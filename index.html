@@ -1320,6 +1320,17 @@
       savedOrders.unshift(orderData);
       localStorage.setItem('jr_standalone_orders', JSON.stringify(savedOrders));
 
+      // Real-time sync to JR India Mission Control Engine
+      try {
+        fetch('/api/orders', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(orderData)
+        }).catch(function(err) {
+          console.log('Mission Engine local sync:', err);
+        });
+      } catch (err) {}
+
       document.getElementById('form-content').style.display = 'none';
       document.getElementById('success-view').style.display = 'block';
 
