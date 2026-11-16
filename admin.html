@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JR INDIA — हरदा हर घर मिशन कंट्रोल इंजन (Mission Control Dashboard)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --card-hover: #1e293b;
+      --text: #f9fafb;
+      --text-muted: #9ca3af;
+      --text-dark: #6b7280;
+      --accent: #2563eb;
+      --accent-glow: rgba(37, 99, 235, 0.2);
+      --success: #10b981;
+      --success-glow: rgba(16, 185, 129, 0.15);
+      --warning: #f59e0b;
+      --warning-glow: rgba(245, 158, 11, 0.15);
+      --danger: #ef4444;
+      --purple: #8b5cf6;
+      --pink: #ec4899;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Navigation Bar */
+    .topbar {
+      background: #0f172a;
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand-section {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo-badge {
+      background: linear-gradient(135deg, #e11d48, #be123c);
+      color: #fff;
+      font-weight: 900;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 15px rgba(225, 29, 72, 0.3);
+    }
+
+    .brand-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .live-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #34d399;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .btn-action {
+      background: #1f2937;
+      border: 1px solid #374151;
+      color: #e5e7eb;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-action:hover {
+      background: #374151;
+      color: #fff;
+      border-color: #4b5563;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      border-color: #3b82f6;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    /* Container */
+    .dashboard-container {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px;
+      flex: 1;
+    }
+
+    /* Revenue & KPI Stat Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .kpi-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .kpi-card:hover {
+      border-color: #374151;
+    }
+
+    .kpi-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .kpi-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .kpi-subtext {
+      font-size: 12px;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .kpi-glow-emerald { border-left: 4px solid var(--success); }
+    .kpi-glow-blue { border-left: 4px solid var(--accent); }
+    .kpi-glow-amber { border-left: 4px solid var(--warning); }
+    .kpi-glow-purple { border-left: 4px solid var(--purple); }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 20px;
+      padding-bottom: 4px;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .tab-btn.active {
+      color: #60a5fa;
+      background: rgba(37, 99, 235, 0.12);
+      border-bottom: 2px solid #3b82f6;
+    }
+
+    .tab-counter {
+      background: #1f2937;
+      color: #e5e7eb;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+
+    .tab-btn.active .tab-counter {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    /* Filters Bar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 12px 16px;
+      border-radius: 10px;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      padding: 6px 12px;
+      border-radius: 8px;
+      flex: 1;
+      max-width: 380px;
+    }
+
+    .search-input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 13px;
+      width: 100%;
+    }
+
+    .filter-dropdowns {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .filter-select {
+      background: #0f172a;
+      border: 1px solid #334155;
+      color: #cbd5e1;
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Table Component */
+    .table-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      overflow-x: auto;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .data-table th {
+      background: #0f172a;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--card-border);
+      white-space: nowrap;
+    }
+
+    .data-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(31, 41, 55, 0.6);
+      color: #e5e7eb;
+      vertical-align: middle;
+    }
+
+    .data-table tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .customer-info-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .customer-name {
+      font-weight: 700;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .customer-id {
+      font-size: 11px;
+      color: var(--text-dark);
+      font-family: monospace;
+    }
+
+    .phone-cell {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 700;
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .phone-cell:hover {
+      text-decoration: underline;
+    }
+
+    .badge-pack {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge-xl {
+      background: rgba(14, 165, 233, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(14, 165, 233, 0.3);
+    }
+
+    .badge-xxl {
+      background: rgba(168, 85, 247, 0.15);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
+
+    .badge-bundle {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .price-tag {
+      font-weight: 800;
+      color: #10b981;
+      font-size: 14px;
+    }
+
+    .badge-status {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .status-New {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .status-Confirmed {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .status-Dispatched {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .status-Delivered {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .status-Cancelled {
+      background: rgba(107, 114, 128, 0.2);
+      color: #9ca3af;
+      border: 1px solid rgba(107, 114, 128, 0.4);
+    }
+
+    .status-select {
+      background: #0f172a;
+      border: 1px solid #374151;
+      color: #e5e7eb;
+      font-size: 11px;
+      padding: 4px 6px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      outline: none;
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-call {
+      background: #0284c7;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: background 0.15s;
+    }
+    .btn-call:hover {
+      background: #0369a1;
+    }
+
+    .btn-whatsapp {
+      background: #059669;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: background 0.15s;
+    }
+    .btn-whatsapp:hover {
+      background: #047857;
+    }
+
+    .btn-loc {
+      background: #374151;
+      color: #e5e7eb;
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .btn-loc:hover {
+      background: #4b5563;
+      color: #fff;
+    }
+
+    .btn-del {
+      background: transparent;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 4px;
+      border-radius: 4px;
+    }
+    .btn-del:hover {
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    /* Modal for Quick Order Entry */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-card {
+      background: #111827;
+      border: 1px solid #374151;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 520px;
+      padding: 24px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      border-bottom: 1px solid #1f2937;
+      padding-bottom: 12px;
+    }
+
+    .modal-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #9ca3af;
+      margin-bottom: 5px;
+    }
+
+    .form-input, .form-select {
+      width: 100%;
+      background: #0f172a;
+      border: 1px solid #334155;
+      padding: 8px 12px;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .form-input:focus, .form-select:focus {
+      border-color: #3b82f6;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+      border-top: 1px solid #1f2937;
+      padding-top: 14px;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--text-dark);
+    }
+
+    .empty-icon {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    /* B2B Table styling */
+    .b2b-badge {
+      background: rgba(59, 130, 246, 0.1);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Toast notification */
+    #toast-msg {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1e293b;
+      border: 1px solid #3b82f6;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+      display: none;
+      z-index: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="brand-section">
+      <div class="brand-logo-badge">⚡ JR INDIA</div>
+      <div>
+        <div class="brand-title">
+          हरदा हर घर मिशन कंट्रोल इंजन
+          <span style="font-size: 11px; background: #374151; padding: 2px 6px; border-radius: 4px; font-weight: 600;">v2.0 Active</span>
+        </div>
+        <div class="brand-subtitle">Harda District Direct Sanitary Pad Delivery & Tracking Engine</div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <div class="live-indicator" id="live-indicator">
+        <div class="live-dot"></div>
+        <span id="live-text">लाइव मॉनिटरिंग चालू</span>
+      </div>
+
+      <button class="btn-action btn-primary" onclick="openManualOrderModal()">
+        <span>➕ नया ऑर्डर दर्ज करें</span>
+      </button>
+
+      <button class="btn-action" onclick="exportOrdersToCSV()">
+        <span>📥 डिलीवरी शीट (CSV)</span>
+      </button>
+
+      <a href="/jr-india-portal.html" target="_blank" class="btn-action">
+        <span>🌐 कस्टमर वेबसाइट</span>
+      </a>
+
+      <a href="/jr-india-poster-print.html" target="_blank" class="btn-action">
+        <span>🖨️ पोस्टर</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="dashboard-container">
+
+    <!-- KPI Revenue & Stats Grid -->
+    <div class="kpi-grid">
+      <!-- Total Revenue -->
+      <div class="kpi-card kpi-glow-emerald">
+        <div class="kpi-label">
+          <span>कुल रेवेन्यू (Total Revenue)</span>
+          <span>💰</span>
+        </div>
+        <div class="kpi-value" id="kpi-total-rev">₹0</div>
+        <div class="kpi-subtext" id="kpi-rev-breakdown">कैश डिलीवरी + प्राप्त भुगतान</div>
+      </div>
+
+      <!-- Total Orders -->
+      <div class="kpi-card kpi-glow-blue">
+        <div class="kpi-label">
+          <span>कुल ऑर्डर्स (Total Orders)</span>
+          <span>📦</span>
+        </div>
+        <div class="kpi-value" id="kpi-total-orders">0</div>
+        <div class="kpi-subtext" id="kpi-orders-breakdown">वेबसाइट + डायरेक्ट फोन रजिस्ट्रेशन</div>
+      </div>
+
+      <!-- Pending COD -->
+      <div class="kpi-card kpi-glow-amber">
+        <div class="kpi-label">
+          <span>COD वसूली बाकी (In Transit)</span>
+          <span>🚚</span>
+        </div>
+        <div class="kpi-value" id="kpi-pending-cod" style="color: #fbbf24;">₹0</div>
+        <div class="kpi-subtext" id="kpi-pending-count">डिलीवरी पर कैश कलेक्ट होना बाकी</div>
+      </div>
+
+      <!-- Delivered / Completed -->
+      <div class="kpi-card kpi-glow-emerald">
+        <div class="kpi-label">
+          <span>डिलीवरी पूरी (Cash Received)</span>
+          <span>✅</span>
+        </div>
+        <div class="kpi-value" id="kpi-delivered-rev" style="color: #34d399;">₹0</div>
+        <div class="kpi-subtext" id="kpi-delivered-count">सफल डिलीवरी व नकद संग्रह</div>
+      </div>
+
+      <!-- Product Split -->
+      <div class="kpi-card kpi-glow-purple">
+        <div class="kpi-label">
+          <span>पैक विभाजन (Packs Ordered)</span>
+          <span>🌸</span>
+        </div>
+        <div class="kpi-value" id="kpi-bundle-count" style="font-size: 22px; color: #e9d5ff;">0 बंडल</div>
+        <div class="kpi-subtext" id="kpi-samples-count">XL: 0 | XXL: 0 सैंपल</div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs">
+      <button class="tab-btn active" id="tab-orders-btn" onclick="switchTab('orders')">
+        <span>📋 लाइव ग्राहक रजिस्ट्रेशन्स (Live Customer Orders)</span>
+        <span class="tab-counter" id="badge-orders-count">0</span>
+      </button>
+
+      <button class="tab-btn" id="tab-b2b-btn" onclick="switchTab('b2b')">
+        <span>🏪 हरदा B2B रिटेल व पार्लर लीड्स (Harda Retail Partners)</span>
+        <span class="tab-counter">47</span>
+      </button>
+
+      <button class="tab-btn" id="tab-mission-btn" onclick="switchTab('mission')">
+        <span>🎯 हरदा हर घर मिशन प्लान (Harda Census Plan)</span>
+        <span class="tab-counter">550 गाँव</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: Live Customer Orders -->
+    <div id="view-orders">
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <div class="search-box">
+          <span style="color: var(--text-dark);">🔍</span>
+          <input type="text" id="order-search" class="search-input" placeholder="ग्राहक का नाम, फोन नंबर, या पता खोजें..." oninput="filterOrders()">
+        </div>
+
+        <div class="filter-dropdowns">
+          <select id="filter-status" class="filter-select" onchange="filterOrders()">
+            <option value="ALL">सभी स्थितियां (All Status)</option>
+            <option value="New">🟡 New (नया ऑर्डर)</option>
+            <option value="Confirmed">📞 Confirmed (बात हो गई)</option>
+            <option value="Dispatched">🚚 Dispatched (भेज दिया)</option>
+            <option value="Delivered">✅ Delivered (डिलीवर हो गया)</option>
+            <option value="Cancelled">❌ Cancelled (रद्द)</option>
+          </select>
+
+          <select id="filter-pack" class="filter-select" onchange="filterOrders()">
+            <option value="ALL">सभी पैक (All Packs)</option>
+            <option value="XL">XL Sample (₹45)</option>
+            <option value="XXL">XXL Sample (₹55)</option>
+            <option value="Bundle10">10-Packs Bundle (₹449)</option>
+          </select>
+
+          <select id="filter-city" class="filter-select" onchange="filterOrders()">
+            <option value="ALL">सभी शहर (All Locations)</option>
+            <option value="Harda">हरदा (Harda)</option>
+            <option value="Timarni">टिमरनी (Timarni)</option>
+            <option value="Khirkiya">खिरकिया (Khirkiya)</option>
+          </select>
+
+          <button class="btn-action" onclick="fetchOrdersAndStats()" title="रिफ्रेश करें">
+            🔄
+          </button>
+        </div>
+      </div>
+
+      <!-- Orders Table -->
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ऑर्डर आईडी & समय</th>
+              <th>ग्राहक का नाम & फोन</th>
+              <th>पैक & कीमत</th>
+              <th>भुगतान मोड</th>
+              <th>डिलीवरी पता व GPS लोकेशन</th>
+              <th>ऑर्डर स्टेटस (Live Status)</th>
+              <th style="text-align: right;">डायरेक्ट एक्शन (1-Click Action)</th>
+            </tr>
+          </thead>
+          <tbody id="orders-tbody">
+            <!-- Dynamic rows injected here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 2: B2B Retail Leads -->
+    <div id="view-b2b" style="display: none;">
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>दुकान / पार्लर / क्लीनिक का नाम</th>
+              <th>श्रेणी (Category)</th>
+              <th>फोन नंबर</th>
+              <th>लोकेशन / वार्ड</th>
+              <th>थोक सप्लाई क्षमता</th>
+              <th style="text-align: right;">कॉल व व्हाट्सएप</th>
+            </tr>
+          </thead>
+          <tbody id="b2b-tbody">
+            <!-- Sample B2B verified Harda leads -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: Mission Blueprint & Census -->
+    <div id="view-mission" style="display: none;">
+      <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; padding: 24px;">
+        <h3 style="font-size: 18px; margin-bottom: 12px; color: #fff;">🎯 मिशन हरदा हर घर: 100% शुद्ध कॉटन सैनिटरी पैड संकल्प</h3>
+        <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
+          हरदा जिले के हर घर तक प्लास्टिक-मुक्त, ऑर्गेनिक कॉटन पैड पहुँचाने के लिए सीधा कॉल और डोर-टू-डोर डिलीवरी मॉडल। शारदा दीदी (<strong>9713773339</strong>) के नेतृत्व में लोकल महिलाओं की सुरक्षा और रोजगार का महा-अभियान।
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+          <div style="background: #0f172a; padding: 18px; border-radius: 10px; border: 1px solid #334155;">
+            <div style="font-weight: 700; color: #38bdf8; margin-bottom: 8px;">1. सैंपल ट्रिगर (₹45 & ₹55)</div>
+            <p style="font-size: 13px; color: #cbd5e1;">घर-घर में एक बार 1 पैकेट फ्री डिलीवरी के साथ पहुँचाना ताकि वो प्लास्टिक पैड जलाकर टेस्ट कर सकें और JR India की क्वालिटी खुद महसूस करें।</p>
+          </div>
+
+          <div style="background: #0f172a; padding: 18px; border-radius: 10px; border: 1px solid #334155;">
+            <div style="font-weight: 700; color: #fbbf24; margin-bottom: 8px;">2. 10-पैकेट फैमिली बंडल (₹449)</div>
+            <p style="font-size: 13px; color: #cbd5e1;">सीधे 1 साल या परिवार की अन्य महिलाओं के लिए 10 पैकेट + ₹50 छूट + 1 JR वॉश बोतल मुफ्त। इससे एवरेज ऑर्डर वैल्यू और रेफरल 10x बढ़ता है।</p>
+          </div>
+
+          <div style="background: #0f172a; padding: 18px; border-radius: 10px; border: 1px solid #334155;">
+            <div style="font-weight: 700; color: #34d399; margin-bottom: 8px;">3. शारदा दीदी डायरेक्ट कनेक्ट</div>
+            <p style="font-size: 13px; color: #cbd5e1;">हर ऑर्डर के बाद 15 मिनट के अंदर फोन कॉल या व्हाट्सएप पर पर्सनल टच जिससे विश्वास 100% पक्का हो और हर महिला अपने 5 परिचितों को जोड़े।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal: Quick Manual Order Entry -->
+  <div class="modal-overlay" id="manual-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">➕ नया ग्राहक ऑर्डर दर्ज करें (Phone Call / Direct)</div>
+        <button onclick="closeManualOrderModal()" style="background: transparent; border: none; color: #9ca3af; font-size: 18px; cursor: pointer;">✕</button>
+      </div>
+
+      <form id="manual-order-form" onsubmit="submitManualOrder(event)">
+        <div class="form-group">
+          <label class="form-label">महिला / ग्राहक का नाम *</label>
+          <input type="text" id="m-name" required class="form-input" placeholder="उदा. सुनीता वर्मा">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">मोबाइल नंबर (10 डिजिट) *</label>
+          <input type="tel" id="m-phone" required class="form-input" placeholder="उदा. 9826012345">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">पैक का चुनाव *</label>
+            <select id="m-pack" class="form-select" onchange="updateManualAmount()">
+              <option value="XXL">1 Pack XXL Sample (₹55)</option>
+              <option value="XL">1 Pack XL Sample (₹45)</option>
+              <option value="Bundle10">10-Packs Bundle (₹449 + Free Wash)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">कुल रकम (₹)</label>
+            <input type="number" id="m-amount" value="55" class="form-input" readonly>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">भुगतान का तरीका</label>
+            <select id="m-payment" class="form-select">
+              <option value="COD">Cash on Delivery (डिलीवरी पर नकद)</option>
+              <option value="UPI">UPI / Online Paid</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">शहर / तहसील</label>
+            <select id="m-city" class="form-select">
+              <option value="Harda">हरदा (Harda)</option>
+              <option value="Timarni">टिमरनी (Timarni)</option>
+              <option value="Khirkiya">खिरकिया (Khirkiya)</option>
+              <option value="Other">अन्य (Rural / Other)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">पूरा डिलीवरी पता (मकान नं, गली, लैंडमार्क) *</label>
+          <input type="text" id="m-address" required class="form-input" placeholder="उदा. वार्ड 12, पानी टंकी के पास, रेलवे कॉलोनी">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">टिप्पणी / नोट्स (वैकल्पिक)</label>
+          <input type="text" id="m-notes" class="form-input" placeholder="उदा. शाम को 4 बजे के बाद डिलीवरी चाहिए">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-action" onclick="closeManualOrderModal()">रद्द करें</button>
+          <button type="submit" class="btn-action btn-primary">✅ ऑर्डर सेव करें</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-msg"></div>
+
+  <!-- Audio beep for new orders -->
+  <script>
+    // Global State
+    var allOrders = [];
+    var lastOrdersCount = 0;
+    var currentTab = 'orders';
+
+    // B2B Seed Leads (Harda / Timarni verified retail partners)
+    var b2bLeads = [
+      { name: "अनुष्का ब्यूटी पार्लर & कॉस्मेटिक्स", cat: "ब्यूटी पार्लर", phone: "9826451203", loc: "घंटाघर चौक, हरदा", capacity: "50 पैकेट/माह" },
+      { name: "गायत्री मैटरनिटी & नर्सिंग होम", cat: "क्लीनिक / मेडिकल", phone: "9425078129", loc: "इंदौर रोड, हरda", capacity: "100 पैकेट/माह" },
+      { name: "प्रिया लेडीज कॉर्नर & जनरल स्टोर्स", cat: "जनरल स्टोर", phone: "9179043211", loc: "मेन मार्केट, टिमरनी", capacity: "60 पैकेट/माह" },
+      { name: "राधा मेडिकल एजेंसीज", cat: "मेडिकल स्टोर", phone: "9893120485", loc: "बस स्टैंड के पास, खिरकिया", capacity: "120 पैकेट/माह" },
+      { name: "सखी विमेंस केयर सेंटर", cat: "एनजीओ / वेलनेस", phone: "9406532187", loc: "शांति नगर, हरदा", capacity: "80 पैकेट/माह" },
+      { name: "महालक्ष्मी सुपरमार्ट", cat: "किराना / डिपार्टमेंटल", phone: "9755412890", loc: "रेलवे स्टेशन रोड, हरदा", capacity: "150 पैकेट/माह" },
+      { name: "दीपिका ब्यूटी सैलून", cat: "ब्यूटी पार्लर", phone: "9826781240", loc: "वार्ड नंबर 5, टिमरनी", capacity: "40 पैकेट/माह" }
+    ];
+
+    // Notification Audio using Web Audio API
+    function playBeep() {
+      try {
+        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        var osc = audioCtx.createOscillator();
+        var gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(587.33, audioCtx.currentTime); // D5
+        osc.frequency.setValueAtTime(880.00, audioCtx.currentTime + 0.1); // A5
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } catch (e) {}
+    }
+
+    function showToast(text) {
+      var t = document.getElementById('toast-msg');
+      t.innerText = text;
+      t.style.display = 'block';
+      setTimeout(function() {
+        t.style.display = 'none';
+      }, 3500);
+    }
+
+    // Switch Tabs
+    function switchTab(tab) {
+      currentTab = tab;
+      document.getElementById('tab-orders-btn').classList.toggle('active', tab === 'orders');
+      document.getElementById('tab-b2b-btn').classList.toggle('active', tab === 'b2b');
+      document.getElementById('tab-mission-btn').classList.toggle('active', tab === 'mission');
+
+      document.getElementById('view-orders').style.display = tab === 'orders' ? 'block' : 'none';
+      document.getElementById('view-b2b').style.display = tab === 'b2b' ? 'block' : 'none';
+      document.getElementById('view-mission').style.display = tab === 'mission' ? 'block' : 'none';
+
+      if (tab === 'b2b') renderB2BTable();
+    }
+
+    // Render B2B Leads Table
+    function renderB2BTable() {
+      var tbody = document.getElementById('b2b-tbody');
+      tbody.innerHTML = '';
+      b2bLeads.forEach(function(lead) {
+        var tr = document.createElement('tr');
+        var waMsg = encodeURIComponent("नमस्ते! मैं जेआर इंडिया (JR India) हरदा से शारदा दीदी बोल रही हूँ। हमारे ऑर्गेनिक कॉटन सैनिटरी पैड्स के थोक वितरण और पार्टनरशिप के लिए आपसे बात करनी थी। क्या हम जुड़ सकते हैं?");
+        tr.innerHTML = `
+          <td><strong>${lead.name}</strong></td>
+          <td><span class="b2b-badge">${lead.cat}</span></td>
+          <td><a href="tel:${lead.phone}" class="phone-cell">📞 ${lead.phone}</a></td>
+          <td>📍 ${lead.loc}</td>
+          <td><span style="color: #34d399; font-weight: 700;">${lead.capacity}</span></td>
+          <td style="text-align: right;">
+            <div class="action-group" style="justify-content: flex-end;">
+              <a href="tel:${lead.phone}" class="btn-call">📞 कॉल</a>
+              <a href="https://wa.me/91${lead.phone}?text=${waMsg}" target="_blank" class="btn-whatsapp">💬 व्हाट्सएप</a>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Fetch Live Orders & Stats from Backend Server
+    function fetchOrdersAndStats() {
+      fetch('/api/orders')
+        .then(function(res) {
+          if (!res.ok) throw new Error('API offline');
+          return res.json();
+        })
+        .then(function(data) {
+          if (data && data.orders) {
+            allOrders = data.orders;
+            
+            // Check if new order arrived
+            if (lastOrdersCount > 0 && allOrders.length > lastOrdersCount) {
+              playBeep();
+              showToast("🔔 नया ग्राहक ऑर्डर प्राप्त हुआ!");
+            }
+            lastOrdersCount = allOrders.length;
+            
+            updateStats();
+            filterOrders();
+          }
+        })
+        .catch(function(err) {
+          // Fallback to localStorage if standalone
+          var localOrders = JSON.parse(localStorage.getItem('jr_standalone_orders') || '[]');
+          if (localOrders.length > 0 && allOrders.length === 0) {
+            allOrders = localOrders.map(function(o, idx) {
+              return {
+                id: 'JR-LOCAL-' + (100 + idx),
+                name: o.name || 'ग्राहक',
+                phone: o.phone || '',
+                pack: o.pack || 'Sample',
+                packType: (o.pack || '').includes('XL') && !(o.pack || '').includes('XXL') ? 'XL' : ((o.pack || '').includes('XXL') ? 'XXL' : 'Bundle10'),
+                amount: Number(o.amount) || 55,
+                paymentMode: o.paymentMode || 'COD',
+                address: o.address || '',
+                city: o.city || 'Harda',
+                pincode: o.pincode || '461331',
+                gps: o.gps || 'Manual Address',
+                status: 'New',
+                notes: 'लोकल स्टोरेज से',
+                createdAt: o.time || new Date().toISOString()
+              };
+            });
+            updateStats();
+            filterOrders();
+          }
+        });
+    }
+
+    // Calculate & Display KPI Stats
+    function updateStats() {
+      var totalRev = 0;
+      var deliveredRev = 0;
+      var pendingCodRev = 0;
+      var countDelivered = 0;
+      var countPending = 0;
+      var countXl = 0;
+      var countXxl = 0;
+      var countBundle10 = 0;
+
+      allOrders.forEach(function(o) {
+        var amt = Number(o.amount) || 0;
+        totalRev += amt;
+
+        if (o.status === 'Delivered') {
+          deliveredRev += amt;
+          countDelivered++;
+        } else if (o.status !== 'Cancelled') {
+          pendingCodRev += amt;
+          countPending++;
+        }
+
+        if (o.packType === 'XL' || (o.pack && o.pack.includes('XL') && !o.pack.includes('XXL'))) {
+          countXl++;
+        } else if (o.packType === 'XXL' || (o.pack && o.pack.includes('XXL'))) {
+          countXxl++;
+        } else {
+          countBundle10++;
+        }
+      });
+
+      document.getElementById('kpi-total-rev').innerText = '₹' + totalRev.toLocaleString('en-IN');
+      document.getElementById('kpi-total-orders').innerText = allOrders.length;
+      document.getElementById('badge-orders-count').innerText = allOrders.length;
+
+      document.getElementById('kpi-pending-cod').innerText = '₹' + pendingCodRev.toLocaleString('en-IN');
+      document.getElementById('kpi-pending-count').innerText = countPending + ' पार्सल डिलीवरी और कैश बाकी';
+
+      document.getElementById('kpi-delivered-rev').innerText = '₹' + deliveredRev.toLocaleString('en-IN');
+      document.getElementById('kpi-delivered-count').innerText = countDelivered + ' पार्सल सफल डिलीवर हुए';
+
+      document.getElementById('kpi-bundle-count').innerText = countBundle10 + ' बंडल (₹449)';
+      document.getElementById('kpi-samples-count').innerText = 'XL: ' + countXl + ' | XXL: ' + countXxl + ' सैंपल';
+    }
+
+    // Filter & Render Orders Table
+    function filterOrders() {
+      var searchVal = (document.getElementById('order-search').value || '').toLowerCase().trim();
+      var statusVal = document.getElementById('filter-status').value;
+      var packVal = document.getElementById('filter-pack').value;
+      var cityVal = document.getElementById('filter-city').value;
+
+      var filtered = allOrders.filter(function(o) {
+        var matchesSearch = !searchVal || 
+          (o.name && o.name.toLowerCase().includes(searchVal)) ||
+          (o.phone && o.phone.includes(searchVal)) ||
+          (o.address && o.address.toLowerCase().includes(searchVal)) ||
+          (o.id && o.id.toLowerCase().includes(searchVal));
+
+        var matchesStatus = statusVal === 'ALL' || o.status === statusVal;
+        
+        var matchesPack = packVal === 'ALL' || 
+          (packVal === 'XL' && (o.packType === 'XL' || (o.pack && o.pack.includes('XL') && !o.pack.includes('XXL')))) ||
+          (packVal === 'XXL' && (o.packType === 'XXL' || (o.pack && o.pack.includes('XXL')))) ||
+          (packVal === 'Bundle10' && (o.packType === 'Bundle10' || (o.pack && o.pack.includes('Bundle') || (o.pack && o.pack.includes('10')))));
+
+        var matchesCity = cityVal === 'ALL' || (o.city && o.city.toLowerCase() === cityVal.toLowerCase());
+
+        return matchesSearch && matchesStatus && matchesPack && matchesCity;
+      });
+
+      renderOrdersTable(filtered);
+    }
+
+    // Render Orders in Table
+    function renderOrdersTable(orders) {
+      var tbody = document.getElementById('orders-tbody');
+      tbody.innerHTML = '';
+
+      if (orders.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="7">
+              <div class="empty-state">
+                <div class="empty-icon">📭</div>
+                <div style="font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 4px;">कोई ऑर्डर नहीं मिला</div>
+                <div>इस फ़िल्टर या खोज के अनुसार कोई ग्राहक रजिस्ट्रेशन उपलब्ध नहीं है।</div>
+              </div>
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      orders.forEach(function(o) {
+        var tr = document.createElement('tr');
+
+        // Pack badge & color
+        var packBadgeClass = 'badge-xxl';
+        var packShort = '1x XXL (₹55)';
+        if (o.packType === 'XL' || (o.pack && o.pack.includes('XL') && !o.pack.includes('XXL'))) {
+          packBadgeClass = 'badge-xl';
+          packShort = '1x XL (₹45)';
+        } else if (o.packType === 'Bundle10' || (o.pack && (o.pack.includes('10') || o.pack.includes('Bundle')))) {
+          packBadgeClass = 'badge-bundle';
+          packShort = '🎁 10-Pack Bundle (₹449)';
+        }
+
+        // WhatsApp message generator
+        var waMessageText = "नमस्ते " + (o.name || "जी") + "! मैं जेआर इंडिया (JR India) हरदा टीम से शारदा दीदी बोल रही हूँ।
+
+" +
+          "हमें वेबसाइट से आपका ऑर्डर प्राप्त हुआ है:
+" +
+          "📦 सामान: " + (o.pack || packShort) + "
+" +
+          "💵 रकम: ₹" + (o.amount || "55") + " (" + (o.paymentMode || "COD - डिलीवरी पर नकद") + ")
+" +
+          "📍 पता: " + (o.address || "") + ", " + (o.city || "Harda") + "
+
+" +
+          "🚚 हमारा डिलीवरी बॉय आपके दिए पते पर पार्सल लेकर आ रहा है। कोई सवाल हो तो मुझे सीधे इस नंबर पर बता सकती हैं। धन्यवाद!";
+        
+        var waUrl = "https://wa.me/91" + (o.phone || "").replace(/\D/g, '') + "?text=" + encodeURIComponent(waMessageText);
+
+        // Date time format
+        var timeStr = 'अभी-अभी';
+        if (o.createdAt) {
+          try {
+            var d = new Date(o.createdAt);
+            timeStr = d.toLocaleDateString('hi-IN', { day: 'numeric', month: 'short' }) + ' ' + d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+          } catch (e) {}
+        }
+
+        // Map link
+        var mapBtn = '';
+        if (o.gps && o.gps !== 'Manual Address') {
+          mapBtn = `<a href="https://maps.google.com/?q=${o.gps}" target="_blank" class="btn-loc" title="Google Maps पर देखें">📍 GPS</a>`;
+        }
+
+        tr.innerHTML = `
+          <td>
+            <div class="customer-info-cell">
+              <span class="customer-id">${o.id || 'JR-ORD'}</span>
+              <span style="font-size: 11px; color: var(--text-dark);">${timeStr}</span>
+            </div>
+          </td>
+          <td>
+            <div class="customer-info-cell">
+              <span class="customer-name">${o.name || 'अज्ञात ग्राहक'}</span>
+              <a href="tel:${o.phone}" class="phone-cell">📞 ${o.phone || 'नंबर नहीं'}</a>
+            </div>
+          </td>
+          <td>
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <span class="badge-pack ${packBadgeClass}">${packShort}</span>
+              <span class="price-tag">₹${o.amount || 55} <span style="font-size: 11px; color: #10b981; font-weight: 500;">(फ्री डिलीवरी)</span></span>
+            </div>
+          </td>
+          <td>
+            <span style="font-size: 12px; font-weight: 700; color: ${o.paymentMode === 'UPI' ? '#60a5fa' : '#34d399'};">
+              ${o.paymentMode === 'UPI' ? '⚡ UPI Paid' : '💵 नकद (COD)'}
+            </span>
+          </td>
+          <td>
+            <div style="max-width: 240px; font-size: 12px; line-height: 1.4;">
+              <div>${o.address || 'पता दर्ज नहीं'}</div>
+              <div style="color: var(--text-muted); font-size: 11px; margin-top: 2px;">
+                <strong>${o.city || 'Harda'}</strong> - ${o.pincode || '461331'} ${mapBtn}
+              </div>
+            </div>
+          </td>
+          <td>
+            <select class="status-select status-${o.status || 'New'}" onchange="changeOrderStatus('${o.id}', this.value)">
+              <option value="New" ${o.status === 'New' ? 'selected' : ''}>🟡 New (नया)</option>
+              <option value="Confirmed" ${o.status === 'Confirmed' ? 'selected' : ''}>📞 Confirmed (पक्का)</option>
+              <option value="Dispatched" ${o.status === 'Dispatched' ? 'selected' : ''}>🚚 Dispatched (रवाना)</option>
+              <option value="Delivered" ${o.status === 'Delivered' ? 'selected' : ''}>✅ Delivered (डिलीवर)</option>
+              <option value="Cancelled" ${o.status === 'Cancelled' ? 'selected' : ''}>❌ Cancelled (रद्द)</option>
+            </select>
+          </td>
+          <td style="text-align: right;">
+            <div class="action-group" style="justify-content: flex-end;">
+              <a href="tel:${o.phone}" class="btn-call" title="सीधे कॉल करें">
+                <span>📞 कॉल</span>
+              </a>
+              <a href="${waUrl}" target="_blank" class="btn-whatsapp" title="शारदा दीदी के नाम से व्हाट्सएप संदेश भेजें">
+                <span>💬 व्हाट्सएप</span>
+              </a>
+              <button class="btn-del" onclick="deleteOrder('${o.id}')" title="हटाएं">✕</button>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Change order status and save to backend
+    function changeOrderStatus(orderId, newStatus) {
+      fetch('/api/orders/update-status', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: orderId, status: newStatus })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.success) {
+          showToast("✅ ऑर्डर स्टेटस अपडेट हुआ: " + newStatus);
+          var item = allOrders.find(function(x) { return x.id === orderId; });
+          if (item) item.status = newStatus;
+          updateStats();
+          filterOrders();
+        }
+      })
+      .catch(function(e) {
+        showToast("⚠️ सर्वर एरर, लोकल अपडेट किया");
+        var item = allOrders.find(function(x) { return x.id === orderId; });
+        if (item) item.status = newStatus;
+        updateStats();
+        filterOrders();
+      });
+    }
+
+    // Delete an order
+    function deleteOrder(orderId) {
+      if (!confirm("क्या आप इस ऑर्डर (" + orderId + ") को डिलीट करना चाहते हैं?")) return;
+
+      fetch('/api/orders/delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: orderId })
+      })
+      .then(function() {
+        allOrders = allOrders.filter(function(o) { return o.id !== orderId; });
+        showToast("🗑️ ऑर्डर हटा दिया गया");
+        updateStats();
+        filterOrders();
+      })
+      .catch(function() {
+        allOrders = allOrders.filter(function(o) { return o.id !== orderId; });
+        updateStats();
+        filterOrders();
+      });
+    }
+
+    // Open & Close Manual Order Modal
+    function openManualOrderModal() {
+      document.getElementById('manual-modal').style.display = 'flex';
+    }
+
+    function closeManualOrderModal() {
+      document.getElementById('manual-modal').style.display = 'none';
+    }
+
+    function updateManualAmount() {
+      var p = document.getElementById('m-pack').value;
+      var amtInput = document.getElementById('m-amount');
+      if (p === 'XL') amtInput.value = 45;
+      else if (p === 'XXL') amtInput.value = 55;
+      else amtInput.value = 449;
+    }
+
+    // Submit Manual Order
+    function submitManualOrder(e) {
+      e.preventDefault();
+      var name = document.getElementById('m-name').value;
+      var phone = document.getElementById('m-phone').value;
+      var packType = document.getElementById('m-pack').value;
+      var amount = Number(document.getElementById('m-amount').value);
+      var paymentMode = document.getElementById('m-payment').value;
+      var city = document.getElementById('m-city').value;
+      var address = document.getElementById('m-address').value;
+      var notes = document.getElementById('m-notes').value;
+
+      var packText = "1 Pack XXL Sample (₹55 - Free Delivery)";
+      if (packType === 'XL') packText = "1 Pack XL Sample (₹45 - Free Delivery)";
+      if (packType === 'Bundle10') packText = "10-Packs Family & Gifting Bundle (+ ₹50 OFF + FREE 1 JR Wash Bottle + Free Delivery)";
+
+      var orderPayload = {
+        name: name,
+        phone: phone,
+        pack: packText,
+        packType: packType,
+        amount: amount,
+        paymentMode: paymentMode,
+        city: city,
+        address: address,
+        notes: notes || "डायरेक्ट कॉल द्वारा मैन्युअल एंट्री",
+        gps: "Manual Phone Order"
+      };
+
+      fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderPayload)
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        showToast("✅ नया ऑर्डर सफलतापूर्वक दर्ज हुआ!");
+        closeManualOrderModal();
+        document.getElementById('manual-order-form').reset();
+        fetchOrdersAndStats();
+      })
+      .catch(function(err) {
+        orderPayload.id = "JR-LOCAL-" + Date.now().toString().slice(-4);
+        orderPayload.createdAt = new Date().toISOString();
+        orderPayload.status = "New";
+        allOrders.unshift(orderPayload);
+        showToast("✅ नया ऑर्डर लोकल सेव हुआ!");
+        closeManualOrderModal();
+        updateStats();
+        filterOrders();
+      });
+    }
+
+    // Export to CSV for Delivery Boys
+    function exportOrdersToCSV() {
+      if (allOrders.length === 0) {
+        alert("कोई ऑर्डर उपलब्ध नहीं है!");
+        return;
+      }
+
+      var csvContent = "data:text/csv;charset=utf-8,";
+      csvContent += "Order ID,Customer Name,Phone,Pack,Amount,Payment Mode,City,Address,GPS Coords,Status,Date
+";
+
+      allOrders.forEach(function(o) {
+        var row = [
+          o.id || '',
+          '"' + (o.name || '').replace(/"/g, '""') + '"',
+          o.phone || '',
+          '"' + (o.pack || '').replace(/"/g, '""') + '"',
+          o.amount || '',
+          o.paymentMode || 'COD',
+          o.city || 'Harda',
+          '"' + (o.address || '').replace(/"/g, '""') + '"',
+          '"' + (o.gps || '') + '"',
+          o.status || 'New',
+          o.createdAt || ''
+        ];
+        csvContent += row.join(",") + "
+";
+      });
+
+      var encodedUri = encodeURI(csvContent);
+      var link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "JR_India_Harda_Delivery_Sheet_" + new Date().toISOString().slice(0, 10) + ".csv");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast("📥 डिलीवरी शीट CSV डाउनलोड हो गई!");
+    }
+
+    // Auto-refresh loop every 5 seconds
+    setInterval(fetchOrdersAndStats, 5000);
+
+    // Initial load
+    fetchOrdersAndStats();
+  </script>
+</body>
+</html>
