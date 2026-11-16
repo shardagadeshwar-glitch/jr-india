@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JR India — जन-स्वास्थ्य चेतावनी पोस्टर (A4/A3 Print Ready)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&family=Noto+Sans+Devanagari:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 8mm;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* A4 POSTER SHEET */
+    .poster-sheet {
+      width: 210mm;
+      min-height: 297mm;
+      background: #ffffff;
+      border: 8px solid #b91c1c;
+      outline: 3px solid #fca5a5;
+      padding: 12mm 14mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      border-radius: 4px;
+    }
+
+    /* TOP HEADER: OFFICIAL PUBLIC HEALTH ALERT (NOT AN AD) */
+    .top-header {
+      background: #991b1b;
+      color: white;
+      text-align: center;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border-bottom: 4px solid #f59e0b;
+    }
+    .top-header .alert-tag {
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: #fef08a;
+      color: #78350f;
+      display: inline-block;
+      padding: 2px 14px;
+      border-radius: 20px;
+      margin-bottom: 4px;
+    }
+    .top-header h1 {
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 1.25;
+      color: #ffffff;
+    }
+    .top-header p {
+      font-size: 12px;
+      color: #fecaca;
+      margin-top: 2px;
+      font-weight: 600;
+    }
+
+    /* MAIN SHOCK HOOK */
+    .shock-headline-box {
+      background: #fff1f2;
+      border: 3px dashed #e11d48;
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .shock-headline-box h2 {
+      font-size: 25px;
+      font-weight: 900;
+      color: #be123c;
+      line-height: 1.3;
+    }
+    .shock-headline-box .sub-hook {
+      font-size: 15px;
+      font-weight: 800;
+      color: #9f1239;
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+    .shock-headline-box .highlight {
+      background: #ffe4e6;
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid #fda4af;
+      color: #881337;
+    }
+
+    /* 3 CRUCIAL DANGER BULLETS */
+    .danger-bullets {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .bullet-card {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+    }
+    .bullet-card .b-icon { font-size: 24px; margin-bottom: 4px; }
+    .bullet-card h4 { font-size: 13px; font-weight: 900; color: #b91c1c; margin-bottom: 3px; }
+    .bullet-card p { font-size: 11px; color: #334155; line-height: 1.4; font-weight: 600; }
+
+    /* PSYCHOLOGICAL DISCREET / PHOTO HOOK */
+    .discreet-hook-card {
+      background: linear-gradient(135deg, #fefce8, #fffbeb);
+      border: 2.5px solid #eab308;
+      border-radius: 12px;
+      padding: 12px 16px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .discreet-hook-card .d-badge {
+      background: #ca8a04;
+      color: white;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 2px 10px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+    .discreet-hook-card h3 {
+      font-size: 18px;
+      font-weight: 900;
+      color: #854d0e;
+      line-height: 1.3;
+    }
+    .discreet-hook-card p {
+      font-size: 12.5px;
+      color: #713f12;
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    /* THE ACTION BOX: QR CODE + 3-STEP EASY INSTRUCTION */
+    .action-container {
+      background: #f0fdf4;
+      border: 3px solid #16a34a;
+      border-radius: 14px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .qr-frame {
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
+      border: 2px solid #86efac;
+      text-align: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(22,163,74,0.12);
+    }
+    .qr-frame #qrcode {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    .qr-frame .qr-label {
+      font-size: 11px;
+      font-weight: 900;
+      color: #166534;
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+
+    .steps-flow {
+      flex: 1;
+    }
+    .steps-flow h4 {
+      font-size: 16px;
+      font-weight: 900;
+      color: #14532d;
+      margin-bottom: 8px;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #16a34a;
+      color: white;
+      font-size: 12px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-text {
+      font-size: 12px;
+      line-height: 1.4;
+      color: #1e293b;
+      font-weight: 700;
+    }
+    .step-text strong {
+      color: #0f172a;
+    }
+
+    /* DIRECT PHONE & MISSED CALL ALTERNATIVE */
+    .offline-call-bar {
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      color: white;
+      border-radius: 10px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .ocb-left {
+      text-align: left;
+    }
+    .ocb-left strong {
+      font-size: 13px;
+      display: block;
+    }
+    .ocb-left span {
+      font-size: 11px;
+      opacity: 0.9;
+    }
+    .ocb-phone {
+      font-size: 22px;
+      font-weight: 900;
+      background: #ffffff;
+      color: #0369a1;
+      padding: 4px 14px;
+      border-radius: 25px;
+      letter-spacing: 0.5px;
+    }
+
+    /* FOOTER TEAR SLIPS / FOOTER NOTICE */
+    .poster-footer {
+      border-top: 2px dashed #94a3b8;
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10.5px;
+      color: #64748b;
+      font-weight: 700;
+    }
+    .poster-footer strong { color: #0f172a; }
+
+    /* PRINT BUTTON (Visible on screen, hidden on print) */
+    .print-controls {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      gap: 10px;
+    }
+    .print-btn {
+      background: #be123c;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 900;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(190,18,60,0.3);
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .print-controls { display: none !important; }
+      .poster-sheet {
+        border: 6px solid #b91c1c;
+        box-shadow: none;
+        width: 100%;
+        min-height: 100vh;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FLOATING PRINT TRIGGER -->
+  <div class="print-controls">
+    <button class="print-btn" onclick="window.print()">🖨️ इस पोस्टर को प्रिंट करें (A4 Print)</button>
+  </div>
+
+  <div class="poster-sheet">
+
+    <!-- TOP ADVISORY HEADER -->
+    <div class="top-header">
+      <span class="alert-tag">⚠️ सार्वजनिक महिला स्वास्थ्य चेतावनी सूचना</span>
+      <h1>मध्य प्रदेश की माताओं, बहनों व बेटियों के नाम एक ज़रूरी चिट्ठी</h1>
+      <p>जन-स्वास्थ्य जागरूकता मिशन · शासकीय पंजीकृत पहल (JR India Care Foundation)</p>
+    </div>
+
+    <!-- MAIN EYE-CATCHING SHOCK BOX -->
+    <div class="shock-headline-box">
+      <h2>"दुकान से लाया ₹50 का पैड असल में 4 प्लास्टिक थैलियों का कचरा है!"</h2>
+      <div class="sub-hook">
+        सफेद पानी (White Discharge), असहनीय खुजली, जांघों पर जलन और <span class="highlight">बच्चेदानी में गांठों/कैंसर का खतरा</span> इसी प्लास्टिक पैड से होता है!
+      </div>
+    </div>
+
+    <!-- 3 SCIENTIFIC DANGER BULLETS -->
+    <div class="danger-bullets">
+      <div class="bullet-card">
+        <div class="b-icon">🛍️</div>
+        <h4>70% रीसायकल प्लास्टिक</h4>
+        <p>हवा पास नहीं होती। पसीना और खून सड़ने से 20 मिनट में लाखों बैक्टीरिया पैदा होते हैं।</p>
+      </div>
+      <div class="bullet-card">
+        <div class="b-icon">☣️</div>
+        <h4>ज़हरीला क्लोरीन ब्लीच</h4>
+        <p>कचरे को सफेद दिखाने के लिए डायोक्सिन केमिकल डाला जाता है जो आगे चलकर बांझपन लाता है।</p>
+      </div>
+      <div class="bullet-card">
+        <div class="b-icon">🌸</div>
+        <h4>100% असली कॉटन उपाय</h4>
+        <p>JR India ने तैयार किया है आम बाज़ार रेट पर 100% शुद्ध कॉटन पैड ग्रीन एनायन चिप के साथ।</p>
+      </div>
+    </div>
+
+    <!-- PSYCHOLOGICAL FEAR OF MISSING OUT / DISCREET ACTION TRIGGER -->
+    <div class="discreet-hook-card">
+      <span class="d-badge">🤫 संकोच व शर्म छोड़िए — अपनी सेहत बचाइए!</span>
+      <h3>"यहां खड़े होकर पढ़ने में शर्म लग रही है? कोई बात नहीं!"</h3>
+      <p>
+        👉 <strong>दूसरों के डर से यह मौका मत छोड़िए — अभी 2 सेकंड में अपने फोन से इस पोस्टर की PHOTO खींच लीजिए!</strong><br>
+        घर जाकर इत्मीनान से अकेले में देखें और अपनी व अपनी बेटी की ज़िंदगी को सुरक्षित करें।
+      </p>
+    </div>
+
+    <!-- ACTION BOX: QR CODE & 3 EASY PHONE STEPS -->
+    <div class="action-container">
+      <div class="qr-frame">
+        <div id="qrcode"></div>
+        <div class="qr-label">स्कैन / फ़ोटो लें 📲</div>
+      </div>
+
+      <div class="steps-flow">
+        <h4>📲 मोबाइल से कैसे देखें? (अनपढ़ या कम पढ़े-लिखे भी 1 मिनट में करें):</h4>
+        
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            अपने मोबाइल का <strong>कैमरा (Camera)</strong> या <strong>Google Lens</strong> खोलें और ऊपर वाले <strong>QR Code की फ़ोटो खींचें</strong> (या सामने रखें)।
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            स्क्रीन पर एक <strong>पीली या नीली लिंक</strong> दिखेगी — उस पर उंगली से <strong>टच (Click) करें</strong>।
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            वेबसाइट खुलते ही पूरी जानकारी, डॉक्टरों की सलाह और <strong>₹0 में मुफ़्त सैंपल</strong> मंगाने का विकल्प दिख जाएगा!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFFLINE CALL & MISSED CALL HELPLINE ALTERNATIVE -->
+    <div class="offline-call-bar">
+      <div class="ocb-left">
+        <strong>इंटरनेट नहीं है? फोन चलाना नहीं आता?</strong>
+        <span>सीधे हमारी महिला हेल्थ डॉक्टर 'प्रिया दीदी' को कॉल या मिसकॉल दें:</span>
+      </div>
+      <div class="ocb-phone">
+        📞 85911 63040
+      </div>
+    </div>
+
+    <!-- POSTER FOOTER -->
+    <div class="poster-footer">
+      <div>
+        <strong>JR INDIA PVT. LTD.</strong> · हरदा, टिमरनी, खिरकिया व मध्य प्रदेश मिशन
+      </div>
+      <div>
+        🌐 वेबसाइट: <strong>shardagadeshwar-glitch.github.io/jr-india/</strong>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Generate QR Code with High Error Correction
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://shardagadeshwar-glitch.github.io/jr-india/",
+      width: 130,
+      height: 130,
+      colorDark : "#0f172a",
+      colorLight : "#ffffff",
+      correctLevel : QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>
