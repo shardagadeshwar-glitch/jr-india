@@ -7,8 +7,8 @@
   <!-- Primary Meta Tags -->
   <title>JR India — 100% Rash-Free Organic Cotton & Anion Sanitary Pads | Official Website</title>
   <meta name="title" content="JR India — 100% Rash-Free Organic Cotton & Anion Sanitary Pads | Official Website">
-  <meta name="description" content="Official website of JR India. ISO-certified 100% rash-free breathable organic cotton sanitary napkins with Green Anion antibacterial technology. Claim your ₹0 Free Trial Pack in Madhya Pradesh. 0% plastic, zero rashes.">
-  <meta name="keywords" content="JR India, JR India pads, JR India sanitary pads, JR India Harda, JR India Madhya Pradesh, organic cotton sanitary napkins, rash free pads, anion chip sanitary pads, buy sanitary pads online, wholesale sanitary pads MP">
+  <meta name="description" content="Official website of JR India. 100% rash-free organic cotton sanitary napkins with Green Anion antibacterial chip. Special Offer: 10 Packs par ₹50 FLAT OFF + 1 FREE JR Wash Bottle! Free Sample Pack available. 0% plastic, zero rashes.">
+  <meta name="keywords" content="JR India, JR India pads, JR India sanitary pads, JR India Harda, JR India Madhya Pradesh, organic cotton sanitary napkins, rash free pads, anion chip sanitary pads, buy sanitary pads online, JR Wash free">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="author" content="JR India Private Limited">
   <meta name="language" content="Hindi, English">
@@ -20,7 +20,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shardagadeshwar-glitch.github.io/jr-india/">
   <meta property="og:title" content="JR India — 100% Rash-Free Organic Cotton Sanitary Pads | Official">
-  <meta property="og:description" content="Stop paying ₹50-60 for plastic pads in shops. Try JR India 100% breathable organic cotton pads with Anion Chip. Zero rashes, 150ml instant dry lock. Free Trial Pack available!">
+  <meta property="og:description" content="Stop paying ₹50-60 for plastic pads in shops. Try JR India 100% breathable organic cotton pads with Anion Chip. 10 Packs par ₹50 OFF + Free JR Wash bottle!">
   <meta property="og:site_name" content="JR India">
   <meta property="og:locale" content="hi_IN">
   <meta property="og:locale:alternate" content="en_IN">
@@ -54,6 +54,45 @@
   }
   </script>
 
+  <!-- Structured Data: Product & Offers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "JR India 100% Rash-Free Organic Cotton Sanitary Pads",
+    "description": "Breathable 100% organic cotton sanitary pads with Green Anion antibacterial chip. 0% plastic, zero rashes.",
+    "brand": {
+      "@type": "Brand",
+      "name": "JR India"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowPrice": "0",
+      "highPrice": "449",
+      "offerCount": "2",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "1-Pack Free Sample Pack (Trial)",
+          "price": "0",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://shardagadeshwar-glitch.github.io/jr-india/#claim-form"
+        },
+        {
+          "@type": "Offer",
+          "name": "10-Packs Family & Gifting Bundle with Free JR Wash",
+          "price": "449",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://shardagadeshwar-glitch.github.io/jr-india/#claim-form"
+        }
+      ]
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -63,7 +102,7 @@
       --rose-dark: #be123c;
       --rose-light: #ffe4e6;
       --rose-subtle: #fff1f2;
-      --rose-glow: rgba(225, 29, 72, 0.25);
+      --rose-glow: rgba(225, 29, 72, 0.3);
       --emerald: #10b981;
       --emerald-dark: #047857;
       --emerald-light: #ecfdf5;
@@ -82,24 +121,44 @@
       background: var(--bg); color: var(--slate-900);
       font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6; -webkit-font-smoothing: antialiased;
-      padding-bottom: 75px; /* for sticky call bar on mobile */
+      padding-bottom: 80px; /* Space for mobile floating call bar */
     }
 
-    /* URGENCY TOP BAR */
+    /* PULSING ANIMATIONS FOR CALL TRIGGER */
+    @keyframes pulse-call {
+      0% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.7); transform: scale(1); }
+      50% { box-shadow: 0 0 0 16px rgba(2, 132, 199, 0); transform: scale(1.02); }
+      100% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); transform: scale(1); }
+    }
+    @keyframes phone-shake {
+      0%, 100% { transform: rotate(0deg); }
+      20%, 60% { transform: rotate(-15deg); }
+      40%, 80% { transform: rotate(15deg); }
+    }
+    @keyframes live-dot {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* TOP URGENCY RIBBON */
     .top-ribbon {
-      background: linear-gradient(135deg, #e11d48, #9f1239);
-      color: white; text-align: center; padding: 11px 16px; font-size: 13px; font-weight: 700;
-      display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
+      background: linear-gradient(135deg, #be123c, #9f1239);
+      color: white; text-align: center; padding: 10px 16px; font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
     }
     .top-ribbon span.badge-pill {
-      background: rgba(255,255,255,0.22); padding: 3px 12px; border-radius: 20px; font-size: 11px;
+      background: #fbbf24; color: #78350f; padding: 3px 12px; border-radius: 20px; font-size: 11px; font-weight: 900;
+    }
+    .top-ribbon a.call-ribbon-link {
+      background: white; color: #9f1239; padding: 3px 14px; border-radius: 20px; font-weight: 900; text-decoration: none; font-size: 12px; display: inline-flex; align-items: center; gap: 5px;
     }
 
     /* LANGUAGE SELECTOR BAR */
     .lang-bar {
       background: #fdf2f4; border-bottom: 1px solid #fecdd3;
-      padding: 10px 20px; display: flex; align-items: center; justify-content: center;
-      gap: 12px; font-size: 13px; flex-wrap: wrap;
+      padding: 8px 20px; display: flex; align-items: center; justify-content: center;
+      gap: 12px; font-size: 12.5px; flex-wrap: wrap;
     }
     .lang-bar strong { color: #881337; font-weight: 800; }
     .lang-btn-group {
@@ -107,8 +166,8 @@
       display: inline-flex; border: 1px solid #fda4af; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
     .lang-btn {
-      border: none; background: transparent; padding: 6px 16px; border-radius: 20px;
-      font-size: 12px; font-weight: 800; cursor: pointer; transition: all 0.2s; color: var(--slate-700);
+      border: none; background: transparent; padding: 5px 14px; border-radius: 20px;
+      font-size: 11.5px; font-weight: 800; cursor: pointer; transition: all 0.2s; color: var(--slate-700);
     }
     .lang-btn.active {
       background: var(--rose); color: white; box-shadow: 0 2px 8px var(--rose-glow);
@@ -118,82 +177,121 @@
     header {
       position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.97);
       backdrop-filter: blur(10px); border-bottom: 1px solid #ffe4e6;
-      padding: 14px 28px; display: flex; justify-content: space-between; align-items: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      padding: 12px 24px; display: flex; justify-content: space-between; align-items: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
     }
-    .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .brand-logo {
       width: 44px; height: 44px; border-radius: 14px; background: linear-gradient(135deg, #e11d48, #be123c);
       color: white; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 20px;
       box-shadow: 0 4px 12px var(--rose-glow);
     }
-    .brand-text h1 { font-size: 19px; font-weight: 900; line-height: 1.1; color: var(--slate-900); }
-    .brand-text h1 span { color: var(--rose); font-size: 13px; }
+    .brand-text h1 { font-size: 18px; font-weight: 900; line-height: 1.1; color: var(--slate-900); }
+    .brand-text h1 span { color: var(--rose); font-size: 12px; }
     .brand-text p { font-size: 11px; color: var(--slate-500); margin-top: 2px; }
-    .header-actions { display: flex; gap: 10px; align-items: center; }
+    .header-actions { display: flex; gap: 8px; align-items: center; }
     .btn {
-      padding: 10px 20px; border-radius: 30px; font-size: 12.5px; font-weight: 800;
-      text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 18px; border-radius: 30px; font-size: 12px; font-weight: 800;
+      text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
       border: none; transition: all 0.2s;
     }
     .btn-rose { background: var(--rose); color: white; box-shadow: 0 4px 14px var(--rose-glow); }
     .btn-rose:hover { background: var(--rose-dark); transform: translateY(-1px); }
     .btn-wa { background: #25d366; color: #0f172a; font-weight: 800; }
-    .btn-call { background: #0284c7; color: white; font-weight: 800; }
-    .btn-outline { background: white; border: 1px solid #fda4af; color: var(--rose-dark); }
-    .btn-outline:hover { background: var(--rose-subtle); }
+    .btn-call {
+      background: linear-gradient(135deg, #0284c7, #0369a1); color: white; font-weight: 800;
+      animation: pulse-call 2.5s infinite;
+    }
+    .btn-call .phone-icon { display: inline-block; animation: phone-shake 1.5s infinite; }
 
     /* CONTAINER */
-    .container { max-width: 980px; margin: 0 auto; padding: 36px 20px; }
+    .container { max-width: 980px; margin: 0 auto; padding: 28px 18px; }
 
     /* HERO */
-    .hero { text-align: center; margin-bottom: 44px; }
+    .hero { text-align: center; margin-bottom: 36px; }
     .trust-pill {
       display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 30px;
       background: var(--rose-subtle); border: 1px solid #fecdd3; color: var(--rose-dark);
-      font-size: 12.5px; font-weight: 800; margin-bottom: 18px;
+      font-size: 12px; font-weight: 800; margin-bottom: 16px;
     }
     .hero h2 {
-      font-size: 33px; font-weight: 900; line-height: 1.25; margin-bottom: 18px; color: var(--slate-900);
+      font-size: 32px; font-weight: 900; line-height: 1.25; margin-bottom: 16px; color: var(--slate-900);
       letter-spacing: -0.5px;
     }
     .hero h2 .highlight { color: var(--rose); }
     .hero h2 .callout-box {
       background: linear-gradient(135deg, #fee2e2, #fff1f2); color: #991b1b;
-      padding: 6px 16px; border-radius: 14px; display: inline-block; font-size: 25px; margin-top: 8px;
+      padding: 6px 16px; border-radius: 14px; display: inline-block; font-size: 23px; margin-top: 8px;
       border: 1px dashed #f87171;
     }
     .hero-desc {
-      font-size: 16px; color: var(--slate-700); max-width: 740px; margin: 0 auto 26px; line-height: 1.65;
+      font-size: 15.5px; color: var(--slate-700); max-width: 740px; margin: 0 auto 22px; line-height: 1.65;
     }
-    .hero-cta-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
 
-    /* DIRECT CONTACT HIGHLIGHT BAR */
-    .contact-priority-bar {
-      background: linear-gradient(135deg, #ecfdf5, #d1fae5); border: 2px solid #6ee7b7;
-      border-radius: 20px; padding: 20px 24px; margin-bottom: 44px;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
-      box-shadow: 0 4px 16px rgba(16,185,129,0.08);
+    /* PROMINENT CALL-FIRST WIDGET */
+    .call-first-card {
+      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+      border: 2px solid #38bdf8; border-radius: 22px; padding: 22px 24px; margin: 0 auto 36px;
+      box-shadow: 0 8px 24px rgba(2, 132, 199, 0.12);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px;
     }
-    .cpb-left h4 { font-size: 17px; font-weight: 900; color: #064e3b; display: flex; align-items: center; gap: 8px; }
-    .cpb-left p { font-size: 12.5px; color: #047857; margin-top: 3px; max-width: 580px; }
-    .cpb-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+    .cf-profile { display: flex; align-items: center; gap: 14px; }
+    .cf-avatar {
+      width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(135deg, #e11d48, #be123c);
+      color: white; font-size: 26px; display: flex; align-items: center; justify-content: center;
+      position: relative; box-shadow: 0 4px 12px rgba(225,29,72,0.3);
+    }
+    .cf-live-badge {
+      position: absolute; bottom: 0; right: 0; width: 15px; height: 15px; border-radius: 50%;
+      background: #22c55e; border: 2.5px solid white; animation: live-dot 1.5s infinite;
+    }
+    .cf-text h4 { font-size: 17px; font-weight: 900; color: #0369a1; display: flex; align-items: center; gap: 6px; }
+    .cf-text p { font-size: 12.5px; color: #0284c7; margin-top: 2px; }
+    .cf-cta-box { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+    .btn-giant-call {
+      background: linear-gradient(135deg, #0284c7, #075985); color: white;
+      padding: 14px 28px; border-radius: 35px; font-size: 15px; font-weight: 900;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+      box-shadow: 0 6px 20px rgba(2,132,199,0.35); animation: pulse-call 2s infinite;
+    }
+    .btn-giant-call:hover { transform: scale(1.02); }
 
-    /* SECTION 1: THE ₹50-₹60 MARKET TRAP (KACHRA PLASTIC VS OVERPRICED COTTON) */
+    /* HEART-HITTING PSYCHOLOGICAL REALIZATION SECTION: DIL PE LAGE */
+    .realization-banner {
+      background: linear-gradient(135deg, #fff5f5, #fef2f2);
+      border: 2px solid #fca5a5; border-radius: 24px; padding: 30px 24px;
+      margin-bottom: 40px; box-shadow: 0 10px 30px rgba(220,38,38,0.06);
+    }
+    .rb-head { text-align: center; margin-bottom: 22px; }
+    .rb-head .rb-tag {
+      background: #dc2626; color: white; font-size: 11px; font-weight: 900; padding: 4px 14px;
+      border-radius: 20px; display: inline-block; text-transform: uppercase; margin-bottom: 8px;
+    }
+    .rb-head h3 { font-size: 24px; font-weight: 900; color: #991b1b; line-height: 1.3; }
+    .rb-head p { font-size: 14px; color: #7f1d1d; margin-top: 6px; max-width: 720px; margin-left: auto; margin-right: auto; }
+
+    .rb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 768px) { .rb-grid { grid-template-columns: 1fr; } }
+    .rb-card {
+      background: white; border-radius: 18px; padding: 22px; border: 1.5px solid #fecaca;
+      box-shadow: 0 2px 10px rgba(220,38,38,0.04);
+    }
+    .rb-icon { font-size: 32px; margin-bottom: 10px; }
+    .rb-title { font-size: 16px; font-weight: 900; color: #991b1b; margin-bottom: 6px; line-height: 1.35; }
+    .rb-body { font-size: 13px; color: var(--slate-700); line-height: 1.6; }
+    .rb-highlight { background: #fee2e2; color: #991b1b; font-weight: 800; padding: 1px 6px; border-radius: 4px; }
+
+    /* MARKET TRAP 3-COL GRID */
     .market-trap-card {
-      background: white; border: 2px solid #fda4af; border-radius: 24px; padding: 32px 24px;
-      margin-bottom: 48px; box-shadow: 0 10px 30px rgba(225,29,72,0.06);
+      background: white; border: 2px solid #fda4af; border-radius: 24px; padding: 30px 22px;
+      margin-bottom: 44px; box-shadow: 0 10px 30px rgba(225,29,72,0.06);
     }
-    .trap-head { text-align: center; margin-bottom: 26px; }
-    .trap-head h3 { font-size: 24px; font-weight: 900; color: #881337; }
-    .trap-head p { font-size: 14px; color: var(--slate-500); margin-top: 4px; max-width: 680px; margin-left: auto; margin-right: auto; }
-
-    .trap-3col-grid {
-      display: grid; grid-template-columns: 1fr 1fr 1.15fr; gap: 18px;
-    }
+    .trap-head { text-align: center; margin-bottom: 24px; }
+    .trap-head h3 { font-size: 23px; font-weight: 900; color: #881337; }
+    .trap-head p { font-size: 13.5px; color: var(--slate-500); margin-top: 4px; max-width: 680px; margin-left: auto; margin-right: auto; }
+    .trap-3col-grid { display: grid; grid-template-columns: 1fr 1fr 1.15fr; gap: 16px; }
     @media (max-width: 820px) { .trap-3col-grid { grid-template-columns: 1fr; } }
-
-    .trap-col { border-radius: 18px; padding: 22px; position: relative; }
+    .trap-col { border-radius: 18px; padding: 20px; }
     .trap-col.bad1 { background: #fff1f2; border: 1.5px solid #fecdd3; }
     .trap-col.bad2 { background: #fefce8; border: 1.5px solid #fef08a; }
     .trap-col.winner {
@@ -201,87 +299,97 @@
       box-shadow: 0 8px 24px rgba(34,197,94,0.15);
     }
     .t-badge {
-      font-size: 10.5px; font-weight: 900; padding: 4px 10px; border-radius: 20px;
+      font-size: 10px; font-weight: 900; padding: 3px 10px; border-radius: 20px;
       display: inline-block; text-transform: uppercase; margin-bottom: 8px;
     }
     .t-badge.bad { background: #fee2e2; color: #b91c1c; }
     .t-badge.warn { background: #fef9c3; color: #854d0e; }
     .t-badge.win { background: #dcfce7; color: #15803d; }
-    .t-title { font-size: 17px; font-weight: 900; margin-bottom: 4px; }
-    .t-price { font-size: 26px; font-weight: 900; margin-bottom: 12px; }
-    .t-points { list-style: none; display: flex; flex-direction: column; gap: 9px; font-size: 12.5px; }
+    .t-title { font-size: 16px; font-weight: 900; margin-bottom: 4px; }
+    .t-price { font-size: 24px; font-weight: 900; margin-bottom: 12px; }
+    .t-points { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 12px; }
     .t-points li { display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
 
-    /* SECTION 2: DANGERS OF PLASTIC PADS */
+    /* DANGERS SECTION */
     .danger-section {
       background: linear-gradient(135deg, #fef2f2, #fff5f5); border: 2px solid #fecaca;
-      border-radius: 24px; padding: 32px 24px; margin-bottom: 48px;
+      border-radius: 24px; padding: 30px 22px; margin-bottom: 44px;
     }
-    .danger-head { text-align: center; margin-bottom: 26px; }
-    .danger-head h3 { font-size: 24px; font-weight: 900; color: #991b1b; }
-    .danger-head p { font-size: 14px; color: #7f1d1d; margin-top: 4px; }
-    .danger-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .danger-head { text-align: center; margin-bottom: 22px; }
+    .danger-head h3 { font-size: 23px; font-weight: 900; color: #991b1b; }
+    .danger-head p { font-size: 13.5px; color: #7f1d1d; margin-top: 4px; }
+    .danger-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
     .danger-card {
       background: white; border: 1px solid #fecaca; border-radius: 16px; padding: 18px;
       box-shadow: 0 2px 8px rgba(220,38,38,0.04);
     }
-    .d-icon { font-size: 28px; margin-bottom: 8px; }
+    .d-icon { font-size: 26px; margin-bottom: 6px; }
     .d-title { font-size: 15px; font-weight: 900; color: #991b1b; margin-bottom: 4px; }
     .d-desc { font-size: 12.5px; color: var(--slate-700); line-height: 1.5; }
 
-    /* SECTION 3: HOW TO DETECT PLASTIC PADS (3-STEP DIY TEST) */
+    /* HOW TO DETECT SECTION */
     .detect-section {
-      background: #eff6ff; border: 2px solid #bfdbfe; border-radius: 24px; padding: 32px 24px;
-      margin-bottom: 48px;
+      background: #eff6ff; border: 2px solid #bfdbfe; border-radius: 24px; padding: 30px 22px;
+      margin-bottom: 44px;
     }
-    .detect-head { text-align: center; margin-bottom: 24px; }
-    .detect-head h3 { font-size: 24px; font-weight: 900; color: #1e3a8a; }
-    .detect-head p { font-size: 14px; color: #1d4ed8; margin-top: 4px; }
-    .detect-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-    .detect-card {
-      background: white; border: 1px solid #93c5fd; border-radius: 16px; padding: 20px;
-    }
+    .detect-head { text-align: center; margin-bottom: 20px; }
+    .detect-head h3 { font-size: 23px; font-weight: 900; color: #1e3a8a; }
+    .detect-head p { font-size: 13.5px; color: #1d4ed8; margin-top: 4px; }
+    .detect-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .detect-card { background: white; border: 1px solid #93c5fd; border-radius: 16px; padding: 18px; }
     .dt-num {
-      width: 32px; height: 32px; border-radius: 50%; background: #dbeafe; color: #1d4ed8;
-      display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 14px; margin-bottom: 10px;
+      width: 30px; height: 30px; border-radius: 50%; background: #dbeafe; color: #1d4ed8;
+      display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 13px; margin-bottom: 8px;
     }
-    .dt-title { font-size: 15px; font-weight: 800; color: #1e40af; margin-bottom: 6px; }
-    .dt-desc { font-size: 12.5px; color: var(--slate-700); line-height: 1.5; }
+    .dt-title { font-size: 14.5px; font-weight: 800; color: #1e40af; margin-bottom: 5px; }
+    .dt-desc { font-size: 12px; color: var(--slate-700); line-height: 1.5; }
 
-    /* SECTION 4: WHY JR INDIA WORKS AS AN NGO / SOCIAL MISSION */
+    /* NGO SECTION */
     .ngo-section {
       background: linear-gradient(135deg, #faf5ff, #f3e8ff); border: 2px solid #d8b4fe;
-      border-radius: 24px; padding: 32px 24px; margin-bottom: 48px;
+      border-radius: 24px; padding: 30px 22px; margin-bottom: 44px;
     }
-    .ngo-head { text-align: center; margin-bottom: 20px; }
-    .ngo-head h3 { font-size: 24px; font-weight: 900; color: #581c87; }
-    .ngo-head p { font-size: 14px; color: #6b21a8; max-width: 680px; margin: 4px auto 0; }
-    .ngo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-    .ngo-card {
-      background: white; border: 1px solid #e9d5ff; border-radius: 16px; padding: 18px;
-    }
+    .ngo-head { text-align: center; margin-bottom: 18px; }
+    .ngo-head h3 { font-size: 23px; font-weight: 900; color: #581c87; }
+    .ngo-head p { font-size: 13.5px; color: #6b21a8; max-width: 680px; margin: 4px auto 0; }
+    .ngo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .ngo-card { background: white; border: 1px solid #e9d5ff; border-radius: 16px; padding: 18px; }
     .ngo-icon { font-size: 26px; margin-bottom: 6px; }
     .ngo-title { font-size: 15px; font-weight: 900; color: #6b21a8; margin-bottom: 4px; }
     .ngo-desc { font-size: 12.5px; color: var(--slate-700); line-height: 1.5; }
 
-    /* SECTION 5: VIRAL SHARING TRAP (APNE APNO KO BHI NIKALEIN KHATRE SE) */
+    /* RELATIVE OBLIGATION / VIRAL SHARING TRAP */
     .viral-box {
       background: linear-gradient(135deg, #fff1f2, #ffe4e6); border: 2px dashed #f43f5e;
-      border-radius: 24px; padding: 30px 24px; margin-bottom: 48px; text-align: center;
+      border-radius: 24px; padding: 28px 22px; margin-bottom: 44px; text-align: center;
     }
-    .viral-box h3 { font-size: 24px; font-weight: 900; color: #9f1239; margin-bottom: 8px; }
-    .viral-box p { font-size: 14px; color: #881337; max-width: 680px; margin: 0 auto 20px; line-height: 1.6; }
+    .viral-box h3 { font-size: 23px; font-weight: 900; color: #9f1239; margin-bottom: 8px; }
+    .viral-box p { font-size: 14px; color: #881337; max-width: 700px; margin: 0 auto 18px; line-height: 1.6; }
     .viral-share-btn {
-      background: #25d366; color: #07090e; font-size: 15px; font-weight: 900; padding: 14px 28px;
-      border-radius: 35px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+      background: #25d366; color: #07090e; font-size: 14.5px; font-weight: 900; padding: 13px 26px;
+      border-radius: 35px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
       box-shadow: 0 4px 18px rgba(37,211,102,0.3); transition: all 0.2s;
     }
     .viral-share-btn:hover { transform: scale(1.02); }
 
-    /* CLAIM / ORDER CARD */
+    /* PRE-FORM DIRECT CALL DESK PROMPT */
+    .pre-form-call-alert {
+      background: #ecfdf5; border: 2px solid #10b981; border-radius: 20px;
+      padding: 16px 20px; margin-bottom: 22px; text-align: center;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .pfca-text { text-align: left; }
+    .pfca-text strong { color: #064e3b; font-size: 14.5px; display: block; }
+    .pfca-text span { color: #047857; font-size: 12.5px; }
+    .pfca-btn {
+      background: #047857; color: white; padding: 10px 20px; border-radius: 25px;
+      text-decoration: none; font-size: 13px; font-weight: 800; display: inline-flex; align-items: center; gap: 6px;
+    }
+
+    /* THE ORDER FORM CARD */
     .form-card {
       background: white; border: 2px solid #fda4af; border-radius: 26px; padding: 32px 24px;
-      box-shadow: 0 14px 40px rgba(225,29,72,0.08); max-width: 600px; margin: 0 auto 52px;
+      box-shadow: 0 14px 40px rgba(225,29,72,0.09); max-width: 620px; margin: 0 auto 50px;
       position: relative; overflow: hidden;
     }
     .form-badge {
@@ -290,47 +398,81 @@
       border-bottom-left-radius: 18px; letter-spacing: 0.5px;
     }
     .form-title { font-size: 24px; font-weight: 900; color: var(--slate-900); margin-bottom: 4px; }
-    .form-sub { font-size: 13px; color: var(--slate-500); margin-bottom: 22px; }
+    .form-sub { font-size: 13px; color: var(--slate-500); margin-bottom: 20px; }
 
-    .pack-selector { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 22px; }
+    /* 2 PACK OPTIONS: 1 PACK TRIAL VS 10 PACKS + FREE JR WASH */
+    .pack-selector { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 22px; }
+    @media (max-width: 580px) { .pack-selector { grid-template-columns: 1fr; } }
     .pack-option {
-      border: 2px solid #e2e8f0; border-radius: 16px; padding: 14px; cursor: pointer;
-      transition: all 0.2s; position: relative;
+      border: 2px solid #e2e8f0; border-radius: 18px; padding: 16px; cursor: pointer;
+      transition: all 0.25s; position: relative; background: #fff;
     }
-    .pack-option.selected { border-color: var(--rose); background: #fff1f2; }
+    .pack-option:hover { border-color: #f43f5e; transform: translateY(-2px); }
+    .pack-option.selected {
+      border-color: var(--rose); background: #fff1f2; box-shadow: 0 6px 20px var(--rose-glow);
+    }
     .pack-opt-badge {
-      position: absolute; top: -9px; right: 12px; background: var(--emerald-dark); color: white;
-      font-size: 9.5px; font-weight: 800; padding: 2px 8px; border-radius: 10px; text-transform: uppercase;
+      position: absolute; top: -10px; right: 12px; background: var(--slate-700); color: white;
+      font-size: 10px; font-weight: 800; padding: 2px 10px; border-radius: 10px; text-transform: uppercase;
     }
-    .pack-opt-title { font-size: 13.5px; font-weight: 800; color: var(--slate-900); }
-    .pack-opt-price { font-size: 18px; font-weight: 900; color: var(--rose); margin-top: 3px; }
-    .pack-opt-sub { font-size: 11px; color: var(--slate-500); margin-top: 2px; }
+    .pack-opt-badge.gold {
+      background: linear-gradient(135deg, #b45309, #d97706); color: white;
+    }
+    .pack-opt-title { font-size: 14px; font-weight: 900; color: var(--slate-900); margin-bottom: 4px; }
+    .pack-opt-price { font-size: 22px; font-weight: 900; color: var(--rose); }
+    .pack-opt-sub { font-size: 11.5px; color: var(--slate-600); margin-top: 4px; line-height: 1.4; }
+    .pack-opt-perk {
+      background: #dcfce7; color: #166534; font-size: 11px; font-weight: 800;
+      padding: 3px 8px; border-radius: 6px; display: inline-block; margin-top: 6px;
+    }
 
+    /* FORM INPUTS */
     .form-group { margin-bottom: 16px; }
     .form-label { display: block; font-size: 11.5px; font-weight: 800; text-transform: uppercase; color: var(--slate-700); margin-bottom: 5px; }
     .form-input, .form-textarea, .form-select {
-      width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid #cbd5e1;
+      width: 100%; padding: 12px 14px; border-radius: 12px; border: 1.5px solid #cbd5e1;
       font-size: 14px; outline: none; transition: border-color 0.2s; background: white;
     }
     .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--rose); }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .form-note { font-size: 10.5px; color: var(--slate-500); margin-top: 4px; display: block; }
+    .form-note { font-size: 11px; color: var(--slate-500); margin-top: 4px; display: block; }
 
+    /* LOCATION DETECTION BUTTON & CONTAINER */
+    .location-box {
+      background: #f8fafc; border: 2px dashed #94a3b8; border-radius: 16px;
+      padding: 16px; margin-bottom: 18px; text-align: center;
+    }
+    .location-box.detected {
+      background: #ecfdf5; border: 2px solid #10b981;
+    }
+    .btn-gps {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white;
+      padding: 12px 22px; border-radius: 30px; font-size: 13.5px; font-weight: 900;
+      border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.25); transition: all 0.2s;
+    }
+    .btn-gps:hover { transform: scale(1.02); background: #1d4ed8; }
+    .gps-status {
+      margin-top: 10px; font-size: 12.5px; color: #047857; font-weight: 700;
+    }
+
+    /* PRICE CALCULATION SUMMARY */
     .calc-box {
-      background: var(--rose-subtle); border: 1px solid #fecdd3; border-radius: 16px;
+      background: var(--rose-subtle); border: 1.5px solid #fecdd3; border-radius: 16px;
       padding: 16px; margin: 20px 0; font-size: 12.5px;
     }
     .calc-row { display: flex; justify-content: space-between; margin-bottom: 6px; color: var(--slate-700); }
     .calc-total {
       border-top: 1px solid #fda4af; padding-top: 8px; margin-top: 8px;
-      display: flex; justify-content: space-between; font-weight: 900; font-size: 15px; color: var(--slate-900);
+      display: flex; justify-content: space-between; font-weight: 900; font-size: 16px; color: var(--slate-900);
     }
     .btn-submit {
       width: 100%; padding: 16px; border-radius: 14px; background: linear-gradient(135deg, #e11d48, #9f1239);
       color: white; font-size: 16px; font-weight: 900; border: none; cursor: pointer;
       box-shadow: 0 4px 18px rgba(225,29,72,0.3); transition: all 0.2s;
     }
+    .btn-submit:hover { transform: scale(1.01); }
 
+    /* SUCCESS SCREEN */
     .success-box {
       background: #ecfdf5; border: 2px solid #a7f3d0; border-radius: 20px; padding: 28px; text-align: center;
     }
@@ -340,24 +482,25 @@
     }
     .order-summary {
       background: white; border: 1px solid #a7f3d0; border-radius: 14px; padding: 16px;
-      text-align: left; font-size: 13px; font-family: monospace; margin: 18px 0; line-height: 1.5;
+      text-align: left; font-size: 13px; font-family: monospace; margin: 18px 0; line-height: 1.6;
     }
 
     /* MOBILE STICKY FLOATING BOTTOM BAR */
     .sticky-mobile-bar {
       position: fixed; bottom: 0; left: 0; right: 0; z-index: 99;
-      background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(12px);
       border-top: 1px solid rgba(255,255,255,0.15); padding: 10px 16px;
       display: flex; gap: 10px; justify-content: center; align-items: center;
-      box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 -4px 25px rgba(0,0,0,0.25);
     }
     .smb-btn-call {
-      flex: 1; background: #0284c7; color: white; padding: 12px; border-radius: 30px;
-      text-decoration: none; font-weight: 900; font-size: 13px; display: flex; align-items: center; justify-content: center; gap: 6px;
+      flex: 1; background: linear-gradient(135deg, #0284c7, #0369a1); color: white; padding: 13px; border-radius: 30px;
+      text-decoration: none; font-weight: 900; font-size: 13.5px; display: flex; align-items: center; justify-content: center; gap: 6px;
+      animation: pulse-call 2s infinite;
     }
     .smb-btn-claim {
-      flex: 1.2; background: linear-gradient(135deg, #e11d48, #be123c); color: white; padding: 12px; border-radius: 30px;
-      text-decoration: none; font-weight: 900; font-size: 13px; display: flex; align-items: center; justify-content: center; gap: 6px;
+      flex: 1.2; background: linear-gradient(135deg, #e11d48, #be123c); color: white; padding: 13px; border-radius: 30px;
+      text-decoration: none; font-weight: 900; font-size: 13.5px; display: flex; align-items: center; justify-content: center; gap: 6px;
       box-shadow: 0 4px 12px var(--rose-glow);
     }
 
@@ -371,10 +514,11 @@
 </head>
 <body>
 
-  <!-- URGENCY TOP BAR -->
+  <!-- TOP URGENCY & CALL ALERT RIBBON -->
   <div class="top-ribbon" id="ribbon-text">
     <span class="badge-pill">⚠️ महिला स्वास्थ्य चेतावनी</span>
-    <span>दुकान पर 50-60 रुपये में प्लास्टिक कचरा मत खरीदिए! JR India 100% कॉटन पैड ट्रायल पैक मंगवाएं (सिर्फ ₹29 डिलीवरी)!</span>
+    <span>दुकान पर 50-60 रुपये में प्लास्टिक कचरा मत खरीदिए! JR India 100% असली कॉटन पैड मंगवाएं!</span>
+    <a href="tel:8591163040" class="call-ribbon-link">📞 कॉल करें: 85911 63040</a>
   </div>
 
   <!-- LANGUAGE SELECTOR BAR -->
@@ -397,11 +541,11 @@
       </div>
     </a>
     <div class="header-actions">
-      <a href="tel:8591163040" class="btn btn-call">
-        📞 85911 63040
+      <a href="tel:8591163040" class="btn btn-call" id="nav-call-btn">
+        <span class="phone-icon">📞</span> 85911 63040
       </a>
       <a href="#claim-form" class="btn btn-rose" id="nav-claim-btn">
-        मुफ़्त सैंपल लें →
+        ऑर्डर / सैंपल लें →
       </a>
     </div>
   </header>
@@ -421,29 +565,74 @@
       <p class="hero-desc" id="hero-desc">
         बाज़ार के आम पैड्स में 70% रिसाइकल प्लास्टिक और ब्लीचिंग केमिकल होते हैं जो प्राइवेट पार्ट्स में लाल दाने, असहनीय खुजली और गंभीर इन्फेक्शन करते हैं। <strong>सिर्फ ₹29 डिलीवरी चार्ज देकर आप बहुत बड़े खतरे से बच सकते हैं — प्लीज एक सैंपल जरूर लें!</strong>
       </p>
-      <div class="hero-cta-row">
-        <a href="#claim-form" class="btn btn-rose" style="font-size: 14px; padding: 13px 28px;" id="hero-cta1">
-          🌸 अपना मुफ़्त सैंपल पैक बुक करें (Pay ₹29) →
+    </div>
+
+    <!-- PROMINENT CALL-FIRST WIDGET -->
+    <div class="call-first-card">
+      <div class="cf-profile">
+        <div class="cf-avatar">
+          👩‍⚕️
+          <span class="cf-live-badge" title="Online Now"></span>
+        </div>
+        <div class="cf-text">
+          <h4 id="cf-title">📞 कोई भी झिझक न करें — अभी प्रिया दीदी से फोन पर बात करें</h4>
+          <p id="cf-sub">सीनियर महिला हेल्थ कंसल्टेंट (100% गोपनीय व नि:शुल्क परामर्श) · 1 मिनट में कॉल कनेक्ट होगा</p>
+        </div>
+      </div>
+      <div class="cf-cta-box">
+        <a href="tel:8591163040" class="btn-giant-call" id="cf-call-btn">
+          <span>📞 अभी कॉल लगाएं (85911 63040)</span>
         </a>
-        <a href="tel:8591163040" class="btn btn-call" style="font-size: 14px; padding: 13px 24px;" id="hero-cta2">
-          📞 हमारी महिला टीम से बात करें (Call Now)
+        <a href="https://wa.me/918591163040?text=Namaste%20Priya%20Didi,%20mujhe%20JR%20India%20sanitary%20pad%20ke%20baare%20me%20jaankari%20chahiye" target="_blank" class="btn btn-wa" style="font-size: 13px; padding: 13px 20px;">
+          💬 WhatsApp
         </a>
       </div>
     </div>
 
-    <!-- DIRECT CONTACT & DIAL CALL BAR -->
-    <div class="contact-priority-bar">
-      <div class="cpb-left">
-        <h4 id="cpb-h">📞 कोई भी संकोच न करें — सीधे हमसे कॉल या व्हाट्सएप पर बात करें</h4>
-        <p id="cpb-p">अगर आपको कोई भी शंका है, तो सीधे हमारी मध्य प्रदेश महिला हेल्थ सपोर्ट टीम को कॉल लगाएं। एक बार बात कर लें, हम आपको पूरी सही जानकारी समझा देंगे!</p>
+    <!-- HEART-HITTING PSYCHOLOGICAL REALIZATION: DIL PE LAGE -->
+    <div class="realization-banner">
+      <div class="rb-head">
+        <span class="rb-tag">आंखें खोल देने वाली सच्चाई</span>
+        <h3 id="rb-main-head">"क्या आप ₹50-60 बचाने या आलस के चक्कर में अपनी बेटी और बहन को जानलेवा बीमारियों में धकेल रही हैं?"</h3>
+        <p id="rb-main-sub">हर भारतीय महिला और मां को यह बात आज ही अपनी अंतरात्मा से पूछनी होगी — चुप रहकर आप अनजाने में अपने ही परिवार का जीवन खतरे में डाल रही हैं:</p>
       </div>
-      <div class="cpb-btns">
-        <a href="tel:8591163040" class="btn btn-call" style="font-size: 13px;">
-          📞 कॉल लगाएं (85911 63040)
-        </a>
-        <a href="https://wa.me/918591163040?text=Namaste%20JR%20India,%20mujhe%20sanitary%20pad%20ke%20baare%20me%20jaankari%20chahiye" target="_blank" class="btn btn-wa" style="font-size: 13px;">
-          💬 व्हाट्सएप पर पूछें
-        </a>
+
+      <div class="rb-grid">
+        <!-- Card 1: Mother's Duty -->
+        <div class="rb-card">
+          <div class="rb-icon">💔</div>
+          <div class="rb-title" id="rb-c1-t">1. एक मां का फर्ज: क्या आप अपनी मासूम बेटी को प्लास्टिक का जहर देंगी?</div>
+          <div class="rb-body" id="rb-c1-d">
+            जब एक 12-14 साल की बच्ची को पहली बार पीरियड आते हैं, तो मां उसे दुकान से ₹50 वाला प्लास्टिक पैड लाकर दे देती है। वही प्लास्टिक जाली 5 दिन तक उसकी सबसे नाजुक त्वचा को काटती है। <span class="rb-highlight">यही प्लास्टिक आगे चलकर 22-25 साल की उम्र में PCOD, बांझपन (Infertility) और बच्चेदानी की गांठों का कारण बनता है।</span> क्या एक मां अपनी बेटी के भविष्य से खिलवाड़ कर सकती है?
+          </div>
+        </div>
+
+        <!-- Card 2: 4 Plastic Bags Comparison -->
+        <div class="rb-card">
+          <div class="rb-icon">🛍️</div>
+          <div class="rb-title" id="rb-c2-t">2. सच्चाई: हर महीने 4 प्लास्टिक पॉलीथिन शरीर पर बांधना बंद कीजिए!</div>
+          <div class="rb-body" id="rb-c2-d">
+            मेडिकल रिपोर्ट्स के अनुसार, 1 आम बाज़ार पैड में <span class="rb-highlight">4 प्लास्टिक थैलियों (Polythene Bags)</span> जितना नॉन-ब्रीदेबल सिंथेटिक कचरा होता है। जब 35 डिग्री गर्मी में 6 घंटे तक यह प्लास्टिक शरीर से चिपका रहता है, तो हवा न मिलने के कारण वहां लाखों एनारोबिक बैक्टीरिया सड़ने लगते हैं। सोचिए, क्या आप अपने चेहरे पर 5 दिन तक प्लास्टिक चिपका कर रह सकती हैं?
+          </div>
+        </div>
+
+        <!-- Card 3: Infertility & White Discharge -->
+        <div class="rb-card">
+          <div class="rb-icon">⚠️</div>
+          <div class="rb-title" id="rb-c3-t">3. 80% महिलाओं में सफेद पानी व इन्फेक्शन का असली राज़</div>
+          <div class="rb-body" id="rb-c3-d">
+            स्त्री रोग विशेषज्ञों (Gynecologists) का कहना है कि क्लिनिक में आने वाली 80% महिलाओं के पेल्विक इन्फेक्शन (PID) और बदबूदार सफेद पानी का कारण उनकी कोई बीमारी नहीं, बल्कि वही <span class="rb-highlight">क्लोरीन ब्लीच किया हुआ प्लास्टिक पैड</span> है जो वो हर महीने मेडिकल स्टोर से खरीदती हैं। बाज़ार वाली कंपनियां खुशबूदार परफ्यूम डालकर इस सड़ांध को छिपाती हैं!
+          </div>
+        </div>
+
+        <!-- Card 4: Duty for Relatives -->
+        <div class="rb-card">
+          <div class="rb-icon">🌸</div>
+          <div class="rb-title" id="rb-c4-t">4. अपने अपनों को बचाइए: संकोच नहीं, सुरक्षा बांटिए!</div>
+          <div class="rb-body" id="rb-c4-d">
+            आपकी मां, आपकी सास, आपकी बहन, आपकी भाभी और आपकी सहेलियां — सब इसी जलन और रैश को खामोशी से सह रही हैं क्योंकि हमारे समाज में महिलाएं इस पर बात नहीं करतीं। <span class="rb-highlight">JR India का 10 पैक्स का सुरक्षा बंडल मंगवाएं — खुद भी सुरक्षित रहें और अपने घर की हर महिला को 1-1 पैक देकर उन्हें जीवनदान दें!</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -482,7 +671,7 @@
         <div class="trap-col winner">
           <span class="t-badge win" id="t3-badge">🌟 रास्ता 3: असली समाधान (JR India)</span>
           <div class="t-title" style="color: #15803d;" id="t3-title">JR INDIA 100% ब्रीदेबल कॉटन पैड</div>
-          <div class="t-price" style="color: #15803d;">₹0 ट्रायल <span style="font-size: 13px; font-weight: normal; color: #166534;">(मंथली पैक ₹5/पैड मात्र)</span></div>
+          <div class="t-price" style="color: #15803d;">₹0 ट्रायल <span style="font-size: 13px; font-weight: normal; color: #166534;">(10 पैक्स पर ₹50 OFF + Free JR Wash)</span></div>
           <ul class="t-points">
             <li><span>✅</span> <span id="t3-p1"><strong>100% शुद्ध ऑर्गेनिक कॉटन</strong> — कोई प्लास्टिक नहीं, मक्खन जैसी कोमलता।</span></li>
             <li><span>✅</span> <span id="t3-p2"><strong>आम बाज़ार रेट पर बेस्ट क्वालिटी</strong> — NGO मॉडल पर आधारित मिशन।</span></li>
@@ -580,13 +769,13 @@
       </div>
     </div>
 
-    <!-- SECTION 5: VIRAL SHARING TRAP (APNE APNO KO BHI NIKALEIN KHATRE SE) -->
+    <!-- SECTION 5: VIRAL SHARING TRAP -->
     <div class="viral-box">
       <h3 id="vb-h3">📢 "अपने अपनों को भी निकालें खतरे से बाहर!"</h3>
       <p id="vb-p">
         क्या आप चाहेंगी कि आपकी बहन, बेटी, मां या सहेली हर महीने वही प्लास्टिक की जलन और इन्फेक्शन सहे? यह सिर्फ एक प्रोडक्ट नहीं, बल्कि हर महिला की सुरक्षा का सवाल है। अगर आप किसी भी महिला को जानती हैं, तो उन्हें यह जानकारी तुरंत व्हाट्सएप पर भेजें!
       </p>
-      <a id="viral-wa-btn" href="https://api.whatsapp.com/send?text=%F0%9F%8C%B8%20%E0%A4%A6%E0%A5%80%E0%A4%A6%E0%A5%80%2F%E0%A4%AC%E0%A4%B9%E0%A4%A8%2C%20%E0%A4%AA%E0%A5%8D%E0%A4%B2%E0%A5%80%E0%A4%9C%20%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A8%20%E0%A4%B8%E0%A5%87%20%E0%A4%AA%E0%A4%A2%E0%A4%BC%E0%A5%87%E0%A4%82!%0A%0A%E0%A4%9C%E0%A5%8B%20%E0%A4%AA%E0%A5%88%E0%A4%A1%20%E0%A4%B9%E0%A4%AE%20%E0%A4%A6%E0%A5%81%E0%A4%95%E0%A4%BE%E0%A4%A8%20%E0%A4%B8%E0%A5%87%2050-60%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B2%E0%A4%BE%E0%A4%A4%E0%A5%87%20%E0%A4%B9%E0%A5%88%E0%A4%82%20%E0%A4%89%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%82%2070%25%20%E0%A4%AA%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%BF%E0%A4%95%20%E0%A4%B9%E0%A5%8B%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88%20%E0%A4%9C%E0%A4%BF%E0%A4%B8%E0%A4%B8%E0%A5%87%20%E0%A4%B0%E0%A5%88%E0%A4%B6%E0%A5%87%E0%A4%9C%E0%A4%BC%2C%20%E0%A4%96%E0%A5%81%E0%A4%9C%E0%A4%B2%E0%A5%80%20%E0%A4%94%E0%A4%B0%20%E0%A4%87%E0%A4%A8%E0%A5%8D%E0%A4%AB%E0%A5%87%E0%A4%95%E0%A5%8D%E0%A4%B6%E0%A4%A8%20%E0%A4%B9%E0%A5%8B%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4%0A%0AJR%20India%20%E0%A4%A8%E0%A5%87%20100%25%20%E0%A4%91%E0%A4%B0%E0%A5%8D%E0%A4%97%E0%A5%87%E0%A4%A8%E0%A4%BF%E0%A4%95%20%E0%A4%95%E0%A5%89%E0%A4%9F%E0%A4%A8%20%E0%A4%AA%E0%A5%88%E0%A4%A1%20%E0%A4%95%E0%A4%BE%20Free%20Trial%20%E0%A4%B6%E0%A5%81%E0%A4%B0%E0%A5%82%20%E0%A4%95%E0%A4%BF%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88%20%E0%A4%B8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%AB%20%E2%82%B929%20%E0%A4%A1%E0%A4%BF%E0%A4%B2%E0%A5%80%E0%A4%B5%E0%A4%B0%E0%A5%80%20%E0%A4%AE%E0%A5%87%E0%A4%82%E0%A5%A4%20%E0%A4%85%E0%A4%AA%E0%A4%A8%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F%20%E0%A4%94%E0%A4%B0%20%E0%A4%AC%E0%A4%9A%E0%A5%8D%E0%A4%9A%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F%20%E0%A4%AF%E0%A4%B9%E0%A4%BE%E0%A4%82%20%E0%A4%B8%E0%A5%87%20%E0%A4%AE%E0%A4%82%E0%A4%97%E0%A4%B5%E0%A4%BE%E0%A4%8F%E0%A4%82%3A%20https%3A%2F%2Fshardagadeshwar-glitch.github.io%2Fjr-india%2F" target="_blank" class="viral-share-btn" id="vb-btn">
+      <a id="viral-wa-btn" href="https://api.whatsapp.com/send?text=%F0%9F%8C%B8%20%E0%A4%A6%E0%A5%80%E0%A4%A6%E0%A5%80%2F%E0%A4%AC%E0%A4%B9%E0%A4%A8%2C%20%E0%A4%AA%E0%A5%8D%E0%A4%B2%E0%A5%80%E0%A4%9C%20%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A8%20%E0%A4%B8%E0%A5%87%20%E0%A4%AA%E0%A4%A2%E0%A4%BC%E0%A5%87%E0%A4%82!%0A%0A%E0%A4%9C%E0%A5%8B%20%E0%A4%AA%E0%A5%88%E0%A4%A1%20%E0%A4%B9%E0%A4%AE%20%E0%A4%A6%E0%A5%81%E0%A4%95%E0%A4%BE%E0%A4%A8%20%E0%A4%B8%E0%A5%87%2050-60%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B2%E0%A4%BE%E0%A4%A4%E0%A5%87%20%E0%A4%B9%E0%A5%88%E0%A4%82%20%E0%A4%89%E0%A4%B8%E0%A4%AE%E0%A5%87%E0%A4%82%2070%25%20%E0%A4%AA%E0%A5%8D%E0%A4%B2%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%BF%E0%A4%99%20%E0%A4%B9%E0%A5%8B%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88%20%E0%A4%9C%E0%A4%BF%E0%A4%B8%E0%A4%B8%E0%A5%87%20%E0%A4%B0%E0%A5%88%E0%A4%B6%E0%A5%87%E0%A4%9C%E0%A4%BC%2C%20%E0%A4%96%E0%A5%81%E0%A4%9C%E0%A4%B2%E0%A5%80%20%E0%A4%94%E0%A4%B0%20%E0%A4%87%E0%A4%A8%E0%A5%8D%E0%A4%AB%E0%A5%87%E0%A4%95%E0%A5%8D%E0%A4%B6%E0%A4%A8%20%E0%A4%B9%E0%A5%8B%E0%A4%A4%E0%A4%BE%20%E0%A4%B9%E0%A5%88%E0%A5%A4%0A%0AJR%20India%20%E0%A4%A8%E0%A5%87%20100%25%20%E0%A4%91%E0%A4%B0%E0%A5%8D%E0%A4%97%E0%A5%87%E0%A4%A8%E0%A4%BF%E0%A4%95%20%E0%A4%95%E0%A5%89%E0%A4%9F%E0%A4%A8%20%E0%A4%AA%E0%A5%88%E0%A4%A1%20%E0%A4%95%E0%A4%BE%20Free%20Trial%20%E0%A4%B6%E0%A5%81%E0%A4%B0%E0%A5%82%20%E0%A4%95%E0%A4%BF%E0%A4%AF%E0%A4%BE%20%E0%A4%B9%E0%A5%88%20%E0%A4%B8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%AB%20%E2%82%B929%20%E0%A4%A1%E0%A4%BF%E0%A4%B2%E0%A5%80%E0%A4%B5%E0%A4%B0%E0%A5%80%20%E0%A4%AE%E0%A5%87%E0%A4%82%E0%A5%A4%20%E0%A4%85%E0%A4%AA%E0%A4%A8%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F%20%E0%A4%94%E0%A4%B0%20%E0%A4%AC%E0%A4%9A%E0%A5%8D%E0%A4%9A%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F%20%E0%A4%AF%E0%A4%B9%E0%A4%BE%E0%A4%82%20%E0%A4%B8%E0%A5%87%20%E0%A4%AE%E0%A4%82%E0%A4%97%E0%A4%B5%E0%A4%BE%E0%A4%8F%E0%A4%82%3A%20https%3A%2F%2Fshardagadeshwar-glitch.github.io%2Fjr-india%2F" target="_blank" class="viral-share-btn" id="vb-btn">
         💬 सभी महिलाओं व सहेलियों को WhatsApp पर बताएं →
       </a>
     </div>
@@ -594,47 +783,82 @@
     <!-- CLAIM FORM ANCHOR -->
     <div id="claim-form"></div>
 
-    <!-- THE CLAIM FORM CARD -->
+    <!-- PRE-FORM DIRECT CALL DESK ALERT -->
+    <div class="pre-form-call-alert">
+      <div class="pfca-text">
+        <strong>📞 फॉर्म भरने से पहले फोन पर बात कर लें?</strong>
+        <span>अगर कोई भी सवाल या संदेह है, तो 2 मिनट में सीधे हमारी महिला टीम को कॉल लगाएं:</span>
+      </div>
+      <a href="tel:8591163040" class="pfca-btn">
+        📞 सीधे कॉल लगाएं (85911 63040)
+      </a>
+    </div>
+
+    <!-- THE CLAIM & REGISTRATION FORM CARD -->
     <div class="form-card">
-      <div class="form-badge">Limited Health Initiative</div>
-      <div class="form-title" id="form-title">🌸 अपना मुफ़्त ट्रायल पैक बुक करें</div>
-      <div class="form-sub" id="form-sub">सिर्फ एक बार आज़मा कर देखें — अगर संतुष्ट न हों, तो ₹29 डिलीवरी चार्ज भी वापस!</div>
+      <div class="form-badge">Special Health Offer</div>
+      <div class="form-title" id="form-title">🌸 अपना पैक चुनें व ऑर्डर करें</div>
+      <div class="form-sub" id="form-sub">100% गोपनीय पैकिंग (Discreet Packing) में सीधे आपके घर डिलीवर होगा</div>
 
       <div id="form-content">
-        <label class="form-label" id="lbl-select-pack">पैक विकल्प चुनें / Select Option *</label>
+        <label class="form-label" id="lbl-select-pack">पैक विकल्प चुनें / Select Your Offer *</label>
+        
+        <!-- 2 OFFERS SELECTOR -->
         <div class="pack-selector">
-          <div class="pack-option selected" id="opt-trial" onclick="selectPack('trial')">
-            <span class="pack-opt-badge">मोस्ट पॉपुलर</span>
-            <div class="pack-opt-title" id="opt-t1">🌸 मुफ़्त 2-Pad ट्रायल पैक</div>
-            <div class="pack-opt-price">₹0 <span style="font-size: 11.5px; font-weight: normal; color: var(--slate-500);">(₹29 डिलीवरी)</span></div>
-            <div class="pack-opt-sub" id="opt-s1">खुद टेस्ट करने के लिए बेस्ट</div>
+          
+          <!-- Offer 1: Sample Pack (No Offer) -->
+          <div class="pack-option" id="opt-trial" onclick="selectPack('trial')">
+            <span class="pack-opt-badge">1 पैक सैंपल (नो ऑफर)</span>
+            <div class="pack-opt-title" id="opt-t1">🌸 1 पैक सैंपल (ट्रायल)</div>
+            <div class="pack-opt-price">₹0 <span style="font-size: 12px; font-weight: normal; color: var(--slate-500);">(₹29 डिलीवरी)</span></div>
+            <div class="pack-opt-sub" id="opt-s1">सिर्फ खुद टेस्ट करने के लिए। इस पर कोई एक्स्ट्रा ऑफर या गिफ्ट नहीं है।</div>
+            <div style="font-size: 11px; color: #64748b; margin-top: 6px;">₹0 उत्पाद + ₹29 कूरियर</div>
           </div>
-          <div class="pack-option" id="opt-monthly" onclick="selectPack('monthly')">
-            <span class="pack-opt-badge" style="background: #2563eb;">फ्री डिलीवरी</span>
-            <div class="pack-opt-title" id="opt-t2">📦 30-Pad मंथली पैक</div>
-            <div class="pack-opt-price">₹149 <span style="font-size: 11.5px; font-weight: normal; color: var(--slate-500);">(₹5/पैड)</span></div>
-            <div class="pack-opt-sub" id="opt-s2">पूरे महीने की पूरी सुरक्षा</div>
+
+          <!-- Offer 2: 10 Packs Bundle (₹50 OFF + FREE JR WASH) -->
+          <div class="pack-option selected" id="opt-bundle10" onclick="selectPack('bundle10')">
+            <span class="pack-opt-badge gold">🔥 ₹50 OFF + FREE JR WASH</span>
+            <div class="pack-opt-title" id="opt-t2">👑 10 पैक्स सुरक्षा व परिवार बंडल</div>
+            <div class="pack-opt-price">₹449 <span style="font-size: 12px; text-decoration: line-through; color: #94a3b8; font-weight: normal;">₹499</span></div>
+            <div class="pack-opt-sub" id="opt-s2">
+              <strong>❤️ Please आप खुद भी लें और अपनों (मां, बेटी, बहन, सहेली) को 1-1 पैक जरूर बांटे!</strong>
+            </div>
+            <div class="pack-opt-perk">🎁 1 JR Wash (₹149 Free) + फ्री डिलीवरी</div>
           </div>
+
         </div>
 
         <form onsubmit="handleOrderSubmit(event)">
           <div class="form-group">
-            <label class="form-label" id="lbl-name">आपका पूरा नाम *</label>
-            <input type="text" id="cust-name" required placeholder="उदा. पूजा शर्मा / सुनीता वर्मा" class="form-input">
+            <label class="form-label" id="lbl-name">आपका पूरा नाम / Name *</label>
+            <input type="text" id="cust-name" required placeholder="उदा. रेखा शर्मा / पूजा वर्मा" class="form-input">
           </div>
 
           <div class="form-group">
-            <label class="form-label" id="lbl-phone">व्हाट्सएप मोबाइल नंबर *</label>
+            <label class="form-label" id="lbl-phone">संपर्क / व्हाट्सएप मोबाइल नंबर (Contact Number) *</label>
             <input type="tel" id="cust-phone" required placeholder="उदा. 98260 12345" class="form-input">
-            <span class="form-note" id="phone-note">* इस नंबर पर ट्रैकिंग और डिलीवरी की जानकारी भेजी जाएगी।</span>
+            <span class="form-note" id="phone-note">* इस नंबर पर कॉल करके डिलीवरी टीम संपर्क करेगी।</span>
+          </div>
+
+          <!-- 1-CLICK LOCATION ACCESS & DETECTION -->
+          <div class="location-box" id="loc-box">
+            <label class="form-label" style="margin-bottom: 8px;">📍 डिलीवरी लोकेशन दर्ज करें / Give Your Location *</label>
+            <p style="font-size: 12px; color: var(--slate-600); margin-bottom: 12px;">
+              सटीक डिलीवरी के लिए नीचे बटन दबाकर अपनी लोकेशन एक्सेस (Allow Location) दें:
+            </p>
+            <button type="button" class="btn-gps" id="btn-detect-loc" onclick="detectUserLocation()">
+              <span>📍 Give Location / ऑटो-डिटेक्ट लोकेशन</span>
+            </button>
+            <div class="gps-status" id="gps-status-text" style="display: none;"></div>
+            <input type="hidden" id="cust-gps-coords" value="">
           </div>
 
           <div class="form-group">
-            <label class="form-label" id="lbl-addr">घर का पूरा पता (डिलीवरी पता) *</label>
-            <textarea id="cust-addr" rows="2" required placeholder="मकान नंबर, गली/मोहल्ला, लैंडमार्क..." class="form-textarea"></textarea>
+            <label class="form-label" id="lbl-addr">मकान नंबर / गली / गांव / लैंडमार्क (Address Landmark) *</label>
+            <textarea id="cust-addr" rows="2" required placeholder="उदा. वार्ड नंबर 4, स्टेशन रोड, पुरानी तहसील के पास..." class="form-textarea"></textarea>
           </div>
 
-          <div class="form-row">
+          <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
             <div class="form-group">
               <label class="form-label" id="lbl-city">शहर / कस्बा / तहसील *</label>
               <select id="cust-city" class="form-select">
@@ -646,6 +870,10 @@
                 <option value="Rahatgaon">Rahatgaon (राहतगांव)</option>
                 <option value="Seoni Malwa">Seoni Malwa (सिवनी मालवा)</option>
                 <option value="Itarsi">Itarsi (इटारसी)</option>
+                <option value="Hoshangabad">Hoshangabad (नर्मदापुरम)</option>
+                <option value="Betul">Betul (बैतूल)</option>
+                <option value="Bhopal">Bhopal (भोपाल)</option>
+                <option value="Indore">Indore (इंदौर)</option>
                 <option value="Other MP Town">अन्य शहर (Other MP)</option>
               </select>
             </div>
@@ -655,45 +883,57 @@
             </div>
           </div>
 
-          <!-- Price Calculation -->
+          <!-- Price Calculation Box -->
           <div class="calc-box">
             <div class="calc-row">
-              <span id="calc-l1">JR India उत्पाद मूल्य:</span>
-              <strong id="calc-v1" style="color: var(--emerald-dark);"><span style="text-decoration: line-through; color: #94a3b8; font-weight: normal; margin-right: 4px;">₹40</span> मुफ़्त (₹0)</strong>
+              <span id="calc-l1">चुना हुआ पैक:</span>
+              <strong id="calc-v1">10 पैक्स सुरक्षा बंडल (MRP ₹499)</strong>
             </div>
             <div class="calc-row">
-              <span id="calc-l2">मानक कूरियर व होम डिलीवरी:</span>
-              <strong id="calc-v2">₹29</strong>
+              <span id="calc-l2">स्पेशल ऑफर छूट:</span>
+              <strong id="calc-v2" style="color: #047857;">- ₹50 फ्लैट छूट (FLAT OFF)</strong>
+            </div>
+            <div class="calc-row">
+              <span id="calc-l3">मुफ़्त उपहार (Free Gift):</span>
+              <strong id="calc-v3" style="color: #047857;">1 JR Intimate Wash (₹149 FREE 🎁)</strong>
+            </div>
+            <div class="calc-row">
+              <span id="calc-l4">डिलीवरी चार्ज:</span>
+              <strong id="calc-v4" style="color: #047857;"><span style="text-decoration: line-through; color: #94a3b8; font-weight: normal; margin-right: 4px;">₹50</span> मुफ़्त (₹0 Free Delivery)</strong>
             </div>
             <div class="calc-total">
-              <span id="calc-lt">आपको सिर्फ देना है:</span>
-              <span id="calc-vt" style="color: var(--rose);">₹29 मात्र</span>
+              <span id="calc-lt">कुल देय राशि (Total Payable):</span>
+              <span id="calc-vt" style="color: var(--rose);">₹449 मात्र</span>
             </div>
           </div>
 
           <button type="submit" class="btn-submit" id="submit-btn">
-            मेरा मुफ़्त पैक भेजें (Pay ₹29) →
+            👑 10 पैक्स बंडल + फ्री JR Wash ऑर्डर करें (Pay ₹449) →
           </button>
         </form>
       </div>
 
+      <!-- SUCCESS SCREEN -->
       <div id="success-view" style="display: none;" class="success-box">
         <div class="success-check">✓</div>
-        <h4 style="font-size: 19px; font-weight: 900; color: #064e3b; margin-bottom: 6px;" id="succ-head">
+        <h4 style="font-size: 20px; font-weight: 900; color: #064e3b; margin-bottom: 6px;" id="succ-head">
           बधाई हो! आपका ऑर्डर सफलतापूर्वक दर्ज हो गया है!
         </h4>
-        <p style="font-size: 13px; color: #047857;" id="succ-sub">
-          गोपनीय पैकिंग (Discreet Brown Box) में आपका पार्सल तैयार किया जा रहा है। नीचे दिए गए सीधे UPI से ₹29 का भुगतान करें:
+        <p style="font-size: 13.5px; color: #047857;" id="succ-sub">
+          गोपनीय पैकिंग (100% Discreet Brown Box) में आपका पार्सल तैयार किया जा रहा है। नीचे दिए गए सीधे UPI या व्हाट्सएप से कन्फर्म करें:
         </p>
 
         <div class="order-summary" id="order-summary-box"></div>
 
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <a id="upi-link" href="#" class="btn" style="background: linear-gradient(135deg, #10b981, #059669); color: white; justify-content: center; font-size: 14px; padding: 13px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a id="upi-link" href="#" class="btn" style="background: linear-gradient(135deg, #10b981, #059669); color: white; justify-content: center; font-size: 15px; padding: 14px;">
             ⚡ PhonePe / GPay / Paytm से भुगतान करें
           </a>
-          <a id="wa-order-link" href="#" target="_blank" class="btn btn-wa" style="justify-content: center; font-size: 13px; padding: 12px;">
+          <a id="wa-order-link" href="#" target="_blank" class="btn btn-wa" style="justify-content: center; font-size: 14px; padding: 13px;">
             💬 व्हाट्सएप पर ऑर्डर कन्फर्म करें
+          </a>
+          <a href="tel:8591163040" class="btn btn-call" style="justify-content: center; font-size: 14px; padding: 13px;">
+            📞 सीधे कॉल पर बात करें: 85911 63040
           </a>
         </div>
       </div>
@@ -704,10 +944,10 @@
   <!-- FLOATING MOBILE BOTTOM BAR (DIRECT CALL & CLAIM) -->
   <div class="sticky-mobile-bar">
     <a href="tel:8591163040" class="smb-btn-call">
-      📞 कॉल लगाएं
+      <span class="phone-icon">📞</span> कॉल लगाएं
     </a>
     <a href="#claim-form" class="smb-btn-claim">
-      🌸 मुफ़्त सैंपल लें (₹29)
+      🌸 10 पैक्स + Free Wash (₹449)
     </a>
   </div>
 
@@ -715,22 +955,26 @@
   <footer>
     <strong>JR INDIA PRIVATE LIMITED</strong><br>
     <span id="footer-text">शासकीय पंजीकृत सैनिटरी केयर विनिर्माण व महिला स्वास्थ्य जागरूकता पहल · मेक इन मध्य प्रदेश</span><br>
-    <div style="margin-top: 8px; font-size: 11.5px;">Women Helpline: +91 85911 63040 · Harda, Timarni & Itarsi Project</div>
+    <div style="margin-top: 8px; font-size: 11.5px;">Women Helpline: +91 85911 63040 · Harda, Timarni, Khirkiya & MP Project</div>
   </footer>
 
   <script>
-    const STRINGS = {
+    var STRINGS = {
       hi: {
-        ribbon: '<span class="badge-pill">⚠️ महिला स्वास्थ्य चेतावनी</span> <span>दुकान पर 50-60 रुपये में प्लास्टिक कचरा मत खरीदिए! JR India 100% कॉटन पैड ट्रायल पैक मंगवाएं (सिर्फ ₹29 डिलीवरी)!</span>',
+        ribbon: '<span class="badge-pill">⚠️ महिला स्वास्थ्य चेतावनी</span> <span>दुकान पर 50-60 रुपये में प्लास्टिक कचरा मत खरीदिए! JR India 100% असली कॉटन पैड मंगवाएं!</span> <a href="tel:8591163040" class="call-ribbon-link">📞 कॉल करें: 85911 63040</a>',
         subHeader: "महिला स्वास्थ्य व हाइजीन जागरूकता मिशन · मेक इन मध्य प्रदेश",
-        navClaim: "मुफ़्त सैंपल लें →",
+        navClaim: "ऑर्डर / सैंपल लें →",
         trustBadge: "✓ 100% शुद्ध ऑर्गेनिक कॉटन · 0% प्लास्टिक कचरा · ग्रीन एनायन सुरक्षा · जीरो रैश",
         heroTitle: 'दुकान पर 50-60 रुपये में आपको प्लास्टिक कचरा मिलता है! <br><span class="highlight">और अच्छी क्वालिटी के पैड्स ₹300-₹400 के आते हैं!</span> <br><span class="callout-box">JR India: आम बाज़ार रेट पर 100% असली कॉटन पैड!</span>',
         heroDesc: "बाज़ार के आम पैड्स में 70% रिसाइकल प्लास्टिक और ब्लीचिंग केमिकल होते हैं जो प्राइवेट पार्ट्स में लाल दाने, असहनीय खुजली और गंभीर इन्फेक्शन करते हैं। <strong>सिर्फ ₹29 डिलीवरी चार्ज देकर आप बहुत बड़े खतरे से बच सकते हैं — प्लीज एक सैंपल जरूर लें!</strong>",
-        heroCta1: "🌸 अपना मुफ़्त सैंपल पैक बुक करें (Pay ₹29) →",
-        heroCta2: "📞 हमारी महिला टीम से बात करें (Call Now)",
-        cpbH: "📞 कोई भी संकोच न करें — सीधे हमसे कॉल या व्हाट्सएप पर बात करें",
-        cpbP: "अगर आपको कोई भी शंका है, तो सीधे हमारी मध्य प्रदेश महिला हेल्थ सपोर्ट टीम को कॉल लगाएं। एक बार बात कर लें, हम आपको पूरी सही जानकारी समझा देंगे!",
+        
+        cfTitle: "📞 कोई भी झिझक न करें — अभी प्रिया दीदी से फोन पर बात करें",
+        cfSub: "सीनियर महिला हेल्थ कंसल्टेंट (100% गोपनीय व नि:शुल्क परामर्श) · 1 मिनट में कॉल कनेक्ट होगा",
+        cfCallBtn: "<span>📞 अभी कॉल लगाएं (85911 63040)</span>",
+
+        rbMainHead: '"क्या आप ₹50-60 बचाने या आलस के चक्कर में अपनी बेटी और बहन को जानलेवा बीमारियों में धकेल रही हैं?"',
+        rbMainSub: "हर भारतीय महिला और मां को यह बात आज ही अपनी अंतरात्मा से पूछनी होगी — चुप रहकर आप अनजाने में अपने ही परिवार का जीवन खतरे में डाल रही हैं:",
+
         trapH3: "⚖️ बाज़ार का सबसे बड़ा ट्रैप: कचरा प्लास्टिक या बेहिसाब महंगाई?",
         trapP: "हर महिला के सामने बाज़ार ने सिर्फ दो गलत रास्ते रखे थे — अब JR India ने तीसरा और सबसे सही रास्ता बनाया है:",
         dangerH3: "⚠️ प्लास्टिक पैड इस्तेमाल करने के 4 गंभीर व खौफनाक नुकसान",
@@ -742,20 +986,25 @@
         vbH3: '📢 "अपने अपनों को भी निकालें खतरे से बाहर!"',
         vbP: "क्या आप चाहेंगी कि आपकी बहन, बेटी, मां या सहेली हर महीने वही प्लास्टिक की जलन और इन्फेक्शन सहे? यह सिर्फ एक प्रोडक्ट नहीं, बल्कि हर महिला की सुरक्षा का सवाल है। अगर आप किसी भी महिला को जानती हैं, तो उन्हें यह जानकारी तुरंत व्हाट्सएप पर भेजें!",
         vbBtn: "💬 सभी महिलाओं व सहेलियों को WhatsApp पर बताएं →",
-        submitBtnTrial: "मेरा मुफ़्त पैक भेजें (Pay ₹29) →",
-        submitBtnMonthly: "मंथली पैक ऑर्डर करें (Pay ₹149) →"
+
+        submitBtnTrial: "मेरा मुफ़्त सैंपल भेजें (Pay ₹29) →",
+        submitBtnBundle: "👑 10 पैक्स बंडल + फ्री JR Wash ऑर्डर करें (Pay ₹449) →"
       },
       hinglish: {
-        ribbon: '<span class="badge-pill">⚠️ Health Alert</span> <span>Dukan par 50-60 rupees me plastic kachra mat lijiye! JR India 100% Cotton Pad trial pack mangwayein (Sirf ₹29 delivery)!</span>',
+        ribbon: '<span class="badge-pill">⚠️ Health Alert</span> <span>Dukan par 50-60 rupees me plastic kachra mat lijiye! JR India 100% Cotton Pad mangwayein!</span> <a href="tel:8591163040" class="call-ribbon-link">📞 Call: 85911 63040</a>',
         subHeader: "Women Healthcare & Hygiene Mission · Make in MP",
-        navClaim: "Claim Free Sample →",
+        navClaim: "Order / Sample Lein →",
         trustBadge: "✓ 100% Pure Organic Cotton · 0% Plastic Waste · Green Anion Shield · Zero Rash",
         heroTitle: 'Dukan Par 50-60 Rs Me Aapko Plastic Kachra Milta Hai! <br><span class="highlight">Aur Acchi Quality Ke Cotton Pads ₹300-₹400 Ke Aate Hain!</span> <br><span class="callout-box">JR India: Normal Market Rate Par 100% Asli Cotton Pad!</span>',
         heroDesc: "Bazaar ke commercial pads me 70% recycled plastic aur bleaching chemicals hote hain jo private parts me rashes, jalan aur infection karte hain. <strong>Sirf ₹29 delivery charge dekar aap bahut bade danger se bach sakte hain — please ek sample zaroor lein!</strong>",
-        heroCta1: "🌸 Apna Free Sample Book Karein (Pay ₹29) →",
-        heroCta2: "📞 Hamari Women Team Ko Call Karein (Direct)",
-        cpbH: "📞 Koi Bhi Sharam Ya Sankoch Na Karein — Seedhe Call Ya WhatsApp Par Baat Karein",
-        cpbP: "Agar aapko koi bhi shanka ya sawal hai, toh seedhe hamari MP women support team se baat karein. Ek baar phone laga lijiye, hum aapko pura sahi system samjha denge!",
+
+        cfTitle: "📞 Koi Bhi Sharam Ya Jhijhak Na Karein — Priya Didi Se Call Par Baat Karein",
+        cfSub: "Senior Women Health Specialist (100% Private & Free Advice) · 1 minute me direct call",
+        cfCallBtn: "<span>📞 Abhi Seedhe Call Lagayein (85911 63040)</span>",
+
+        rbMainHead: '"Kya aap ₹50-60 bachane ya aalas ke chakkar me apni beti aur behan ko plastic ki bimariyon me dhakel rahi hain?"',
+        rbMainSub: "Har maa aur mahila ko ye baat dil pe realize karni hogi — chup rehkar anjaane me aap apne apno ko khatre me daal rahi hain:",
+
         trapH3: "⚖️ Bazaar Ka Sabse Bada Trap: Kachra Plastic Ya Overpriced Cotton?",
         trapP: "Har aurat ke samne market ne sirf do galat raaste rakhe the — ab JR India ne teesra aur sahi raasta banaya hai:",
         dangerH3: "⚠️ Plastic Pads Use Karne Ke 4 Khatarnak Nuksaan",
@@ -763,24 +1012,29 @@
         detectH3: "🔍 Kaise Pata Lagayein Ki Aapka Pad Plastic Hai? (3 Easy Home Tests)",
         detectP: "Aaj hi apni drawer se koi bhi bazaar ka pad nikalein aur khud 2 minute me test karein:",
         ngoH3: "🤝 JR India: Business Nahi, MP Ki Behano Ka Health Mission",
-        ngoP: "Hum greedy MNCs ki tarah ₹400 lootne nahi aaye hain — hamara aim har gaon aur sheher ke ghar-ghar tak organic cotton pahunchana hai:",
+        ngoP: "Hum greedy MNCs ki tarah lootne nahi aaye hain — hamara aim har gaon aur sheher ke ghar-ghar tak organic cotton pahunchana hai:",
         vbH3: '📢 "Apne Apno Ko Bhi Nikalein Khatre Se Bahar!"',
         vbP: "Kya aap chahengi ki aapki behan, beti ya saheli roz plastic ki jalan aur infection jhele? Agar aap kisi bhi mahila ko jaanti hain, toh unhe ye alert abhi WhatsApp par share karein!",
         vbBtn: "💬 Apni Sabhi Behano Ko WhatsApp Par Alert Bhejein →",
-        submitBtnTrial: "Mera Free Pack Bhejo (Pay ₹29) →",
-        submitBtnMonthly: "Monthly Pack Order Karein (Pay ₹149) →"
+
+        submitBtnTrial: "Mera Free Sample Bhejo (Pay ₹29) →",
+        submitBtnBundle: "👑 10 Packs Bundle + Free JR Wash Order Karein (Pay ₹449) →"
       },
       en: {
-        ribbon: '<span class="badge-pill">⚠️ Women Health Alert</span> <span>Stop buying ₹50-60 plastic waste in shops! Order JR India 100% Cotton Pad trial pack (Only ₹29 delivery)!</span>',
+        ribbon: '<span class="badge-pill">⚠️ Women Health Alert</span> <span>Stop buying ₹50-60 plastic waste in shops! Order JR India 100% Cotton Pads!</span> <a href="tel:8591163040" class="call-ribbon-link">📞 Call: 85911 63040</a>',
         subHeader: "Women Healthcare & Hygiene Mission · Make in MP",
-        navClaim: "Claim Free Sample →",
+        navClaim: "Order / Sample →",
         trustBadge: "✓ 100% Pure Organic Cotton · 0% Plastic Waste · Green Anion Shield · Zero Rash",
         heroTitle: 'Commercial ₹50-60 Pads Give You Synthetic Plastic Waste! <br><span class="highlight">While High-End Organic Pads Cost ₹300-₹400!</span> <br><span class="callout-box">JR India: 100% Pure Cotton Pads At Normal Market Rates!</span>',
         heroDesc: "Commercial pads contain 70% recycled synthetic plastic and chlorine bleach causing painful rashes and severe infections. <strong>By paying just ₹29 nominal delivery fee, you can protect yourself from serious health dangers — please claim a sample today!</strong>",
-        heroCta1: "🌸 Book Your Free Sample Pack (Pay ₹29) →",
-        heroCta2: "📞 Speak With Our Women Team (Call Now)",
-        cpbH: "📞 Don't Hesitate — Call Or WhatsApp Us Directly",
-        cpbP: "If you have any questions or doubts, talk directly with our Madhya Pradesh women healthcare support team. Call us right away!",
+
+        cfTitle: "📞 Do Not Hesitate — Speak Directly With Priya Didi",
+        cfSub: "Senior Women Healthcare Consultant (100% Confidential & Free Consultation)",
+        cfCallBtn: "<span>📞 Call Now (85911 63040)</span>",
+
+        rbMainHead: '"Are you unknowingly pushing your daughter and sister into toxic plastic diseases just to save ₹50-60?"',
+        rbMainSub: "Every mother and woman must realize this truth today — staying silent puts your loved ones future reproductive health at risk:",
+
         trapH3: "⚖️ The Market Dilemma: Toxic Plastic vs Overpriced Luxury Cotton?",
         trapP: "Big corporations gave women only two bad choices — now JR India brings the true affordable organic solution:",
         dangerH3: "⚠️ 4 Dangerous Consequences Of Plastic Sanitary Pads",
@@ -788,36 +1042,42 @@
         detectH3: "🔍 How To Detect If Your Pad Is Plastic? (3 Easy DIY Tests)",
         detectP: "Take any pad from your cabinet today and perform these 2-minute scientific tests:",
         ngoH3: "🤝 JR India: Not A Greedy Business, But A True Social Health Mission",
-        ngoP: "We don't charge luxury prices like foreign MNCs — our goal is to deliver pure organic cotton to every single household at normal market rates:",
+        ngoP: "We dont charge luxury prices like foreign MNCs — our goal is to deliver pure organic cotton to every single household at normal market rates:",
         vbH3: '📢 "Save Your Loved Ones From Plastic Dangers!"',
         vbP: "Would you want your sister, daughter, mother, or friends to suffer from plastic friction and infections? If you know any woman, share this life-saving awareness on WhatsApp now!",
         vbBtn: "💬 Share Health Alert On WhatsApp →",
+
         submitBtnTrial: "Send My Free Trial Pack (Pay ₹29) →",
-        submitBtnMonthly: "Order Monthly 30-Pad Pack (Pay ₹149) →"
+        submitBtnBundle: "👑 Order 10 Packs Bundle + Free JR Wash (Pay ₹449) →"
       }
     };
 
-    let activeLang = 'hi';
-    let selectedPack = 'trial';
+    var activeLang = 'hi';
+    var selectedPack = 'bundle10'; // Default to the 10-pack bundle offer
 
     function switchLanguage(lang) {
       activeLang = lang;
-      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-      const activeBtn = Array.from(document.querySelectorAll('.lang-btn')).find(b => b.textContent.toLowerCase().includes(lang));
+      document.querySelectorAll('.lang-btn').forEach(function(btn) { btn.classList.remove('active'); });
+      var activeBtn = Array.from(document.querySelectorAll('.lang-btn')).find(function(b) {
+        return b.textContent.toLowerCase().includes(lang);
+      });
       if (activeBtn) activeBtn.classList.add('active');
 
-      const s = STRINGS[lang];
+      var s = STRINGS[lang];
       document.getElementById('ribbon-text').innerHTML = s.ribbon;
       document.getElementById('sub-header').textContent = s.subHeader;
       document.getElementById('nav-claim-btn').textContent = s.navClaim;
       document.getElementById('trust-badge').textContent = s.trustBadge;
       document.getElementById('hero-title').innerHTML = s.heroTitle;
       document.getElementById('hero-desc').innerHTML = s.heroDesc;
-      document.getElementById('hero-cta1').textContent = s.heroCta1;
-      document.getElementById('hero-cta2').textContent = s.heroCta2;
 
-      document.getElementById('cpb-h').textContent = s.cpbH;
-      document.getElementById('cpb-p').textContent = s.cpbP;
+      document.getElementById('cf-title').textContent = s.cfTitle;
+      document.getElementById('cf-sub').textContent = s.cfSub;
+      document.getElementById('cf-call-btn').innerHTML = s.cfCallBtn;
+
+      document.getElementById('rb-main-head').textContent = s.rbMainHead;
+      document.getElementById('rb-main-sub').textContent = s.rbMainSub;
+
       document.getElementById('trap-h3').textContent = s.trapH3;
       document.getElementById('trap-p').textContent = s.trapP;
       document.getElementById('danger-h3').textContent = s.dangerH3;
@@ -836,57 +1096,152 @@
     function selectPack(packType) {
       selectedPack = packType;
       document.getElementById('opt-trial').classList.toggle('selected', packType === 'trial');
-      document.getElementById('opt-monthly').classList.toggle('selected', packType === 'monthly');
+      document.getElementById('opt-bundle10').classList.toggle('selected', packType === 'bundle10');
       updatePriceCalc();
     }
 
     function updatePriceCalc() {
-      const s = STRINGS[activeLang];
+      var s = STRINGS[activeLang];
       if (selectedPack === 'trial') {
-        document.getElementById('calc-v1').innerHTML = '<span style="text-decoration: line-through; color: #94a3b8; font-weight: normal; margin-right: 4px;">₹40</span> मुफ़्त (₹0)';
-        document.getElementById('calc-v2').textContent = '₹29';
+        document.getElementById('calc-v1').innerHTML = '1 पैक सैंपल (₹0 उत्पाद मूल्य)';
+        document.getElementById('calc-v2').innerHTML = '<span style="color: #64748b;">लागू नहीं (नो ऑफर)</span>';
+        document.getElementById('calc-v3').innerHTML = '<span style="color: #64748b;">लागू नहीं</span>';
+        document.getElementById('calc-v4').innerHTML = '₹29 (मानक कूरियर चार्ज)';
         document.getElementById('calc-vt').textContent = '₹29 मात्र';
         document.getElementById('submit-btn').textContent = s.submitBtnTrial;
       } else {
-        document.getElementById('calc-v1').innerHTML = '₹149 <span style="font-size: 11px; color: #64748b;">(30 Pads)</span>';
-        document.getElementById('calc-v2').innerHTML = '<span style="text-decoration: line-through; color: #94a3b8; font-weight: normal; margin-right: 4px;">₹50</span> मुफ़्त (₹0)';
-        document.getElementById('calc-vt').textContent = '₹149 मात्र';
-        document.getElementById('submit-btn').textContent = s.submitBtnMonthly;
+        document.getElementById('calc-v1').innerHTML = '10 पैक्स सुरक्षा व उपहार बंडल (MRP ₹499)';
+        document.getElementById('calc-v2').innerHTML = '- ₹50 फ्लैट छूट (FLAT OFF)';
+        document.getElementById('calc-v3').innerHTML = '1 JR Intimate Wash (₹149 FREE 🎁)';
+        document.getElementById('calc-v4').innerHTML = '<span style="text-decoration: line-through; color: #94a3b8; font-weight: normal; margin-right: 4px;">₹50</span> मुफ़्त (₹0 Free Delivery)';
+        document.getElementById('calc-vt').textContent = '₹449 मात्र';
+        document.getElementById('submit-btn').textContent = s.submitBtnBundle;
       }
+    }
+
+    // 1-CLICK LOCATION ACCESS & GEOLOCATION DETECTION
+    function detectUserLocation() {
+      var btn = document.getElementById('btn-detect-loc');
+      var statusDiv = document.getElementById('gps-status-text');
+      var box = document.getElementById('loc-box');
+      var coordsInput = document.getElementById('cust-gps-coords');
+      var addrText = document.getElementById('cust-addr');
+
+      if (!navigator.geolocation) {
+        statusDiv.style.display = 'block';
+        statusDiv.style.color = '#dc2626';
+        statusDiv.textContent = '❌ आपके ब्राउज़र में GPS सपोर्ट नहीं है। कृपया नीचे पता लिखें।';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '<span>⏳ लोकेशन अनुमति मांग रहे हैं... (Allow Karein)</span>';
+      statusDiv.style.display = 'block';
+      statusDiv.style.color = '#0284c7';
+      statusDiv.textContent = '📍 कृपया अपने स्क्रीन पर "Allow" (अनुमति दें) पर क्लिक करें...';
+
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          var lat = position.coords.latitude.toFixed(5);
+          var lon = position.coords.longitude.toFixed(5);
+          var acc = Math.round(position.coords.accuracy);
+
+          coordsInput.value = lat + ',' + lon;
+          box.classList.add('detected');
+
+          btn.innerHTML = '<span>✅ लोकेशन सफलतापूर्वक दर्ज हो गई!</span>';
+          btn.style.background = '#059669';
+
+          statusDiv.style.color = '#047857';
+          statusDiv.innerHTML = '✓ <strong>GPS Captured:</strong> Lat ' + lat + ', Lon ' + lon + ' (सटीकता: ±' + acc + 'm)<br>🔒 आपकी सटीक लोकेशन डिलीवरी एजेंट को मैप लिंक के साथ भेजी जाएगी!';
+
+          // Reverse geocode via Nominatim API if available
+          try {
+            fetch('https://nominatim.openstreetmap.org/reverse?format=json&lat=' + lat + '&lon=' + lon)
+              .then(function(res) { return res.json(); })
+              .then(function(data) {
+                if (data && data.display_name) {
+                  if (!addrText.value.trim()) {
+                    addrText.value = data.display_name;
+                  }
+                  var sub = (data.address && (data.address.suburb || data.address.village || data.address.town || data.address.city)) || '';
+                  var state = (data.address && data.address.state) || 'MP';
+                  statusDiv.innerHTML += '<br>📍 <em>पहचाना गया क्षेत्र: ' + sub + ', ' + state + '</em>';
+                }
+              }).catch(function(e) { console.log('Reverse geocode bypassed'); });
+          } catch(e) {
+            console.log('Reverse geocode bypassed');
+          }
+        },
+        function(err) {
+          btn.disabled = false;
+          btn.innerHTML = '<span>📍 पुनः प्रयास करें (Click For Location)</span>';
+          statusDiv.style.color = '#b91c1c';
+          if (err.code === 1) {
+            statusDiv.textContent = '⚠️ लोकेशन अनुमति अस्वीकार (Blocked) की गई। कोई बात नहीं, कृपया नीचे अपना पता लिख दें।';
+          } else {
+            statusDiv.textContent = '⚠️ लोकेशन डिटेक्ट नहीं हो पाई। कृपया नीचे अपना घर/गांव का पता लिख दें।';
+          }
+        },
+        { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 }
+      );
     }
 
     function handleOrderSubmit(e) {
       e.preventDefault();
-      const name = document.getElementById('cust-name').value;
-      const phone = document.getElementById('cust-phone').value;
-      const addr = document.getElementById('cust-addr').value;
-      const city = document.getElementById('cust-city').value;
-      const pin = document.getElementById('cust-pin').value;
-      const amount = selectedPack === 'trial' ? 29 : 149;
-      const packName = selectedPack === 'trial' ? "Free 2-Pad Trial Pack" : "30-Pad Monthly Pack";
+      var name = document.getElementById('cust-name').value;
+      var phone = document.getElementById('cust-phone').value;
+      var addr = document.getElementById('cust-addr').value;
+      var city = document.getElementById('cust-city').value;
+      var pin = document.getElementById('cust-pin').value;
+      var gps = document.getElementById('cust-gps-coords').value || 'Manual Address';
+      
+      var amount = selectedPack === 'trial' ? 29 : 449;
+      var packName = selectedPack === 'trial' 
+        ? "1 Pack Trial Sample (₹0 Product + ₹29 Delivery)" 
+        : "10-Packs Family & Gifting Bundle (+ ₹50 OFF + FREE 1 JR Wash Bottle + Free Delivery)";
 
-      const orderData = { name, phone, address: addr, city, pincode: pin, pack: packName, amount, time: new Date().toISOString() };
-      const savedOrders = JSON.parse(localStorage.getItem('jr_standalone_orders') || '[]');
+      var orderData = { 
+        name: name, 
+        phone: phone, 
+        address: addr, 
+        city: city, 
+        pincode: pin, 
+        gps: gps,
+        pack: packName, 
+        amount: amount, 
+        time: new Date().toISOString() 
+      };
+
+      var savedOrders = JSON.parse(localStorage.getItem('jr_standalone_orders') || '[]');
       savedOrders.unshift(orderData);
       localStorage.setItem('jr_standalone_orders', JSON.stringify(savedOrders));
 
       document.getElementById('form-content').style.display = 'none';
       document.getElementById('success-view').style.display = 'block';
 
-      document.getElementById('order-summary-box').innerHTML = `
-        <strong>Naam:</strong> ${name}<br>
-        <strong>Phone:</strong> ${phone}<br>
-        <strong>Pata:</strong> ${addr}, ${city} (${pin})<br>
-        <strong>Selected Item:</strong> ${packName}<br>
-        <strong>Payable Amount:</strong> ₹${amount}
-      `;
+      var mapLink = gps !== 'Manual Address' 
+        ? '<a href="https://maps.google.com/?q=' + gps + '" target="_blank" style="color: #2563eb;">📍 मैप पर लोकेशन देखें (' + gps + ')</a>' 
+        : 'सामान्य पता';
+
+      document.getElementById('order-summary-box').innerHTML = 
+        '<strong>Naam:</strong> ' + name + '<br>' +
+        '<strong>Phone:</strong> ' + phone + '<br>' +
+        '<strong>Pata:</strong> ' + addr + ', ' + city + ' (' + pin + ')<br>' +
+        '<strong>GPS Location:</strong> ' + mapLink + '<br>' +
+        '<strong>Selected Item:</strong> ' + packName + '<br>' +
+        '<strong>Payable Amount:</strong> ₹' + amount;
 
       // Set UPI link
-      document.getElementById('upi-link').href = `upi://pay?pa=8591163040@okaxis&pn=JR%20India%20Pvt%20Ltd&am=${amount}&cu=INR&tn=Order%20${phone}`;
+      document.getElementById('upi-link').href = 'upi://pay?pa=8591163040@okaxis&pn=JR%20India%20Pvt%20Ltd&am=' + amount + '&cu=INR&tn=Order%20' + phone;
 
-      // Set WhatsApp confirm link
-      const waMsg = `Namaste JR India! 🙏%0AMaine order book kiya hai:%0A*Item:* ${encodeURIComponent(packName)}%0A*Naam:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Pata:* ${encodeURIComponent(addr)}, ${encodeURIComponent(city)} (${encodeURIComponent(pin)})%0A*Payable:* ₹${amount}%0APlease dispatch confirm karein!`;
-      document.getElementById('wa-order-link').href = `https://wa.me/918591163040?text=${waMsg}`;
+      // Set WhatsApp confirm link with GPS coords if available
+      var waMsg = 'Namaste JR India! 🙏%0AMaine order book kiya hai:%0A*Item:* ' + encodeURIComponent(packName) + '%0A*Naam:* ' + encodeURIComponent(name) + '%0A*Phone:* ' + encodeURIComponent(phone) + '%0A*Pata:* ' + encodeURIComponent(addr) + ', ' + encodeURIComponent(city) + ' (' + encodeURIComponent(pin) + ')%0A*Payable:* ₹' + amount;
+      if (gps !== 'Manual Address') {
+        waMsg += '%0A*GPS Location:* https://maps.google.com/?q=' + gps;
+      }
+      waMsg += '%0APlease dispatch confirm karein!';
+      document.getElementById('wa-order-link').href = 'https://wa.me/918591163040?text=' + waMsg;
     }
   </script>
 </body>
