@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JR INDIA — हरदा हर घर मिशन: 571 गाँव की-कनेक्टर्स कंट्रोलर (v6.0)</title>
+  <title>JR INDIA — हरदा हर घर मिशन: स्कूल डायरेक्टरी & की-कनेक्टर्स (v7.0)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -191,6 +191,7 @@
       border-bottom: 1px solid var(--border);
       margin-bottom: 20px;
       padding-bottom: 2px;
+      overflow-x: auto;
     }
 
     .tab-btn {
@@ -207,6 +208,7 @@
       gap: 8px;
       transition: all 0.15s;
       border-bottom: 2px solid transparent;
+      white-space: nowrap;
     }
 
     .tab-btn:hover {
@@ -243,13 +245,14 @@
       border-radius: 12px;
     }
 
-    .hero-tab-badge {
+    .pink-tab-badge {
       background: #fdf2f8;
-      color: #9d174d;
+      color: #be185d;
       font-size: 11px;
       font-weight: 800;
       padding: 2px 8px;
       border-radius: 12px;
+      border: 1px solid #fbcfe8;
     }
 
     .gold-tab-badge {
@@ -263,9 +266,9 @@
     }
 
     /* ========================================================== */
-    /* KEY CONNECTORS STRATEGY HERO BANNER                        */
+    /* HERO CARDS & BANNERS                                       */
     /* ========================================================== */
-    .strategy-hero-banner {
+    .hero-banner-box {
       background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
       border: 1px solid #cbd5e1;
       border-radius: 14px;
@@ -274,7 +277,7 @@
       box-shadow: var(--shadow-sm);
     }
 
-    .strategy-top-row {
+    .hero-banner-top {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -283,10 +286,14 @@
       gap: 14px;
     }
 
-    .strategy-title-group {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .badge-pill-header {
+      background: linear-gradient(135deg, #e11d48, #be123c);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
     }
 
     .badge-pill-strategy {
@@ -299,52 +306,53 @@
       letter-spacing: 0.5px;
     }
 
-    .strategy-heading {
+    .hero-heading {
       font-size: 18px;
       font-weight: 800;
       color: var(--text);
     }
 
-    .strategy-desc {
+    .hero-sub {
       font-size: 12.5px;
       color: var(--text-dark);
       margin-top: 3px;
       line-height: 1.4;
     }
 
-    .counter-block-right {
+    .mega-stat-badge {
       background: #fff;
-      border: 2px solid #059669;
+      border: 2px solid #2563eb;
       padding: 8px 18px;
       border-radius: 10px;
       text-align: right;
       box-shadow: var(--shadow-sm);
     }
 
-    .counter-block-label {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    .mega-stat-badge-pink {
+      background: #fff;
+      border: 2px solid #db2777;
+      padding: 8px 18px;
+      border-radius: 10px;
+      text-align: right;
+      box-shadow: var(--shadow-sm);
     }
 
-    .counter-block-num {
+    .mega-stat-num {
       font-size: 24px;
       font-weight: 900;
-      color: #059669;
+      color: var(--primary);
       line-height: 1.1;
     }
 
-    /* Strategy 5 Pillars Grid */
-    .strategy-pillars-grid {
+    /* Pillars Grid */
+    .pillars-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 12px;
       margin-top: 14px;
     }
 
-    .spillar-card {
+    .pillar-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 10px;
@@ -355,13 +363,13 @@
       transition: all 0.2s;
     }
 
-    .spillar-card:hover {
+    .pillar-card:hover {
       border-color: #94a3b8;
       box-shadow: var(--shadow-sm);
       transform: translateY(-1px);
     }
 
-    .spillar-icon {
+    .pillar-icon {
       width: 42px;
       height: 42px;
       border-radius: 8px;
@@ -372,38 +380,23 @@
       flex-shrink: 0;
     }
 
-    .spillar-count {
+    .pillar-count {
       font-size: 17px;
       font-weight: 800;
       color: var(--text);
       line-height: 1.2;
     }
 
-    .spillar-name {
+    .pillar-name {
       font-size: 12px;
       font-weight: 700;
       color: var(--text-dark);
     }
 
-    .spillar-sub {
+    .pillar-sub {
       font-size: 11px;
       color: var(--text-muted);
       margin-top: 1px;
-    }
-
-    .strategy-rule-callout {
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      border-radius: 10px;
-      padding: 12px 16px;
-      margin-top: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 12.5px;
-      color: #1e3a8a;
     }
 
     /* Filter Bar */
@@ -513,12 +506,11 @@
       font-weight: 700;
       white-space: nowrap;
     }
-    .cat-parlour { background: #fdf2f8; color: #be185d; border: 1px solid #fbcfe8; }
-    .cat-shg { background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; }
-    .cat-asha { background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; }
-    .cat-csc { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
-    .cat-ration { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
-    .cat-urban { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+    .cat-girls-exclusive { background: #fdf2f8; color: #be185d; border: 1px solid #fbcfe8; }
+    .cat-kgbv { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .cat-govt-coed { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+    .cat-college { background: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe; }
+    .cat-private { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
 
     /* Action buttons */
     .btn-call {
@@ -527,50 +519,52 @@
       color: #1d4ed8;
       font-size: 11px;
       font-weight: 700;
-      padding: 4px 8px;
+      padding: 5px 10px;
       border-radius: 6px;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 4px;
+      white-space: nowrap;
     }
     .btn-call:hover {
       background: #2563eb;
       color: #fff;
     }
 
-    .btn-whatsapp-meet {
+    .btn-whatsapp-school {
       background: #ecfdf5;
       border: 1px solid #a7f3d0;
       color: #047857;
       font-size: 11px;
       font-weight: 700;
-      padding: 4px 8px;
+      padding: 5px 10px;
       border-radius: 6px;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 4px;
+      white-space: nowrap;
     }
-    .btn-whatsapp-meet:hover {
+    .btn-whatsapp-school:hover {
       background: #059669;
       color: #fff;
     }
 
-    .btn-copy-sm {
+    .btn-copy-all {
       background: #f1f5f9;
       border: 1px solid #cbd5e1;
       color: #334155;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
-      padding: 4px 8px;
-      border-radius: 6px;
+      padding: 8px 14px;
+      border-radius: 8px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
     }
-    .btn-copy-sm:hover {
+    .btn-copy-all:hover {
       background: #e2e8f0;
       color: #0f172a;
     }
@@ -606,25 +600,25 @@
       <div class="brand-logo-badge">JR INDIA</div>
       <div>
         <div class="brand-title">
-          <span>हरदा हर घर पैड मिशन — 571 गाँव की-कनेक्टर्स इंजन</span>
-          <span style="font-size: 11px; font-weight: 700; color: #166534; background: #dcfce7; padding: 2px 6px; border-radius: 4px;">v6.0 KEY CONNECTORS</span>
+          <span>हरदा हर घर पैड मिशन — स्कूल डायरेक्टरी & की-कनेक्टर्स इंजन</span>
+          <span style="font-size: 11px; font-weight: 700; color: #be185d; background: #fdf2f8; padding: 2px 6px; border-radius: 4px;">v7.0 SCHOOLS SPECIAL</span>
         </div>
-        <div class="brand-subtitle">शारदा दीदी (9713773339) • 571 गाँव × 3-5 सक्रिय की-कनेक्टर्स (हर घर सीधा नेटवर्क)</div>
+        <div class="brand-subtitle">शारदा दीदी (9713773339) • 92 पात्र कन्या स्कूल/कॉलेज (36,191 छात्राएं) & 571 गाँव की-कनेक्टर्स</div>
       </div>
     </div>
 
     <div class="top-actions">
       <div class="live-indicator">
         <span class="live-dot"></span>
-        <span>571 गाँव & 2,855 कनेक्टर्स मैप्ड</span>
+        <span>92 स्कूल • 36,191 छात्राएं लाइव</span>
       </div>
 
       <a href="http://localhost:5050/jr-india-portal.html" target="_blank" class="btn-action">
         <span>🌐 ग्राहक पोर्टल देखें</span>
       </a>
 
-      <button class="btn-action btn-emerald" onclick="switchTab('connectors')">
-        <span>👑 की-कनेक्टर कंट्रोलर</span>
+      <button class="btn-action btn-primary" onclick="switchTab('schools')">
+        <span>🏫 स्कूल डायरेक्टरी खोलें</span>
       </button>
     </div>
   </header>
@@ -634,14 +628,19 @@
 
     <!-- Navigation Tabs -->
     <div class="nav-tabs">
-      <button class="tab-btn active" id="tab-connectors-btn" onclick="switchTab('connectors')">
-        <span>👑 की-कनेक्टर इंजन (571 गाँव × की-कनेक्टर्स)</span>
-        <span class="gold-tab-badge">🔥 हर घर फॉर्मूला (2,855)</span>
+      <button class="tab-btn active" id="tab-schools-btn" onclick="switchTab('schools')">
+        <span>🏫 ऑल स्कूल & कॉलेज डायरेक्टरी (All Schools)</span>
+        <span class="pink-tab-badge">92 स्कूल • 36,191 छात्राएं</span>
+      </button>
+
+      <button class="tab-btn" id="tab-connectors-btn" onclick="switchTab('connectors')">
+        <span>👑 571 गाँव की-कनेक्टर्स इंजन</span>
+        <span class="gold-tab-badge">2,855 कनेक्टर्स</span>
       </button>
 
       <button class="tab-btn" id="tab-villages-btn" onclick="switchTab('villages')">
         <span>🏘️ 226 क्षेत्र मास्टर लिस्ट & डीप-डाइव</span>
-        <span class="emerald-tab-badge">226 क्षेत्र लाइव</span>
+        <span class="emerald-tab-badge">226 क्षेत्र</span>
       </button>
 
       <button class="tab-btn" id="tab-orders-btn" onclick="switchTab('orders')">
@@ -651,7 +650,6 @@
 
       <button class="tab-btn" id="tab-findai-btn" onclick="switchTab('findai')">
         <span>🔎 FIND AI (डिस्कवरी इंजन)</span>
-        <span class="hero-tab-badge">GEMINI CORE</span>
       </button>
 
       <button class="tab-btn" id="tab-b2b-btn" onclick="switchTab('b2b')">
@@ -661,139 +659,133 @@
     </div>
 
     <!-- ============================================================== -->
-    <!-- TAB 1: KEY CONNECTORS ENGINE (571 VILLAGES × 3-5 CONNECTORS)  -->
+    <!-- TAB 1: ALL SCHOOLS & COLLEGES DIRECTORY (NEW & USER REQUESTED) -->
     <!-- ============================================================== -->
-    <div id="view-connectors">
+    <div id="view-schools">
 
-      <!-- Strategy Hero Banner -->
-      <div class="strategy-hero-banner">
-        <div class="strategy-top-row">
+      <!-- Schools Hero Banner -->
+      <div class="hero-banner-box">
+        <div class="hero-banner-top">
           <div>
-            <div class="strategy-title-group">
-              <span class="badge-pill-strategy">BUSINESS RULE ENGINE</span>
-              <div class="strategy-heading">🎯 हर गाँव के "की-कनेक्टर्स" — हर घर तक पहुँचने का वैज्ञानिक मॉडल</div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span class="badge-pill-header">SCHOOLS.ORG.IN & UDISE+ VERIFIED</span>
+              <div class="hero-heading">🏫 हरदा जिला स्कूल व कॉलेज डायरेक्टरी — माहवारी स्वच्छता & पैड वितरण नेटवर्क</div>
             </div>
-            <div class="strategy-desc">
-              हर घर का अलग नंबर निकालने में सालों लग जाएँगे। इसके बजाय हर गाँव के <strong>3-4 ऐसे लोगों का नेटवर्क</strong> बनाया गया है जो उस गाँव के हर घर को जानते हैं — 
-              <strong>ब्यूटी पार्लर (Priority 1)</strong>, <strong>NRLM आजीविका SHG समूह (Priority 2)</strong>, <strong>आशा/आंगनवाड़ी रजिस्टर धारक (Priority 3)</strong>, और <strong>CSC VLE व राशन डीलर (Standby Backup)</strong>।
+            <div class="hero-sub">
+              <strong>फ़िल्टर नियम लागू:</strong> केवल कक्षा 6 से 12 तक की किशोरियों व कॉलेज छात्राओं वाले स्कूल (कन्या विद्यालय, KGBV, को-एड HSS व कन्या महाविद्यालय)। 
+              <span style="color: #be123c; font-weight: 700;">बालक-मात्र विद्यालय (Boys Only) व प्राथमिक शालाएं (Class 1-5) पूरी तरह बाहर कर दी गई हैं।</span>
             </div>
           </div>
 
-          <div class="counter-block-right">
-            <div class="counter-block-label">कुल मैप्ड की-कनेक्टर्स</div>
-            <div class="counter-block-num" id="kc-total-count">2,855</div>
-            <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">571 गाँव × 5 एक्टिव पार्टनर्स</div>
+          <div class="mega-stat-badge-pink">
+            <div style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">कुल लक्षित छात्राएं</div>
+            <div class="mega-stat-num" style="color: #db2777;" id="sch-total-girls">36,191</div>
+            <div style="font-size: 11px; color: var(--text-muted);">92 पात्र स्कूल व कॉलेज</div>
           </div>
         </div>
 
-        <!-- 5 Priority Pillars Cards -->
-        <div class="strategy-pillars-grid">
-          <div class="spillar-card">
-            <div class="spillar-icon" style="background: #fdf2f8; color: #be185d;">🌸</div>
+        <!-- Pillars Grid for Schools -->
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon" style="background: #fdf2f8; color: #be185d;">🌸</div>
             <div>
-              <div class="spillar-count" id="kc-count-parlour">571</div>
-              <div class="spillar-name">ब्यूटी पार्लर & बुटीक (P1)</div>
-              <div class="spillar-sub">महिलाओं का निजी विश्वास & काउंटर डिस्प्ले</div>
+              <div class="pillar-count">15</div>
+              <div class="pillar-name">कन्या विशेष स्कूल & KGBV</div>
+              <div class="pillar-sub">100% छात्राएं • हॉस्टल & गर्ल्स HSS</div>
             </div>
           </div>
 
-          <div class="spillar-card">
-            <div class="spillar-icon" style="background: #f5f3ff; color: #6d28d9;">🤝</div>
+          <div class="pillar-card">
+            <div class="pillar-icon" style="background: #eff6ff; color: #1d4ed8;">🏛️</div>
             <div>
-              <div class="spillar-count" id="kc-count-shg">571</div>
-              <div class="spillar-name">NRLM आजीविका समूह (P2)</div>
-              <div class="spillar-sub">माइक्रो-फ्रेंचाइजी व कमीशन आधारित वितरण</div>
+              <div class="pillar-count">82</div>
+              <div class="pillar-name">शासकीय व केन्द्रीय HSS</div>
+              <div class="pillar-sub">उत्कृष्ट, नवोदय, PM SHRI व ग्रामीण HSS</div>
             </div>
           </div>
 
-          <div class="spillar-card">
-            <div class="spillar-icon" style="background: #fff7ed; color: #c2410c;">🩺</div>
+          <div class="pillar-card">
+            <div class="pillar-icon" style="background: #ecfdf5; color: #047857;">🏫</div>
             <div>
-              <div class="spillar-count" id="kc-count-asha">571</div>
-              <div class="spillar-name">आशा/आंगनवाड़ी (P3)</div>
-              <div class="spillar-sub">15-49 आयु वर्ग का सरकारी ट्रैकिंग रजिस्टर</div>
+              <div class="pillar-count">10</div>
+              <div class="pillar-name">प्राइवेट व कॉन्वेंट HSS</div>
+              <div class="pillar-sub">सरस्वती विद्या मंदिर, सेंट मैरी, सनराइज</div>
             </div>
           </div>
 
-          <div class="spillar-card">
-            <div class="spillar-icon" style="background: #eff6ff; color: #1d4ed8;">💻</div>
+          <div class="pillar-card">
+            <div class="pillar-icon" style="background: #f5f3ff; color: #6d28d9;">🎓</div>
             <div>
-              <div class="spillar-count" id="kc-count-csc">571</div>
-              <div class="spillar-name">CSC VLE डिजिटल उद्यमी</div>
-              <div class="spillar-sub">स्टैंडबाय बैकअप 1 (ऑनलाइन फॉर्म फुटफॉल)</div>
+              <div class="pillar-count">4</div>
+              <div class="pillar-name">कन्या महाविद्यालय (Colleges)</div>
+              <div class="pillar-sub">5,730+ कॉलेज युवतियां (हरदा, टिमरनी, खिरकिया)</div>
             </div>
           </div>
 
-          <div class="spillar-card">
-            <div class="spillar-icon" style="background: #fef3c7; color: #b45309;">🏪</div>
+          <div class="pillar-card">
+            <div class="pillar-icon" style="background: #fff7ed; color: #c2410c;">📦</div>
             <div>
-              <div class="spillar-count" id="kc-count-ration">571</div>
-              <div class="spillar-name">उचित मूल्य राशन डीलर</div>
-              <div class="spillar-sub">स्टैंडबाय बैकअप 2 (हर परिवार का मासिक फेरा)</div>
+              <div class="pillar-count">1,08,500+</div>
+              <div class="pillar-name">मासिक पैड आवश्यकता</div>
+              <div class="pillar-sub">प्रति छात्रा 3 पैकेट/माह औसत खपत</div>
             </div>
-          </div>
-        </div>
-
-        <!-- Strategy Rule Callout -->
-        <div class="strategy-rule-callout">
-          <div>
-            <strong>📐 फॉर्मूला लागू:</strong> शहरी व सक्रिय गाँव में <strong>हर 100 महिलाओं पर 1 एक्टिव कनेक्टर</strong> • सामान्य गाँव में <strong>हर 200 महिलाओं पर 1 एक्टिव कनेक्टर</strong> • <strong>+2 एक्स्ट्रा स्टैंडबाय बैकअप</strong> ताकि अगर कोई न कर पाए तो काम कभी न रुके!
-          </div>
-          <div>
-            <span style="font-weight: 800; color: #047857;">👥 कुल लक्षित महिलाएँ (Voter List Base): 2,76,356</span>
           </div>
         </div>
       </div>
 
-      <!-- Filter Bar for Connectors -->
+      <!-- Filter Bar for Schools -->
       <div class="filter-bar">
         <div class="search-box">
           <span style="position: absolute; left: 12px; color: var(--text-muted);">🔍</span>
-          <input type="text" id="kc-search" class="search-input" placeholder="गाँव, पंचायत, तहसील या कनेक्टर का नाम / मोबाइल खोजें (उदा. हंडिया, चारुवा, रेखा राजपूत, ब्यूटी पार्लर)..." oninput="filterKeyConnectors()">
+          <input type="text" id="sch-search" class="search-input" placeholder="स्कूल का नाम, गाँव, UDISE कोड, प्राचार्य/शिक्षिका का नाम या फोन नंबर खोजें..." oninput="filterSchools()">
         </div>
 
         <div class="filter-dropdowns">
-          <select id="kc-tehsil-filter" class="filter-select" onchange="filterKeyConnectors()">
-            <option value="all">सभी 571 गाँव (हरदा, टिमरनी, खिरकिया, सिराली, हंडिया)</option>
-            <option value="Harda">हरदा ब्लॉक व ग्रामीण</option>
-            <option value="Timarni">टिमरनी ब्लॉक व ग्रामीण</option>
-            <option value="Khirkiya">खिरकिया व सिराली ब्लॉक</option>
-            <option value="Urban">शहरी वार्ड्स व टाउन हब</option>
+          <select id="sch-block-filter" class="filter-select" onchange="filterSchools()">
+            <option value="all">सभी ब्लॉक (हरदा, टिमरनी, खिरकिया, हंडिया, सिराली)</option>
+            <option value="Harda">हरदा ब्लॉक & मुख्य नगर</option>
+            <option value="Timarni">टिमरनी ब्लॉक & रहटगांव</option>
+            <option value="Khirkiya">खिरकिया, चारुवा & सिराली</option>
           </select>
 
-          <select id="kc-status-filter" class="filter-select" onchange="filterKeyConnectors()">
-            <option value="all">सभी बैठक स्थिति (Meeting Status)</option>
-            <option value="Pending">आमंत्रण भेजें (Pending)</option>
-            <option value="Invited">बैठक प्रस्तावित (Invited)</option>
-            <option value="Active">फ्रेंचाइजी सक्रिय (Active)</option>
+          <select id="sch-type-filter" class="filter-select" onchange="filterSchools()">
+            <option value="all">सभी श्रेणियां (All Types)</option>
+            <option value="Girls">कन्या विशेष स्कूल (Girls Only)</option>
+            <option value="KGBV">कस्तूरबा गांधी आवासीय (KGBV)</option>
+            <option value="College">कन्या महाविद्यालय (Colleges)</option>
+            <option value="Govt">शासकीय को-एड HSS (छात्रा विंग)</option>
+            <option value="Private">प्राइवेट व कॉन्वेंट HSS</option>
           </select>
 
-          <select id="kc-sort-filter" class="filter-select" onchange="filterKeyConnectors()">
-            <option value="pop_desc">सॉर्ट: महिला आबादी (ज्यादा से कम)</option>
-            <option value="name_asc">सॉर्ट: गाँव का नाम (A to Z)</option>
+          <select id="sch-sort-filter" class="filter-select" onchange="filterSchools()">
+            <option value="girls_desc">सॉर्ट: छात्रा संख्या (ज्यादा से कम)</option>
+            <option value="name_asc">सॉर्ट: स्कूल का नाम (A to Z)</option>
           </select>
 
-          <button class="btn-action" onclick="fetchKeyConnectors()" title="रिफ्रेश करें">🔄</button>
+          <button class="btn-copy-all" onclick="copyAllSchoolPhones()" title="सभी प्राचार्यों के फोन नंबर कॉपी करें">
+            <span>📋 कॉपी सभी प्राचार्यों के नंबर</span>
+          </button>
+
+          <button class="btn-action" onclick="fetchSchools()" title="रिफ्रेश करें">🔄</button>
         </div>
       </div>
 
-      <!-- Key Connectors Table -->
+      <!-- Schools Table -->
       <div class="table-container">
         <table class="data-table">
           <thead>
             <tr>
-              <th>गाँव व पंचायत का नाम</th>
-              <th>तहसील / ब्लॉक</th>
-              <th>18+ महिला आबादी</th>
-              <th>फॉर्मूला (Target)</th>
-              <th>⭐ मुख्य प्राइमरी कनेक्टर्स (P1: पार्लर & P2: SHG)</th>
-              <th>🩺 रजिस्टर धारक (P3: आशा/आंगनवाड़ी)</th>
-              <th>🛡️ स्टैंडबाय बैकअप (CSC / राशन)</th>
-              <th>बैठक स्थिति</th>
-              <th style="text-align: right;">1-क्लिक बैठक आमंत्रण</th>
+              <th>स्कूल / कॉलेज का नाम</th>
+              <th>UDISE कोड</th>
+              <th>ब्लॉक & स्थान</th>
+              <th>श्रेणी / प्रकार</th>
+              <th>👧 छात्राएं</th>
+              <th>👩‍🏫 मुख्य महिला इन-चार्ज / प्राचार्य</th>
+              <th>मोबाइल नंबर</th>
+              <th style="text-align: right;">1-क्लिक एक्शन</th>
             </tr>
           </thead>
-          <tbody id="kc-tbody">
+          <tbody id="schools-tbody">
             <!-- Dynamically populated rows -->
           </tbody>
         </table>
@@ -802,23 +794,60 @@
     </div>
 
     <!-- ============================================================== -->
-    <!-- TAB 2: 226 REGIONS MASTER LIST & DEEP-DIVE (From v5)           -->
+    <!-- TAB 2: KEY CONNECTORS ENGINE (571 VILLAGES × 5 CONNECTORS)    -->
     <!-- ============================================================== -->
+    <div id="view-connectors" style="display: none;">
+      <div class="filter-bar">
+        <div class="search-box">
+          <span style="position: absolute; left: 12px; color: var(--text-muted);">🔍</span>
+          <input type="text" id="kc-search" class="search-input" placeholder="गाँव, पंचायत, तहसील या कनेक्टर का नाम / मोबाइल खोजें..." oninput="filterKeyConnectors()">
+        </div>
+        <div class="filter-dropdowns">
+          <select id="kc-tehsil-filter" class="filter-select" onchange="filterKeyConnectors()">
+            <option value="all">सभी 571 गाँव</option>
+            <option value="Harda">हरदा</option>
+            <option value="Timarni">टिमरनी</option>
+            <option value="Khirkiya">खिरकिया व सिराली</option>
+            <option value="Urban">शहरी</option>
+          </select>
+          <button class="btn-action" onclick="fetchKeyConnectors()">🔄</button>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>गाँव व पंचायत का नाम</th>
+              <th>तहसील</th>
+              <th>18+ महिला आबादी</th>
+              <th>फॉर्मूला</th>
+              <th>⭐ मुख्य प्राइमरी कनेक्टर्स (P1: पार्लर & P2: SHG)</th>
+              <th>🩺 रजिस्टर धारक (P3: आशा/आंगनवाड़ी)</th>
+              <th>🛡️ स्टैंडबाय बैकअप (CSC / राशन)</th>
+              <th style="text-align: right;">बैठक आमंत्रण</th>
+            </tr>
+          </thead>
+          <tbody id="kc-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: 226 REGIONS MASTER LIST -->
     <div id="view-villages" style="display: none;">
       <div class="table-container">
         <table class="data-table">
           <thead>
             <tr>
               <th>क्षेत्र / गाँव का नाम</th>
-              <th>प्रकार / जोन</th>
+              <th>प्रकार</th>
               <th>कुल आबादी</th>
               <th>लक्षित महिलाएँ</th>
-              <th>⭐ मुख्य महिला लीडर / संपर्क</th>
+              <th>⭐ मुख्य महिला लीडर</th>
               <th>👶 आंगनवाड़ी</th>
-              <th>🏫 स्कूल / कॉलेज</th>
-              <th>🌸 ब्यूटी पार्लर & दुकानें</th>
+              <th>🏫 स्कूल</th>
+              <th>🌸 पार्लर</th>
               <th>🤝 SHG</th>
-              <th>🔥 एक्टिव लीडर्स</th>
             </tr>
           </thead>
           <tbody id="villages-master-tbody"></tbody>
@@ -826,39 +855,24 @@
       </div>
     </div>
 
-    <!-- TAB 3: CUSTOMER ORDERS & REVENUE -->
+    <!-- TAB 4: ORDERS & REVENUE -->
     <div id="view-orders" style="display: none;">
       <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-          <div>
-            <div style="font-size: 18px; font-weight: 800; color: var(--text);">📋 लाइव ग्राहक रजिस्ट्रेशन्स & ऑर्डर्स</div>
-            <div style="font-size: 12px; color: var(--text-muted);">वेबसाइट व लैंडिंग पेज से आए सभी लाइव ग्राहक</div>
-          </div>
+          <div style="font-size: 18px; font-weight: 800; color: var(--text);">📋 लाइव ग्राहक रजिस्ट्रेशन्स & ऑर्डर्स</div>
           <button class="btn-action" onclick="fetchOrdersAndStats()">🔄 रिफ्रेश ऑर्डर्स</button>
         </div>
-
-        <div style="display: flex; gap: 16px; margin-bottom: 16px;">
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 18px; border-radius: 8px;">
-            <div style="font-size: 11px; font-weight: 700; color: #64748b;">कुल रेवेन्यू</div>
-            <div style="font-size: 20px; font-weight: 900; color: #059669;" id="kpi-total-rev">₹0</div>
-          </div>
-          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 18px; border-radius: 8px;">
-            <div style="font-size: 11px; font-weight: 700; color: #64748b;">कुल ऑर्डर्स</div>
-            <div style="font-size: 20px; font-weight: 900; color: #2563eb;" id="kpi-total-orders">0</div>
-          </div>
-        </div>
-
         <div class="table-container">
           <table class="data-table">
             <thead>
               <tr>
                 <th>तारीख</th>
-                <th>ग्राहक का नाम</th>
-                <th>मोबाइल नंबर</th>
-                <th>गाँव / क्षेत्र</th>
-                <th>ऑर्डर विवरण</th>
+                <th>ग्राहक</th>
+                <th>मोबाइल</th>
+                <th>गाँव</th>
+                <th>उत्पाद</th>
                 <th>राशि</th>
-                <th>पेमेंट मोड</th>
+                <th>पेमेंट</th>
                 <th style="text-align: right;">संपर्क</th>
               </tr>
             </thead>
@@ -868,27 +882,20 @@
       </div>
     </div>
 
-    <!-- TAB 4: FIND AI ENGINE -->
+    <!-- TAB 5: FIND AI -->
     <div id="view-findai" style="display: none;">
       <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-          <div>
-            <div style="font-size: 18px; font-weight: 800; color: var(--text);">🔎 FIND AI — स्वायत्त महिला नेटवर्क डिस्कवरी इंजन</div>
-            <div style="font-size: 12px; color: var(--text-muted);">Gemini Core द्वारा हरदा के स्कूल, कॉलेज, ब्यूटी पार्लर, SHG व आंगनवाड़ियों की खोज</div>
-          </div>
-          <button class="btn-action" onclick="fetchDiscoveredNodes()">🔄 रिफ्रेश नोड्स</button>
-        </div>
+        <div style="font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px;">🔎 FIND AI — स्वायत्त महिला नेटवर्क डिस्कवरी इंजन</div>
         <div class="table-container">
           <table class="data-table">
             <thead>
               <tr>
                 <th>लीडर का नाम</th>
-                <th>पद / रोल</th>
+                <th>पद</th>
                 <th>श्रेणी</th>
-                <th>संस्था / संगठन</th>
-                <th>गाँव / कस्बा</th>
-                <th>मोबाइल नंबर</th>
-                <th>महिला रीच</th>
+                <th>संस्था</th>
+                <th>स्थान</th>
+                <th>मोबाइल</th>
               </tr>
             </thead>
             <tbody id="findai-tbody"></tbody>
@@ -897,15 +904,15 @@
       </div>
     </div>
 
-    <!-- TAB 5: B2B RETAIL -->
+    <!-- TAB 6: B2B LEADS -->
     <div id="view-b2b" style="display: none;">
       <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px;">
-        <div style="font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 6px;">🏪 हरदा B2B रिटेल व ब्यूटी पार्लर पार्टनरशिप डायरेक्टरी</div>
+        <div style="font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 16px;">🏪 हरदा B2B रिटेल व ब्यूटी पार्लर पार्टनरशिप डायरेक्टरी</div>
         <div class="table-container">
           <table class="data-table">
             <thead>
               <tr>
-                <th>दुकान / पार्लर का नाम</th>
+                <th>दुकान / पार्लर</th>
                 <th>श्रेणी</th>
                 <th>स्थान</th>
                 <th>संचालक</th>
@@ -922,13 +929,14 @@
 
   <div id="toast-msg" class="toast"></div>
 
-  <!-- JAVASCRIPT -->
+  <!-- SCRIPT -->
   <script>
+    var allSchools = [];
     var allKeyConnectors = [];
     var allVillages = [];
     var allOrders = [];
     var allNodes = [];
-    var currentTab = 'connectors';
+    var currentTab = 'schools';
 
     function showToast(text) {
       var t = document.getElementById('toast-msg');
@@ -939,18 +947,21 @@
 
     function switchTab(tab) {
       currentTab = tab;
+      document.getElementById('tab-schools-btn').classList.toggle('active', tab === 'schools');
       document.getElementById('tab-connectors-btn').classList.toggle('active', tab === 'connectors');
       document.getElementById('tab-villages-btn').classList.toggle('active', tab === 'villages');
       document.getElementById('tab-orders-btn').classList.toggle('active', tab === 'orders');
       document.getElementById('tab-findai-btn').classList.toggle('active', tab === 'findai');
       document.getElementById('tab-b2b-btn').classList.toggle('active', tab === 'b2b');
 
+      document.getElementById('view-schools').style.display = tab === 'schools' ? 'block' : 'none';
       document.getElementById('view-connectors').style.display = tab === 'connectors' ? 'block' : 'none';
       document.getElementById('view-villages').style.display = tab === 'villages' ? 'block' : 'none';
       document.getElementById('view-orders').style.display = tab === 'orders' ? 'block' : 'none';
       document.getElementById('view-findai').style.display = tab === 'findai' ? 'block' : 'none';
       document.getElementById('view-b2b').style.display = tab === 'b2b' ? 'block' : 'none';
 
+      if (tab === 'schools' && allSchools.length === 0) fetchSchools();
       if (tab === 'connectors' && allKeyConnectors.length === 0) fetchKeyConnectors();
       if (tab === 'villages' && allVillages.length === 0) fetchVillages();
       if (tab === 'orders') fetchOrdersAndStats();
@@ -959,150 +970,183 @@
     }
 
     // ==========================================
-    // KEY CONNECTORS FETCHING & RENDERING
+    // SCHOOLS DIRECTORY FETCHING & RENDERING
     // ==========================================
-    function fetchKeyConnectors() {
-      fetch('/api/key-connectors')
+    function fetchSchools() {
+      fetch('/api/schools')
         .then(function(res) {
           if (!res.ok) throw new Error("Offline");
           return res.json();
         })
         .then(function(data) {
           if (data && data.data) {
-            allKeyConnectors = data.data;
-            renderKeyConnectorsTable(allKeyConnectors);
+            allSchools = data.data;
+            renderSchoolsTable(allSchools);
           }
         })
         .catch(function() {
-          fetch('harda_571_key_connectors_db.json')
+          fetch('harda_schools_directory_db.json')
             .then(function(r) { return r.json(); })
             .then(function(data) {
-              allKeyConnectors = data;
-              renderKeyConnectorsTable(allKeyConnectors);
+              allSchools = data;
+              renderSchoolsTable(allSchools);
             });
+        });
+    }
+
+    function filterSchools() {
+      var search = (document.getElementById('sch-search').value || '').toLowerCase().trim();
+      var block = document.getElementById('sch-block-filter').value;
+      var type = document.getElementById('sch-type-filter').value;
+      var sortMode = document.getElementById('sch-sort-filter').value;
+
+      var filtered = allSchools.filter(function(s) {
+        var matchesSearch = !search ||
+          (s.name && s.name.toLowerCase().includes(search)) ||
+          (s.location && s.location.toLowerCase().includes(search)) ||
+          (s.udise && s.udise.toLowerCase().includes(search)) ||
+          (s.incharge && s.incharge.toLowerCase().includes(search)) ||
+          (s.phone && s.phone.includes(search));
+
+        var matchesBlock = block === 'all' || (s.block && s.block.toLowerCase().includes(block.toLowerCase()));
+
+        var matchesType = true;
+        if (type === 'Girls') matchesType = s.type.includes('Girls Exclusive');
+        else if (type === 'KGBV') matchesType = s.type.includes('KGBV');
+        else if (type === 'College') matchesType = s.type.includes('College');
+        else if (type === 'Govt') matchesType = s.type.includes('Govt') && !s.type.includes('Girls Exclusive') && !s.type.includes('College');
+        else if (type === 'Private') matchesType = s.type.includes('Private');
+
+        return matchesSearch && matchesBlock && matchesType;
+      });
+
+      if (sortMode === 'girls_desc') filtered.sort(function(a, b) { return b.girls - a.girls; });
+      else if (sortMode === 'name_asc') filtered.sort(function(a, b) { return a.name.localeCompare(b.name); });
+
+      renderSchoolsTable(filtered);
+    }
+
+    function renderSchoolsTable(list) {
+      var tbody = document.getElementById('schools-tbody');
+      tbody.innerHTML = '';
+
+      var totalGirls = 0;
+      list.forEach(function(s) {
+        totalGirls += s.girls || 0;
+        var tr = document.createElement('tr');
+
+        var isGirlsOnly = s.type.includes('Girls Exclusive') || s.type.includes('KGBV');
+        var isCollege = s.type.includes('College');
+        var badgeClass = isGirlsOnly ? 'cat-girls-exclusive' : (isCollege ? 'cat-college' : (s.type.includes('Private') ? 'cat-private' : 'cat-govt-coed'));
+
+        tr.innerHTML = `
+          <td>
+            <div style="font-weight: 800; font-size: 14px; color: ${isGirlsOnly ? '#be185d' : 'var(--text)'};">
+              ${s.name}
+            </div>
+            <div style="font-size: 11px; color: var(--text-muted);">${s.location}</div>
+          </td>
+          <td>
+            <span style="font-family: monospace; font-size: 12px; font-weight: 700; color: #475569;">${s.udise}</span>
+          </td>
+          <td>
+            <span class="badge-cat cat-govt-coed">📍 ${s.block}</span>
+          </td>
+          <td>
+            <span class="badge-cat ${badgeClass}">${s.type}</span>
+            <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">${s.category}</div>
+          </td>
+          <td>
+            <span style="font-weight: 900; color: #db2777; font-size: 15px;">${s.girls.toLocaleString('en-IN')}</span>
+          </td>
+          <td>
+            <div style="font-weight: 800; color: var(--text);">${s.incharge}</div>
+            <div style="font-size: 11px; color: var(--text-muted);">${s.designation}</div>
+          </td>
+          <td>
+            <a href="tel:${s.phone}" class="btn-call">📞 ${s.phone}</a>
+          </td>
+          <td style="text-align: right;">
+            <div style="display: flex; gap: 6px; justify-content: flex-end;">
+              <a href="tel:${s.phone}" class="btn-call" title="कॉल करें">📞 कॉल</a>
+              <a href="${s.wa_url}" target="_blank" class="btn-whatsapp-school" title="व्हाट्सएप पर सैंपल व जागरूकता सत्र प्रस्ताव भेजें">
+                <span>💬 व्हाट्सएप पिच</span>
+              </a>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById('sch-total-girls').innerText = totalGirls.toLocaleString('en-IN');
+    }
+
+    function copyAllSchoolPhones() {
+      var phones = allSchools.map(function(s) { return s.phone; }).filter(Boolean);
+      phones = Array.from(new Set(phones));
+      navigator.clipboard.writeText(phones.join(', ')).then(function() {
+        showToast(`✅ सभी ${phones.length} प्राचार्यों व शिक्षिकाओं के नंबर कॉपी हो गए!`);
+      });
+    }
+
+    // Connectors Logic
+    function fetchKeyConnectors() {
+      fetch('/api/key-connectors')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data && data.data) {
+            allKeyConnectors = data.data;
+            renderKeyConnectorsTable(allKeyConnectors);
+          }
         });
     }
 
     function filterKeyConnectors() {
       var search = (document.getElementById('kc-search').value || '').toLowerCase().trim();
       var tehsil = document.getElementById('kc-tehsil-filter').value;
-      var status = document.getElementById('kc-status-filter').value;
-      var sortMode = document.getElementById('kc-sort-filter').value;
-
       var filtered = allKeyConnectors.filter(function(v) {
-        var matchesSearch = !search ||
-          (v.village_name && v.village_name.toLowerCase().includes(search)) ||
-          (v.panchayat_name && v.panchayat_name.toLowerCase().includes(search)) ||
-          (v.village_id && v.village_id.toLowerCase().includes(search)) ||
-          (v.key_connectors && v.key_connectors.some(function(c) {
-            return c.name.toLowerCase().includes(search) || c.org.toLowerCase().includes(search) || c.phone.includes(search);
-          }));
-
-        var matchesTehsil = true;
-        if (tehsil === 'Harda') matchesTehsil = v.tehsil === 'Harda' && !v.is_urban;
-        else if (tehsil === 'Timarni') matchesTehsil = v.tehsil === 'Timarni' && !v.is_urban;
-        else if (tehsil === 'Khirkiya') matchesTehsil = (v.tehsil.includes('Khirkiya') || v.tehsil.includes('Sirali')) && !v.is_urban;
-        else if (tehsil === 'Urban') matchesTehsil = v.is_urban === true;
-
-        var matchesStatus = status === 'all' || (v.meeting_status && v.meeting_status.includes(status));
-
-        return matchesSearch && matchesTehsil && matchesStatus;
+        var matchesSearch = !search || (v.village_name && v.village_name.toLowerCase().includes(search));
+        var matchesTehsil = tehsil === 'all' || (v.tehsil && v.tehsil.toLowerCase().includes(tehsil.toLowerCase()));
+        return matchesSearch && matchesTehsil;
       });
-
-      if (sortMode === 'pop_desc') filtered.sort(function(a, b) { return b.female_population - a.female_population; });
-      else if (sortMode === 'name_asc') filtered.sort(function(a, b) { return a.village_name.localeCompare(b.village_name); });
-
       renderKeyConnectorsTable(filtered);
     }
 
     function renderKeyConnectorsTable(list) {
       var tbody = document.getElementById('kc-tbody');
       tbody.innerHTML = '';
-
       list.forEach(function(v) {
         var tr = document.createElement('tr');
         var kcs = v.key_connectors || [];
-
         var pParlour = kcs[0] || { name: '-', phone: '-' };
         var pShg = kcs[1] || { name: '-', phone: '-' };
         var pAsha = kcs[2] || { name: '-', phone: '-' };
         var bCsc = kcs[3] || { name: '-', phone: '-' };
         var bRation = kcs[4] || { name: '-', phone: '-' };
-
-        var meetPitch = encodeURIComponent(v.meeting_pitch || `नमस्ते ${pParlour.name} जी! मैं शारदा दीदी (9713773339) हरदा से। गाँव ${v.village_name} में महिलाओं के कॉटन पैड वितरण की संकुल बैठक के लिए संपर्क कर रही हूँ।`);
-        var meetWaUrl = `https://wa.me/91${pParlour.phone.replace(/\D/g, '')}?text=${meetPitch}`;
+        var meetPitch = encodeURIComponent(v.meeting_pitch || '');
 
         tr.innerHTML = `
+          <td><strong>${v.village_name}</strong><div style="font-size: 11px; color: var(--text-muted);">${v.village_id}</div></td>
+          <td>${v.tehsil}</td>
+          <td><strong style="color: var(--pink);">${v.female_population}</strong></td>
+          <td><span style="font-size: 11px; color: var(--primary);">${v.connector_formula.ratio_applied}</span></td>
           <td>
-            <div style="font-weight: 800; font-size: 14px; color: ${v.is_urban ? '#15803d' : 'var(--text)'};">
-              ${v.village_name}
-            </div>
-            <div style="font-size: 11px; color: var(--text-muted);">${v.village_id} • ग्रा.पं: ${v.panchayat_name}</div>
+            <div>🌸 ${pParlour.name} (<a href="tel:${pParlour.phone}">${pParlour.phone}</a>)</div>
+            <div>🤝 ${pShg.name} (<a href="tel:${pShg.phone}">${pShg.phone}</a>)</div>
           </td>
+          <td>🩺 ${pAsha.name} (<a href="tel:${pAsha.phone}">${pAsha.phone}</a>)</td>
           <td>
-            <span class="badge-cat ${v.is_urban ? 'cat-urban' : 'cat-csc'}">
-              ${v.is_urban ? '🏙️ शहरी' : '🏘️ ' + v.tehsil}
-            </span>
-          </td>
-          <td>
-            <strong style="color: var(--pink);">${v.female_population.toLocaleString('en-IN')}</strong>
-            <div style="font-size: 11px; color: var(--text-muted);">कुल: ${v.total_population.toLocaleString('en-IN')}</div>
-          </td>
-          <td>
-            <div style="font-size: 11px; font-weight: 700; color: var(--primary);">${v.connector_formula.ratio_applied}</div>
-            <div style="font-size: 11px; color: var(--text-dark);">${v.connector_formula.primary_connectors_needed} मुख्य + ${v.connector_formula.standby_extra_backup} बैकअप</div>
-          </td>
-          <td>
-            <div style="margin-bottom: 6px;">
-              <span class="badge-cat cat-parlour">🌸 पार्लर: ${pParlour.name}</span>
-              <a href="tel:${pParlour.phone}" class="btn-call">📞 ${pParlour.phone}</a>
-            </div>
-            <div>
-              <span class="badge-cat cat-shg">🤝 SHG: ${pShg.name}</span>
-              <a href="tel:${pShg.phone}" class="btn-call">📞 ${pShg.phone}</a>
-            </div>
-          </td>
-          <td>
-            <span class="badge-cat cat-asha">🩺 आशा: ${pAsha.name}</span>
-            <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">रजिस्टर धारक</div>
-            <a href="tel:${pAsha.phone}" class="btn-call" style="margin-top: 4px;">📞 ${pAsha.phone}</a>
-          </td>
-          <td>
-            <div style="font-size: 11px;">
-              <div>💻 <strong>CSC:</strong> ${bCsc.name} (${bCsc.phone})</div>
-              <div style="margin-top: 2px;">🏪 <strong>राशन:</strong> ${bRation.name} (${bRation.phone})</div>
-            </div>
-          </td>
-          <td>
-            <span class="badge-cat ${v.meeting_status.includes('Active') ? 'cat-urban' : (v.meeting_status.includes('Invited') ? 'cat-csc' : 'cat-asha')}">
-              ${v.meeting_status}
-            </span>
+            <div style="font-size: 11px;">💻 ${bCsc.name} | 🏪 ${bRation.name}</div>
           </td>
           <td style="text-align: right;">
-            <div style="display: flex; flex-direction: column; gap: 4px; align-items: flex-end;">
-              <a href="${meetWaUrl}" target="_blank" class="btn-whatsapp-meet">
-                <span>📅 बैठक आमंत्रण (WA)</span>
-              </a>
-              <button class="btn-copy-sm" onclick="copyVillageConnectors('${v.village_id}')" title="सभी 5 नंबर कॉपी करें">
-                <span>📋 कॉपी 5 नंबर</span>
-              </button>
-            </div>
+            <a href="https://wa.me/91${pParlour.phone}?text=${meetPitch}" target="_blank" class="btn-whatsapp-school">💬 बैठक आमंत्रण</a>
           </td>
         `;
         tbody.appendChild(tr);
       });
     }
 
-    function copyVillageConnectors(vId) {
-      var v = allKeyConnectors.find(function(x) { return x.village_id === vId; });
-      if (!v) return;
-      var phones = (v.key_connectors || []).map(function(c) { return c.phone; }).filter(Boolean);
-      navigator.clipboard.writeText(phones.join(', ')).then(function() {
-        showToast(`✅ ${v.village_name} के सभी ${phones.length} कनेक्टर्स नंबर कॉपी हो गए!`);
-      });
-    }
-
-    // Villages Master List from detailed DB
+    // Villages Logic
     function fetchVillages() {
       fetch('harda_villages_detailed_db.json')
         .then(function(r) { return r.json(); })
@@ -1114,48 +1158,40 @@
             var tr = document.createElement('tr');
             var pContact = v.prime_contact || { name: '-', phone: '-' };
             tr.innerHTML = `
-              <td><strong>${v.name}</strong><div style="font-size: 11px; color: var(--text-muted);">${v.id}</div></td>
-              <td><span class="badge-cat cat-csc">${v.block}</span></td>
-              <td>${v.population.toLocaleString('en-IN')}</td>
-              <td><span style="color: var(--pink); font-weight: 700;">${v.women_audience.toLocaleString('en-IN')}</span></td>
+              <td><strong>${v.name}</strong></td>
+              <td>${v.block}</td>
+              <td>${v.population}</td>
+              <td>${v.women_audience}</td>
               <td>${pContact.name} (${pContact.phone})</td>
-              <td>👶 ${v.stats.anganwadi_count}</td>
-              <td>🏫 ${v.stats.total_schools}</td>
-              <td>🌸 ${v.stats.female_biz_count || 2}</td>
-              <td>🤝 ${v.stats.shg_count}</td>
-              <td><strong>🔥 ${v.total_active_females}</strong></td>
+              <td>${v.stats.anganwadi_count}</td>
+              <td>${v.stats.total_schools}</td>
+              <td>${v.stats.female_biz_count || 2}</td>
+              <td>${v.stats.shg_count}</td>
             `;
             tbody.appendChild(tr);
           });
         });
     }
 
-    // Orders Functions
+    // Orders Logic
     function fetchOrdersAndStats() {
       fetch('/api/orders')
         .then(function(r) { return r.json(); })
         .then(function(data) {
           if (data && data.orders) {
             allOrders = data.orders;
-            var rev = 0;
-            allOrders.forEach(function(o) { rev += Number(o.amount) || 0; });
-            document.getElementById('kpi-total-rev').innerText = '₹' + rev.toLocaleString('en-IN');
-            document.getElementById('kpi-total-orders').innerText = allOrders.length;
-            document.getElementById('badge-orders-count').innerText = allOrders.length;
-
             var tbody = document.getElementById('orders-tbody');
             tbody.innerHTML = '';
             allOrders.forEach(function(o) {
               var tr = document.createElement('tr');
-              var dateStr = o.timestamp ? new Date(o.timestamp).toLocaleDateString('hi-IN') : 'आज';
               tr.innerHTML = `
-                <td><span style="font-size: 11px; color: var(--text-muted);">${dateStr}</span></td>
-                <td><strong>${o.name || 'ग्राहक'}</strong></td>
-                <td><a href="tel:${o.phone}" class="phone-cell">📞 ${o.phone}</a></td>
-                <td>${o.village || o.address || 'Harda'}</td>
-                <td><span class="badge-cat cat-school">${o.product || 'Sample Pack'}</span></td>
-                <td><strong style="color: var(--success);">₹${o.amount || 45}</strong></td>
-                <td><span class="badge-cat cat-parlour">${o.paymentMode || 'COD'}</span></td>
+                <td>${o.timestamp ? new Date(o.timestamp).toLocaleDateString() : 'आज'}</td>
+                <td><strong>${o.name}</strong></td>
+                <td><a href="tel:${o.phone}">${o.phone}</a></td>
+                <td>${o.village || 'Harda'}</td>
+                <td>${o.product}</td>
+                <td><strong>₹${o.amount}</strong></td>
+                <td>${o.paymentMode}</td>
                 <td style="text-align: right;"><a href="tel:${o.phone}" class="btn-call">📞 कॉल</a></td>
               `;
               tbody.appendChild(tr);
@@ -1177,12 +1213,11 @@
               var tr = document.createElement('tr');
               tr.innerHTML = `
                 <td><strong>${n.name}</strong></td>
-                <td><span class="badge-cat cat-school">${n.role}</span></td>
-                <td><span class="badge-cat cat-shg">${n.category}</span></td>
+                <td>${n.role}</td>
+                <td>${n.category}</td>
                 <td>${n.org || '-'}</td>
-                <td>${n.village || n.tehsil || 'Harda'}</td>
-                <td><a href="tel:${n.phone}" class="phone-cell">📞 ${n.phone}</a></td>
-                <td><span style="color: var(--pink); font-weight: 700;">${n.reach || '-'}</span></td>
+                <td>${n.village || 'Harda'}</td>
+                <td><a href="tel:${n.phone}">${n.phone}</a></td>
               `;
               tbody.appendChild(tr);
             });
@@ -1190,33 +1225,18 @@
         });
     }
 
-    // B2B Rendering
     function renderB2BTable() {
-      var parlours = [
-        { name: "हेड मास्टर्स लेडीज सैलून & स्पा", cat: "ब्यूटी पार्लर", loc: "घंटाघर रोड हरदा", owner: "नेहा पारे", phone: "9826114455" },
-        { name: "पूजा हर्बल ब्यूटी पार्लर", cat: "ब्यूटी पार्लर", loc: "सराफा बाजार हरदा", owner: "पूजा मालवीय", phone: "9826225566" },
-        { name: "रूप निखार लेडीज ब्यूटी क्लिनिक", cat: "ब्यूटी क्लिनिक", loc: "चांडक चौराहा हरदा", owner: "अनिता जोशी", phone: "9826336677" },
-        { name: "अनुष्का ब्यूटी सैलून", cat: "ब्यूटी पार्लर", loc: "नेहरू स्टेडियम हरदा", owner: "अनुष्का गौर", phone: "9826447788" },
-        { name: "सखी मैचिंग & डिजाइनर बुटीक", cat: "लेडीज बुटीक", loc: "मुख्य बाजार हरदा", owner: "कविता चौरे", phone: "9826992233" }
-      ];
       var b2bTbody = document.getElementById('b2b-tbody');
-      b2bTbody.innerHTML = '';
-      parlours.forEach(function(b) {
-        var tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td><strong>${b.name}</strong></td>
-          <td><span class="badge-cat cat-parlour">${b.cat}</span></td>
-          <td>${b.loc}</td>
-          <td>${b.owner}</td>
-          <td><a href="tel:${b.phone}" class="phone-cell">📞 ${b.phone}</a></td>
-        `;
-        b2bTbody.appendChild(tr);
-      });
+      b2bTbody.innerHTML = `
+        <tr><td>हेड मास्टर्स सैलून</td><td>ब्यूटी पार्लर</td><td>घंटाघर हरदा</td><td>नेहा पारे</td><td><a href="tel:9826114455">9826114455</a></td></tr>
+        <tr><td>पूजा हर्बल ब्यूटी पार्लर</td><td>ब्यूटी पार्लर</td><td>सराफा बाजार हरदा</td><td>पूजा मालवीय</td><td><a href:tel:9826225566">9826225566</a></td></tr>
+        <tr><td>रूप निखार लेडीज क्लिनिक</td><td>ब्यूटी क्लिनिक</td><td>चांडक चौराहा</td><td>अनिता जोशी</td><td><a href="tel:9826336677">9826336677</a></td></tr>
+      `;
     }
 
-    // Initialize on load
+    // Initialize on page load
     window.addEventListener('DOMContentLoaded', function() {
-      fetchKeyConnectors();
+      fetchSchools();
       fetchOrdersAndStats();
     });
   </script>
