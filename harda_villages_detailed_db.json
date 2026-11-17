@@ -401,7 +401,11 @@
       "shg_count": 5,
       "total_institutions": 35
     },
-    "total_active_females": 185
+    "total_active_females": 185,
+    "lat": 22.357914,
+    "lng": 77.0945,
+    "clean_name": "हरदा शहर (Harda Urban Municipality)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=हरदा+शहर+(Harda+Urban+Municipality),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-URB-0002",
@@ -669,7 +673,11 @@
         "name": "श्रीमती कविता अग्रवाल (ANM स्वास्थ्य दीदी)",
         "phone": "9406680099"
       }
-    }
+    },
+    "lat": 22.32713,
+    "lng": 77.111721,
+    "clean_name": "घंटाघर & सराफा बाजार (Harda Sector 1)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=घंटाघर+&+सराफा+बाजार+(Harda+Sector+1),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-URB-0003",
@@ -937,7 +945,11 @@
         "name": "श्रीमती वंदना मिश्रा (ANM स्वास्थ्य दीदी)",
         "phone": "9425153045"
       }
-    }
+    },
+    "lat": 22.347305,
+    "lng": 77.058364,
+    "clean_name": "इंदौर रोड & सिविल लाइंस (Harda Sector 2)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=इंदौर+रोड+&+सिविल+लाइंस+(Harda+Sector+2),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-URB-0004",
@@ -1205,7 +1217,11 @@
         "name": "श्रीमती सपना जोशी (ANM स्वास्थ्य दीदी)",
         "phone": "9669679364"
       }
-    }
+    },
+    "lat": 22.370725,
+    "lng": 77.131834,
+    "clean_name": "कॉलेज रोड & विवेकानंद नगर (Harda Sector 3)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=कॉलेज+रोड+&+विवेकानंद+नगर+(Harda+Sector+3),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-URB-0005",
@@ -1493,7 +1509,11 @@
         "name": "श्रीमती रजनी विश्नोई (ANM स्वास्थ्य दीदी)",
         "phone": "9752618392"
       }
-    }
+    },
+    "lat": 22.292054,
+    "lng": 77.084456,
+    "clean_name": "खेड़ीपुरा & पुरानी बस्ती (Harda Sector 4)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=खेड़ीपुरा+&+पुरानी+बस्ती+(Harda+Sector+4),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-URB-0006",
@@ -1741,7 +1761,11 @@
         "name": "श्रीमती सीमा रघुवंशी (ANM स्वास्थ्य दीदी)",
         "phone": "9406888539"
       }
-    }
+    },
+    "lat": 22.397587,
+    "lng": 77.057626,
+    "clean_name": "रेलवे कॉलोनी & शांति नगर (Harda Sector 5)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=रेलवे+कॉलोनी+&+शांति+नगर+(Harda+Sector+5),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-URB-0007",
@@ -1959,7 +1983,11 @@
         "name": "श्रीमती प्रियंका तिवारी (ANM स्वास्थ्य दीदी)",
         "phone": "9977682144"
       }
-    }
+    },
+    "lat": 22.325513,
+    "lng": 77.171206,
+    "clean_name": "कुलहर्दा & न्यू फ्रेंड्स कॉलोनी (Harda Sector 6)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=कुलहर्दा+&+न्यू+फ्रेंड्स+कॉलोनी+(Harda+Sector+6),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-URB-0008",
@@ -2167,7 +2195,11 @@
         "name": "श्रीमती आरती वर्मा (ANM स्वास्थ्य दीदी)",
         "phone": "9669751194"
       }
-    }
+    },
+    "lat": 22.306129,
+    "lng": 77.014495,
+    "clean_name": "कृषि उपज मंडी & छीपानेर रोड (Harda Sector 7)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=कृषि+उपज+मंडी+&+छीपानेर+रोड+(Harda+Sector+7),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-URB-0009",
@@ -2475,7 +2507,11 @@
         "name": "श्रीमती सुमन विश्नोई (ANM दीदी)",
         "phone": "9669632929"
       }
-    }
+    },
+    "lat": 22.455797,
+    "lng": 77.263637,
+    "clean_name": "टिमरनी नगर (Timarni Urban)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=टिमरनी+नगर+(Timarni+Urban),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-URB-0010",
@@ -2773,7 +2809,11 @@
         "name": "श्रीमती मंजू रघुवंशी (ANM दीदी)",
         "phone": "9406108491"
       }
-    }
+    },
+    "lat": 22.075715,
+    "lng": 76.883471,
+    "clean_name": "खिरकिया नगर (Khirkiya Urban)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=खिरकिया+नगर+(Khirkiya+Urban),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-URB-0011",
@@ -2980,7 +3020,11 @@
         "name": "श्रीमती कविता जोशी (ANM दीदी)",
         "phone": "9827539486"
       }
-    }
+    },
+    "lat": 22.218192,
+    "lng": 76.729633,
+    "clean_name": "सिराली नगर (Sirali Urban)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=सिराली+नगर+(Sirali+Urban),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0001",
@@ -3222,7 +3266,11 @@
         "name": "श्रीमती मंजू सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752201255"
       }
-    }
+    },
+    "lat": 22.396843,
+    "lng": 77.187162,
+    "clean_name": "Handia",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Handia,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0002",
@@ -3380,7 +3428,11 @@
         "name": "श्रीमती कविता तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755550797"
       }
-    }
+    },
+    "lat": 22.348297,
+    "lng": 77.052647,
+    "clean_name": "Abgaon Kalan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Abgaon+Kalan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0003",
@@ -3568,7 +3620,11 @@
         "name": "श्रीमती पूजा सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406720148"
       }
-    }
+    },
+    "lat": 22.382868,
+    "lng": 77.054483,
+    "clean_name": "Abgaon Khurd",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Abgaon+Khurd,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0004",
@@ -3764,7 +3820,11 @@
         "name": "श्रीमती ललिता शर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179971728"
       }
-    }
+    },
+    "lat": 22.340881,
+    "lng": 77.089714,
+    "clean_name": "Adalpur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Adalpur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0005",
@@ -3996,7 +4056,11 @@
         "name": "श्रीमती रेखा रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425461551"
       }
-    }
+    },
+    "lat": 22.354356,
+    "lng": 77.013344,
+    "clean_name": "Adampur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Adampur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0006",
@@ -4184,7 +4248,11 @@
         "name": "श्रीमती पूजा चौरे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826734487"
       }
-    }
+    },
+    "lat": 22.400718,
+    "lng": 77.097181,
+    "clean_name": "Ajnas",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Ajnas,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0007",
@@ -4372,7 +4440,11 @@
         "name": "श्रीमती कल्पना गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179269834"
       }
-    }
+    },
+    "lat": 22.296997,
+    "lng": 77.062993,
+    "clean_name": "Charakhan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Charakhan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0008",
@@ -4614,7 +4686,11 @@
         "name": "श्रीमती सुमन जोशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179308727"
       }
-    }
+    },
+    "lat": 22.4116,
+    "lng": 77.003847,
+    "clean_name": "Dhangaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Dhangaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0009",
@@ -4772,7 +4848,11 @@
         "name": "श्रीमती कविता मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406739711"
       }
-    }
+    },
+    "lat": 22.356385,
+    "lng": 77.15011,
+    "clean_name": "Khedi Neema",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khedi+Neema,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0010",
@@ -4976,7 +5056,11 @@
         "name": "श्रीमती गीता विश्नोई (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977779776"
       }
-    }
+    },
+    "lat": 22.300354,
+    "lng": 76.982645,
+    "clean_name": "Kolwa",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kolwa,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0011",
@@ -5134,7 +5218,11 @@
         "name": "श्रीमती साधना मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827563303"
       }
-    }
+    },
+    "lat": 22.461824,
+    "lng": 77.074588,
+    "clean_name": "Malpon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Malpon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0012",
@@ -5330,7 +5418,11 @@
         "name": "श्रीमती रजनी शर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406163918"
       }
-    }
+    },
+    "lat": 22.267753,
+    "lng": 77.130291,
+    "clean_name": "Piplghata",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Piplghata,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0013",
@@ -5562,7 +5654,11 @@
         "name": "श्रीमती रेखा मालवीय (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179983472"
       }
-    }
+    },
+    "lat": 22.386519,
+    "lng": 76.929827,
+    "clean_name": "Balagaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Balagaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0014",
@@ -5758,7 +5854,11 @@
         "name": "श्रीमती वंदना रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179928897"
       }
-    }
+    },
+    "lat": 22.366757,
+    "lng": 77.072736,
+    "clean_name": "Rehanpur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Rehanpur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0015",
@@ -5954,7 +6054,11 @@
         "name": "श्रीमती सुनीता रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755561607"
       }
-    }
+    },
+    "lat": 22.337661,
+    "lng": 77.052335,
+    "clean_name": "Kulharda",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kulharda,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0016",
@@ -6196,7 +6300,11 @@
         "name": "श्रीमती सुमन जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826873207"
       }
-    }
+    },
+    "lat": 22.39021,
+    "lng": 77.04467,
+    "clean_name": "Chhadgaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chhadgaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0017",
@@ -6420,7 +6528,11 @@
         "name": "श्रीमती नीता मालवीय (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669822608"
       }
-    }
+    },
+    "lat": 22.343452,
+    "lng": 77.103477,
+    "clean_name": "Nimgaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Nimgaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0018",
@@ -6578,7 +6690,11 @@
         "name": "श्रीमती संतोष पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977117072"
       }
-    }
+    },
+    "lat": 22.341821,
+    "lng": 77.005645,
+    "clean_name": "Undrakhal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Undrakhal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0019",
@@ -6802,7 +6918,11 @@
         "name": "श्रीमती मंजू जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669170813"
       }
-    }
+    },
+    "lat": 22.415938,
+    "lng": 77.091689,
+    "clean_name": "Magardha",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Magardha,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0020",
@@ -6998,7 +7118,11 @@
         "name": "श्रीमती कल्पना तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755384434"
       }
-    }
+    },
+    "lat": 22.289514,
+    "lng": 77.080553,
+    "clean_name": "Rangaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Rangaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0021",
@@ -7186,7 +7310,11 @@
         "name": "श्रीमती सरिता यादव (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977429287"
       }
-    }
+    },
+    "lat": 22.404533,
+    "lng": 76.983929,
+    "clean_name": "Bedakhedi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bedakhedi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0022",
@@ -7382,7 +7510,11 @@
         "name": "श्रीमती स्वाति मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827919394"
       }
-    }
+    },
+    "lat": 22.376113,
+    "lng": 77.159446,
+    "clean_name": "Chidgaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chidgaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0023",
@@ -7532,7 +7664,11 @@
         "name": "श्रीमती किरण जोशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425452909"
       }
-    }
+    },
+    "lat": 22.27852,
+    "lng": 76.991962,
+    "clean_name": "Khedi Mehmudabad",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khedi+Mehmudabad,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0024",
@@ -7720,7 +7856,11 @@
         "name": "श्रीमती रामबाई जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425447177"
       }
-    }
+    },
+    "lat": 22.472184,
+    "lng": 77.049319,
+    "clean_name": "Bhadugaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bhadugaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0025",
@@ -7916,7 +8056,11 @@
         "name": "श्रीमती ललिता मालवीय (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827441968"
       }
-    }
+    },
+    "lat": 22.277225,
+    "lng": 77.158304,
+    "clean_name": "Bichhapur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bichhapur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0026",
@@ -8148,7 +8292,11 @@
         "name": "श्रीमती कमला राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826597126"
       }
-    }
+    },
+    "lat": 22.36,
+    "lng": 77.045294,
+    "clean_name": "Gondagaon Kalan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gondagaon+Kalan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0027",
@@ -8362,7 +8510,11 @@
         "name": "श्रीमती रजनी कुशवाह (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425611265"
       }
-    }
+    },
+    "lat": 22.375825,
+    "lng": 77.078793,
+    "clean_name": "Gondagaon Khurd",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gondagaon+Khurd,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0028",
@@ -8550,7 +8702,11 @@
         "name": "श्रीमती माया राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826415743"
       }
-    }
+    },
+    "lat": 22.326794,
+    "lng": 77.056838,
+    "clean_name": "Lachora",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Lachora,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0029",
@@ -8708,7 +8864,11 @@
         "name": "श्रीमती रजनी मालवीय (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425520245"
       }
-    }
+    },
+    "lat": 22.394307,
+    "lng": 77.031352,
+    "clean_name": "Bhawras",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bhawras,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0030",
@@ -8932,7 +9092,11 @@
         "name": "श्रीमती रामबाई वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425148001"
       }
-    }
+    },
+    "lat": 22.35077,
+    "lng": 77.116964,
+    "clean_name": "Bori",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bori,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0031",
@@ -9082,7 +9246,11 @@
         "name": "श्रीमती रामबाई जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425897730"
       }
-    }
+    },
+    "lat": 22.326116,
+    "lng": 77.00212,
+    "clean_name": "Borpani",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Borpani,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0032",
@@ -9332,7 +9500,11 @@
         "name": "श्रीमती किरण मालवीय (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826757386"
       }
-    }
+    },
+    "lat": 22.430486,
+    "lng": 77.080553,
+    "clean_name": "Chandrakhal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chandrakhal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0033",
@@ -9546,7 +9718,11 @@
         "name": "श्रीमती संतोष कुशवाह (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669259797"
       }
-    }
+    },
+    "lat": 22.286482,
+    "lng": 77.101648,
+    "clean_name": "Charkheda",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Charkheda,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0034",
@@ -9788,7 +9964,11 @@
         "name": "श्रीमती अनिता जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9893534753"
       }
-    }
+    },
+    "lat": 22.391737,
+    "lng": 76.965109,
+    "clean_name": "Chharpura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chharpura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0035",
@@ -10030,7 +10210,11 @@
         "name": "श्रीमती कमला तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179488196"
       }
-    }
+    },
+    "lat": 22.399303,
+    "lng": 77.163257,
+    "clean_name": "Chhindgaon Mal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chhindgaon+Mal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0036",
@@ -10188,7 +10372,11 @@
         "name": "श्रीमती सुमन रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425194545"
       }
-    }
+    },
+    "lat": 22.257938,
+    "lng": 77.008209,
+    "clean_name": "Chhindgaon Tamoli",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chhindgaon+Tamoli,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0037",
@@ -10384,7 +10572,11 @@
         "name": "श्रीमती वंदना राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752332881"
       }
-    }
+    },
+    "lat": 22.476852,
+    "lng": 77.019906,
+    "clean_name": "Dholpur Kalan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Dholpur+Kalan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0038",
@@ -10580,7 +10772,11 @@
         "name": "श्रीमती मंजू अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752743473"
       }
-    }
+    },
+    "lat": 22.353243,
+    "lng": 77.072736,
+    "clean_name": "Dholpur Khurd",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Dholpur+Khurd,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0039",
@@ -10738,7 +10934,11 @@
         "name": "श्रीमती साधना कुशवाह (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827424703"
       }
-    }
+    },
+    "lat": 22.35493,
+    "lng": 77.035114,
+    "clean_name": "Gadamod",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gadamod,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0040",
@@ -10888,7 +11088,11 @@
         "name": "श्रीमती माया पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179849937"
       }
-    }
+    },
+    "lat": 22.387305,
+    "lng": 77.080806,
+    "clean_name": "Gadrapur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gadrapur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0041",
@@ -11076,7 +11280,11 @@
         "name": "श्रीमती माया जोशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752475565"
       }
-    }
+    },
+    "lat": 22.317127,
+    "lng": 77.066142,
+    "clean_name": "Godri",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Godri,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0042",
@@ -11326,7 +11534,11 @@
         "name": "श्रीमती रामबाई तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827324319"
       }
-    }
+    },
+    "lat": 22.394166,
+    "lng": 77.01569,
+    "clean_name": "Gullas",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gullas,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0043",
@@ -11514,7 +11726,11 @@
         "name": "श्रीमती साधना गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752626199"
       }
-    }
+    },
+    "lat": 22.362751,
+    "lng": 77.128562,
+    "clean_name": "Jaloda",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Jaloda,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0044",
@@ -11764,7 +11980,11 @@
         "name": "श्रीमती रुक्मिणी चौरे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752427557"
       }
-    }
+    },
+    "lat": 22.3084,
+    "lng": 77.003847,
+    "clean_name": "Kartana",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kartana,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0045",
@@ -12014,7 +12234,11 @@
         "name": "श्रीमती कविता पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9893576769"
       }
-    }
+    },
+    "lat": 22.442804,
+    "lng": 77.063934,
+    "clean_name": "Kathadi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kathadi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0046",
@@ -12164,7 +12388,11 @@
         "name": "श्रीमती नीता गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669978721"
       }
-    }
+    },
+    "lat": 22.288917,
+    "lng": 77.124909,
+    "clean_name": "Khartalab",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khartalab,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0047",
@@ -12360,7 +12588,11 @@
         "name": "श्रीमती स्वाति गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977663051"
       }
-    }
+    },
+    "lat": 22.373405,
+    "lng": 76.949191,
+    "clean_name": "Khidki",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khidki,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0048",
@@ -12556,7 +12788,11 @@
         "name": "श्रीमती सरिता जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827639031"
       }
-    }
+    },
+    "lat": 22.424592,
+    "lng": 77.160386,
+    "clean_name": "Kuhi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kuhi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0049",
@@ -12706,7 +12942,11 @@
         "name": "श्रीमती वंदना जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669233582"
       }
-    }
+    },
+    "lat": 22.240382,
+    "lng": 77.031141,
+    "clean_name": "Malona",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Malona,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0050",
@@ -12930,7 +13170,11 @@
         "name": "श्रीमती रजनी सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752578180"
       }
-    }
+    },
+    "lat": 22.371703,
+    "lng": 77.052647,
+    "clean_name": "Nausar",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Nausar,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0051",
@@ -13180,7 +13424,11 @@
         "name": "श्रीमती सरिता अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977500560"
       }
-    }
+    },
+    "lat": 22.352956,
+    "lng": 77.08431,
+    "clean_name": "Nayagaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Nayagaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0052",
@@ -13330,7 +13578,11 @@
         "name": "श्रीमती सीमा तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425390756"
       }
-    }
+    },
+    "lat": 22.345913,
+    "lng": 77.027124,
+    "clean_name": "Pokharni",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Pokharni,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0053",
@@ -13526,7 +13778,11 @@
         "name": "श्रीमती ललिता गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425321960"
       }
-    }
+    },
+    "lat": 22.399952,
+    "lng": 77.078009,
+    "clean_name": "Sodhalpur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sodhalpur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0054",
@@ -13714,7 +13970,11 @@
         "name": "श्रीमती शीला गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425757658"
       }
-    }
+    },
+    "lat": 22.310052,
+    "lng": 77.079784,
+    "clean_name": "Sonkhedi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sonkhedi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0055",
@@ -13946,7 +14206,11 @@
         "name": "श्रीमती रेखा सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752602550"
       }
-    }
+    },
+    "lat": 22.389119,
+    "lng": 76.999127,
+    "clean_name": "Temagaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Temagaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0056",
@@ -14104,7 +14368,11 @@
         "name": "श्रीमती नीता राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826166447"
       }
-    }
+    },
+    "lat": 22.378887,
+    "lng": 77.136706,
+    "clean_name": "Ahalwada",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Ahalwada,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0057",
@@ -14300,7 +14568,11 @@
         "name": "श्रीमती कल्पना पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755263633"
       }
-    }
+    },
+    "lat": 22.290097,
+    "lng": 77.011538,
+    "clean_name": "Alampur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Alampur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0058",
@@ -14488,7 +14760,11 @@
         "name": "श्रीमती माया कुशवाह (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179972712"
       }
-    }
+    },
+    "lat": 22.451383,
+    "lng": 77.042465,
+    "clean_name": "Amsagar",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Amsagar,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0059",
@@ -14638,7 +14914,11 @@
         "name": "श्रीमती सीमा जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406384645"
       }
-    }
+    },
+    "lat": 22.297479,
+    "lng": 77.148669,
+    "clean_name": "Baghawad",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Baghawad,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0060",
@@ -14834,7 +15114,11 @@
         "name": "श्रीमती प्रियंका चौरे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669900319"
       }
-    }
+    },
+    "lat": 22.350185,
+    "lng": 76.937917,
+    "clean_name": "Bajaniya",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bajaniya,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0061",
@@ -15066,7 +15350,11 @@
         "name": "श्रीमती मंजू सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755948802"
       }
-    }
+    },
+    "lat": 22.450333,
+    "lng": 77.150079,
+    "clean_name": "Banshipura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Banshipura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0062",
@@ -15298,7 +15586,11 @@
         "name": "श्रीमती साधना अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425783185"
       }
-    }
+    },
+    "lat": 22.346486,
+    "lng": 77.06,
+    "clean_name": "Banspani",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Banspani,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0063",
@@ -15448,7 +15740,11 @@
         "name": "श्रीमती रामबाई गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425429153"
       }
-    }
+    },
+    "lat": 22.37727,
+    "lng": 77.042779,
+    "clean_name": "Barkalan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Barkalan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0064",
@@ -15644,7 +15940,11 @@
         "name": "श्रीमती आरती यादव (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425468948"
       }
-    }
+    },
+    "lat": 22.357095,
+    "lng": 77.096136,
+    "clean_name": "Billod",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Billod,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0065",
@@ -15894,7 +16194,11 @@
         "name": "श्रीमती कल्पना पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827553959"
       }
-    }
+    },
+    "lat": 22.333675,
+    "lng": 77.022666,
+    "clean_name": "Bodhi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bodhi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0066",
@@ -16126,7 +16430,11 @@
         "name": "श्रीमती स्वाति वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425972470"
       }
-    }
+    },
+    "lat": 22.412346,
+    "lng": 77.070044,
+    "clean_name": "Churni",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Churni,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0067",
@@ -16376,7 +16684,11 @@
         "name": "श्रीमती साधना चौरे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752153395"
       }
-    }
+    },
+    "lat": 22.306813,
+    "lng": 77.096874,
+    "clean_name": "Khedi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khedi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0068",
@@ -16618,7 +16930,11 @@
         "name": "श्रीमती सरिता यादव (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826357232"
       }
-    }
+    },
+    "lat": 22.378887,
+    "lng": 76.983294,
+    "clean_name": "Manjharikalan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Manjharikalan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0069",
@@ -16776,7 +17092,11 @@
         "name": "श्रीमती सुमन शर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425636526"
       }
-    }
+    },
+    "lat": 22.398271,
+    "lng": 77.140005,
+    "clean_name": "Nehru Nagar Gram",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Nehru+Nagar+Gram,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0070",
@@ -17018,7 +17338,11 @@
         "name": "श्रीमती साधना वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752598312"
       }
-    }
+    },
+    "lat": 22.272803,
+    "lng": 77.025463,
+    "clean_name": "Pratap Pura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Pratap+Pura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0071",
@@ -17268,7 +17592,11 @@
         "name": "श्रीमती स्वाति शर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9893663646"
       }
-    }
+    },
+    "lat": 22.454885,
+    "lng": 77.017229,
+    "clean_name": "Bairagarh",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bairagarh,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0072",
@@ -17464,7 +17792,11 @@
         "name": "श्रीमती सपना रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977278758"
       }
-    }
+    },
+    "lat": 22.312408,
+    "lng": 77.171067,
+    "clean_name": "Baranga Harda",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Baranga+Harda,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0073",
@@ -17696,7 +18028,11 @@
         "name": "श्रीमती ममता पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669301831"
       }
-    }
+    },
+    "lat": 22.323157,
+    "lng": 76.932838,
+    "clean_name": "Chhipaner",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chhipaner,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "HDA-GP-0074",
@@ -17928,7 +18264,11 @@
         "name": "श्रीमती पुष्पा जोशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669554786"
       }
-    }
+    },
+    "lat": 22.371703,
+    "lng": 77.067353,
+    "clean_name": "Bhilatdev",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bhilatdev,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0075",
@@ -18116,7 +18456,11 @@
         "name": "श्रीमती गीता रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406776703"
       }
-    }
+    },
+    "lat": 22.345732,
+    "lng": 77.234617,
+    "clean_name": "Timarni Town Hub",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Timarni+Town+Hub,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0076",
@@ -18348,7 +18692,11 @@
         "name": "श्रीमती सुनीता जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425235410"
       }
-    }
+    },
+    "lat": 22.387719,
+    "lng": 77.199386,
+    "clean_name": "Ahalwada",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Ahalwada,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0077",
@@ -18544,7 +18892,11 @@
         "name": "श्रीमती माया चौरे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406982442"
       }
-    }
+    },
+    "lat": 22.374244,
+    "lng": 77.275756,
+    "clean_name": "Alampur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Alampur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0078",
@@ -18740,7 +19092,11 @@
         "name": "श्रीमती रामबाई रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755992919"
       }
-    }
+    },
+    "lat": 22.327882,
+    "lng": 77.191919,
+    "clean_name": "Amsagar",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Amsagar,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0079",
@@ -18890,7 +19246,11 @@
         "name": "श्रीमती सरिता विश्नोई (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827971598"
       }
-    }
+    },
+    "lat": 22.431603,
+    "lng": 77.226107,
+    "clean_name": "Baghawad",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Baghawad,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0080",
@@ -19048,7 +19408,11 @@
         "name": "श्रीमती साधना मालवीय (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669270249"
       }
-    }
+    },
+    "lat": 22.317,
+    "lng": 77.285253,
+    "clean_name": "Bajaniya",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bajaniya,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0081",
@@ -19244,7 +19608,11 @@
         "name": "श्रीमती पूजा पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977805486"
       }
-    }
+    },
+    "lat": 22.372215,
+    "lng": 77.13899,
+    "clean_name": "Banshipura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Banshipura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0082",
@@ -19458,7 +19826,11 @@
         "name": "श्रीमती प्रियंका सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669903562"
       }
-    }
+    },
+    "lat": 22.428246,
+    "lng": 77.306455,
+    "clean_name": "Banspani",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Banspani,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0083",
@@ -19690,7 +20062,11 @@
         "name": "श्रीमती नीता सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755722217"
       }
-    }
+    },
+    "lat": 22.266776,
+    "lng": 77.214512,
+    "clean_name": "Barkalan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Barkalan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0084",
@@ -19840,7 +20216,11 @@
         "name": "श्रीमती कविता पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9893784343"
       }
-    }
+    },
+    "lat": 22.460847,
+    "lng": 77.158809,
+    "clean_name": "Bhadugaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bhadugaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0085",
@@ -19998,7 +20378,11 @@
         "name": "श्रीमती आरती रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406230674"
       }
-    }
+    },
+    "lat": 22.342081,
+    "lng": 77.359273,
+    "clean_name": "Bhavras",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bhavras,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0086",
@@ -20222,7 +20606,11 @@
         "name": "श्रीमती अनिता अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179638637"
       }
-    }
+    },
+    "lat": 22.361843,
+    "lng": 77.216364,
+    "clean_name": "Bichhapur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bichhapur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0087",
@@ -20446,7 +20834,11 @@
         "name": "श्रीमती उषा वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669259903"
       }
-    }
+    },
+    "lat": 22.390939,
+    "lng": 77.236765,
+    "clean_name": "Billod",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Billod,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0088",
@@ -20604,7 +20996,11 @@
         "name": "श्रीमती माया शर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669654552"
       }
-    }
+    },
+    "lat": 22.33839,
+    "lng": 77.24443,
+    "clean_name": "Bodhi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bodhi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0089",
@@ -20762,7 +21158,11 @@
         "name": "श्रीमती साधना पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827371407"
       }
-    }
+    },
+    "lat": 22.385148,
+    "lng": 77.185623,
+    "clean_name": "Bori",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bori,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0090",
@@ -20912,7 +21312,11 @@
         "name": "श्रीमती अनिता कुशवाह (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669614345"
       }
-    }
+    },
+    "lat": 22.386779,
+    "lng": 77.283455,
+    "clean_name": "Borpani",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Borpani,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0091",
@@ -21108,7 +21512,11 @@
         "name": "श्रीमती अनिता तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406465308"
       }
-    }
+    },
+    "lat": 22.312662,
+    "lng": 77.197411,
+    "clean_name": "Chandrakhal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chandrakhal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0092",
@@ -21296,7 +21704,11 @@
         "name": "श्रीमती रुक्मिणी जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425356949"
       }
-    }
+    },
+    "lat": 22.439086,
+    "lng": 77.208547,
+    "clean_name": "Charkheda",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Charkheda,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0093",
@@ -21510,7 +21922,11 @@
         "name": "श्रीमती स्वाति शर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669993415"
       }
-    }
+    },
+    "lat": 22.324067,
+    "lng": 77.305171,
+    "clean_name": "Chharpura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chharpura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0094",
@@ -21724,7 +22140,11 @@
         "name": "श्रीमती पूजा जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752444688"
       }
-    }
+    },
+    "lat": 22.352487,
+    "lng": 77.129654,
+    "clean_name": "Chhindgaon Mal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chhindgaon+Mal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0095",
@@ -21874,7 +22294,11 @@
         "name": "श्रीमती रजनी विश्नोई (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179439458"
       }
-    }
+    },
+    "lat": 22.45008,
+    "lng": 77.297138,
+    "clean_name": "Chhindgaon Tamoli",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chhindgaon+Tamoli,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0096",
@@ -22098,7 +22522,11 @@
         "name": "श्रीमती पुष्पा मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752968797"
       }
-    }
+    },
+    "lat": 22.256416,
+    "lng": 77.239781,
+    "clean_name": "Chhipaner",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chhipaner,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0097",
@@ -22248,7 +22676,11 @@
         "name": "श्रीमती पूजा सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425614889"
       }
-    }
+    },
+    "lat": 22.451375,
+    "lng": 77.130796,
+    "clean_name": "Churni",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Churni,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0098",
@@ -22462,7 +22894,11 @@
         "name": "श्रीमती सीमा पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826851622"
       }
-    }
+    },
+    "lat": 22.3686,
+    "lng": 77.243806,
+    "clean_name": "Dholpur Kalan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Dholpur+Kalan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0099",
@@ -22620,7 +23056,11 @@
         "name": "श्रीमती ममता पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425438542"
       }
-    }
+    },
+    "lat": 22.352775,
+    "lng": 77.210307,
+    "clean_name": "Dholpur Khurd",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Dholpur+Khurd,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0100",
@@ -22808,7 +23248,11 @@
         "name": "श्रीमती कमला रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179819602"
       }
-    }
+    },
+    "lat": 22.401806,
+    "lng": 77.232262,
+    "clean_name": "Gadamod",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gadamod,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0101",
@@ -22958,7 +23402,11 @@
         "name": "श्रीमती कमला जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669401967"
       }
-    }
+    },
+    "lat": 22.334293,
+    "lng": 77.257748,
+    "clean_name": "Gadrapur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gadrapur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0102",
@@ -23154,7 +23602,11 @@
         "name": "श्रीमती शीला पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977694188"
       }
-    }
+    },
+    "lat": 22.37783,
+    "lng": 77.172136,
+    "clean_name": "Godri",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Godri,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0103",
@@ -23350,7 +23802,11 @@
         "name": "श्रीमती सीमा तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406924843"
       }
-    }
+    },
+    "lat": 22.402484,
+    "lng": 77.28698,
+    "clean_name": "Gondagaon Kalan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gondagaon+Kalan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0104",
@@ -23508,7 +23964,11 @@
         "name": "श्रीमती वंदना मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977790130"
       }
-    }
+    },
+    "lat": 22.298114,
+    "lng": 77.208547,
+    "clean_name": "Gondagaon Khurd",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gondagaon+Khurd,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0105",
@@ -23704,7 +24164,11 @@
         "name": "श्रीमती वंदना मालवीय (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826282522"
       }
-    }
+    },
+    "lat": 22.442118,
+    "lng": 77.187452,
+    "clean_name": "Gullas",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gullas,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0106",
@@ -23918,7 +24382,11 @@
         "name": "श्रीमती सरिता राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827336186"
       }
-    }
+    },
+    "lat": 22.336863,
+    "lng": 77.323991,
+    "clean_name": "Jaloda",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Jaloda,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0107",
@@ -24114,7 +24582,11 @@
         "name": "श्रीमती शीला कुशवाह (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826383428"
       }
-    }
+    },
+    "lat": 22.329297,
+    "lng": 77.125843,
+    "clean_name": "Kartana",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kartana,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0108",
@@ -24302,7 +24774,11 @@
         "name": "श्रीमती गीता मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406903184"
       }
-    }
+    },
+    "lat": 22.470662,
+    "lng": 77.280891,
+    "clean_name": "Kathadi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kathadi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0109",
@@ -24490,7 +24966,11 @@
         "name": "श्रीमती ममता अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827645611"
       }
-    }
+    },
+    "lat": 22.251748,
+    "lng": 77.269194,
+    "clean_name": "Khartalab",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khartalab,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0110",
@@ -24722,7 +25202,11 @@
         "name": "श्रीमती किरण तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179250152"
       }
-    }
+    },
+    "lat": 22.375357,
+    "lng": 77.216364,
+    "clean_name": "Khidki",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khidki,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0111",
@@ -24882,7 +25366,11 @@
         "name": "श्रीमती ममता अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826765318"
       }
-    }
+    },
+    "lat": 22.37367,
+    "lng": 77.253986,
+    "clean_name": "Kuhi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kuhi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0112",
@@ -25106,7 +25594,11 @@
         "name": "श्रीमती सीमा मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9893479687"
       }
-    }
+    },
+    "lat": 22.341295,
+    "lng": 77.208294,
+    "clean_name": "Lachora",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Lachora,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0113",
@@ -25330,7 +25822,11 @@
         "name": "श्रीमती उषा पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669727814"
       }
-    }
+    },
+    "lat": 22.411473,
+    "lng": 77.222958,
+    "clean_name": "Malona",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Malona,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0114",
@@ -25562,7 +26058,11 @@
         "name": "श्रीमती कल्पना सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9893326957"
       }
-    }
+    },
+    "lat": 22.334434,
+    "lng": 77.27341,
+    "clean_name": "Nausar",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Nausar,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0115",
@@ -25720,7 +26220,11 @@
         "name": "श्रीमती किरण पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406772844"
       }
-    }
+    },
+    "lat": 22.365849,
+    "lng": 77.160538,
+    "clean_name": "Nayagaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Nayagaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0116",
@@ -25870,7 +26374,11 @@
         "name": "श्रीमती गीता मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669976720"
       }
-    }
+    },
+    "lat": 22.4202,
+    "lng": 77.285253,
+    "clean_name": "Pokharni",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Pokharni,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0117",
@@ -26066,7 +26574,11 @@
         "name": "श्रीमती ललिता यादव (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977673338"
       }
-    }
+    },
+    "lat": 22.285796,
+    "lng": 77.225166,
+    "clean_name": "Rahatgaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Rahatgaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0118",
@@ -26224,7 +26736,11 @@
         "name": "श्रीमती पुष्पा यादव (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179519308"
       }
-    }
+    },
+    "lat": 22.439683,
+    "lng": 77.164191,
+    "clean_name": "Sodhalpur (Mela Ground)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sodhalpur+(Mela+Ground),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0119",
@@ -26374,7 +26890,11 @@
         "name": "श्रीमती सीमा गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425732958"
       }
-    }
+    },
+    "lat": 22.355195,
+    "lng": 77.339909,
+    "clean_name": "Sonkhedi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sonkhedi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0120",
@@ -26532,7 +27052,11 @@
         "name": "श्रीमती रेखा शर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827860636"
       }
-    }
+    },
+    "lat": 22.304008,
+    "lng": 77.128714,
+    "clean_name": "Temagaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Temagaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0121",
@@ -26690,7 +27214,11 @@
         "name": "श्रीमती माया जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669182427"
       }
-    }
+    },
+    "lat": 22.488218,
+    "lng": 77.257959,
+    "clean_name": "Baranga",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Baranga,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0122",
@@ -26886,7 +27414,11 @@
         "name": "श्रीमती प्रियंका रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179580005"
       }
-    }
+    },
+    "lat": 22.356897,
+    "lng": 77.236453,
+    "clean_name": "Chichot",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chichot,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0123",
@@ -27044,7 +27576,11 @@
         "name": "श्रीमती गीता पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977833543"
       }
-    }
+    },
+    "lat": 22.375644,
+    "lng": 77.20479,
+    "clean_name": "Chichli",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chichli,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0124",
@@ -27194,7 +27730,11 @@
         "name": "श्रीमती रुक्मिणी यादव (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669769658"
       }
-    }
+    },
+    "lat": 22.382687,
+    "lng": 77.261976,
+    "clean_name": "Deogaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Deogaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0125",
@@ -27418,7 +27958,11 @@
         "name": "श्रीमती सीमा यादव (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406435560"
       }
-    }
+    },
+    "lat": 22.328648,
+    "lng": 77.211091,
+    "clean_name": "Fatehpur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Fatehpur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0126",
@@ -27642,7 +28186,11 @@
         "name": "श्रीमती सपना वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755994889"
       }
-    }
+    },
+    "lat": 22.418548,
+    "lng": 77.209316,
+    "clean_name": "Jamunya",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Jamunya,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0127",
@@ -27866,7 +28414,11 @@
         "name": "श्रीमती सीमा जोशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752126658"
       }
-    }
+    },
+    "lat": 22.339481,
+    "lng": 77.289973,
+    "clean_name": "Kalyanpura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kalyanpura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0128",
@@ -28016,7 +28568,11 @@
         "name": "श्रीमती रुक्मिणी तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827258733"
       }
-    }
+    },
+    "lat": 22.349713,
+    "lng": 77.152394,
+    "clean_name": "Khairi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khairi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0129",
@@ -28166,7 +28722,11 @@
         "name": "श्रीमती प्रियंका वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669645172"
       }
-    }
+    },
+    "lat": 22.438503,
+    "lng": 77.277562,
+    "clean_name": "Kothi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kothi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0130",
@@ -28316,7 +28876,11 @@
         "name": "श्रीमती उषा कुशवाह (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179516869"
       }
-    }
+    },
+    "lat": 22.277217,
+    "lng": 77.246635,
+    "clean_name": "Mokalgaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Mokalgaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0131",
@@ -28512,7 +29076,11 @@
         "name": "श्रीमती रजनी पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406218318"
       }
-    }
+    },
+    "lat": 22.431121,
+    "lng": 77.140431,
+    "clean_name": "Nandara",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Nandara,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0132",
@@ -28662,7 +29230,11 @@
         "name": "श्रीमती साधना जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406532164"
       }
-    }
+    },
+    "lat": 22.378415,
+    "lng": 77.351183,
+    "clean_name": "Palasner",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Palasner,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0133",
@@ -28820,7 +29392,11 @@
         "name": "श्रीमती सुमन राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755516029"
       }
-    }
+    },
+    "lat": 22.278267,
+    "lng": 77.139021,
+    "clean_name": "Pipliya",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Pipliya,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0134",
@@ -29044,7 +29620,11 @@
         "name": "श्रीमती वंदना पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425912248"
       }
-    }
+    },
+    "lat": 22.382114,
+    "lng": 77.2291,
+    "clean_name": "Raikhedi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Raikhedi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0135",
@@ -29232,7 +29812,11 @@
         "name": "श्रीमती मंजू जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977302542"
       }
-    }
+    },
+    "lat": 22.35133,
+    "lng": 77.246321,
+    "clean_name": "Rampur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Rampur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0136",
@@ -29382,7 +29966,11 @@
         "name": "श्रीमती ललिता गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752297382"
       }
-    }
+    },
+    "lat": 22.371505,
+    "lng": 77.192964,
+    "clean_name": "Sontalai",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sontalai,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0137",
@@ -29540,7 +30128,11 @@
         "name": "श्रीमती अनिता मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752398641"
       }
-    }
+    },
+    "lat": 22.394925,
+    "lng": 77.266434,
+    "clean_name": "Sukhras",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sukhras,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0138",
@@ -29764,7 +30356,11 @@
         "name": "श्रीमती गीता जोशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827477629"
       }
-    }
+    },
+    "lat": 22.316254,
+    "lng": 77.219056,
+    "clean_name": "Surjana",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Surjana,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0139",
@@ -29952,7 +30548,11 @@
         "name": "श्रीमती कल्पना अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425189915"
       }
-    }
+    },
+    "lat": 22.421787,
+    "lng": 77.192226,
+    "clean_name": "Tandwada",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Tandwada,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "TIM-GP-0140",
@@ -30176,7 +30776,11 @@
         "name": "श्रीमती कमला सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406830706"
       }
-    }
+    },
+    "lat": 22.349713,
+    "lng": 77.305806,
+    "clean_name": "Umardha",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Umardha,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0141",
@@ -30400,7 +31004,11 @@
         "name": "श्रीमती सीमा तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425433864"
       }
-    }
+    },
+    "lat": 22.106729,
+    "lng": 76.834995,
+    "clean_name": "Khirkiya Town",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khirkiya+Town,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0142",
@@ -30624,7 +31232,11 @@
         "name": "श्रीमती कल्पना सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755832251"
       }
-    }
+    },
+    "lat": 22.232197,
+    "lng": 76.949537,
+    "clean_name": "Chhipabad Hub",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chhipabad+Hub,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0143",
@@ -30856,7 +31468,11 @@
         "name": "श्रीमती ममता अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755474426"
       }
-    }
+    },
+    "lat": 22.050115,
+    "lng": 76.957771,
+    "clean_name": "Sirali Block Hub",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sirali+Block+Hub,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0144",
@@ -31080,7 +31696,11 @@
         "name": "श्रीमती सुनीता विश्नोई (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752854942"
       }
-    }
+    },
+    "lat": 22.192592,
+    "lng": 76.803933,
+    "clean_name": "Amakhal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Amakhal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0145",
@@ -31238,7 +31858,11 @@
         "name": "श्रीमती रजनी राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406125598"
       }
-    }
+    },
+    "lat": 22.181843,
+    "lng": 77.042162,
+    "clean_name": "Amasel",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Amasel,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0146",
@@ -31426,7 +32050,11 @@
         "name": "श्रीमती ममता पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752329713"
       }
-    }
+    },
+    "lat": 22.133297,
+    "lng": 76.907647,
+    "clean_name": "Babadia",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Babadia,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0147",
@@ -31622,7 +32250,11 @@
         "name": "श्रीमती पूजा अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669507034"
       }
-    }
+    },
+    "lat": 22.167868,
+    "lng": 76.909483,
+    "clean_name": "Badnagar",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Badnagar,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0148",
@@ -31780,7 +32412,11 @@
         "name": "श्रीमती अनिता विश्नोई (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827375782"
       }
-    }
+    },
+    "lat": 22.125881,
+    "lng": 76.944714,
+    "clean_name": "Bamhangaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bamhangaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0149",
@@ -31976,7 +32612,11 @@
         "name": "श्रीमती गीता रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827734698"
       }
-    }
+    },
+    "lat": 22.139356,
+    "lng": 76.868344,
+    "clean_name": "Baranga",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Baranga,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0150",
@@ -32172,7 +32812,11 @@
         "name": "श्रीमती संतोष तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179228887"
       }
-    }
+    },
+    "lat": 22.185718,
+    "lng": 76.952181,
+    "clean_name": "Barangi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Barangi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0151",
@@ -32414,7 +33058,11 @@
         "name": "श्रीमती आरती राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406601775"
       }
-    }
+    },
+    "lat": 22.081997,
+    "lng": 76.917993,
+    "clean_name": "Bawdiya",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bawdiya,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0152",
@@ -32638,7 +33286,11 @@
         "name": "श्रीमती अनिता अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425728934"
       }
-    }
+    },
+    "lat": 22.1966,
+    "lng": 76.858847,
+    "clean_name": "Bediya Kala",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bediya+Kala,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0153",
@@ -32862,7 +33514,11 @@
         "name": "श्रीमती साधना राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826378404"
       }
-    }
+    },
+    "lat": 22.141385,
+    "lng": 77.00511,
+    "clean_name": "Bhagwanpura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bhagwanpura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0154",
@@ -33094,7 +33750,11 @@
         "name": "श्रीमती ममता गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826961331"
       }
-    }
+    },
+    "lat": 22.085354,
+    "lng": 76.837645,
+    "clean_name": "Bhawardi Mal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Bhawardi+Mal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0155",
@@ -33290,7 +33950,11 @@
         "name": "श्रीमती ललिता जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752197744"
       }
-    }
+    },
+    "lat": 22.246824,
+    "lng": 76.929588,
+    "clean_name": "Charuwa (Historic Market)",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Charuwa+(Historic+Market),+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0156",
@@ -33486,7 +34150,11 @@
         "name": "श्रीमती ललिता जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752183547"
       }
-    }
+    },
+    "lat": 22.052753,
+    "lng": 76.985291,
+    "clean_name": "Chaukdi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chaukdi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0157",
@@ -33636,7 +34304,11 @@
         "name": "श्रीमती स्वाति अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669768455"
       }
-    }
+    },
+    "lat": 22.171519,
+    "lng": 76.784827,
+    "clean_name": "Chhurikhaal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chhurikhaal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0158",
@@ -33794,7 +34466,11 @@
         "name": "श्रीमती रुक्मिणी यादव (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755433774"
       }
-    }
+    },
+    "lat": 22.151757,
+    "lng": 76.927736,
+    "clean_name": "Chikalpaat",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chikalpaat,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0159",
@@ -33944,7 +34620,11 @@
         "name": "श्रीमती स्वाति विश्नोई (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752321257"
       }
-    }
+    },
+    "lat": 22.122661,
+    "lng": 76.907335,
+    "clean_name": "Dedgaonmaal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Dedgaonmaal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0160",
@@ -34132,7 +34812,11 @@
         "name": "श्रीमती गीता जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827168466"
       }
-    }
+    },
+    "lat": 22.17521,
+    "lng": 76.89967,
+    "clean_name": "Deepgaon Kala",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Deepgaon+Kala,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0161",
@@ -34374,7 +35058,11 @@
         "name": "श्रीमती शीला राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977956755"
       }
-    }
+    },
+    "lat": 22.128452,
+    "lng": 76.958477,
+    "clean_name": "Dhankar",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Dhankar,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0162",
@@ -34570,7 +35258,11 @@
         "name": "श्रीमती स्वाति शर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425687270"
       }
-    }
+    },
+    "lat": 22.126821,
+    "lng": 76.860645,
+    "clean_name": "Dhanwada",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Dhanwada,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0163",
@@ -34720,7 +35412,11 @@
         "name": "श्रीमती रजनी मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179470500"
       }
-    }
+    },
+    "lat": 22.200938,
+    "lng": 76.946689,
+    "clean_name": "Dholgaon Kala",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Dholgaon+Kala,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0164",
@@ -34870,7 +35566,11 @@
         "name": "श्रीमती आरती विश्नोई (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669685380"
       }
-    }
+    },
+    "lat": 22.074514,
+    "lng": 76.935553,
+    "clean_name": "Gomgaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Gomgaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0165",
@@ -35094,7 +35794,11 @@
         "name": "श्रीमती कमला विश्नोई (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827370235"
       }
-    }
+    },
+    "lat": 22.189533,
+    "lng": 76.838929,
+    "clean_name": "Hasanpura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Hasanpura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0166",
@@ -35326,7 +36030,11 @@
         "name": "श्रीमती संतोष रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425222172"
       }
-    }
+    },
+    "lat": 22.161113,
+    "lng": 77.014446,
+    "clean_name": "Jamnya Khurd",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Jamnya+Khurd,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0167",
@@ -35522,7 +36230,11 @@
         "name": "श्रीमती रुक्मिणी कुशवाह (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827921591"
       }
-    }
+    },
+    "lat": 22.06352,
+    "lng": 76.846962,
+    "clean_name": "Jamukho",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Jamukho,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0168",
@@ -35710,7 +36422,11 @@
         "name": "श्रीमती साधना पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406518036"
       }
-    }
+    },
+    "lat": 22.257184,
+    "lng": 76.904319,
+    "clean_name": "Jatpuramaal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Jatpuramaal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0169",
@@ -35942,7 +36658,11 @@
         "name": "श्रीमती किरण पारे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669461722"
       }
-    }
+    },
+    "lat": 22.062225,
+    "lng": 77.013304,
+    "clean_name": "Jaymalpura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Jaymalpura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0170",
@@ -36166,7 +36886,11 @@
         "name": "श्रीमती ललिता मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669257643"
       }
-    }
+    },
+    "lat": 22.145,
+    "lng": 76.900294,
+    "clean_name": "Jinwaniya",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Jinwaniya,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0171",
@@ -36362,7 +37086,11 @@
         "name": "श्रीमती रामबाई जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406131350"
       }
-    }
+    },
+    "lat": 22.160825,
+    "lng": 76.933793,
+    "clean_name": "Junapani Bhavardi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Junapani+Bhavardi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0172",
@@ -36586,7 +37314,11 @@
         "name": "श्रीमती ललिता वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755312123"
       }
-    }
+    },
+    "lat": 22.111794,
+    "lng": 76.911838,
+    "clean_name": "Junapani Makrai",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Junapani+Makrai,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0173",
@@ -36782,7 +37514,11 @@
         "name": "श्रीमती सरिता वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9893176281"
       }
-    }
+    },
+    "lat": 22.179307,
+    "lng": 76.886352,
+    "clean_name": "Kaaldhad",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kaaldhad,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0174",
@@ -37024,7 +37760,11 @@
         "name": "श्रीमती साधना जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179704659"
       }
-    }
+    },
+    "lat": 22.13577,
+    "lng": 76.971964,
+    "clean_name": "Kaalkund",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kaalkund,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0175",
@@ -37220,7 +37960,11 @@
         "name": "श्रीमती कमला जोशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827513501"
       }
-    }
+    },
+    "lat": 22.111116,
+    "lng": 76.85712,
+    "clean_name": "Kaanpura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kaanpura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0176",
@@ -37452,7 +38196,11 @@
         "name": "श्रीमती प्रियंका पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755234430"
       }
-    }
+    },
+    "lat": 22.215486,
+    "lng": 76.935553,
+    "clean_name": "Kadola Rahau",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kadola+Rahau,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0177",
@@ -37648,7 +38396,11 @@
         "name": "श्रीमती रेखा विश्नोई (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9893205253"
       }
-    }
+    },
+    "lat": 22.071482,
+    "lng": 76.956648,
+    "clean_name": "Kalyakhedi",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kalyakhedi,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0178",
@@ -37806,7 +38558,11 @@
         "name": "श्रीमती आरती रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755713571"
       }
-    }
+    },
+    "lat": 22.176737,
+    "lng": 76.820109,
+    "clean_name": "Khamlay",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khamlay,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0179",
@@ -37956,7 +38712,11 @@
         "name": "श्रीमती कमला सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669379103"
       }
-    }
+    },
+    "lat": 22.184303,
+    "lng": 77.018257,
+    "clean_name": "Khedimal",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khedimal,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0180",
@@ -38106,7 +38866,11 @@
         "name": "श्रीमती रजनी जोशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977631468"
       }
-    }
+    },
+    "lat": 22.042938,
+    "lng": 76.863209,
+    "clean_name": "Khudiya",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khudiya,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0181",
@@ -38264,7 +39028,11 @@
         "name": "श्रीमती कल्पना तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752673359"
       }
-    }
+    },
+    "lat": 22.261852,
+    "lng": 76.874906,
+    "clean_name": "Kudawa",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kudawa,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0182",
@@ -38414,7 +39182,11 @@
         "name": "श्रीमती प्रियंका तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826366875"
       }
-    }
+    },
+    "lat": 22.138243,
+    "lng": 76.927736,
+    "clean_name": "Kukrapani",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kukrapani,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0183",
@@ -38572,7 +39344,11 @@
         "name": "श्रीमती कल्पना अग्रवाल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425443226"
       }
-    }
+    },
+    "lat": 22.13993,
+    "lng": 76.890114,
+    "clean_name": "Lolangra",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Lolangra,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0184",
@@ -38730,7 +39506,11 @@
         "name": "श्रीमती वंदना जोशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827130601"
       }
-    }
+    },
+    "lat": 22.172305,
+    "lng": 76.935806,
+    "clean_name": "Loni",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Loni,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0185",
@@ -38962,7 +39742,11 @@
         "name": "श्रीमती ललिता राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826808649"
       }
-    }
+    },
+    "lat": 22.102127,
+    "lng": 76.921142,
+    "clean_name": "Mahendragaon",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Mahendragaon,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0186",
@@ -39150,7 +39934,11 @@
         "name": "श्रीमती नीता राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827320479"
       }
-    }
+    },
+    "lat": 22.179166,
+    "lng": 76.87069,
+    "clean_name": "Makrai Fort & Town",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Makrai+Fort+&+Town,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0187",
@@ -39338,7 +40126,11 @@
         "name": "श्रीमती रजनी पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977555051"
       }
-    }
+    },
+    "lat": 22.147751,
+    "lng": 76.983562,
+    "clean_name": "Maktapur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Maktapur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0188",
@@ -39562,7 +40354,11 @@
         "name": "श्रीमती मंजू सोनी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755941850"
       }
-    }
+    },
+    "lat": 22.0934,
+    "lng": 76.858847,
+    "clean_name": "Mandla",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Mandla,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0189",
@@ -39720,7 +40516,11 @@
         "name": "श्रीमती साधना मालवीय (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755379341"
       }
-    }
+    },
+    "lat": 22.227804,
+    "lng": 76.918934,
+    "clean_name": "Mardanpur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Mardanpur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0190",
@@ -39878,7 +40678,11 @@
         "name": "श्रीमती साधना जोशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977946475"
       }
-    }
+    },
+    "lat": 22.073917,
+    "lng": 76.979909,
+    "clean_name": "Morghari",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Morghari,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0191",
@@ -40074,7 +40878,11 @@
         "name": "श्रीमती गीता वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406285468"
       }
-    }
+    },
+    "lat": 22.158405,
+    "lng": 76.804191,
+    "clean_name": "Chhirpura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chhirpura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0192",
@@ -40288,7 +41096,11 @@
         "name": "श्रीमती नीता पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826511744"
       }
-    }
+    },
+    "lat": 22.209592,
+    "lng": 77.015386,
+    "clean_name": "Kalan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Kalan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0193",
@@ -40512,7 +41324,11 @@
         "name": "श्रीमती पुष्पा पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406354778"
       }
-    }
+    },
+    "lat": 22.025382,
+    "lng": 76.886141,
+    "clean_name": "Pipalgohan",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Pipalgohan,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0194",
@@ -40736,7 +41552,11 @@
         "name": "श्रीमती ललिता वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179276288"
       }
-    }
+    },
+    "lat": 22.156703,
+    "lng": 76.907647,
+    "clean_name": "Pokharni Khirkiya",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Pokharni+Khirkiya,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0195",
@@ -40932,7 +41752,11 @@
         "name": "श्रीमती गीता मालवीय (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179695055"
       }
-    }
+    },
+    "lat": 22.137956,
+    "lng": 76.93931,
+    "clean_name": "Raikhedi Sirali",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Raikhedi+Sirali,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0196",
@@ -41082,7 +41906,11 @@
         "name": "श्रीमती सरिता यादव (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826659730"
       }
-    }
+    },
+    "lat": 22.130913,
+    "lng": 76.882124,
+    "clean_name": "Sali",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sali,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0197",
@@ -41232,7 +42060,11 @@
         "name": "श्रीमती पूजा तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179459931"
       }
-    }
+    },
+    "lat": 22.184952,
+    "lng": 76.933009,
+    "clean_name": "Samardha",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Samardha,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0198",
@@ -41428,7 +42260,11 @@
         "name": "श्रीमती रजनी कुशवाह (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752519750"
       }
-    }
+    },
+    "lat": 22.095052,
+    "lng": 76.934784,
+    "clean_name": "Sandalpur",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sandalpur,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0199",
@@ -41652,7 +42488,11 @@
         "name": "श्रीमती किरण जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826615262"
       }
-    }
+    },
+    "lat": 22.174119,
+    "lng": 76.854127,
+    "clean_name": "Saradhana",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Saradhana,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0200",
@@ -41884,7 +42724,11 @@
         "name": "श्रीमती कविता मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9977942455"
       }
-    }
+    },
+    "lat": 22.163887,
+    "lng": 76.991706,
+    "clean_name": "Sirali Bazaar",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sirali+Bazaar,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0201",
@@ -42080,7 +42924,11 @@
         "name": "श्रीमती सुमन वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9406193351"
       }
-    }
+    },
+    "lat": 22.075097,
+    "lng": 76.866538,
+    "clean_name": "Sonpura",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Sonpura,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "KHI-GP-0202",
@@ -42230,7 +43078,11 @@
         "name": "श्रीमती आरती चौरे (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9893422323"
       }
-    }
+    },
+    "lat": 22.236383,
+    "lng": 76.897465,
+    "clean_name": "Uskala",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Uskala,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0203",
@@ -42480,7 +43332,11 @@
         "name": "श्रीमती कविता वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425119625"
       }
-    }
+    },
+    "lat": 22.387479,
+    "lng": 77.555369,
+    "clean_name": "Seoni Malwa Town & Bazaar",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Seoni+Malwa+Town+&+Bazaar,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0204",
@@ -42730,7 +43586,11 @@
         "name": "श्रीमती सपना राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9669291760"
       }
-    }
+    },
+    "lat": 22.440185,
+    "lng": 77.344617,
+    "clean_name": "Banapura Mandi Hub",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Banapura+Mandi+Hub,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0205",
@@ -42980,7 +43840,11 @@
         "name": "श्रीमती मंजू कुशवाह (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179516558"
       }
-    }
+    },
+    "lat": 22.540333,
+    "lng": 77.556779,
+    "clean_name": "Shivpur Rural Hub",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Shivpur+Rural+Hub,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0206",
@@ -43230,7 +44094,11 @@
         "name": "श्रीमती सरिता तिवारी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179117938"
       }
-    }
+    },
+    "lat": 22.596486,
+    "lng": 77.76,
+    "clean_name": "Itarsi Junction Main Market",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Itarsi+Junction+Main+Market,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0207",
@@ -43480,7 +44348,11 @@
         "name": "श्रीमती रुक्मिणी मालवीय (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826525785"
       }
-    }
+    },
+    "lat": 22.62727,
+    "lng": 77.742779,
+    "clean_name": "Suraj Ganj & Overbridge",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Suraj+Ganj+&+Overbridge,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0208",
@@ -43730,7 +44602,11 @@
         "name": "श्रीमती ललिता जाट (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9752246319"
       }
-    }
+    },
+    "lat": 22.607095,
+    "lng": 77.796136,
+    "clean_name": "Malviya Ganj Hub",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Malviya+Ganj+Hub,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0209",
@@ -43980,7 +44856,11 @@
         "name": "श्रीमती रजनी रघुवंशी (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755490453"
       }
-    }
+    },
+    "lat": 22.556975,
+    "lng": 76.879366,
+    "clean_name": "Khategaon Azad Marg Hub",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Khategaon+Azad+Marg+Hub,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0210",
@@ -44230,7 +45110,11 @@
         "name": "श्रीमती सपना मिश्रा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9425428687"
       }
-    }
+    },
+    "lat": 22.635646,
+    "lng": 76.926744,
+    "clean_name": "Nemawar Narmada Ghat Hub",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Nemawar+Narmada+Ghat+Hub,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0211",
@@ -44480,7 +45364,11 @@
         "name": "श्रीमती ममता राजपूत (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179648481"
       }
-    }
+    },
+    "lat": 22.480113,
+    "lng": 76.720174,
+    "clean_name": "Satwas Market Hub",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Satwas+Market+Hub,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0212",
@@ -44730,7 +45618,11 @@
         "name": "श्रीमती सुमन वर्मा (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9179979041"
       }
-    }
+    },
+    "lat": 22.685587,
+    "lng": 77.089994,
+    "clean_name": "Nasrullaganj / Bherunda Town",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Nasrullaganj+/+Bherunda+Town,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0213",
@@ -44980,7 +45872,11 @@
         "name": "श्रीमती शीला पटेल (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9755302376"
       }
-    }
+    },
+    "lat": 22.771571,
+    "lng": 77.513305,
+    "clean_name": "Rehti Rural Cluster",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Rehti+Rural+Cluster,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0214",
@@ -45230,7 +46126,11 @@
         "name": "श्रीमती पूजा यादव (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9826879348"
       }
-    }
+    },
+    "lat": 21.996103,
+    "lng": 76.682163,
+    "clean_name": "Harsud / Chhanera Town",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Harsud+/+Chhanera+Town,+Harda+District,+Madhya+Pradesh"
   },
   {
     "id": "BOR-HUB-0215",
@@ -45480,6 +46380,10 @@
         "name": "श्रीमती उषा गौर (ANM स्वास्थ्य कार्यकर्ता)",
         "phone": "9827963900"
       }
-    }
+    },
+    "lat": 22.111585,
+    "lng": 77.357229,
+    "clean_name": "Chicholi Border Market",
+    "gmaps_url": "https://www.google.com/maps/search/?api=1&query=Chicholi+Border+Market,+Harda+District,+Madhya+Pradesh"
   }
 ]
