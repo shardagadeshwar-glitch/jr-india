@@ -787,6 +787,14 @@
               <option value="Khirkiya">खिरकिया व सिराली</option>
               <option value="Village">ग्रामीण मजरा / मोहल्ला</option>
             </select>
+
+            <select id="cluster-display-limit" class="filter-select" onchange="filterClusters()" style="font-weight:700; border-color:var(--primary);">
+              <option value="all" selected>⚡ सभी 2,855 क्लस्टर्स एक साथ (Full View)</option>
+              <option value="1000">1,000 क्लस्टर्स</option>
+              <option value="500">500 क्लस्टर्स</option>
+              <option value="200">200 क्लस्टर्स</option>
+              <option value="100">100 क्लस्टर्स</option>
+            </select>
           </div>
         </div>
 
@@ -876,6 +884,14 @@
               <option value="Sirali">सिराली</option>
               <option value="Handia">हंडिया</option>
               <option value="Rahatgaon">राहतगांव</option>
+            </select>
+
+            <select id="village-reg-display-limit" class="filter-select" onchange="filterVillageRegister()" style="font-weight:700; border-color:var(--primary);">
+              <option value="all" selected>⚡ समस्त 2,855 रिकॉर्ड्स एक साथ (Full View)</option>
+              <option value="1000">1,000 रिकॉर्ड्स</option>
+              <option value="500">500 रिकॉर्ड्स</option>
+              <option value="200">200 रिकॉर्ड्स</option>
+              <option value="100">100 रिकॉर्ड्स</option>
             </select>
           </div>
         </div>
@@ -1246,65 +1262,70 @@
 
     function renderClustersTable(list) {
       var tbody = document.getElementById('clusters-tbody');
-      tbody.innerHTML = '';
-      document.getElementById('cluster-table-subtitle').innerText = list.length + ' माइक्रो-क्लस्टर्स प्रदर्शित (20-50 घर प्रति क्लस्टर)';
+      var limitEl = document.getElementById('cluster-display-limit');
+      var limitVal = limitEl ? limitEl.value : 'all';
+      var toRender = (limitVal === 'all') ? list : list.slice(0, parseInt(limitVal));
 
-      if (list.length === 0) {
+      document.getElementById('cluster-table-subtitle').innerText = 'कुल ' + list.length + ' माइक्रो-क्लस्टर्स में से ' + toRender.length + ' प्रदर्शित (20-50 घर प्रति क्लस्टर — 100% संपूर्ण कवरेज)';
+
+      if (toRender.length === 0) {
         tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:24px; color:var(--text-muted);">कोई क्लस्टर नहीं मिला।</td></tr>';
         return;
       }
 
-      list.slice(0, 150).forEach(function(item, idx) {
-        var tr = document.createElement('tr');
-
+      var rows = toRender.map(function(item, idx) {
         var stageBadge = 'tag-blue';
         var stageText = '1. WhatsApp भेजा';
         if (item.funnel_stage === '2_CALL_CONFIRMED') { stageBadge = 'tag-purple'; stageText = '2. कॉल पुष्ट'; }
         else if (item.funnel_stage === '3_MEETING_SCHEDULED') { stageBadge = 'tag-amber'; stageText = '3. 20-महिला बैठक तय'; }
         else if (item.funnel_stage === '4_AREA_LOCKED') { stageBadge = 'tag-green'; stageText = '4. क्षेत्र सेट (Active Hub)'; }
 
-        tr.innerHTML = `
-          <td><span class="badge-sno">#${idx + 1}</span></td>
-          <td>
-            <div style="font-weight:800; font-size:14px; color:var(--text);">${item.colony_name}</div>
-            <div style="font-size:11px; color:var(--text-muted);">${item.area_type}</div>
-          </td>
-          <td>
-            <span class="badge-tag tag-gray">${item.tehsil}</span>
-            <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">${item.parent_unit}</div>
-          </td>
-          <td>
-            <strong>${item.sakhi_name}</strong>
-            <div style="font-size:11px; color:var(--text-muted);">${item.sakhi_role}</div>
-            <div style="font-size:11px; font-weight:700; color:var(--primary); margin-top:2px;"><a href="tel:${item.phone}" style="text-decoration:none;">📞 ${item.phone}</a></div>
-          </td>
-          <td>
-            <strong style="color:var(--rose);">${item.households} घर</strong>
-            <div style="font-size:11px; color:var(--text-muted);">${item.women_target} महिला आबादी</div>
-          </td>
-          <td>
-            <select class="filter-select" style="font-size:11px; padding:4px 8px;" onchange="changeClusterStage('${item.cluster_id}', this.value)">
-              <option value="1_WA_SENT" ${item.funnel_stage === '1_WA_SENT' ? 'selected' : ''}>💬 1. WhatsApp भेजा</option>
-              <option value="2_CALL_CONFIRMED" ${item.funnel_stage === '2_CALL_CONFIRMED' ? 'selected' : ''}>📞 2. कॉल पुष्ट</option>
-              <option value="3_MEETING_SCHEDULED" ${item.funnel_stage === '3_MEETING_SCHEDULED' ? 'selected' : ''}>🎪 3. 20-महिला बैठक</option>
-              <option value="4_AREA_LOCKED" ${item.funnel_stage === '4_AREA_LOCKED' ? 'selected' : ''}>🔒 4. क्षेत्र सेट (Active Hub)</option>
-            </select>
-            <div style="margin-top:4px;"><span class="badge-tag ${stageBadge}">${stageText}</span></div>
-          </td>
-          <td style="font-size:12px; font-weight:600;">
-            ${item.meeting_datetime || 'प्रस्तावित'}
-            <div style="font-size:11px; color:var(--text-muted);">${item.expected_attendees || 18} बहनें अपेक्षित</div>
-          </td>
-          <td>
-            <div style="display:flex; gap:5px; flex-wrap:wrap;">
-              <a href="${item.wa_invite_url}" target="_blank" class="btn-wa-sm">💬 स्टेज 1 WA</a>
-              <button class="btn-call-sm" onclick="callScriptPopup('${item.sakhi_name}', '${item.colony_name}', '${item.phone}')">📞 कॉल</button>
-              <button class="btn-lock-sm" onclick="lockClusterArea('${item.cluster_id}')">🔒 क्षेत्र सेट</button>
-            </div>
-          </td>
-        `;
-        tbody.appendChild(tr);
+        var waText = "नमस्ते " + item.sakhi_name + " जी! मैं शारदा दीदी (9713773339) हरदा से। आपके क्षेत्र " + item.colony_name + " की 20-25 बहनों के लिए JR India का शुद्ध कॉटन सैनिटरी पैड अभियान शुरू हुआ है। 2 मिनट इस पोर्टल को देखें: https://shardagadeshwar-glitch.github.io/jr-india/ । क्या कल दोपहर आपकी कॉलोनी की 15-20 बहनों के साथ 20 मिनट की एक छोटी बैठक (चाय पर डेमो) रख सकते हैं? आपको फ्री सैंपल किट व प्रति पैकेट आकर्षक कमीशन मिलेगा।";
+        var waInviteUrl = item.wa_invite_url || ("https://wa.me/91" + item.phone + "?text=" + encodeURIComponent(waText));
+
+        return '<tr>' +
+          '<td><span class="badge-sno">#' + (idx + 1) + '</span></td>' +
+          '<td>' +
+            '<div style="font-weight:800; font-size:14px; color:var(--text);">' + item.colony_name + '</div>' +
+            '<div style="font-size:11px; color:var(--text-muted);">' + item.area_type + '</div>' +
+          '</td>' +
+          '<td>' +
+            '<span class="badge-tag tag-gray">' + item.tehsil + '</span>' +
+            '<div style="font-size:11px; color:var(--text-muted); margin-top:2px;">' + item.parent_unit + '</div>' +
+          '</td>' +
+          '<td>' +
+            '<strong>' + item.sakhi_name + '</strong>' +
+            '<div style="font-size:11px; color:var(--text-muted);">' + item.sakhi_role + '</div>' +
+            '<div style="font-size:11px; font-weight:700; color:var(--primary); margin-top:2px;"><a href="tel:' + item.phone + '" style="text-decoration:none;">📞 ' + item.phone + '</a></div>' +
+          '</td>' +
+          '<td>' +
+            '<strong style="color:var(--rose);">' + item.households + ' घर</strong>' +
+            '<div style="font-size:11px; color:var(--text-muted);">' + item.women_target + ' महिला आबादी</div>' +
+          '</td>' +
+          '<td>' +
+            '<select class="filter-select" style="font-size:11px; padding:4px 8px;" onchange="changeClusterStage(\'' + item.cluster_id + '\', this.value)">' +
+              '<option value="1_WA_SENT" ' + (item.funnel_stage === '1_WA_SENT' ? 'selected' : '') + '>💬 1. WhatsApp भेजा</option>' +
+              '<option value="2_CALL_CONFIRMED" ' + (item.funnel_stage === '2_CALL_CONFIRMED' ? 'selected' : '') + '>📞 2. कॉल पुष्ट</option>' +
+              '<option value="3_MEETING_SCHEDULED" ' + (item.funnel_stage === '3_MEETING_SCHEDULED' ? 'selected' : '') + '>🎪 3. 20-महिला बैठक</option>' +
+              '<option value="4_AREA_LOCKED" ' + (item.funnel_stage === '4_AREA_LOCKED' ? 'selected' : '') + '>🔒 4. क्षेत्र सेट (Active Hub)</option>' +
+            '</select>' +
+            '<div style="margin-top:4px;"><span class="badge-tag ' + stageBadge + '">' + stageText + '</span></div>' +
+          '</td>' +
+          '<td style="font-size:12px; font-weight:600;">' +
+            (item.meeting_datetime || 'प्रस्तावित') +
+            '<div style="font-size:11px; color:var(--text-muted);">' + (item.expected_attendees || 18) + ' बहनें अपेक्षित</div>' +
+          '</td>' +
+          '<td>' +
+            '<div style="display:flex; gap:5px; flex-wrap:wrap;">' +
+              '<a href="' + waInviteUrl + '" target="_blank" class="btn-wa-sm">💬 स्टेज 1 WA</a>' +
+              '<button class="btn-call-sm" onclick="callScriptPopup(\'' + item.sakhi_name + '\', \'' + item.colony_name + '\', \'' + item.phone + '\')">📞 कॉल</button>' +
+              '<button class="btn-lock-sm" onclick="lockClusterArea(\'' + item.cluster_id + '\')">🔒 क्षेत्र सेट</button>' +
+            '</div>' +
+          '</td>' +
+        '</tr>';
       });
+
+      tbody.innerHTML = rows.join('');
     }
 
     function changeClusterStage(clusterId, newStage) {
@@ -1474,36 +1495,42 @@
 
     function renderVillageRegisterTable(list) {
       var tbody = document.getElementById('village-reg-tbody');
-      tbody.innerHTML = '';
-      document.getElementById('village-reg-filtered-count').innerText = list.length + ' रिकॉर्ड प्रदर्शित (' + (currentViewMode === 'gp226' ? '220 आबाद ग्राम पंचायतें' : 'समस्त 571 मौजे') + ')';
+      var limitEl = document.getElementById('village-reg-display-limit');
+      var limitVal = limitEl ? limitEl.value : 'all';
+      var toRender = (limitVal === 'all') ? list : list.slice(0, parseInt(limitVal));
 
-      if (list.length === 0) {
+      document.getElementById('village-reg-filtered-count').innerText = 'कुल ' + list.length + ' में से ' + toRender.length + ' रिकॉर्ड प्रदर्शित (' + (currentViewMode === 'gp226' ? '220 आबाद ग्राम पंचायतें' : 'समस्त 571 मौजे') + ' — संपूर्ण रजिस्टर)';
+
+      if (toRender.length === 0) {
         tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 24px;">कोई रिकॉर्ड नहीं मिला।</td></tr>';
         return;
       }
 
-      list.slice(0, 150).forEach(function(item, idx) {
-        var tr = document.createElement('tr');
+      var rows = toRender.map(function(item, idx) {
         var waUrl = "https://wa.me/91" + item.phone + "?text=" + encodeURIComponent("नमस्ते " + item.name + " जी! मैं शारदा दीदी हरदा से। JR India मिशन के तहत आपके क्षेत्र " + item.village_name + " में बहनों तक शुद्ध कॉटन पैड पहुँचाने हेतु संपर्क कर रही हूँ।");
         var gmapsSearch = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(item.village_name + ", Harda, Madhya Pradesh");
 
-        tr.innerHTML = `
-          <td><span class="badge-sno">#${idx + 1}</span></td>
-          <td><strong>${item.village_name}</strong></td>
-          <td><span class="badge-tag tag-gray">${item.tehsil}</span></td>
-          <td><strong>${item.name}</strong></td>
-          <td>${item.role}</td>
-          <td><a href="tel:${item.phone}" style="font-weight:700; color:var(--primary);">📞 ${item.phone}</a></td>
-          <td>${item.reach || (item.female_population + ' आबादी')}</td>
-          <td>
-            <div style="display:flex; gap:5px;">
-              <a href="${waUrl}" target="_blank" class="btn-wa-sm">💬 WhatsApp</a>
-              <a href="${gmapsSearch}" target="_blank" class="btn-call-sm">📍 Maps</a>
-            </div>
-          </td>
-        `;
-        tbody.appendChild(tr);
+        var waText = "नमस्ते " + item.sakhi_name + " जी! मैं शारदा दीदी (9713773339) हरदा से। आपके क्षेत्र " + item.colony_name + " की 20-25 बहनों के लिए JR India का शुद्ध कॉटन सैनिटरी पैड अभियान शुरू हुआ है। 2 मिनट इस पोर्टल को देखें: https://shardagadeshwar-glitch.github.io/jr-india/ । क्या कल दोपहर आपकी कॉलोनी की 15-20 बहनों के साथ 20 मिनट की एक छोटी बैठक (चाय पर डेमो) रख सकते हैं? आपको फ्री सैंपल किट व प्रति पैकेट आकर्षक कमीशन मिलेगा।";
+        var waInviteUrl = item.wa_invite_url || ("https://wa.me/91" + item.phone + "?text=" + encodeURIComponent(waText));
+
+        return '<tr>' +
+          '<td><span class="badge-sno">#' + (idx + 1) + '</span></td>' +
+          '<td><strong>' + item.village_name + '</strong></td>' +
+          '<td><span class="badge-tag tag-gray">' + item.tehsil + '</span></td>' +
+          '<td><strong>' + item.name + '</strong></td>' +
+          '<td>' + item.role + '</td>' +
+          '<td><a href="tel:' + item.phone + '" style="font-weight:700; color:var(--primary);">📞 ' + item.phone + '</a></td>' +
+          '<td>' + (item.reach || (item.female_population + ' आबादी')) + '</td>' +
+          '<td>' +
+            '<div style="display:flex; gap:5px;">' +
+              '<a href="' + waUrl + '" target="_blank" class="btn-wa-sm">💬 WhatsApp</a>' +
+              '<a href="' + gmapsSearch + '" target="_blank" class="btn-call-sm">📍 Maps</a>' +
+            '</div>' +
+          '</td>' +
+        '</tr>';
       });
+
+      tbody.innerHTML = rows.join('');
     }
 
     function filterVillageRegister() {
@@ -1520,58 +1547,46 @@
       renderVillageRegisterTable(filtered);
     }
 
-    // Secondary Tab Fetchers
+    // Secondary Tab Fetchers - Render 100% Full Uncapped Datasets
     function fetchSchools() {
       fetch('harda_schools_directory_db.json').then(r=>r.json()).then(data=>{
-        var tbody = document.getElementById('schools-tbody'); tbody.innerHTML = '';
-        data.slice(0, 100).forEach((s, idx)=>{
-          tbody.innerHTML += `<tr><td>#${idx+1}</td><td><strong>${s.name}</strong></td><td>${s.block}</td><td>${s.incharge||'प्राचार्य'}</td><td>${s.type}</td><td>${s.female_students||350}</td><td>📞 ${s.phone}</td><td><a href="https://wa.me/91${s.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`;
-        });
+        var tbody = document.getElementById('schools-tbody');
+        tbody.innerHTML = (data || []).map((s, idx) => `<tr><td>#${idx+1}</td><td><strong>${s.name}</strong></td><td>${s.block}</td><td>${s.incharge||'प्राचार्य'}</td><td>${s.type}</td><td>${s.female_students||350}</td><td>📞 ${s.phone}</td><td><a href="https://wa.me/91${s.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`).join('');
       });
     }
 
     function fetchAnganwadis() {
       fetch('harda_anganwadi_directory_db.json').then(r=>r.json()).then(data=>{
-        var tbody = document.getElementById('aw-tbody'); tbody.innerHTML = '';
-        data.slice(0, 100).forEach((a, idx)=>{
-          tbody.innerHTML += `<tr><td>#${idx+1}</td><td><strong>${a.kendra_name}</strong></td><td>${a.sector||a.block}</td><td>${a.karyakarta_name}</td><td>${a.estimated_beneficiaries||350}</td><td>📞 ${a.phone}</td><td><a href="https://wa.me/91${a.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`;
-        });
+        var tbody = document.getElementById('aw-tbody');
+        tbody.innerHTML = (data || []).map((a, idx) => `<tr><td>#${idx+1}</td><td><strong>${a.kendra_name}</strong></td><td>${a.sector||a.block}</td><td>${a.karyakarta_name}</td><td>${a.estimated_beneficiaries||350}</td><td>📞 ${a.phone}</td><td><a href="https://wa.me/91${a.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`).join('');
       });
     }
 
     function fetchDoctors() {
       fetch('harda_doctors_directory_db.json').then(r=>r.json()).then(data=>{
-        var tbody = document.getElementById('doctors-tbody'); tbody.innerHTML = '';
-        data.forEach((d, idx)=>{
-          tbody.innerHTML += `<tr><td>#${idx+1}</td><td><strong>${d.name}</strong></td><td>${d.role}</td><td>${d.hospital_clinic}</td><td>${d.area}</td><td>📞 ${d.phone}</td><td><a href="https://wa.me/91${d.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`;
-        });
+        var tbody = document.getElementById('doctors-tbody');
+        tbody.innerHTML = (data || []).map((d, idx) => `<tr><td>#${idx+1}</td><td><strong>${d.name}</strong></td><td>${d.role}</td><td>${d.hospital_clinic}</td><td>${d.area}</td><td>📞 ${d.phone}</td><td><a href="https://wa.me/91${d.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`).join('');
       });
     }
 
     function fetchParlours() {
       fetch('harda_parlours_directory_db.json').then(r=>r.json()).then(data=>{
-        var tbody = document.getElementById('parlours-tbody'); tbody.innerHTML = '';
-        data.slice(0, 100).forEach((p, idx)=>{
-          tbody.innerHTML += `<tr><td>#${idx+1}</td><td><strong>${p.name}</strong></td><td>${p.establishment}</td><td>${p.area}</td><td>${p.reach||'30+'}</td><td>📞 ${p.phone}</td><td><a href="https://wa.me/91${p.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`;
-        });
+        var tbody = document.getElementById('parlours-tbody');
+        tbody.innerHTML = (data || []).map((p, idx) => `<tr><td>#${idx+1}</td><td><strong>${p.name}</strong></td><td>${p.establishment}</td><td>${p.area}</td><td>${p.reach||'30+'}</td><td>📞 ${p.phone}</td><td><a href="https://wa.me/91${p.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`).join('');
       });
     }
 
     function fetchSHG() {
       fetch('harda_shg_directory_db.json').then(r=>r.json()).then(data=>{
-        var tbody = document.getElementById('shg-tbody'); tbody.innerHTML = '';
-        data.slice(0, 100).forEach((s, idx)=>{
-          tbody.innerHTML += `<tr><td>#${idx+1}</td><td><strong>${s.name}</strong></td><td>${s.group_org}</td><td>${s.area}</td><td>${s.reach||'15+'}</td><td>📞 ${s.phone}</td><td><a href="https://wa.me/91${s.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`;
-        });
+        var tbody = document.getElementById('shg-tbody');
+        tbody.innerHTML = (data || []).map((s, idx) => `<tr><td>#${idx+1}</td><td><strong>${s.name}</strong></td><td>${s.group_org}</td><td>${s.area}</td><td>${s.reach||'15+'}</td><td>📞 ${s.phone}</td><td><a href="https://wa.me/91${s.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`).join('');
       });
     }
 
     function fetchPanchayat() {
       fetch('harda_panchayat_directory_db.json').then(r=>r.json()).then(data=>{
-        var tbody = document.getElementById('panchayat-tbody'); tbody.innerHTML = '';
-        data.slice(0, 100).forEach((p, idx)=>{
-          tbody.innerHTML += `<tr><td>#${idx+1}</td><td><strong>${p.name}</strong></td><td>${p.role}</td><td>${p.panchayat_body}</td><td>📞 ${p.phone}</td><td><a href="https://wa.me/91${p.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`;
-        });
+        var tbody = document.getElementById('panchayat-tbody');
+        tbody.innerHTML = (data || []).map((p, idx) => `<tr><td>#${idx+1}</td><td><strong>${p.name}</strong></td><td>${p.role}</td><td>${p.panchayat_body}</td><td>📞 ${p.phone}</td><td><a href="https://wa.me/91${p.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`).join('');
       });
     }
 
