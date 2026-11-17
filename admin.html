@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JR INDIA — हरदा हर घर मिशन कंट्रोल | v10.0 HARDA WOMEN DIRECTORY & CRM</title>
+  <title>JR INDIA — हरदा हर घर मिशन कंट्रोल | v11.0 SERIAL NUMBERS & CRM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -455,6 +455,19 @@
       background: #f8fafc;
     }
 
+    .badge-sno {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-dark);
+      background: var(--surface-subtle);
+      border: 1px solid var(--border-strong);
+      padding: 2px 7px;
+      border-radius: 6px;
+      display: inline-block;
+      min-width: 32px;
+      text-align: center;
+    }
+
     .badge-star {
       background: #fffbeb;
       color: #b45309;
@@ -609,7 +622,7 @@
       <div>
         <div class="brand-title">
           <span>हरदा हर घर मिशन — समग्र महिला डायरेक्टरी & CRM</span>
-          <span style="font-size: 11px; font-weight: 700; color: #be185d; background: #fdf2f8; padding: 2px 6px; border-radius: 4px; border: 1px solid #fbcfe8;">v10.0 WOMEN DIRECTORY</span>
+          <span style="font-size: 11px; font-weight: 700; color: #be185d; background: #fdf2f8; padding: 2px 6px; border-radius: 4px; border: 1px solid #fbcfe8;">v11.0 S.NO. & CRM</span>
         </div>
         <div class="brand-subtitle">शारदा दीदी (+91 9713773339) • हरदा की सभी सक्रिय महिलाएँ, पार्लर, डॉक्टर्स, बुटीक, जन-प्रतिनिधि व आँगनवाड़ी</div>
       </div>
@@ -780,6 +793,7 @@
           <table class="data-table">
             <thead>
               <tr>
+                <th style="width: 50px;">क्र.सं.</th>
                 <th>समय</th>
                 <th>माध्यम</th>
                 <th>नाम</th>
@@ -811,6 +825,7 @@
           <table class="data-table">
             <thead>
               <tr>
+                <th style="width: 50px;">क्र.सं.</th>
                 <th>समय</th>
                 <th>माध्यम</th>
                 <th>प्रेषक का नाम</th>
@@ -913,6 +928,7 @@
         <table class="data-table">
           <thead>
             <tr>
+              <th style="width: 55px;">क्र.सं.</th>
               <th>नाम व पहचान ID</th>
               <th>पद / पेशा व श्रेणी</th>
               <th>स्थान / क्षेत्र</th>
@@ -1003,6 +1019,7 @@
         <table class="data-table">
           <thead>
             <tr>
+              <th style="width: 55px;">क्र.सं.</th>
               <th>केंद्र ID व नाम</th>
               <th>गाँव / वार्ड & ब्लॉक</th>
               <th>⭐ कार्यकर्ता दीदी (STAR #1)</th>
@@ -1045,6 +1062,7 @@
         <table class="data-table">
           <thead>
             <tr>
+              <th style="width: 55px;">क्र.सं.</th>
               <th>UDISE कोड व स्कूल का नाम</th>
               <th>स्थान / ब्लॉक</th>
               <th>श्रेणी</th>
@@ -1087,6 +1105,7 @@
         <table class="data-table">
           <thead>
             <tr>
+              <th style="width: 55px;">क्र.सं.</th>
               <th>गाँव का नाम</th>
               <th>तहसील</th>
               <th>महिला आबादी</th>
@@ -1112,6 +1131,7 @@
         <table class="data-table">
           <thead>
             <tr>
+              <th style="width: 55px;">क्र.सं.</th>
               <th>क्षेत्र / गाँव</th>
               <th>ब्लॉक</th>
               <th>आबादी</th>
@@ -1144,6 +1164,7 @@
         <table class="data-table">
           <thead>
             <tr>
+              <th style="width: 55px;">क्र.सं.</th>
               <th>दिनांक</th>
               <th>ग्राहक का नाम</th>
               <th>मोबाइल</th>
@@ -1156,7 +1177,7 @@
           </thead>
           <tbody id="orders-tbody">
             <tr>
-              <td colspan="8" style="text-align: center; padding: 24px; color: var(--text-muted);">
+              <td colspan="9" style="text-align: center; padding: 24px; color: var(--text-muted);">
                 कोई फेक ऑर्डर नहीं है। वेबसाइट या चैट से आया असली ऑर्डर यहाँ तुरंत प्रदर्शित होगा।
               </td>
             </tr>
@@ -1246,11 +1267,11 @@
       document.getElementById('women-filtered-count').innerText = list.length + ' प्रोफाइल प्रदर्शित';
 
       if (list.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; padding: 24px; color: var(--text-muted);">कोई महिला प्रोफाइल नहीं मिली।</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 24px; color: var(--text-muted);">कोई महिला प्रोफाइल नहीं मिली।</td></tr>`;
         return;
       }
 
-      list.forEach(function(w) {
+      list.forEach(function(w, idx) {
         var tr = document.createElement('tr');
         var pitch = encodeURIComponent(w.pitch || `नमस्ते ${w.name} जी, मैं शारदा दीदी बोल रही हूँ हरदा से। महिलाओं के स्वास्थ्य और स्वच्छता के लिए JR India के ₹45/₹55 वाले फ्री डिलीवरी पैड मिशन में आपका सहयोग प्रार्थनीय है।`);
         var catClass = w.category_badge.includes('पार्लर') ? 'cat-ig' :
@@ -1258,6 +1279,7 @@
                        (w.category_badge.includes('अध्यक्ष') || w.category_badge.includes('पार्षद') ? 'cat-civic' : 'cat-edu'));
 
         tr.innerHTML = `
+          <td><span class="badge-sno">#${idx + 1}</span></td>
           <td>
             <strong>${w.name}</strong>
             <div style="font-size: 11px; color: var(--text-muted);">${w.id}</div>
@@ -1350,14 +1372,15 @@
       var tbody = document.getElementById('leads-tbody');
       tbody.innerHTML = '';
       if (leads.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 24px; color: var(--text-muted);">कोई फेक लीड नहीं है। WhatsApp, Insta या FB पर जैसे ही कोई संदेश भेजेगा, यहाँ तुरंत आ जाएगा।</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; padding: 24px; color: var(--text-muted);">कोई फेक लीड नहीं है। WhatsApp, Insta या FB पर जैसे ही कोई संदेश भेजेगा, यहाँ तुरंत आ जाएगा।</td></tr>`;
         return;
       }
-      leads.forEach(function(l) {
+      leads.forEach(function(l, idx) {
         var tr = document.createElement('tr');
         var channelBadge = l.platform === 'whatsapp' ? '<span class="badge-cat cat-wa">WhatsApp</span>' :
                           (l.platform === 'instagram' ? '<span class="badge-cat cat-ig">Instagram</span>' : '<span class="badge-cat cat-fb">Facebook</span>');
         tr.innerHTML = `
+          <td><span class="badge-sno">#${idx + 1}</span></td>
           <td>${new Date(l.createdAt).toLocaleTimeString('hi-IN', { hour: '2-digit', minute: '2-digit' })}</td>
           <td>${channelBadge}</td>
           <td><strong>${l.name}</strong></td>
@@ -1389,13 +1412,14 @@
       var tbody = document.getElementById('messages-tbody');
       tbody.innerHTML = '';
       if (messages.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; padding: 24px; color: var(--text-muted);">कोई कच्चा इनबाउंड संदेश नहीं है।</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; padding: 24px; color: var(--text-muted);">कोई कच्चा इनबाउंड संदेश नहीं है।</td></tr>`;
         return;
       }
-      messages.forEach(function(m) {
+      messages.forEach(function(m, idx) {
         var tr = document.createElement('tr');
         var channelClass = m.platform === 'whatsapp' ? 'cat-wa' : (m.platform === 'instagram' ? 'cat-ig' : 'cat-fb');
         tr.innerHTML = `
+          <td><span class="badge-sno">#${idx + 1}</span></td>
           <td>${new Date(m.timestamp).toLocaleTimeString('hi-IN')}</td>
           <td><span class="badge-cat ${channelClass}">${m.platform}</span></td>
           <td><strong>${m.senderName}</strong></td>
@@ -1475,15 +1499,16 @@
       document.getElementById('aw-filtered-count').innerText = list.length + ' केंद्र प्रदर्शित';
 
       if (list.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" style="text-align: center; padding: 24px; color: var(--text-muted);">कोई आँगनवाड़ी केंद्र नहीं मिला।</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 24px; color: var(--text-muted);">कोई आँगनवाड़ी केंद्र नहीं मिला।</td></tr>`;
         return;
       }
 
-      list.slice(0, 150).forEach(function(a) {
+      list.slice(0, 150).forEach(function(a, idx) {
         var tr = document.createElement('tr');
         var pitch = encodeURIComponent(`नमस्ते ${a.worker_name} जी, मैं शारदा दीदी बोल रही हूँ हरदा से। आपके आँगनवाड़ी केंद्र (${a.kendra_name}) के अंतर्गत हर घर की किशोरी बेटियों और माताओं तक JR India के ₹45/₹55 वाले फ्री डिलीवरी सैनिटरी पैड पहुँचाने के 'हर घर मिशन' में आपकी मदद चाहिए। आपके माध्यम से हर घर तक स्वच्छता पहुँचेगी और हर पैकेट पर आपको भी सहयोग राशि मिलेगी। क्या हम आज बात कर सकते हैं?`);
 
         tr.innerHTML = `
+          <td><span class="badge-sno">#${idx + 1}</span></td>
           <td>
             <strong>${a.kendra_name}</strong>
             <div style="font-size: 11px; color: var(--text-muted);">${a.id}</div>
@@ -1553,10 +1578,11 @@
     function renderSchoolsTable(list) {
       var tbody = document.getElementById('schools-tbody');
       tbody.innerHTML = '';
-      list.forEach(function(s) {
+      list.forEach(function(s, idx) {
         var tr = document.createElement('tr');
         var pitch = encodeURIComponent(s.pitch_script || '');
         tr.innerHTML = `
+          <td><span class="badge-sno">#${idx + 1}</span></td>
           <td><strong>${s.name}</strong><div style="font-size: 11px; color: var(--text-muted);">UDISE: ${s.udise}</div></td>
           <td>${s.location}<div style="font-size: 11px; color: var(--text-muted);">${s.block}</div></td>
           <td><span class="badge-cat cat-wa">${s.type}</span></td>
@@ -1606,7 +1632,7 @@
     function renderKeyConnectorsTable(list) {
       var tbody = document.getElementById('kc-tbody');
       tbody.innerHTML = '';
-      list.slice(0, 100).forEach(function(v) {
+      list.slice(0, 100).forEach(function(v, idx) {
         var tr = document.createElement('tr');
         var kcs = v.key_connectors || [];
         var pAsha = kcs[0] || { name: '-', phone: '-' };
@@ -1617,6 +1643,7 @@
         var meetPitch = encodeURIComponent(v.meeting_pitch || '');
 
         tr.innerHTML = `
+          <td><span class="badge-sno">#${idx + 1}</span></td>
           <td><strong>${v.village_name}</strong><div style="font-size: 11px; color: var(--text-muted);">${v.village_id}</div></td>
           <td>${v.tehsil}</td>
           <td><strong style="color: var(--pink);">${v.female_population}</strong></td>
@@ -1666,11 +1693,12 @@
     function renderVillagesTable(list) {
       var tbody = document.getElementById('villages-tbody');
       tbody.innerHTML = '';
-      list.slice(0, 100).forEach(function(v) {
+      list.slice(0, 100).forEach(function(v, idx) {
         var tr = document.createElement('tr');
         var awCount = v.anganwadis ? v.anganwadis.length : (v.stats ? v.stats.anganwadi_count : 0);
         var schCount = (v.govt_schools ? v.govt_schools.length : 0) + (v.private_schools ? v.private_schools.length : 0);
         tr.innerHTML = `
+          <td><span class="badge-sno">#${idx + 1}</span></td>
           <td><strong>${v.raw_name || v.name}</strong></td>
           <td>${v.block}</td>
           <td>${v.population}</td>
@@ -1697,9 +1725,10 @@
               tbody.innerHTML = `<tr><td colspan="8" style="text-align: center; padding: 24px; color: var(--text-muted);">कोई फेक ऑर्डर नहीं है। वेबसाइट से जैसे ही असली ऑर्डर आएगा, यहाँ लाइव दिखेगा।</td></tr>`;
               return;
             }
-            allOrders.forEach(function(o) {
+            allOrders.forEach(function(o, idx) {
               var tr = document.createElement('tr');
               tr.innerHTML = `
+                <td><span class="badge-sno">#${idx + 1}</span></td>
                 <td>${o.createdAt ? new Date(o.createdAt).toLocaleDateString() : 'आज'}</td>
                 <td><strong>${o.name}</strong></td>
                 <td><a href="tel:${o.phone}">${o.phone}</a></td>
