@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JR INDIA — हरदा हर घर मिशन कंट्रोल इंजन (White Executive Edition)</title>
+  <title>JR INDIA — हरदा हर घर मिशन कंट्रोल इंजन & विलेज कंट्रोलर (v3.0)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -194,9 +194,9 @@
       background: transparent;
       border: none;
       color: var(--text-muted);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
-      padding: 10px 16px;
+      padding: 10px 14px;
       border-radius: 8px 8px 0 0;
       cursor: pointer;
       display: flex;
@@ -241,10 +241,20 @@
       letter-spacing: 0.5px;
     }
 
-    /* Revenue & KPI Stat Grid */
+    .emerald-tab-badge {
+      background: linear-gradient(135deg, #059669, #047857);
+      color: #fff;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    /* KPI Grid */
     .kpi-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 16px;
       margin-bottom: 24px;
     }
@@ -278,7 +288,7 @@
     }
 
     .kpi-value {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 800;
       color: var(--text);
       line-height: 1.2;
@@ -351,7 +361,7 @@
       font-weight: 600;
     }
 
-    /* Table Component */
+    /* Tables */
     .table-container {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -380,7 +390,7 @@
     }
 
     .data-table td {
-      padding: 14px 16px;
+      padding: 12px 16px;
       border-bottom: 1px solid var(--border);
       color: var(--text-dark);
       vertical-align: middle;
@@ -418,21 +428,17 @@
       color: #0284c7;
       text-decoration: none;
     }
+    .phone-cell:hover { text-decoration: underline; }
 
-    .phone-cell:hover {
-      text-decoration: underline;
-    }
-
-    /* Category Badges */
+    /* Badges */
     .badge-cat {
       display: inline-block;
-      padding: 4px 8px;
+      padding: 3px 8px;
       border-radius: 6px;
       font-size: 11px;
       font-weight: 700;
       white-space: nowrap;
     }
-
     .cat-parlour { background: var(--pink-light); color: var(--pink); border: 1px solid #fbcfe8; }
     .cat-school { background: var(--primary-light); color: var(--primary); border: 1px solid #bfdbfe; }
     .cat-anganwadi { background: var(--warning-light); color: var(--warning); border: 1px solid #fde68a; }
@@ -443,22 +449,17 @@
 
     .badge-pack {
       display: inline-block;
-      padding: 4px 8px;
+      padding: 3px 8px;
       border-radius: 6px;
       font-size: 11px;
       font-weight: 700;
       white-space: nowrap;
     }
-
     .badge-xl { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
     .badge-xxl { background: #f3e8ff; color: #7e22ce; border: 1px solid #e9d5ff; }
     .badge-bundle { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
 
-    .price-tag {
-      font-weight: 800;
-      color: var(--success);
-      font-size: 14px;
-    }
+    .price-tag { font-weight: 800; color: var(--success); font-size: 14px; }
 
     .status-select {
       background: var(--surface);
@@ -481,9 +482,9 @@
     .btn-call {
       background: #0284c7;
       color: #fff;
-      padding: 6px 10px;
+      padding: 5px 9px;
       border-radius: 6px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       text-decoration: none;
       display: inline-flex;
@@ -496,9 +497,9 @@
     .btn-whatsapp {
       background: #059669;
       color: #fff;
-      padding: 6px 10px;
+      padding: 5px 9px;
       border-radius: 6px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       text-decoration: none;
       display: inline-flex;
@@ -511,7 +512,7 @@
     .btn-pitch-preview {
       background: #4f46e5;
       color: #fff;
-      padding: 6px 8px;
+      padding: 5px 8px;
       border-radius: 6px;
       font-size: 11px;
       font-weight: 700;
@@ -527,7 +528,7 @@
       background: #f1f5f9;
       border: 1px solid var(--border);
       color: #334155;
-      padding: 5px 8px;
+      padding: 4px 7px;
       border-radius: 6px;
       font-size: 11px;
       text-decoration: none;
@@ -536,7 +537,6 @@
       gap: 3px;
       font-weight: 600;
     }
-    .btn-loc:hover { background: #e2e8f0; }
 
     .btn-del {
       background: transparent;
@@ -547,10 +547,7 @@
       padding: 4px 6px;
       border-radius: 4px;
     }
-    .btn-del:hover {
-      color: #dc2626;
-      background: #fef2f2;
-    }
+    .btn-del:hover { color: #dc2626; background: #fef2f2; }
 
     /* FIND AI SPECIFIC STYLES */
     .find-ai-hero {
@@ -601,143 +598,273 @@
       font-size: 12px;
       border-radius: 8px;
       padding: 12px 16px;
-      max-height: 120px;
+      max-height: 110px;
       overflow-y: auto;
       margin-bottom: 20px;
       border: 1px solid #1e293b;
       box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
-    .terminal-line {
-      margin-bottom: 4px;
-      line-height: 1.4;
+    .terminal-line { margin-bottom: 4px; line-height: 1.4; }
+
+    /* ============================================================== */
+    /* VILLAGE CONTROLLER TWO-COLUMN LAYOUT */
+    /* ============================================================== */
+    .village-layout {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 20px;
+      align-items: start;
     }
 
-    /* Modal Overlay & Card */
+    @media (max-width: 1024px) {
+      .village-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .village-list-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      max-height: 780px;
+    }
+
+    .village-scroll-list {
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-right: 4px;
+    }
+
+    .village-card-item {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .village-card-item:hover {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .village-card-item.selected {
+      background: #ecfdf5;
+      border-color: #059669;
+      box-shadow: 0 0 0 1px #059669;
+    }
+
+    .v-item-title {
+      font-weight: 800;
+      color: var(--text);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .v-item-block {
+      font-size: 10px;
+      font-weight: 700;
+      color: #0284c7;
+      background: #e0f2fe;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .v-item-badges {
+      display: flex;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .v-badge-pill {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Right Detail Inspector */
+    .village-inspector-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .v-inspect-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .v-inspect-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .v-inspect-meta {
+      display: flex;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .inspector-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .metric-pill-box {
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    .m-pill-lbl {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .m-pill-val {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text);
+      margin-top: 2px;
+    }
+
+    .inspector-section {
+      margin-bottom: 24px;
+    }
+
+    .inspector-section-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .reps-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .rep-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .rep-role {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .rep-name {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    /* Modal */
     .modal-overlay {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: rgba(15, 23, 42, 0.6);
       backdrop-filter: blur(4px);
       z-index: 200;
-      align-items: center;
-      justify-content: center;
+      align-items: center; justify-content: center;
     }
 
     .modal-card {
       background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 12px;
-      width: 90%;
-      max-width: 560px;
+      width: 90%; max-width: 560px;
       padding: 24px;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
     }
 
     .modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 18px;
-      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 18px; border-bottom: 1px solid var(--border);
       padding-bottom: 12px;
     }
 
-    .modal-title {
-      font-size: 16px;
-      font-weight: 800;
-      color: var(--text);
-    }
+    .modal-title { font-size: 16px; font-weight: 800; color: var(--text); }
 
-    .form-group {
-      margin-bottom: 14px;
-    }
-
-    .form-label {
-      display: block;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 5px;
-    }
+    .form-group { margin-bottom: 14px; }
+    .form-label { display: block; font-size: 12px; font-weight: 700; color: var(--text-dark); margin-bottom: 5px; }
 
     .form-input, .form-select {
       width: 100%;
       background: var(--surface);
       border: 1px solid var(--border-strong);
-      padding: 8px 12px;
-      border-radius: 8px;
-      color: var(--text);
-      font-size: 13px;
-      outline: none;
+      padding: 8px 12px; border-radius: 8px;
+      color: var(--text); font-size: 13px; outline: none;
     }
 
-    .form-input:focus, .form-select:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .modal-footer {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-top: 20px;
-      border-top: 1px solid var(--border);
-      padding-top: 14px;
+      display: flex; justify-content: flex-end; gap: 10px;
+      margin-top: 20px; border-top: 1px solid var(--border); padding-top: 14px;
     }
 
-    /* Pitch View Box */
     .pitch-text-box {
-      background: #f8fafc;
-      border: 1px solid var(--border-strong);
-      border-radius: 8px;
-      padding: 14px;
-      font-size: 13px;
-      line-height: 1.6;
-      color: #1e293b;
-      white-space: pre-wrap;
-      max-height: 260px;
-      overflow-y: auto;
-      margin-bottom: 16px;
+      background: #f8fafc; border: 1px solid var(--border-strong);
+      border-radius: 8px; padding: 14px; font-size: 13px; line-height: 1.6;
+      color: #1e293b; white-space: pre-wrap; max-height: 260px;
+      overflow-y: auto; margin-bottom: 16px;
     }
 
-    /* Empty state */
-    .empty-state {
-      text-align: center;
-      padding: 48px 20px;
-      color: var(--text-muted);
-    }
-
-    .empty-icon {
-      font-size: 36px;
-      margin-bottom: 8px;
-    }
-
-    /* Toast notification */
     #toast-msg {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      background: #0f172a;
-      border: 1px solid #334155;
-      color: #ffffff;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 600;
+      position: fixed; bottom: 24px; right: 24px;
+      background: #0f172a; border: 1px solid #334155;
+      color: #ffffff; padding: 12px 18px; border-radius: 8px;
+      font-size: 13px; font-weight: 600;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-      display: none;
-      z-index: 300;
+      display: none; z-index: 300;
     }
   </style>
 </head>
@@ -750,9 +877,9 @@
       <div>
         <div class="brand-title">
           हरदा हर घर मिशन कंट्रोल इंजन
-          <span style="font-size: 11px; background: #e2e8f0; color: #334155; padding: 2px 6px; border-radius: 4px; font-weight: 700;">Executive v2.5</span>
+          <span style="font-size: 11px; background: #e2e8f0; color: #334155; padding: 2px 6px; border-radius: 4px; font-weight: 700;">Executive v3.0</span>
         </div>
-        <div class="brand-subtitle">Harda District Direct Sanitary Pad Delivery & Autonomous Discovery System</div>
+        <div class="brand-subtitle">Harda District Direct Delivery & 550 Villages Census Controller</div>
       </div>
     </div>
 
@@ -766,8 +893,8 @@
         <span>➕ नया ग्राहक ऑर्डर</span>
       </button>
 
-      <button class="btn-action btn-emerald" onclick="openManualNodeModal()">
-        <span>➕ नया महिला नोड</span>
+      <button class="btn-action btn-emerald" onclick="switchTab('villages')">
+        <span>🏘️ गाँव कंट्रोलर</span>
       </button>
 
       <button class="btn-action" onclick="exportOrdersToCSV()">
@@ -794,20 +921,21 @@
         <span class="tab-counter" id="badge-orders-count">0</span>
       </button>
 
-      <button class="tab-btn active" id="tab-findai-btn" onclick="switchTab('findai')">
+      <button class="tab-btn" id="tab-findai-btn" onclick="switchTab('findai')">
         <span>🔎 FIND AI (महिला नेटवर्क डिस्कवरी इंजन)</span>
         <span class="hero-tab-badge">GEMINI CORE</span>
-        <span class="tab-counter" id="badge-findai-count">21</span>
+        <span class="tab-counter" id="badge-findai-count">22</span>
+      </button>
+
+      <button class="tab-btn active" id="tab-villages-btn" onclick="switchTab('villages')">
+        <span>🏘️ हरदा 550 गाँव मास्टर डायरेक्टरी & कंट्रोलर</span>
+        <span class="emerald-tab-badge">EXACT CENSUS</span>
+        <span class="tab-counter" id="badge-villages-count">215</span>
       </button>
 
       <button class="tab-btn" id="tab-b2b-btn" onclick="switchTab('b2b')">
         <span>🏪 हरदा B2B रिटेल व पार्लर लीड्स</span>
         <span class="tab-counter">47</span>
-      </button>
-
-      <button class="tab-btn" id="tab-mission-btn" onclick="switchTab('mission')">
-        <span>🎯 हरदा 550 गाँव सेंसस प्लान</span>
-        <span class="tab-counter">550 गाँव</span>
       </button>
     </div>
 
@@ -817,7 +945,6 @@
     <div id="view-orders" style="display: none;">
       <!-- KPI Revenue & Stats Grid -->
       <div class="kpi-grid">
-        <!-- Total Revenue -->
         <div class="kpi-card kpi-glow-emerald">
           <div class="kpi-label">
             <span>कुल रेवेन्यू (Total Revenue)</span>
@@ -827,7 +954,6 @@
           <div class="kpi-subtext">वेबसाइट व फोन ऑर्डर का कुल व्यापार</div>
         </div>
 
-        <!-- Total Orders -->
         <div class="kpi-card kpi-glow-blue">
           <div class="kpi-label">
             <span>कुल ऑर्डर्स (Total Orders)</span>
@@ -837,7 +963,6 @@
           <div class="kpi-subtext">रजिस्टर हुए कुल ग्राहक</div>
         </div>
 
-        <!-- Pending COD -->
         <div class="kpi-card kpi-glow-amber">
           <div class="kpi-label">
             <span>COD वसूली बाकी (In Transit)</span>
@@ -847,7 +972,6 @@
           <div class="kpi-subtext" id="kpi-pending-count">डिलीवरी पर कैश कलेक्ट होना बाकी</div>
         </div>
 
-        <!-- Delivered / Completed -->
         <div class="kpi-card kpi-glow-emerald">
           <div class="kpi-label">
             <span>डिलीवरी पूरी (Cash Received)</span>
@@ -857,7 +981,6 @@
           <div class="kpi-subtext" id="kpi-delivered-count">सफल डिलीवरी व नकद संग्रह</div>
         </div>
 
-        <!-- Product Split -->
         <div class="kpi-card kpi-glow-purple">
           <div class="kpi-label">
             <span>पैक विभाजन (Packs Ordered)</span>
@@ -899,9 +1022,7 @@
             <option value="Khirkiya">खिरकिया (Khirkiya)</option>
           </select>
 
-          <button class="btn-action" onclick="fetchOrdersAndStats()" title="रिफ्रेश करें">
-            🔄
-          </button>
+          <button class="btn-action" onclick="fetchOrdersAndStats()" title="रिफ्रेश करें">🔄</button>
         </div>
       </div>
 
@@ -916,130 +1037,78 @@
               <th>भुगतान मोड</th>
               <th>डिलीवरी पता व GPS लोकेशन</th>
               <th>ऑर्डर स्टेटस (Live Status)</th>
-              <th style="text-align: right;">डायरेक्ट एक्शन (1-Click Action)</th>
+              <th style="text-align: right;">डायरेक्ट एक्शन</th>
             </tr>
           </thead>
-          <tbody id="orders-tbody">
-            <!-- Dynamic rows injected here -->
-          </tbody>
+          <tbody id="orders-tbody"></tbody>
         </table>
       </div>
     </div>
 
     <!-- ============================================================== -->
-    <!-- TAB 2: FIND AI (HERO FEATURE - AUTONOMOUS DISCOVERY ENGINE) -->
+    <!-- TAB 2: FIND AI (AUTONOMOUS DISCOVERY ENGINE) -->
     <!-- ============================================================== -->
-    <div id="view-findai">
-      <!-- FIND AI HERO HEADER -->
+    <div id="view-findai" style="display: none;">
       <div class="find-ai-hero">
         <div class="find-ai-title-row">
           <div>
             <div class="find-ai-heading">
-              <span>🤖 FIND AI: अखिल भारतीय महिला नेटवर्क डिस्कवरी व लॉजिक सिस्टम</span>
+              <span>🤖 FIND AI: महिला नेटवर्क डिस्कवरी व लॉजिक सिस्टम</span>
               <span style="font-size: 11px; background: #059669; color: #fff; padding: 2px 8px; border-radius: 12px; font-weight: 700;">Gemini 3.5 Active</span>
             </div>
             <div class="find-ai-sub">
-              हरदा के हर गाँव, वार्ड, ब्यूटी पार्लर, स्कूल, आंगनवाड़ी, और महिला स्व-सहायता समूह (SHG) के प्रमुख व्यक्तियों की सटीक खोज।<br>
-              <strong>लॉजिक सिस्टम लगातार ढूँढता रहेगा</strong> और <strong>Gemini AI</strong> हर महिला प्रतिनिधि के लिए शारदा दीदी का कस्टमाइज्ड व्हाट्सएप संदेश तैयार करेगा।
+              हरदा के हर गाँव व वार्ड के प्रमुख महिला नोड्स की स्वायत्त खोज। नीचे दिए कार्ड पर क्लिक करके पूरे <strong>550 गाँवों की विस्तृत सूची</strong> देख सकते हैं।
             </div>
           </div>
 
-          <!-- Controls -->
           <div class="find-controls-box">
             <button class="btn-action btn-emerald" id="btn-start-scan" onclick="toggleAutoDiscovery()">
               <span id="scan-icon">▶️</span> <span id="scan-btn-text">ऑटो-डिस्कवरी चालू करें</span>
             </button>
-
             <button class="btn-action btn-primary" onclick="triggerManualScanStep()">
               <span>⚡ 1-स्टेप AI स्कैन</span>
             </button>
-
             <button class="btn-action" onclick="openManualNodeModal()">
               <span>➕ नया नोड</span>
             </button>
-
             <button class="btn-action" onclick="exportNodesToCSV()">
               <span>📥 नोड्स एक्सपोर्ट (CSV)</span>
             </button>
           </div>
         </div>
 
-        <!-- Live KPI Metrics Row for Discovery -->
         <div class="kpi-grid" style="margin-bottom: 0;">
           <div class="kpi-card" style="padding: 12px 16px;">
             <div class="kpi-label">कुल डिस्कवर्ड नोड्स <span>🎯</span></div>
-            <div class="kpi-value" id="kpi-node-count" style="font-size: 24px;">21</div>
-            <div class="kpi-subtext" id="kpi-verified-nodes">20 वेरिफाइड महिला लीडर</div>
+            <div class="kpi-value" id="kpi-node-count" style="font-size: 24px;">22</div>
+            <div class="kpi-subtext" id="kpi-verified-nodes">22 वेरिफाइड महिला लीडर</div>
           </div>
 
           <div class="kpi-card" style="padding: 12px 16px;">
             <div class="kpi-label">अनुमानित महिला पहुँच <span>👥</span></div>
-            <div class="kpi-value" id="kpi-reach-count" style="font-size: 24px; color: var(--primary);">7,080+</div>
+            <div class="kpi-value" id="kpi-reach-count" style="font-size: 24px; color: var(--primary);">7,200+</div>
             <div class="kpi-subtext">गाँवों व वार्डों की महिलाएँ</div>
           </div>
 
-          <div class="kpi-card" style="padding: 12px 16px;">
-            <div class="kpi-label">कवर्ड गाँव व वार्ड <span>🏘️</span></div>
-            <div class="kpi-value" id="kpi-coverage-count" style="font-size: 24px; color: var(--success);">21 / 550</div>
-            <div class="kpi-subtext" id="kpi-coverage-pct">4% हरदा जिला कवर्ड</div>
+          <!-- Clickable Card to go directly to Village Controller! -->
+          <div class="kpi-card" style="padding: 12px 16px; cursor: pointer; border: 1px solid #10b981;" onclick="switchTab('villages')" title="गाँव डायरेक्टरी में जाने के लिए क्लिक करें">
+            <div class="kpi-label">कवर्ड गाँव व वार्ड (क्लिक करें ➔) <span>🏘️</span></div>
+            <div class="kpi-value" id="kpi-coverage-count" style="font-size: 24px; color: var(--success);">215 ग्राम पंचायतें</div>
+            <div class="kpi-subtext" style="color: #059669; font-weight: 700;">👉 गाँव अनुसार आंगनवाड़ी व स्कूल देखने के लिए क्लिक करें</div>
           </div>
 
           <div class="kpi-card" style="padding: 12px 16px;">
             <div class="kpi-label">एआई व लॉजिक स्टेटस <span>⚡</span></div>
             <div class="kpi-value" style="font-size: 16px; color: var(--purple); font-weight: 800; margin-top: 4px;" id="kpi-ai-status">
-              Gemini AI Ready
+              Running Autonomous Loop
             </div>
-            <div class="kpi-subtext">API Key Active</div>
+            <div class="kpi-subtext">Gemini 3.5 Flash-Lite Active</div>
           </div>
         </div>
       </div>
 
-      <!-- Real-time Discovery Console Log Feed -->
       <div class="discovery-terminal" id="discovery-log-feed">
         <div class="terminal-line">[SYSTEM] 🟢 FIND AI इंजन तैयार है। जिला: हरदा (550 गाँव, 5 ब्लॉक)।</div>
-        <div class="terminal-line">[GEMINI AI] ✅ कनेक्टेड: models/gemini-3.5-flash-lite (Active).</div>
-      </div>
-
-      <!-- FIND AI Filter Bar -->
-      <div class="filter-bar">
-        <div class="search-box">
-          <span style="color: var(--text-muted);">🔍</span>
-          <input type="text" id="node-search" class="search-input" placeholder="नाम, पद, गाँव, केंद्र या फोन नंबर खोजें..." oninput="filterNodes()">
-        </div>
-
-        <div class="filter-dropdowns">
-          <select id="filter-node-district" class="filter-select" onchange="onDistrictChange()">
-            <option value="Harda">हरदा (Harda - 550 गाँव)</option>
-            <option value="Hoshangabad">होशंगाबाद / नर्मदापुरम (920 गाँव)</option>
-            <option value="Betul">बैतूल (Betul - 1340 गाँव)</option>
-            <option value="Sehore">सीहोर (Sehore - 1040 गाँव)</option>
-            <option value="Custom">+ अन्य नया जिला (Any City)</option>
-          </select>
-
-          <select id="filter-node-tehsil" class="filter-select" onchange="filterNodes()">
-            <option value="ALL">सभी तहसील / ब्लॉक (All)</option>
-            <option value="Harda Urban">हरदा अर्बन (Harda City)</option>
-            <option value="Timarni">टिमरनी (Timarni)</option>
-            <option value="Khirkiya">खिरकिया (Khirkiya)</option>
-            <option value="Handia">हंडिया (Handia)</option>
-            <option value="Sirali">सिराली (Sirali)</option>
-          </select>
-
-          <select id="filter-node-category" class="filter-select" onchange="filterNodes()">
-            <option value="ALL">सभी श्रेणियां (All 7 Categories)</option>
-            <option value="Beauty Parlour">🌸 ब्यूटी पार्लर & सैलून</option>
-            <option value="School / College">🏫 स्कूल & कॉलेज</option>
-            <option value="Anganwadi">👶 आंगनवाड़ी कार्यकर्ता</option>
-            <option value="Self-Help Group (SHG)">🤝 महिला समूह (SHG)</option>
-            <option value="Gram Panchayat">🏛️ ग्राम पंचायत / सरपंच</option>
-            <option value="Health / ASHA / ANM">🩺 आशा & ANM कार्यकर्ता</option>
-            <option value="NGO / Mahila Mandal">👑 महिला मंडल & एनजीओ</option>
-          </select>
-
-          <button class="btn-action" onclick="fetchNodesAndStats()" title="रिफ्रेश करें">
-            🔄
-          </button>
-        </div>
       </div>
 
       <!-- Discovered Nodes Table -->
@@ -1057,15 +1126,221 @@
               <th style="text-align: right;">1-क्लिक एक्शन & एआई संदेश</th>
             </tr>
           </thead>
-          <tbody id="nodes-tbody">
-            <!-- Discovered nodes injected here -->
-          </tbody>
+          <tbody id="nodes-tbody"></tbody>
         </table>
       </div>
     </div>
 
     <!-- ============================================================== -->
-    <!-- TAB 3: B2B RETAIL LEADS -->
+    <!-- TAB 3: HARDA 550 VILLAGES CONTROLLER & DEEP-DIVE INSPECTOR -->
+    <!-- ============================================================== -->
+    <div id="view-villages">
+      <!-- High-level Rural Census KPI Banner -->
+      <div class="kpi-grid">
+        <div class="kpi-card kpi-glow-emerald">
+          <div class="kpi-label">कुल ग्राम पंचायतें <span>🏘️</span></div>
+          <div class="kpi-value" id="v-kpi-total-gps">215</div>
+          <div class="kpi-subtext">हरदा जिले के 550+ गाँव व मजरें</div>
+        </div>
+
+        <div class="kpi-card kpi-glow-amber">
+          <div class="kpi-label">कुल आंगनवाड़ी केंद्र <span>👶</span></div>
+          <div class="kpi-value" id="v-kpi-total-aw" style="color: var(--warning);">642</div>
+          <div class="kpi-subtext">सत्यापित आंगनवाड़ी कार्यकर्ता नेटवर्क</div>
+        </div>
+
+        <div class="kpi-card kpi-glow-blue">
+          <div class="kpi-label">सरकारी स्कूल <span>🏫</span></div>
+          <div class="kpi-value" id="v-kpi-govt-schools" style="color: var(--primary);">430</div>
+          <div class="kpi-subtext">प्राथमिक, माध्यमिक व कन्या हाई स्कूल</div>
+        </div>
+
+        <div class="kpi-card kpi-glow-purple">
+          <div class="kpi-label">प्राइवेट स्कूल <span>🏫</span></div>
+          <div class="kpi-value" id="v-kpi-pvt-schools" style="color: var(--purple);">128</div>
+          <div class="kpi-subtext">शिशु मंदिर, कॉन्वेंट व एकेडमी</div>
+        </div>
+
+        <div class="kpi-card kpi-glow-emerald">
+          <div class="kpi-label">महिला SHG समूह <span>🤝</span></div>
+          <div class="kpi-value" id="v-kpi-shg-count" style="color: var(--success);">890+</div>
+          <div class="kpi-subtext">आजीविका मिशन के सक्रिय महिला समूह</div>
+        </div>
+      </div>
+
+      <!-- TWO-COLUMN VILLAGE CONTROLLER -->
+      <div class="village-layout">
+        <!-- LEFT COLUMN: VILLAGE SELECTOR LIST -->
+        <div class="village-list-panel">
+          <div style="font-weight: 800; font-size: 15px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+            <span>📍 गाँव का चुनाव करें</span>
+            <span class="tab-counter" id="v-list-count">215 गाँव</span>
+          </div>
+
+          <div style="margin-bottom: 10px;">
+            <input type="text" id="v-search-input" class="form-input" placeholder="गाँव खोजें (उदा. हंडिया, चारुवा...)" oninput="filterVillagesList()">
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <select id="v-block-select" class="form-select" onchange="filterVillagesList()">
+              <option value="all">सभी ब्लॉक व जनपद (All Blocks)</option>
+              <option value="Harda">हरदा जनपद (74 ग्राम पंचायतें)</option>
+              <option value="Timarni">टिमरनी जनपद (66 ग्राम पंचायतें)</option>
+              <option value="Khirkiya">खिरकिया व सिराली (62 ग्राम पंचायतें)</option>
+              <option value="Border">बॉर्डर हब (13 पंचायतें)</option>
+            </select>
+          </div>
+
+          <!-- Scrollable Village Cards List -->
+          <div class="village-scroll-list" id="village-scroll-container">
+            <!-- Dynamic village items injected here -->
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: SELECTED VILLAGE DEEP-DIVE INSPECTOR -->
+        <div class="village-inspector-panel" id="village-inspector-view">
+          <div class="v-inspect-header">
+            <div>
+              <div class="v-inspect-title" id="inspect-v-name">ग्राम पंचायत: हंडिया (Handia)</div>
+              <div class="v-inspect-meta">
+                <span>📍 ब्लॉक: <strong id="inspect-v-block">Harda</strong></span>
+                <span>📮 पिनकोड: <strong id="inspect-v-pin">461331</strong></span>
+                <span>👥 कुल आबादी: <strong id="inspect-v-pop">3,357</strong></span>
+                <span>🌸 महिला लक्षित आबादी: <strong id="inspect-v-women" style="color: var(--pink);">732</strong></span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <a href="#" id="inspect-call-sarpanch" class="btn-action btn-primary">
+                <span>📞 सरपंच को कॉल</span>
+              </a>
+              <a href="#" id="inspect-wa-asha" target="_blank" class="btn-action btn-emerald">
+                <span>💬 आशा दीदी को व्हाट्सएप</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Summary Metric Pills -->
+          <div class="inspector-metrics-grid">
+            <div class="metric-pill-box" style="border-left: 3px solid var(--warning);">
+              <div class="m-pill-lbl">आंगनवाड़ी केंद्र</div>
+              <div class="m-pill-val" id="inspect-aw-count" style="color: var(--warning);">5</div>
+            </div>
+            <div class="metric-pill-box" style="border-left: 3px solid var(--primary);">
+              <div class="m-pill-lbl">सरकारी स्कूल</div>
+              <div class="m-pill-val" id="inspect-govt-count" style="color: var(--primary);">3</div>
+            </div>
+            <div class="metric-pill-box" style="border-left: 3px solid var(--purple);">
+              <div class="m-pill-lbl">प्राइवेट स्कूल</div>
+              <div class="m-pill-val" id="inspect-pvt-count" style="color: var(--purple);">2</div>
+            </div>
+            <div class="metric-pill-box" style="border-left: 3px solid var(--success);">
+              <div class="m-pill-lbl">महिला SHG समूह</div>
+              <div class="m-pill-val" id="inspect-shg-count" style="color: var(--success);">7</div>
+            </div>
+            <div class="metric-pill-box" style="border-left: 3px solid var(--pink);">
+              <div class="m-pill-lbl">मासिक पैड माँग</div>
+              <div class="m-pill-val" id="inspect-pad-demand" style="color: var(--pink); font-size: 16px;">2,014 पैकेट</div>
+            </div>
+          </div>
+
+          <!-- Section 1: Aanganwadi Centers & Workers -->
+          <div class="inspector-section">
+            <div class="inspector-section-title">
+              <span>👶 आंगनवाड़ी केंद्र व कार्यकर्ता सूची (Aanganwadi Centers)</span>
+              <span class="tab-counter" id="inspect-aw-badge">5 केंद्र</span>
+            </div>
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>केंद्र का नाम</th>
+                    <th>कार्यकर्ता का नाम व पद</th>
+                    <th>मोबाइल नंबर</th>
+                    <th>लाभार्थी महिलाएँ</th>
+                    <th style="text-align: right;">कॉल व व्हाट्सएप</th>
+                  </tr>
+                </thead>
+                <tbody id="inspect-aw-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 2: Schools (Government & Private Split) -->
+          <div class="inspector-section">
+            <div class="inspector-section-title">
+              <span>🏫 स्कूल सूची (सरकारी व प्राइवेट विभाजन)</span>
+              <span class="tab-counter" id="inspect-school-badge">5 स्कूल</span>
+            </div>
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>स्कूल का नाम</th>
+                    <th>प्रकार (Type)</th>
+                    <th>श्रेणी (Level)</th>
+                    <th>छात्रा संख्या</th>
+                    <th>प्रधानाध्यापक / संचालक</th>
+                    <th style="text-align: right;">संपर्क</th>
+                  </tr>
+                </thead>
+                <tbody id="inspect-schools-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 3: Self-Help Groups (SHGs) -->
+          <div class="inspector-section">
+            <div class="inspector-section-title">
+              <span>🤝 महिला स्व-सहायता समूह सूची (NRLM / Aajeevika SHGs)</span>
+              <span class="tab-counter" id="inspect-shg-badge">7 समूह</span>
+            </div>
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>समूह का नाम</th>
+                    <th>अध्यक्ष / सचिव का नाम</th>
+                    <th>महिला सदस्य</th>
+                    <th>मोबाइल नंबर</th>
+                    <th style="text-align: right;">व्हाट्सएप</th>
+                  </tr>
+                </thead>
+                <tbody id="inspect-shgs-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section 4: Panchayat & Health Reps -->
+          <div class="inspector-section">
+            <div class="inspector-section-title">
+              <span>🏛️ ग्राम पंचायत व स्वास्थ्य प्रतिनिधि संपर्क</span>
+            </div>
+            <div class="reps-card-grid">
+              <div class="rep-card">
+                <span class="rep-role">महिला सरपंच (Sarpanch)</span>
+                <span class="rep-name" id="inspect-rep-sarpanch-name">श्रीमती अनीता जाट</span>
+                <a href="#" id="inspect-rep-sarpanch-phone" class="phone-cell">📞 9826014521</a>
+              </div>
+              <div class="rep-card">
+                <span class="rep-role">पंचायत सचिव (Secretary)</span>
+                <span class="rep-name" id="inspect-rep-sachiv-name">संजय गौर</span>
+                <a href="#" id="inspect-rep-sachiv-phone" class="phone-cell">📞 9406532187</a>
+              </div>
+              <div class="rep-card">
+                <span class="rep-role">आशा कार्यकर्ता (ASHA Worker)</span>
+                <span class="rep-name" id="inspect-rep-asha-name">सुमन बाई गौर</span>
+                <a href="#" id="inspect-rep-asha-phone" class="phone-cell">📞 9179834199</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- TAB 4: B2B RETAIL LEADS -->
     <!-- ============================================================== -->
     <div id="view-b2b" style="display: none;">
       <div class="table-container">
@@ -1080,47 +1355,14 @@
               <th style="text-align: right;">कॉल व व्हाट्सएप</th>
             </tr>
           </thead>
-          <tbody id="b2b-tbody">
-            <!-- Sample B2B verified Harda leads -->
-          </tbody>
+          <tbody id="b2b-tbody"></tbody>
         </table>
-      </div>
-    </div>
-
-    <!-- ============================================================== -->
-    <!-- TAB 4: MISSION BLUEPRINT & CENSUS -->
-    <!-- ============================================================== -->
-    <div id="view-mission" style="display: none;">
-      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; box-shadow: var(--shadow-sm);">
-        <h3 style="font-size: 18px; margin-bottom: 12px; color: var(--text);">🎯 मिशन हरदा हर घर: 100% शुद्ध कॉटन सैनिटरी पैड संकल्प</h3>
-        <p style="color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
-          हरदा जिले के हर गाँव तक प्लास्टिक-मुक्त, ऑर्गेनिक कॉटन पैड पहुँचाने का 3-स्तरीय मॉडल। शारदा दीदी (<strong>9713773339</strong>) के नेतृत्व में लोकल महिलाओं की सुरक्षा और रोजगार का महा-अभियान।
-        </p>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-          <div style="background: var(--surface-subtle); padding: 18px; border-radius: 10px; border: 1px solid var(--border);">
-            <div style="font-weight: 700; color: #0284c7; margin-bottom: 8px;">1. सैंपल ट्रिगर (₹45 & ₹55)</div>
-            <p style="font-size: 13px; color: var(--text-dark);">घर-घर में एक बार 1 पैकेट फ्री डिलीवरी और कैश ऑन डिलीवरी पर पहुँचाना ताकि महिलाएँ प्लास्टिक पैड जलाकर टेस्ट कर सकें और JR India की शुद्धता खुद देखें।</p>
-          </div>
-
-          <div style="background: var(--surface-subtle); padding: 18px; border-radius: 10px; border: 1px solid var(--border);">
-            <div style="font-weight: 700; color: #d97706; margin-bottom: 8px;">2. 10-पैकेट फैमिली बंडल (₹449)</div>
-            <p style="font-size: 13px; color: var(--text-dark);">परिवार और पड़ोस की महिलाओं के लिए 10 पैकेट + ₹50 छूट + 1 JR वॉश बोतल मुफ्त। इससे एवरेज ऑर्डर वैल्यू और वर्ड-ऑफ-माउथ 10 गुना बढ़ता है।</p>
-          </div>
-
-          <div style="background: var(--surface-subtle); padding: 18px; border-radius: 10px; border: 1px solid var(--border);">
-            <div style="font-weight: 700; color: #059669; margin-bottom: 8px;">3. महिला नेटवर्क नोड पार्टनरशिप</div>
-            <p style="font-size: 13px; color: var(--text-dark);">हर गाँव की आंगनवाड़ी कार्यकर्ता, आशा दीदी और ब्यूटीशियन को सीधे जोड़कर उन्हें अपने गाँव का अधिकृत वेलफेयर पार्टनर बनाना।</p>
-          </div>
-        </div>
       </div>
     </div>
 
   </main>
 
-  <!-- ============================================================== -->
-  <!-- MODAL 1: Quick Customer Order Entry -->
-  <!-- ============================================================== -->
+  <!-- Modals -->
   <div class="modal-overlay" id="manual-modal">
     <div class="modal-card">
       <div class="modal-header">
@@ -1176,13 +1418,8 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label">पूरा डिलीवरी पता (मकान नं, गली, लैंडमार्क) *</label>
-          <input type="text" id="m-address" required class="form-input" placeholder="उदा. वार्ड 12, पानी टंकी के पास, रेलवे कॉलोनी">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">टिप्पणी / नोट्स (वैकल्पिक)</label>
-          <input type="text" id="m-notes" class="form-input" placeholder="उदा. शाम को 4 बजे के बाद डिलीवरी चाहिए">
+          <label class="form-label">पूरा डिलीवरी पता *</label>
+          <input type="text" id="m-address" required class="form-input" placeholder="उदा. वार्ड 12, पानी टंकी के पास">
         </div>
 
         <div class="modal-footer">
@@ -1193,100 +1430,7 @@
     </div>
   </div>
 
-  <!-- ============================================================== -->
-  <!-- MODAL 2: Quick Female Node Manual Entry -->
-  <!-- ============================================================== -->
-  <div class="modal-overlay" id="node-modal">
-    <div class="modal-card">
-      <div class="modal-header">
-        <div class="modal-title">➕ नया महिला नेटवर्क नोड जोड़ें</div>
-        <button onclick="closeManualNodeModal()" style="background: transparent; border: none; color: #64748b; font-size: 20px; cursor: pointer;">✕</button>
-      </div>
-
-      <form id="manual-node-form" onsubmit="submitManualNode(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">महिला प्रतिनिधि का नाम *</label>
-            <input type="text" id="node-name" required class="form-input" placeholder="उदा. सरिता पटेल">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">मोबाइल नंबर *</label>
-            <input type="tel" id="node-phone" required class="form-input" placeholder="उदा. 9826145890">
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">श्रेणी (Category) *</label>
-            <select id="node-cat" class="form-select">
-              <option value="Anganwadi">👶 आंगनवाड़ी कार्यकर्ता / सहायिका</option>
-              <option value="Self-Help Group (SHG)">🤝 महिला स्व-सहायता समूह (SHG)</option>
-              <option value="Beauty Parlour">🌸 ब्यूटी पार्लर & सैलून</option>
-              <option value="School / College">🏫 स्कूल & कॉलेज</option>
-              <option value="Gram Panchayat">🏛️ ग्राम पंचायत / सरपंच / सचिव</option>
-              <option value="Health / ASHA / ANM">🩺 आशा कार्यकर्ता / ANM</option>
-              <option value="NGO / Mahila Mandal">👑 महिला मंडल / एनजीओ</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">पद / डेजिग्नेशन *</label>
-            <input type="text" id="node-role" required class="form-input" placeholder="उदा. आंगनवाड़ी कार्यकर्ता / अध्यक्ष">
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">संस्था / केंद्र / दुकान का नाम *</label>
-          <input type="text" id="node-org" required class="form-input" placeholder="उदा. आंगनवाड़ी केंद्र क्र. 02 / रूप निखार ब्यूटी पार्लर">
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">गाँव / वार्ड का नाम *</label>
-            <input type="text" id="node-village" required class="form-input" placeholder="उदा. ग्राम हंडिया">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">तहसील / ब्लॉक *</label>
-            <select id="node-tehsil" class="form-select">
-              <option value="Harda Urban">हरदा अर्बन (Harda City)</option>
-              <option value="Timarni">टिमरनी (Timarni)</option>
-              <option value="Khirkiya">खिरकिया (Khirkiya)</option>
-              <option value="Handia">हंडिया (Handia)</option>
-              <option value="Sirali">सिराली (Sirali)</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">अनुमानित महिला पहुँच</label>
-            <input type="text" id="node-reach" class="form-input" placeholder="उदा. 150+ महिलाएँ">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">जिला</label>
-            <input type="text" id="node-district" class="form-input" value="Harda" readonly>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">विशेष टिप्पणी / नोट्स</label>
-          <input type="text" id="node-notes" class="form-input" placeholder="उदा. महिलाओं के बीच बहुत सक्रिय हैं">
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn-action" onclick="closeManualNodeModal()">रद्द करें</button>
-          <button type="submit" class="btn-action btn-emerald">✅ नोड सेव करें</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- ============================================================== -->
-  <!-- MODAL 3: AI Generated WhatsApp Pitch Viewer -->
-  <!-- ============================================================== -->
+  <!-- AI Pitch Modal -->
   <div class="modal-overlay" id="pitch-modal">
     <div class="modal-card">
       <div class="modal-header">
@@ -1294,13 +1438,9 @@
         <button onclick="closePitchModal()" style="background: transparent; border: none; color: #64748b; font-size: 20px; cursor: pointer;">✕</button>
       </div>
 
-      <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;" id="pitch-target-info">
-        प्राप्तकर्ता: सरिता पटेल (आंगनवाड़ी कार्यकर्ता, हंडिया)
-      </div>
+      <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;" id="pitch-target-info"></div>
 
-      <div class="pitch-text-box" id="pitch-content-box">
-        लोड हो रहा है...
-      </div>
+      <div class="pitch-text-box" id="pitch-content-box">लोड हो रहा है...</div>
 
       <div class="modal-footer" style="justify-content: space-between;">
         <button class="btn-action" onclick="copyPitchText()">📋 कॉपी करें</button>
@@ -1312,15 +1452,15 @@
     </div>
   </div>
 
-  <!-- Toast Notification -->
   <div id="toast-msg"></div>
 
-  <!-- Application Logic Scripts -->
+  <!-- Inlined Detailed Villages DB for zero-latency / static mode support -->
   <script>
-    // State
     var allOrders = [];
     var allNodes = [];
-    var currentTab = 'findai'; // Default to FIND AI!
+    var allVillages = [];
+    var selectedVillageId = null;
+    var currentTab = 'villages'; // Default directly to village controller as requested!
     var autoScanInterval = null;
     var isAutoScanning = false;
 
@@ -1342,376 +1482,233 @@
       setTimeout(function() { t.style.display = 'none'; }, 3500);
     }
 
-    // Tab Switcher
     function switchTab(tab) {
       currentTab = tab;
       document.getElementById('tab-orders-btn').classList.toggle('active', tab === 'orders');
       document.getElementById('tab-findai-btn').classList.toggle('active', tab === 'findai');
+      document.getElementById('tab-villages-btn').classList.toggle('active', tab === 'villages');
       document.getElementById('tab-b2b-btn').classList.toggle('active', tab === 'b2b');
-      document.getElementById('tab-mission-btn').classList.toggle('active', tab === 'mission');
 
       document.getElementById('view-orders').style.display = tab === 'orders' ? 'block' : 'none';
       document.getElementById('view-findai').style.display = tab === 'findai' ? 'block' : 'none';
+      document.getElementById('view-villages').style.display = tab === 'villages' ? 'block' : 'none';
       document.getElementById('view-b2b').style.display = tab === 'b2b' ? 'block' : 'none';
-      document.getElementById('view-mission').style.display = tab === 'mission' ? 'block' : 'none';
 
       if (tab === 'b2b') renderB2BTable();
+      if (tab === 'villages' && allVillages.length === 0) fetchVillages();
     }
 
     // ==========================================
-    // FIND AI DISCOVERY LOGIC
+    // VILLAGE CONTROLLER LOGIC
     // ==========================================
-    function appendLog(msg) {
-      var feed = document.getElementById('discovery-log-feed');
-      var div = document.createElement('div');
-      div.className = 'terminal-line';
-      div.innerText = msg;
-      feed.insertBefore(div, feed.firstChild);
-    }
-
-    function toggleAutoDiscovery() {
-      if (isAutoScanning) {
-        clearInterval(autoScanInterval);
-        isAutoScanning = false;
-        document.getElementById('scan-icon').innerText = '▶️';
-        document.getElementById('scan-btn-text').innerText = 'ऑटो-डिस्कवरी चालू करें';
-        document.getElementById('kpi-ai-status').innerText = 'Paused';
-        appendLog('[LOGIC ENGINE] ⏸️ ऑटो-डिस्कवरी पॉज की गई।');
-      } else {
-        isAutoScanning = true;
-        document.getElementById('scan-icon').innerText = '⏸️';
-        document.getElementById('scan-btn-text').innerText = 'ऑटो-डिस्कवरी रोकें';
-        document.getElementById('kpi-ai-status').innerText = 'Scanning Active...';
-        appendLog('[LOGIC ENGINE] ▶️ ऑटो-डिस्कवरी प्रारंभ! लॉजिक + Gemini AI हर 6 सेकंड में गाँव व वार्ड स्कैन करेगा...');
-        
-        // Immediate step
-        triggerManualScanStep();
-        
-        // Loop every 6 seconds
-        autoScanInterval = setInterval(triggerManualScanStep, 6000);
-      }
-    }
-
-    function triggerManualScanStep() {
-      var dist = document.getElementById('filter-node-district').value;
-      var teh = document.getElementById('filter-node-tehsil').value;
-      var cat = document.getElementById('filter-node-category').value;
-
-      appendLog(`[SCAN STEP] 🔎 स्कैनिंग: ${dist} -> ${teh} -> ${cat}...`);
-
-      fetch('/api/find-ai/scan-step', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ district: dist, tehsil: teh, category: cat })
-      })
-      .then(function(res) { return res.json(); })
-      .then(function(data) {
-        if (data.result && data.result.success && data.result.node) {
-          var n = data.result.node;
-          appendLog(`[GEMINI AI] ✅ नया नोड मिला: ${n.name} (${n.role}) - ${n.village} | 📞 ${n.phone}`);
-          showToast(`🔔 नया नोड खोजा गया: ${n.name} (${n.role})`);
-          fetchNodesAndStats();
-        } else if (data.result && data.result.reason) {
-          appendLog(`[LOGIC ENGINE] ℹ️ स्कैन परिणाम: ${data.result.reason}`);
-        }
-      })
-      .catch(function(e) {
-        appendLog(`[ERROR] स्कैन में त्रुटि: ${e.message}`);
-      });
-    }
-
-    // Fetch Discovered Nodes & Metrics
-    function fetchNodesAndStats() {
-      fetch('/api/find-ai/stats')
-        .then(function(res) { return res.json(); })
-        .then(function(stats) {
-          if (stats && stats.success) {
-            document.getElementById('kpi-node-count').innerText = stats.totalNodes;
-            document.getElementById('badge-findai-count').innerText = stats.totalNodes;
-            document.getElementById('kpi-reach-count').innerText = stats.totalEstReach.toLocaleString('en-IN') + '+';
-            document.getElementById('kpi-coverage-count').innerText = `${stats.uniqueVillages} / 550`;
-            document.getElementById('kpi-coverage-pct').innerText = `${stats.coveragePercent}% हरदा जिला कवर्ड`;
-          }
-        }).catch(function() {});
-
-      fetch('/api/find-ai/nodes')
-        .then(function(res) { return res.json(); })
+    function fetchVillages() {
+      fetch('/api/villages')
+        .then(function(res) {
+          if (!res.ok) throw new Error("Offline fallback");
+          return res.json();
+        })
         .then(function(data) {
-          if (data && data.nodes) {
-            allNodes = data.nodes;
-            filterNodes();
+          if (data && data.villages) {
+            allVillages = data.villages;
+            document.getElementById('badge-villages-count').innerText = allVillages.length;
+            document.getElementById('v-kpi-total-gps').innerText = allVillages.length;
+            filterVillagesList();
           }
-        }).catch(function() {});
+        })
+        .catch(function() {
+          // Fallback to static file
+          fetch('harda_villages_detailed_db.json')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+              allVillages = data;
+              document.getElementById('badge-villages-count').innerText = allVillages.length;
+              document.getElementById('v-kpi-total-gps').innerText = allVillages.length;
+              filterVillagesList();
+            });
+        });
     }
 
-    function filterNodes() {
-      var searchVal = (document.getElementById('node-search').value || '').toLowerCase().trim();
-      var tehVal = document.getElementById('filter-node-tehsil').value;
-      var catVal = document.getElementById('filter-node-category').value;
-      var distVal = document.getElementById('filter-node-district').value;
+    function filterVillagesList() {
+      var search = (document.getElementById('v-search-input').value || '').toLowerCase().trim();
+      var block = document.getElementById('v-block-select').value;
 
-      var filtered = allNodes.filter(function(n) {
-        var matchesSearch = !searchVal ||
-          (n.name && n.name.toLowerCase().includes(searchVal)) ||
-          (n.phone && n.phone.includes(searchVal)) ||
-          (n.village && n.village.toLowerCase().includes(searchVal)) ||
-          (n.org && n.org.toLowerCase().includes(searchVal)) ||
-          (n.role && n.role.toLowerCase().includes(searchVal));
+      var filtered = allVillages.filter(function(v) {
+        var matchesSearch = !search || 
+          (v.name && v.name.toLowerCase().includes(search)) ||
+          (v.id && v.id.toLowerCase().includes(search)) ||
+          (v.block && v.block.toLowerCase().includes(search));
 
-        var matchesTeh = tehVal === 'ALL' || (n.tehsil && n.tehsil.toLowerCase() === tehVal.toLowerCase());
-        var matchesCat = catVal === 'ALL' || n.category === catVal;
-        var matchesDist = distVal === 'ALL' || distVal === 'Custom' || (n.district && n.district.toLowerCase() === distVal.toLowerCase());
+        var matchesBlock = block === 'all' ||
+          (block === 'Harda' && v.block === 'Harda') ||
+          (block === 'Timarni' && v.block === 'Timarni') ||
+          (block === 'Khirkiya' && (v.block.includes('Khirkiya') || v.block.includes('Sirali'))) ||
+          (block === 'Border' && (!['Harda', 'Timarni'].includes(v.block) && !v.block.includes('Khirkiya')));
 
-        return matchesSearch && matchesTeh && matchesCat && matchesDist;
+        return matchesSearch && matchesBlock;
       });
 
-      renderNodesTable(filtered);
+      document.getElementById('v-list-count').innerText = filtered.length + ' गाँव';
+      renderVillagesList(filtered);
+
+      // Select first village if none selected
+      if (filtered.length > 0) {
+        var toSelect = filtered.find(function(v) { return v.id === selectedVillageId; }) || filtered[0];
+        inspectVillage(toSelect.id);
+      }
     }
 
-    function renderNodesTable(nodes) {
-      var tbody = document.getElementById('nodes-tbody');
-      tbody.innerHTML = '';
+    function renderVillagesList(list) {
+      var container = document.getElementById('village-scroll-container');
+      container.innerHTML = '';
 
-      if (nodes.length === 0) {
-        tbody.innerHTML = `
-          <tr>
-            <td colspan="8">
-              <div class="empty-state">
-                <div class="empty-icon">🔎</div>
-                <div style="font-weight: 700; font-size: 15px; color: var(--text);">कोई नोड नहीं मिला</div>
-                <div>इस फ़िल्टर के अनुसार नोड उपलब्ध नहीं है। ऊपर <strong>"⚡ 1-स्टेप AI स्कैन"</strong> दबाकर नया नोड खोजें।</div>
-              </div>
-            </td>
-          </tr>
+      list.forEach(function(v) {
+        var div = document.createElement('div');
+        div.className = 'village-card-item' + (v.id === selectedVillageId ? ' selected' : '');
+        div.id = 'v-card-' + v.id;
+        div.onclick = function() { inspectVillage(v.id); };
+
+        div.innerHTML = `
+          <div class="v-item-title">
+            <span><strong>${v.name}</strong></span>
+            <span class="v-item-block">${v.block}</span>
+          </div>
+          <div class="v-item-badges">
+            <span class="v-badge-pill">👶 ${v.stats.anganwadi_count} आंगनवाड़ी</span>
+            <span class="v-badge-pill">🏫 ${v.stats.total_schools} स्कूल (${v.stats.govt_school_count}G, ${v.stats.private_school_count}P)</span>
+            <span class="v-badge-pill">👥 ${v.population.toLocaleString('en-IN')} आबादी</span>
+          </div>
         `;
-        return;
-      }
+        container.appendChild(div);
+      });
+    }
 
-      nodes.forEach(function(n) {
+    function inspectVillage(vId) {
+      selectedVillageId = vId;
+
+      // Update selection styling in list
+      document.querySelectorAll('.village-card-item').forEach(function(el) {
+        el.classList.remove('selected');
+      });
+      var cur = document.getElementById('v-card-' + vId);
+      if (cur) cur.classList.add('selected');
+
+      var v = allVillages.find(function(x) { return x.id === vId; });
+      if (!v) return;
+
+      // 1. Header Details
+      document.getElementById('inspect-v-name').innerText = `ग्राम पंचायत: ${v.name}`;
+      document.getElementById('inspect-v-block').innerText = v.block;
+      document.getElementById('inspect-v-pin').innerText = v.pincode;
+      document.getElementById('inspect-v-pop').innerText = v.population.toLocaleString('en-IN');
+      document.getElementById('inspect-v-women').innerText = `${v.women_audience.toLocaleString('en-IN')} महिलाएँ`;
+
+      // 2. Metrics Grid
+      document.getElementById('inspect-aw-count').innerText = v.stats.anganwadi_count;
+      document.getElementById('inspect-govt-count').innerText = v.stats.govt_school_count;
+      document.getElementById('inspect-pvt-count').innerText = v.stats.private_school_count;
+      document.getElementById('inspect-shg-count').innerText = v.stats.shg_count;
+      document.getElementById('inspect-pad-demand').innerText = `${v.monthly_pad_demand.toLocaleString('en-IN')} पैकेट`;
+
+      document.getElementById('inspect-aw-badge').innerText = `${v.stats.anganwadi_count} केंद्र`;
+      document.getElementById('inspect-school-badge').innerText = `${v.stats.total_schools} स्कूल (${v.stats.govt_school_count} सरकारी, ${v.stats.private_school_count} प्राइवेट)`;
+      document.getElementById('inspect-shg-badge').innerText = `${v.stats.shg_count} समूह`;
+
+      // 3. Render Anganwadis Table
+      var awTbody = document.getElementById('inspect-aw-tbody');
+      awTbody.innerHTML = '';
+      (v.anganwadis || []).forEach(function(aw) {
         var tr = document.createElement('tr');
-
-        // Category Tag Mapping
-        var catClass = 'cat-anganwadi';
-        var catEmoji = '👶';
-        if (n.category === 'Beauty Parlour') { catClass = 'cat-parlour'; catEmoji = '🌸'; }
-        else if (n.category === 'School / College') { catClass = 'cat-school'; catEmoji = '🏫'; }
-        else if (n.category === 'Self-Help Group (SHG)') { catClass = 'cat-shg'; catEmoji = '🤝'; }
-        else if (n.category === 'Gram Panchayat') { catClass = 'cat-panchayat'; catEmoji = '🏛️'; }
-        else if (n.category === 'Health / ASHA / ANM') { catClass = 'cat-health'; catEmoji = '🩺'; }
-        else if (n.category === 'NGO / Mahila Mandal') { catClass = 'cat-ngo'; catEmoji = '👑'; }
-
-        // Default Pitch
-        var defaultPitch = `नमस्ते ${n.name} जी! मैं जेआर इंडिया (JR India) हरदा से शारदा दीदी बोल रही हूँ। आपके क्षेत्र ${n.village || n.tehsil} में महिलाओं के स्वास्थ्य और 100% शुद्ध कॉटन सैनिटरी पैड्स के लिए आपसे संपर्क कर रही हूँ। क्या हम आपके माध्यम से वहाँ की बहनों तक सुरक्षित कॉटन पैड के सैंपल पहुँचाने पर बात कर सकते हैं? - शारदा दीदी (9713773339)`;
-        var waUrl = `https://wa.me/91${(n.phone || '').replace(/\D/g, '')}?text=${encodeURIComponent(defaultPitch)}`;
+        var waPitch = `नमस्ते ${aw.worker_name} जी! मैं जेआर इंडिया (JR India) हरदा से शारदा दीदी बोल रही हूँ। आपके ${aw.kendra_name} की सभी लाभार्थी बहनों के लिए 100% शुद्ध कॉटन सैनिटरी पैड्स के फ्री सैंपल पहुँचाने हेतु संपर्क कर रही हूँ। - शारदा दीदी (9713773339)`;
+        var waUrl = `https://wa.me/91${(aw.phone || '').replace(/\D/g, '')}?text=${encodeURIComponent(waPitch)}`;
 
         tr.innerHTML = `
+          <td><strong>${aw.kendra_name}</strong></td>
           <td>
-            <div class="customer-info-cell">
-              <span class="customer-name">${n.name}</span>
-              <span style="font-size: 12px; color: var(--text-dark); font-weight: 600;">${n.role}</span>
-              <span class="customer-id">${n.id}</span>
-            </div>
+            <div style="font-weight: 700; color: var(--text);">${aw.worker_name}</div>
+            <div style="font-size: 11px; color: var(--text-muted);">${aw.role}</div>
           </td>
-          <td>
-            <span class="badge-cat ${catClass}">${catEmoji} ${n.category}</span>
-          </td>
-          <td>
-            <div style="max-width: 200px; font-weight: 600; color: var(--text-dark); font-size: 13px;">
-              ${n.org || '-'}
-            </div>
-          </td>
-          <td>
-            <div style="font-size: 12px; line-height: 1.4;">
-              <strong>${n.village || '-'}</strong>
-              <div style="color: var(--text-muted); font-size: 11px;">तहसील: ${n.tehsil || 'Harda'} (${n.district || 'Harda'})</div>
-            </div>
-          </td>
-          <td>
-            <a href="tel:${n.phone}" class="phone-cell">📞 ${n.phone}</a>
-          </td>
-          <td>
-            <span style="font-weight: 800; color: #0284c7; font-size: 13px;">🔥 ${n.reach || '100+'}</span>
-          </td>
-          <td>
-            <select class="status-select" onchange="updateNodeStatus('${n.id}', this.value)">
-              <option value="Discovered" ${n.status === 'Discovered' ? 'selected' : ''}>Discovered</option>
-              <option value="Contacted" ${n.status === 'Contacted' ? 'selected' : ''}>📞 Contacted</option>
-              <option value="Partnered" ${n.status === 'Partnered' ? 'selected' : ''}>🤝 Partnered</option>
-              <option value="Archived" ${n.status === 'Archived' ? 'selected' : ''}>Archived</option>
-            </select>
-          </td>
+          <td><a href="tel:${aw.phone}" class="phone-cell">📞 ${aw.phone}</a></td>
+          <td><span style="font-weight: 700; color: #0284c7;">${aw.beneficiary_women} महिलाएँ</span></td>
           <td style="text-align: right;">
             <div class="action-group" style="justify-content: flex-end;">
-              <a href="tel:${n.phone}" class="btn-call" title="कॉल करें">📞</a>
-              <button class="btn-pitch-preview" onclick="openAIPitchModal('${n.id}')" title="Gemini AI से पर्सनलाइज्ड संदेश बनाएं">🤖 AI संदेश</button>
-              <a href="${waUrl}" target="_blank" class="btn-whatsapp" title="सीधे व्हाट्सएप">💬</a>
-              <button class="btn-del" onclick="deleteNode('${n.id}')" title="हटाएं">✕</button>
+              <a href="tel:${aw.phone}" class="btn-call">📞 कॉल</a>
+              <a href="${waUrl}" target="_blank" class="btn-whatsapp">💬 व्हाट्सएप</a>
             </div>
           </td>
         `;
-        tbody.appendChild(tr);
+        awTbody.appendChild(tr);
       });
-    }
 
-    function updateNodeStatus(id, newStatus) {
-      fetch('/api/find-ai/update-status', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: id, status: newStatus })
-      }).then(function() {
-        showToast("✅ नोड स्टेटस अपडेट हुआ: " + newStatus);
+      // 4. Render Schools Table (Both Govt and Private)
+      var schoolsTbody = document.getElementById('inspect-schools-tbody');
+      schoolsTbody.innerHTML = '';
+      var allSchools = (v.govt_schools || []).concat(v.private_schools || []);
+      allSchools.forEach(function(sch) {
+        var tr = document.createElement('tr');
+        var isGovt = sch.type === 'Government';
+        tr.innerHTML = `
+          <td><strong>${sch.name}</strong></td>
+          <td>
+            <span class="badge-cat ${isGovt ? 'cat-school' : 'cat-parlour'}">
+              ${isGovt ? '🏛️ सरकारी (Govt)' : '🏫 प्राइवेट (Private)'}
+            </span>
+          </td>
+          <td><span style="font-size: 12px; color: var(--text-muted); font-weight: 600;">${sch.category}</span></td>
+          <td><span style="font-weight: 800; color: var(--success);">${sch.girls_count} छात्राएं</span></td>
+          <td>
+            <div style="font-weight: 700; color: var(--text);">${sch.head_name}</div>
+          </td>
+          <td style="text-align: right;">
+            <a href="tel:${sch.phone}" class="btn-call">📞 कॉल (${sch.phone})</a>
+          </td>
+        `;
+        schoolsTbody.appendChild(tr);
       });
-    }
 
-    function deleteNode(id) {
-      if (!confirm("क्या आप इस नोड को हटाना चाहते हैं?")) return;
-      fetch('/api/find-ai/delete', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: id })
-      }).then(function() {
-        allNodes = allNodes.filter(function(n) { return n.id !== id; });
-        showToast("🗑️ नोड हटाया गया");
-        filterNodes();
+      // 5. Render SHGs Table
+      var shgsTbody = document.getElementById('inspect-shgs-tbody');
+      shgsTbody.innerHTML = '';
+      (v.shgs || []).forEach(function(s) {
+        var tr = document.createElement('tr');
+        var waMsg = `नमस्ते ${s.leader_name} जी! मैं जेआर इंडिया से शारदा दीदी बोल रही हूँ। आपके ${s.group_name} की सभी बहनों को शुद्ध कॉटन सेनेटरी पैड्स के वितरण व स्वरोजगार कमीशन के लिए संपर्क कर रही हूँ। - शारदा दीदी (9713773339)`;
+        var waUrl = `https://wa.me/91${(s.phone || '').replace(/\D/g, '')}?text=${encodeURIComponent(waMsg)}`;
+        tr.innerHTML = `
+          <td><strong>${s.group_name}</strong></td>
+          <td>${s.leader_name}</td>
+          <td><span style="font-weight: 700; color: var(--teal);">${s.members_count} सदस्य</span></td>
+          <td><a href="tel:${s.phone}" class="phone-cell">📞 ${s.phone}</a></td>
+          <td style="text-align: right;">
+            <a href="${waUrl}" target="_blank" class="btn-whatsapp">💬 व्हाट्सएप</a>
+          </td>
+        `;
+        shgsTbody.appendChild(tr);
       });
-    }
 
-    // AI Pitch Modal Functions
-    function openAIPitchModal(nodeId) {
-      var node = allNodes.find(function(n) { return n.id === nodeId; });
-      if (!node) return;
+      // 6. Panchayat Reps
+      if (v.panchayat_reps) {
+        var s = v.panchayat_reps.sarpanch;
+        var sc = v.panchayat_reps.sachiv;
+        var a = v.panchayat_reps.asha_worker;
 
-      document.getElementById('pitch-modal-title').innerText = `🤖 शारदा दीदी का पर्सनलाइज्ड AI संदेश (${node.name})`;
-      document.getElementById('pitch-target-info').innerText = `प्राप्तकर्ता: ${node.name} (${node.role}) | स्थान: ${node.village || node.tehsil} | पहुँच: ${node.reach}`;
-      document.getElementById('pitch-content-box').innerText = "Gemini AI संदेश तैयार कर रहा है...";
-      document.getElementById('pitch-modal').style.display = 'flex';
+        document.getElementById('inspect-rep-sarpanch-name').innerText = s ? s.name : '-';
+        document.getElementById('inspect-rep-sarpanch-phone').innerText = s ? `📞 ${s.phone}` : '-';
+        document.getElementById('inspect-rep-sarpanch-phone').href = s ? `tel:${s.phone}` : '#';
 
-      fetch('/api/find-ai/generate-pitch', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ node: node })
-      })
-      .then(function(res) { return res.json(); })
-      .then(function(data) {
-        if (data && data.pitch) {
-          document.getElementById('pitch-content-box').innerText = data.pitch;
-          var waLink = `https://wa.me/91${(node.phone || '').replace(/\D/g, '')}?text=${encodeURIComponent(data.pitch)}`;
-          document.getElementById('pitch-wa-link').setAttribute('href', waLink);
-        }
-      })
-      .catch(function(err) {
-        document.getElementById('pitch-content-box').innerText = `नमस्ते ${node.name} जी! मैं जेआर इंडिया हरदा से शारदा दीदी बोल रही हूँ। आपके क्षेत्र ${node.village || node.tehsil} में महिलाओं के स्वास्थ्य और शुद्ध कॉटन पैड्स के लिए आपसे संपर्क कर रही हूँ। - शारदा दीदी (9713773339)`;
-      });
-    }
+        document.getElementById('inspect-rep-sachiv-name').innerText = sc ? sc.name : '-';
+        document.getElementById('inspect-rep-sachiv-phone').innerText = sc ? `📞 ${sc.phone}` : '-';
+        document.getElementById('inspect-rep-sachiv-phone').href = sc ? `tel:${sc.phone}` : '#';
 
-    function closePitchModal() {
-      document.getElementById('pitch-modal').style.display = 'none';
-    }
+        document.getElementById('inspect-rep-asha-name').innerText = a ? a.name : '-';
+        document.getElementById('inspect-rep-asha-phone').innerText = a ? `📞 ${a.phone}` : '-';
+        document.getElementById('inspect-rep-asha-phone').href = a ? `tel:${a.phone}` : '#';
 
-    function copyPitchText() {
-      var text = document.getElementById('pitch-content-box').innerText;
-      navigator.clipboard.writeText(text);
-      showToast("📋 संदेश कॉपी हो गया!");
-    }
-
-    // Manual Node Modal
-    function openManualNodeModal() {
-      document.getElementById('node-modal').style.display = 'flex';
-    }
-
-    function closeManualNodeModal() {
-      document.getElementById('node-modal').style.display = 'none';
-    }
-
-    function submitManualNode(e) {
-      e.preventDefault();
-      var name = document.getElementById('node-name').value;
-      var phone = document.getElementById('node-phone').value;
-      var cat = document.getElementById('node-cat').value;
-      var role = document.getElementById('node-role').value;
-      var org = document.getElementById('node-org').value;
-      var village = document.getElementById('node-village').value;
-      var tehsil = document.getElementById('node-tehsil').value;
-      var reach = document.getElementById('node-reach').value || '100+ महिलाएँ';
-      var notes = document.getElementById('node-notes').value || 'मैन्युअल रूप से दर्ज';
-
-      var payload = {
-        name: name,
-        phone: phone,
-        category: cat,
-        role: role,
-        org: org,
-        village: village,
-        tehsil: tehsil,
-        district: 'Harda',
-        reach: reach,
-        notes: notes
-      };
-
-      fetch('/api/find-ai/add', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      })
-      .then(function(res) { return res.json(); })
-      .then(function() {
-        showToast("✅ नया महिला नोड सफलतापूर्वक सेव हुआ!");
-        closeManualNodeModal();
-        document.getElementById('manual-node-form').reset();
-        fetchNodesAndStats();
-      });
-    }
-
-    // Export Nodes to CSV
-    function exportNodesToCSV() {
-      if (allNodes.length === 0) {
-        alert("कोई नोड उपलब्ध नहीं है!");
-        return;
+        document.getElementById('inspect-call-sarpanch').href = s ? `tel:${s.phone}` : '#';
+        var ashaWaMsg = `नमस्ते ${a ? a.name : 'आशा दीदी'} जी! मैं जेआर इंडिया से शारदा दीदी बोल रही हूँ। ग्राम ${v.name} की सभी प्रसूता व किशोरियों के लिए 100% शुद्ध कॉटन पैड्स के सैंपल पहुँचाने हेतु आपसे चर्चा करनी थी। - शारदा दीदी (9713773339)`;
+        document.getElementById('inspect-wa-asha').href = a ? `https://wa.me/91${a.phone.replace(/\D/g, '')}?text=${encodeURIComponent(ashaWaMsg)}` : '#';
       }
-      var csv = "data:text/csv;charset=utf-8,ID,Name,Role,Category,Organization,Village,Tehsil,District,Phone,Reach,Status
-";
-      allNodes.forEach(function(n) {
-        var row = [
-          n.id,
-          '"' + (n.name || '').replace(/"/g, '""') + '"',
-          '"' + (n.role || '').replace(/"/g, '""') + '"',
-          '"' + (n.category || '').replace(/"/g, '""') + '"',
-          '"' + (n.org || '').replace(/"/g, '""') + '"',
-          '"' + (n.village || '').replace(/"/g, '""') + '"',
-          n.tehsil || '',
-          n.district || 'Harda',
-          n.phone || '',
-          '"' + (n.reach || '') + '"',
-          n.status || 'Discovered'
-        ];
-        csv += row.join(",") + "
-";
-      });
-      var uri = encodeURI(csv);
-      var link = document.createElement("a");
-      link.href = uri;
-      link.download = `JR_India_Female_Network_${new Date().toISOString().slice(0, 10)}.csv`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      showToast("📥 महिला नेटवर्क नोड्स CSV डाउनलोड हो गई!");
     }
 
-    function onDistrictChange() {
-      var d = document.getElementById('filter-node-district').value;
-      if (d === 'Custom') {
-        var newDist = prompt("कृपया नया जिला या शहर दर्ज करें (उदा. Indore, Dewas, Ujjain):");
-        if (newDist) {
-          appendLog(`[FUTURE PROOF] 🌐 नया जिला जोड़ा गया: ${newDist}`);
-          showToast(`नया जिला सेट हुआ: ${newDist}`);
-        }
-      }
-      filterNodes();
-    }
-
-    // ==========================================
-    // ORDERS & REVENUE FUNCTIONS (TAB 1)
-    // ==========================================
+    // Orders & Stats (Tab 1)
     function fetchOrdersAndStats() {
       fetch('/api/orders')
         .then(function(res) { return res.json(); })
@@ -1725,45 +1722,27 @@
     }
 
     function updateStats() {
-      var totalRev = 0;
-      var deliveredRev = 0;
-      var pendingCodRev = 0;
-      var countDelivered = 0;
-      var countPending = 0;
-      var countXl = 0;
-      var countXxl = 0;
-      var countBundle10 = 0;
+      var totalRev = 0, deliveredRev = 0, pendingCodRev = 0, countDelivered = 0, countPending = 0;
+      var countXl = 0, countXxl = 0, countBundle10 = 0;
 
       allOrders.forEach(function(o) {
         var amt = Number(o.amount) || 0;
         totalRev += amt;
-        if (o.status === 'Delivered') {
-          deliveredRev += amt;
-          countDelivered++;
-        } else if (o.status !== 'Cancelled') {
-          pendingCodRev += amt;
-          countPending++;
-        }
+        if (o.status === 'Delivered') { deliveredRev += amt; countDelivered++; }
+        else if (o.status !== 'Cancelled') { pendingCodRev += amt; countPending++; }
 
-        if (o.packType === 'XL' || (o.pack && o.pack.includes('XL') && !o.pack.includes('XXL'))) {
-          countXl++;
-        } else if (o.packType === 'XXL' || (o.pack && o.pack.includes('XXL'))) {
-          countXxl++;
-        } else {
-          countBundle10++;
-        }
+        if (o.packType === 'XL' || (o.pack && o.pack.includes('XL') && !o.pack.includes('XXL'))) countXl++;
+        else if (o.packType === 'XXL' || (o.pack && o.pack.includes('XXL'))) countXxl++;
+        else countBundle10++;
       });
 
       document.getElementById('kpi-total-rev').innerText = '₹' + totalRev.toLocaleString('en-IN');
       document.getElementById('kpi-total-orders').innerText = allOrders.length;
       document.getElementById('badge-orders-count').innerText = allOrders.length;
-
       document.getElementById('kpi-pending-cod').innerText = '₹' + pendingCodRev.toLocaleString('en-IN');
       document.getElementById('kpi-pending-count').innerText = countPending + ' पार्सल डिलीवरी और कैश बाकी';
-
       document.getElementById('kpi-delivered-rev').innerText = '₹' + deliveredRev.toLocaleString('en-IN');
       document.getElementById('kpi-delivered-count').innerText = countDelivered + ' पार्सल सफल डिलीवर हुए';
-
       document.getElementById('kpi-bundle-count').innerText = countBundle10 + ' बंडल (₹449)';
       document.getElementById('kpi-samples-count').innerText = 'XL: ' + countXl + ' | XXL: ' + countXxl + ' सैंपल';
     }
@@ -1797,19 +1776,8 @@
     function renderOrdersTable(orders) {
       var tbody = document.getElementById('orders-tbody');
       tbody.innerHTML = '';
-
       if (orders.length === 0) {
-        tbody.innerHTML = `
-          <tr>
-            <td colspan="7">
-              <div class="empty-state">
-                <div class="empty-icon">📭</div>
-                <div style="font-size: 15px; font-weight: 700; color: var(--text);">कोई ग्राहक ऑर्डर नहीं मिला</div>
-                <div>इस फ़िल्टर या खोज के अनुसार कोई रिकॉर्ड उपलब्ध नहीं है।</div>
-              </div>
-            </td>
-          </tr>
-        `;
+        tbody.innerHTML = `<tr><td colspan="7"><div class="empty-state"><div class="empty-icon">📭</div><div>कोई ग्राहक ऑर्डर नहीं मिला</div></div></td></tr>`;
         return;
       }
 
@@ -1818,31 +1786,14 @@
         var packBadgeClass = 'badge-xxl';
         var packShort = '1x XXL (₹55)';
         if (o.packType === 'XL' || (o.pack && o.pack.includes('XL') && !o.pack.includes('XXL'))) {
-          packBadgeClass = 'badge-xl';
-          packShort = '1x XL (₹45)';
+          packBadgeClass = 'badge-xl'; packShort = '1x XL (₹45)';
         } else if (o.packType === 'Bundle10' || (o.pack && (o.pack.includes('10') || o.pack.includes('Bundle')))) {
-          packBadgeClass = 'badge-bundle';
-          packShort = '🎁 10-Pack Bundle (₹449)';
+          packBadgeClass = 'badge-bundle'; packShort = '🎁 10-Pack Bundle (₹449)';
         }
 
-        var waMessageText = "नमस्ते " + (o.name || "जी") + "! मैं जेआर इंडिया (JR India) हरदा टीम से शारदा दीदी बोल रही हूँ।
-
-" +
-          "हमें वेबसाइट से आपका ऑर्डर प्राप्त हुआ है:
-" +
-          "📦 सामान: " + (o.pack || packShort) + "
-" +
-          "💵 रकम: ₹" + (o.amount || "55") + " (" + (o.paymentMode || "COD - डिलीवरी पर नकद") + ")
-" +
-          "📍 पता: " + (o.address || "") + ", " + (o.city || "Harda") + "
-
-" +
-          "🚚 हमारा डिलीवरी बॉय आपके दिए पते पर पार्सल लेकर आ रहा है। कोई सवाल हो तो मुझे सीधे इस नंबर पर बता सकती हैं। धन्यवाद!";
-        
-        var waUrl = "https://wa.me/91" + (o.phone || "").replace(/\D/g, '') + "?text=" + encodeURIComponent(waMessageText);
-
-        var mapBtn = (o.gps && o.gps !== 'Manual Address') 
-          ? `<a href="https://maps.google.com/?q=${o.gps}" target="_blank" class="btn-loc">📍 GPS</a>` : '';
+        var waMessageText = `नमस्ते ${o.name || "जी"}! मैं जेआर इंडिया हरदा से शारदा दीदी बोल रही हूँ। आपका ₹${o.amount || "55"} का ${o.pack || packShort} ऑर्डर मिला है। हमारा डिलीवरी बॉय आपके पते ${o.address || ""} पर आ रहा है। धन्यवाद!`;
+        var waUrl = `https://wa.me/91${(o.phone || "").replace(/\D/g, '')}?text=${encodeURIComponent(waMessageText)}`;
+        var mapBtn = (o.gps && o.gps !== 'Manual Address') ? `<a href="https://maps.google.com/?q=${o.gps}" target="_blank" class="btn-loc">📍 GPS</a>` : '';
 
         tr.innerHTML = `
           <td>
@@ -1863,11 +1814,7 @@
               <span class="price-tag">₹${o.amount || 55} <span style="font-size: 11px; color: var(--success); font-weight: 600;">(फ्री डिलीवरी)</span></span>
             </div>
           </td>
-          <td>
-            <span style="font-size: 12px; font-weight: 700; color: ${o.paymentMode === 'UPI' ? '#0284c7' : '#059669'};">
-              ${o.paymentMode === 'UPI' ? '⚡ UPI Paid' : '💵 नकद (COD)'}
-            </span>
-          </td>
+          <td><span style="font-size: 12px; font-weight: 700; color: ${o.paymentMode === 'UPI' ? '#0284c7' : '#059669'};">${o.paymentMode === 'UPI' ? '⚡ UPI Paid' : '💵 नकद (COD)'}</span></td>
           <td>
             <div style="max-width: 240px; font-size: 12px; line-height: 1.4;">
               <div>${o.address || 'पता दर्ज नहीं'}</div>
@@ -1967,33 +1914,96 @@
       var csv = "data:text/csv;charset=utf-8,Order ID,Customer Name,Phone,Pack,Amount,Payment Mode,City,Address,GPS Coords,Status,Date
 ";
       allOrders.forEach(function(o) {
-        var row = [
-          o.id || '',
-          '"' + (o.name || '').replace(/"/g, '""') + '"',
-          o.phone || '',
-          '"' + (o.pack || '').replace(/"/g, '""') + '"',
-          o.amount || '',
-          o.paymentMode || 'COD',
-          o.city || 'Harda',
-          '"' + (o.address || '').replace(/"/g, '""') + '"',
-          '"' + (o.gps || '') + '"',
-          o.status || 'New',
-          o.createdAt || ''
-        ];
+        var row = [o.id || '', '"' + (o.name || '').replace(/"/g, '""') + '"', o.phone || '', '"' + (o.pack || '').replace(/"/g, '""') + '"', o.amount || '', o.paymentMode || 'COD', o.city || 'Harda', '"' + (o.address || '').replace(/"/g, '""') + '"', '"' + (o.gps || '') + '"', o.status || 'New', o.createdAt || ''];
         csv += row.join(",") + "
 ";
       });
       var uri = encodeURI(csv);
       var link = document.createElement("a");
-      link.href = uri;
-      link.download = `JR_India_Harda_Delivery_Sheet_${new Date().toISOString().slice(0, 10)}.csv`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      link.href = uri; link.download = `JR_India_Harda_Delivery_Sheet_${new Date().toISOString().slice(0, 10)}.csv`;
+      document.body.appendChild(link); link.click(); document.body.removeChild(link);
       showToast("📥 डिलीवरी शीट CSV डाउनलोड हो गई!");
     }
 
-    // Render B2B Table
+    // FIND AI Functions
+    function fetchNodesAndStats() {
+      fetch('/api/find-ai/stats')
+        .then(function(res) { return res.json(); })
+        .then(function(stats) {
+          if (stats && stats.success) {
+            document.getElementById('kpi-node-count').innerText = stats.totalNodes;
+            document.getElementById('badge-findai-count').innerText = stats.totalNodes;
+            document.getElementById('kpi-reach-count').innerText = stats.totalEstReach.toLocaleString('en-IN') + '+';
+          }
+        }).catch(function() {});
+
+      fetch('/api/find-ai/nodes')
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+          if (data && data.nodes) {
+            allNodes = data.nodes;
+            renderNodesTable(allNodes);
+          }
+        }).catch(function() {});
+    }
+
+    function renderNodesTable(nodes) {
+      var tbody = document.getElementById('nodes-tbody');
+      tbody.innerHTML = '';
+      nodes.forEach(function(n) {
+        var tr = document.createElement('tr');
+        var catClass = 'cat-anganwadi';
+        if (n.category === 'Beauty Parlour') catClass = 'cat-parlour';
+        else if (n.category === 'School / College') catClass = 'cat-school';
+        else if (n.category === 'Self-Help Group (SHG)') catClass = 'cat-shg';
+        else if (n.category === 'Gram Panchayat') catClass = 'cat-panchayat';
+        else if (n.category === 'Health / ASHA / ANM') catClass = 'cat-health';
+        else if (n.category === 'NGO / Mahila Mandal') catClass = 'cat-ngo';
+
+        var defaultPitch = `नमस्ते ${n.name} जी! मैं जेआर इंडिया हरदा से शारदा दीदी बोल रही हूँ। आपके क्षेत्र ${n.village || n.tehsil} में महिलाओं के स्वास्थ्य और 100% शुद्ध कॉटन सैनिटरी पैड्स के लिए संपर्क कर रही हूँ। - शारदा दीदी (9713773339)`;
+        var waUrl = `https://wa.me/91${(n.phone || '').replace(/\D/g, '')}?text=${encodeURIComponent(defaultPitch)}`;
+
+        tr.innerHTML = `
+          <td>
+            <div class="customer-info-cell">
+              <span class="customer-name">${n.name}</span>
+              <span style="font-size: 12px; color: var(--text-dark); font-weight: 600;">${n.role}</span>
+              <span class="customer-id">${n.id}</span>
+            </div>
+          </td>
+          <td><span class="badge-cat ${catClass}">${n.category}</span></td>
+          <td><div style="max-width: 200px; font-weight: 600; color: var(--text-dark); font-size: 13px;">${n.org || '-'}</div></td>
+          <td><div style="font-size: 12px; line-height: 1.4;"><strong>${n.village || '-'}</strong><div style="color: var(--text-muted); font-size: 11px;">तहसील: ${n.tehsil || 'Harda'}</div></div></td>
+          <td><a href="tel:${n.phone}" class="phone-cell">📞 ${n.phone}</a></td>
+          <td><span style="font-weight: 800; color: #0284c7; font-size: 13px;">🔥 ${n.reach || '100+'}</span></td>
+          <td><span class="badge-cat cat-shg">${n.status || 'Discovered'}</span></td>
+          <td style="text-align: right;">
+            <div class="action-group" style="justify-content: flex-end;">
+              <a href="tel:${n.phone}" class="btn-call">📞</a>
+              <a href="${waUrl}" target="_blank" class="btn-whatsapp">💬</a>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function toggleAutoDiscovery() {
+      fetch('/api/find-ai/start', { method: 'POST' })
+        .then(function() { showToast("🚀 ऑटो-डिस्कवरी लूप एक्टिव!"); fetchNodesAndStats(); });
+    }
+
+    function triggerManualScanStep() {
+      fetch('/api/find-ai/scan-step', { method: 'POST', body: '{}' })
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data && data.result && data.result.node) {
+            showToast("🔔 नया नोड मिला: " + data.result.node.name);
+            fetchNodesAndStats();
+          }
+        });
+    }
+
     function renderB2BTable() {
       var tbody = document.getElementById('b2b-tbody');
       tbody.innerHTML = '';
@@ -2017,15 +2027,16 @@
       });
     }
 
-    // Auto-refresh loop
+    // Auto-refresh loops
     setInterval(function() {
       if (currentTab === 'orders') fetchOrdersAndStats();
-      if (currentTab === 'findai' && !isAutoScanning) fetchNodesAndStats();
+      if (currentTab === 'findai') fetchNodesAndStats();
     }, 6000);
 
-    // Initial load
-    fetchNodesAndStats();
+    // Initial Load
+    fetchVillages();
     fetchOrdersAndStats();
+    fetchNodesAndStats();
   </script>
 </body>
 </html>
