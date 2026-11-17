@@ -1005,7 +1005,25 @@
     <div id="view-parlours" style="display:none;">
       <div class="card">
         <div class="card-header">
-          <div class="card-title">💄 ब्यूटी पार्लर व बुटीक डायरेक्टरी (581+ केंद्र)</div>
+          <div>
+            <div class="card-title">💄 ब्यूटी पार्लर व बुटीक डायरेक्टरी (581+ केंद्र)</div>
+            <div class="card-subtitle" id="parlours-table-subtitle">सभी 581 केंद्र — Instagram ID व Facebook ID सहित</div>
+          </div>
+          <div class="filters-row">
+            <input type="text" id="search-parlour-input" class="search-input" placeholder="🔍 पार्लर, संचालिका, Insta ID या फोन खोजें..." oninput="filterParlours()">
+            <select id="filter-parlour-social" class="filter-select" onchange="filterParlours()" style="font-weight:700; border-color:#e1306c;">
+              <option value="all">सभी 581 पार्लर</option>
+              <option value="with_social">📸 केवल सोशल मीडिया वाले (Instagram & FB)</option>
+              <option value="no_social">⚪ बिना सोशल मीडिया वाले (Blank / Rural)</option>
+            </select>
+            <select id="filter-parlour-area" class="filter-select" onchange="filterParlours()">
+              <option value="all">सभी क्षेत्र / निकाय</option>
+              <option value="Harda Urban">हरदा शहर</option>
+              <option value="Timarni">टिमरनी</option>
+              <option value="Khirkiya">खिरकिया व सिराली</option>
+              <option value="Rural">ग्रामीण क्षेत्र</option>
+            </select>
+          </div>
         </div>
         <div class="table-responsive">
           <table class="data-table">
@@ -1013,11 +1031,12 @@
               <tr>
                 <th style="width: 55px;">क्र.सं.</th>
                 <th>संचालिका</th>
-                <th>पार्लर / बुटीक का नाम</th>
+                <th>पार्लर / बुटीक का नाम व पता</th>
                 <th>क्षेत्र</th>
-                <th>दैनिक फुटफॉल</th>
+                <th>📸 Instagram ID</th>
+                <th>📘 Facebook ID</th>
                 <th>फोन</th>
-                <th>एक्शन</th>
+                <th style="width: 170px;">सोशल मीडिया & WA</th>
               </tr>
             </thead>
             <tbody id="parlours-tbody"></tbody>
@@ -1569,11 +1588,80 @@
       });
     }
 
+    var allParlours = [];
     function fetchParlours() {
       fetch('harda_parlours_directory_db.json').then(r=>r.json()).then(data=>{
-        var tbody = document.getElementById('parlours-tbody');
-        tbody.innerHTML = (data || []).map((p, idx) => `<tr><td>#${idx+1}</td><td><strong>${p.name}</strong></td><td>${p.establishment}</td><td>${p.area}</td><td>${p.reach||'30+'}</td><td>📞 ${p.phone}</td><td><a href="https://wa.me/91${p.phone}" target="_blank" class="btn-wa-sm">💬 WA</a></td></tr>`).join('');
+        allParlours = data || [];
+        renderParloursTable(allParlours);
       });
+    }
+
+    function renderParloursTable(list) {
+      var tbody = document.getElementById('parlours-tbody');
+      var sub = document.getElementById('parlours-table-subtitle');
+      if (sub) sub.innerText = 'कुल 581 में से ' + list.length + ' केंद्र प्रदर्शित';
+
+      if (!list || list.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:24px; color:var(--text-muted);">कोई पार्लर नहीं मिला।</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = list.map(function(p, idx) {
+        var instaHtml = p.insta_id ? 
+          '<a href="' + (p.insta_url || 'https://instagram.com/' + p.insta_id.replace('@','')) + '" target="_blank" style="color:#e1306c; font-weight:700; text-decoration:none;">📸 ' + p.insta_id + '</a>' :
+          '<span style="color:var(--text-muted); font-size:11px;">—</span>';
+
+        var fbHtml = p.fb_id ?
+          '<a href="' + (p.fb_url || 'https://' + p.fb_id) + '" target="_blank" style="color:#1877f2; font-weight:700; text-decoration:none;">📘 ' + p.fb_id + '</a>' :
+          '<span style="color:var(--text-muted); font-size:11px;">—</span>';
+
+        var socialBtns = '';
+        if (p.insta_id) {
+          socialBtns += '<a href="' + p.insta_url + '" target="_blank" class="btn-wa-sm" style="background:#e1306c; margin-right:4px;">📸 Insta</a>';
+        }
+        if (p.fb_id) {
+          socialBtns += '<a href="' + p.fb_url + '" target="_blank" class="btn-wa-sm" style="background:#1877f2; margin-right:4px;">📘 FB</a>';
+        }
+        socialBtns += '<a href="https://wa.me/91' + p.phone + '" target="_blank" class="btn-wa-sm">💬 WA</a>';
+
+        return '<tr>' +
+          '<td><span class="badge-sno">#' + (idx+1) + '</span></td>' +
+          '<td><strong>' + p.name + '</strong><div style="font-size:11px; color:var(--text-muted);">' + (p.role||'संचालिका') + '</div></td>' +
+          '<td><div style="font-weight:700; font-size:13px;">' + p.establishment + '</div><div style="font-size:11px; color:var(--text-muted);">' + (p.reach||'') + '</div></td>' +
+          '<td><span class="badge-tag tag-gray">' + p.area + '</span></td>' +
+          '<td>' + instaHtml + '</td>' +
+          '<td>' + fbHtml + '</td>' +
+          '<td><a href="tel:' + p.phone + '" style="font-weight:700; color:var(--primary); text-decoration:none;">📞 ' + p.phone + '</a></td>' +
+          '<td><div style="display:flex; flex-wrap:wrap; gap:4px;">' + socialBtns + '</div></td>' +
+        '</tr>';
+      }).join('');
+    }
+
+    function filterParlours() {
+      var query = (document.getElementById('search-parlour-input').value || '').toLowerCase().trim();
+      var social = document.getElementById('filter-parlour-social').value;
+      var area = document.getElementById('filter-parlour-area').value;
+
+      var filtered = allParlours.filter(function(p) {
+        var matchQ = !query || 
+          (p.name && p.name.toLowerCase().includes(query)) ||
+          (p.establishment && p.establishment.toLowerCase().includes(query)) ||
+          (p.phone && p.phone.includes(query)) ||
+          (p.insta_id && p.insta_id.toLowerCase().includes(query)) ||
+          (p.fb_id && p.fb_id.toLowerCase().includes(query));
+
+        var matchS = (social === 'all') ||
+          (social === 'with_social' && (p.insta_id || p.fb_id)) ||
+          (social === 'no_social' && (!p.insta_id && !p.fb_id));
+
+        var matchA = (area === 'all') ||
+          (area === 'Rural' && !p.area.includes('Urban') && p.area !== 'Harda Khurd') ||
+          (p.area && p.area.toLowerCase().includes(area.toLowerCase()));
+
+        return matchQ && matchS && matchA;
+      });
+
+      renderParloursTable(filtered);
     }
 
     function fetchSHG() {
