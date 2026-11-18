@@ -658,9 +658,14 @@
 
     <!-- Nav Tabs -->
     <nav class="nav-tabs">
-      <button class="tab-btn active" id="tab-cluster-funnel-btn" onclick="switchTab('cluster-funnel')">
-        <span>🚀 4-स्टेप हर घर फनल</span>
-        <span class="pink-tab-badge" id="badge-cluster-count">184 कॉलोनी क्लस्टर्स</span>
+      <button class="tab-btn active" id="tab-urban-saturation-btn" onclick="switchTab('urban-saturation')" style="background: linear-gradient(135deg, rgba(235, 76, 125, 0.18), rgba(79, 70, 229, 0.18)); border: 1.5px solid var(--primary); font-weight:800;">
+        <span>🏙️ हरदा अर्बन 3-दिन मिशन (35 वार्ड)</span>
+        <span class="gold-tab-badge">385 क्लस्टर्स • 100% Saturation</span>
+      </button>
+
+      <button class="tab-btn" id="tab-cluster-funnel-btn" onclick="switchTab('cluster-funnel')">
+        <span>🚀 समस्त जिला फनल</span>
+        <span class="pink-tab-badge" id="badge-cluster-count">2,855 क्लस्टर्स</span>
       </button>
 
       <button class="tab-btn" id="tab-maps-radar-btn" onclick="switchTab('maps-radar')">
@@ -715,9 +720,110 @@
     </nav>
 
     <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- TAB: HARDA URBAN 3-DAY SATURATION ENGINE (35 WARDS)            -->
+    <!-- ============================================================== -->
+    <div id="view-urban-saturation">
+      <!-- 3-Day Campaign Stat Cards -->
+      <div class="funnel-pipeline-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <div class="funnel-step-card" style="border-top: 4px solid #3b82f6;">
+          <span class="step-badge" style="color: #2563eb;">अभियान दिन 1 (Day 1)</span>
+          <div class="step-title">
+            <span>वार्ड 01 से 12</span>
+            <span>🏛️</span>
+          </div>
+          <div class="step-desc">खेड़ीपुरा, घंटाघर, सराफा, आजाद चौक, दाना बाबा, हरदा खुर्द व पुराना शहर।</div>
+          <div class="step-metric" style="color: #2563eb;" id="urban-stat-day1">132 क्लस्टर्स • 4,600 घर</div>
+        </div>
+
+        <div class="funnel-step-card" style="border-top: 4px solid #8b5cf6;">
+          <span class="step-badge" style="color: #7c3aed;">अभियान दिन 2 (Day 2)</span>
+          <div class="step-title">
+            <span>वार्ड 13 से 24</span>
+            <span>🏢</span>
+          </div>
+          <div class="step-desc">सिविल लाइंस, कलेक्ट्रेट रोड, शास्त्री कॉलोनी, महाराणा प्रताप, विवेकानंद & कॉलेज रोड।</div>
+          <div class="step-metric" style="color: #7c3aed;" id="urban-stat-day2">132 क्लस्टर्स • 4,600 घर</div>
+        </div>
+
+        <div class="funnel-step-card" style="border-top: 4px solid #10b981;">
+          <span class="step-badge" style="color: #059669;">अभियान दिन 3 (Day 3)</span>
+          <div class="step-title">
+            <span>वार्ड 25 से 35</span>
+            <span>🏘️</span>
+          </div>
+          <div class="step-desc">मानपुरा, बायपास, रेलवे कॉलोनी ईस्ट/वेस्ट, कुलहर्दा, न्यू फ्रेंड्स कॉलोनी, मंडी क्षेत्र।</div>
+          <div class="step-metric" style="color: #059669;" id="urban-stat-day3">121 क्लस्टर्स • 4,400 घर</div>
+        </div>
+
+        <div class="funnel-step-card" style="border-top: 4px solid var(--primary); background: linear-gradient(135deg, rgba(235, 76, 125, 0.05), rgba(79, 70, 229, 0.05));">
+          <span class="step-badge" style="color: var(--primary);">सत्यापन व प्रगति (Live)</span>
+          <div class="step-title">
+            <span>100% हरदा शहर कवरेज</span>
+            <span>⭐</span>
+          </div>
+          <div class="step-desc">हर 20 से 50 घरों के बीच 1 प्रमाणित कॉलोनी सखी — कुल 35 वार्ड सैचुरेशन।</div>
+          <div class="step-metric" style="color: var(--primary);" id="urban-stat-total">385 क्लस्टर्स • 13,800+ घर</div>
+        </div>
+      </div>
+
+      <!-- Main Action Card -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">🏙️ हरदा अर्बन 3-दिन माइक्रो-क्लस्टर सत्यापन व WhatsApp हुक इंजन</div>
+            <div class="card-subtitle" id="urban-table-subtitle">35 वार्ड्स • 385 क्लस्टर्स लोड हो रहे हैं...</div>
+          </div>
+          <div class="filters-row">
+            <!-- 3-Day Quick Selector Pills -->
+            <select id="filter-urban-day" class="filter-select" onchange="filterUrbanClusters()" style="font-weight:800; border-color:var(--primary); background:#fff;">
+              <option value="all">⭐ सभी 35 वार्ड (385 क्लस्टर्स)</option>
+              <option value="1" selected>📅 दिन 1: वार्ड 01 से 12 (132 क्लस्टर्स — पुराना हरदा & बाजार)</option>
+              <option value="2">📅 दिन 2: वार्ड 13 से 24 (132 क्लस्टर्स — सिविल लाइंस & कॉलोनियां)</option>
+              <option value="3">📅 दिन 3: वार्ड 25 से 35 (121 क्लस्टर्स — आउटर & कुलहर्दा / मानपुरा)</option>
+            </select>
+
+            <select id="filter-urban-ward" class="filter-select" onchange="filterUrbanClusters()">
+              <option value="all">सभी 35 वार्ड (All Wards)</option>
+            </select>
+
+            <select id="filter-urban-status" class="filter-select" onchange="filterUrbanClusters()">
+              <option value="all">सभी सत्यापन स्थितियाँ (All Statuses)</option>
+              <option value="VERIFIED_READY">✅ केवल सत्यापित (Ready to Hook)</option>
+              <option value="WA_SENT">💬 WhatsApp हुक भेजा गया</option>
+              <option value="CALL_DONE">🔵 कॉल पुष्ट & सहमति</option>
+              <option value="DEMO_CONFIRMED">🟡 20-महिला बैठक तय</option>
+              <option value="AREA_LOCKED">🟢 क्षेत्र सेट (Active Hub)</option>
+            </select>
+
+            <input type="text" id="search-urban-input" class="search-input" placeholder="🔍 वार्ड, कॉलोनी, सखी का नाम या मोबाइल खोजें..." oninput="filterUrbanClusters()">
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 55px;">क्र.सं.</th>
+                <th>अभियान दिन & वार्ड</th>
+                <th>कॉलोनी / मोहल्ला व लैंडमार्क</th>
+                <th>प्रस्तावित कॉलोनी सखी (होस्ट)</th>
+                <th>दायरा (घर व आबादी)</th>
+                <th>सत्यापन व फनल स्थिति</th>
+                <th style="width: 260px;">4-स्टेप एक्शन टूल्स</th>
+              </tr>
+            </thead>
+            <tbody id="urban-tbody">
+              <tr><td colspan="7" style="text-align:center; padding:30px; color:var(--text-muted);">हरदा अर्बन क्लस्टर्स लोड हो रहे हैं...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <!-- TAB 1: 4-STEP HAR GHAR CLUSTER FUNNEL (PRIMARY ENGINE)         -->
     <!-- ============================================================== -->
-    <div id="view-cluster-funnel">
+    <div id="view-cluster-funnel" style="display:none;">
 
       <!-- 4-Stage Visual Funnel Cards -->
       <div class="funnel-pipeline-grid">
@@ -1198,7 +1304,7 @@
     var currentViewMode = 'gp226';
 
     function switchTab(tabId) {
-      var tabs = ['cluster-funnel', 'maps-radar', 'village-reg', 'schools', 'anganwadi', 'doctors', 'parlours', 'shg', 'panchayat', 'social', 'orders'];
+      var tabs = ['urban-saturation', 'cluster-funnel', 'maps-radar', 'village-reg', 'schools', 'anganwadi', 'doctors', 'parlours', 'shg', 'panchayat', 'social', 'orders'];
       tabs.forEach(function(t) {
         var btn = document.getElementById('tab-' + t + '-btn');
         var view = document.getElementById('view-' + t);
@@ -1211,6 +1317,7 @@
       if (activeBtn) activeBtn.classList.add('active');
       if (activeView) activeView.style.display = 'block';
 
+      if (tabId === 'urban-saturation' && allUrbanClusters.length === 0) fetchUrbanClusters();
       if (tabId === 'cluster-funnel' && allMicroClusters.length === 0) fetchMicroClusters();
       if (tabId === 'maps-radar') {
         if (!mapInstance) initMap();
@@ -1247,6 +1354,179 @@
         showToast('पड़ोसियों का WhatsApp आमंत्रण कॉपी हो गया!');
       });
     }
+
+
+    // ==============================================================
+    // HARDA URBAN 3-DAY SATURATION ENGINE (35 WARDS)
+    // ==============================================================
+    var allUrbanClusters = [];
+
+    function fetchUrbanClusters() {
+      fetch('harda_urban_35_wards_clusters_db.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data && Array.isArray(data)) {
+            allUrbanClusters = data;
+            populateUrbanWardDropdown();
+            updateUrbanCounts();
+            filterUrbanClusters();
+          }
+        }).catch(function(err) {
+          console.error('Error loading urban clusters:', err);
+        });
+    }
+
+    function populateUrbanWardDropdown() {
+      var select = document.getElementById('filter-urban-ward');
+      if (!select) return;
+      var wards = [];
+      for (var i = 1; i <= 35; i++) {
+        var sample = allUrbanClusters.find(function(c) { return c.ward_no === i; });
+        var wname = sample ? sample.ward_name : ('वार्ड ' + (i < 10 ? '0' + i : i));
+        wards.push({ no: i, name: wname });
+      }
+      select.innerHTML = '<option value="all">सभी 35 वार्ड (All 35 Wards)</option>' +
+        wards.map(function(w) { return '<option value="' + w.no + '">वार्ड ' + (w.no < 10 ? '0' + w.no : w.no) + ': ' + w.name + '</option>'; }).join('');
+    }
+
+    function updateUrbanCounts() {
+      var d1 = 0, d2 = 0, d3 = 0, locked = 0;
+      allUrbanClusters.forEach(function(c) {
+        if (c.day === 1) d1++;
+        if (c.day === 2) d2++;
+        if (c.day === 3) d3++;
+        if (c.verification_status === 'AREA_LOCKED') locked++;
+      });
+      if (document.getElementById('urban-stat-day1')) document.getElementById('urban-stat-day1').innerText = d1 + ' क्लस्टर्स • 4,600 घर';
+      if (document.getElementById('urban-stat-day2')) document.getElementById('urban-stat-day2').innerText = d2 + ' क्लस्टर्स • 4,600 घर';
+      if (document.getElementById('urban-stat-day3')) document.getElementById('urban-stat-day3').innerText = d3 + ' क्लस्टर्स • 4,400 घर';
+      if (document.getElementById('urban-stat-total')) document.getElementById('urban-stat-total').innerText = allUrbanClusters.length + ' क्लस्टर्स (' + locked + ' लॉक्ड)';
+    }
+
+    function renderUrbanTable(list) {
+      var tbody = document.getElementById('urban-tbody');
+      var sub = document.getElementById('urban-table-subtitle');
+      if (sub) sub.innerText = 'कुल 385 में से ' + list.length + ' क्लस्टर्स प्रदर्शित (हर 20-50 घर पर 1 सखी)';
+
+      if (!list || list.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:30px; color:var(--text-muted);">कोई क्लस्टर नहीं मिला। फ़िल्टर बदलें।</td></tr>';
+        return;
+      }
+
+      var rows = list.map(function(c, idx) {
+        var dayBadgeColor = c.day === 1 ? 'background:#dbeafe; color:#1e40af;' : (c.day === 2 ? 'background:#f3e8ff; color:#6b21a8;' : 'background:#d1fae5; color:#065f46;');
+        var statusBadge = 'tag-blue';
+        var statusText = '💬 WA हुक भेजा';
+
+        if (c.verification_status === 'VERIFIED_READY') { statusBadge = 'tag-green'; statusText = '✅ सत्यापित (Ready)'; }
+        else if (c.verification_status === 'CALL_DONE') { statusBadge = 'tag-purple'; statusText = '🔵 कॉल पुष्ट & सहमति'; }
+        else if (c.verification_status === 'DEMO_CONFIRMED') { statusBadge = 'tag-amber'; statusText = '🟡 20-महिला बैठक तय'; }
+        else if (c.verification_status === 'AREA_LOCKED') { statusBadge = 'tag-green'; statusText = '🟢 क्षेत्र सेट (Active Hub)'; }
+
+        return '<tr>' +
+          '<td><span class="badge-sno">#' + (idx + 1) + '</span></td>' +
+          '<td>' +
+            '<span class="badge-tag" style="' + dayBadgeColor + ' font-weight:800; font-size:10px;">' + c.day_badge + '</span>' +
+            '<div style="font-weight:800; font-size:13px; color:var(--text); margin-top:3px;">' + c.ward_name + '</div>' +
+          '</td>' +
+          '<td>' +
+            '<div style="font-weight:700; font-size:13px; color:var(--text);">' + c.colony_mohalla + '</div>' +
+            '<div style="font-size:11px; color:var(--text-muted); margin-top:2px;">📍 लैंडमार्क: ' + c.landmark + '</div>' +
+          '</td>' +
+          '<td>' +
+            '<strong>' + c.sakhi_name + '</strong>' +
+            '<div style="font-size:11px; color:var(--text-muted);">' + c.sakhi_role + '</div>' +
+            '<div style="font-size:12px; font-weight:800; color:var(--primary); margin-top:2px;"><a href="tel:' + c.phone + '" style="text-decoration:none;">📞 ' + c.phone + '</a></div>' +
+          '</td>' +
+          '<td>' +
+            '<strong style="color:var(--rose);">' + c.households + ' घर</strong>' +
+            '<div style="font-size:11px; color:var(--text-muted);">' + c.women_target + ' महिलाएँ</div>' +
+          '</td>' +
+          '<td>' +
+            '<select class="filter-select" style="font-size:11px; padding:4px 8px; font-weight:700;" onchange="changeUrbanStatus(\'' + c.cluster_id + '\', this.value)">' +
+              '<option value="VERIFIED_READY" ' + (c.verification_status === 'VERIFIED_READY' ? 'selected' : '') + '>✅ सत्यापित (Ready)</option>' +
+              '<option value="WA_SENT" ' + (c.verification_status === 'WA_SENT' ? 'selected' : '') + '>💬 WhatsApp हुक भेजा</option>' +
+              '<option value="CALL_DONE" ' + (c.verification_status === 'CALL_DONE' ? 'selected' : '') + '>🔵 कॉल पुष्ट & सहमति</option>' +
+              '<option value="DEMO_CONFIRMED" ' + (c.verification_status === 'DEMO_CONFIRMED' ? 'selected' : '') + '>🟡 20-महिला बैठक तय</option>' +
+              '<option value="AREA_LOCKED" ' + (c.verification_status === 'AREA_LOCKED' ? 'selected' : '') + '>🟢 क्षेत्र सेट (Active Hub)</option>' +
+            '</select>' +
+            '<div style="margin-top:4px;"><span class="badge-tag ' + statusBadge + '">' + statusText + '</span></div>' +
+          '</td>' +
+          '<td>' +
+            '<div style="display:flex; gap:4px; flex-wrap:wrap;">' +
+              '<a href="' + c.wa_hook_url + '" target="_blank" class="btn-wa-sm" onclick="markUrbanWaSent(\'' + c.cluster_id + '\')">💬 स्टेज 1 WA</a>' +
+              '<button class="btn-call-sm" onclick="alert(\'' + c.call_script.replace(/'/g, "\\'") + '\')">📞 कॉल</button>' +
+              '<button class="btn-wa-sm" style="background:#10b981;" onclick="verifyUrbanSakhi(\'' + c.cluster_id + '\')">✅ सत्यापित</button>' +
+              '<button class="btn-lock-sm" onclick="lockUrbanArea(\'' + c.cluster_id + '\')">🔒 क्षेत्र सेट</button>' +
+            '</div>' +
+          '</td>' +
+        '</tr>';
+      });
+
+      tbody.innerHTML = rows.join('');
+    }
+
+    function filterUrbanClusters() {
+      var day = document.getElementById('filter-urban-day').value;
+      var ward = document.getElementById('filter-urban-ward').value;
+      var status = document.getElementById('filter-urban-status').value;
+      var query = (document.getElementById('search-urban-input').value || '').toLowerCase().trim();
+
+      var filtered = allUrbanClusters.filter(function(c) {
+        var matchDay = (day === 'all') || (c.day === parseInt(day));
+        var matchWard = (ward === 'all') || (c.ward_no === parseInt(ward));
+        var matchStatus = (status === 'all') || (c.verification_status === status);
+        var matchQ = !query ||
+          (c.ward_name && c.ward_name.toLowerCase().includes(query)) ||
+          (c.colony_mohalla && c.colony_mohalla.toLowerCase().includes(query)) ||
+          (c.sakhi_name && c.sakhi_name.toLowerCase().includes(query)) ||
+          (c.phone && c.phone.includes(query)) ||
+          (c.landmark && c.landmark.toLowerCase().includes(query));
+
+        return matchDay && matchWard && matchStatus && matchQ;
+      });
+
+      renderUrbanTable(filtered);
+    }
+
+    function changeUrbanStatus(clusterId, newStatus) {
+      var c = allUrbanClusters.find(function(x) { return x.cluster_id === clusterId; });
+      if (c) {
+        c.verification_status = newStatus;
+        if (newStatus === 'AREA_LOCKED') c.funnel_stage = '4_AREA_LOCKED';
+        else if (newStatus === 'DEMO_CONFIRMED') c.funnel_stage = '3_MEETING_SCHEDULED';
+        else if (newStatus === 'CALL_DONE') c.funnel_stage = '2_CALL_CONFIRMED';
+        else c.funnel_stage = '1_WA_SENT';
+      }
+      updateUrbanCounts();
+      showToast('क्लस्टर ' + clusterId + ' का स्टेटस अपडेट हुआ!');
+
+      try {
+        fetch('/api/urban/update-status', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ clusterId: clusterId, status: newStatus, stage: c ? c.funnel_stage : '' })
+        }).catch(function(e) {});
+      } catch(e) {}
+    }
+
+    function markUrbanWaSent(clusterId) {
+      changeUrbanStatus(clusterId, 'WA_SENT');
+      filterUrbanClusters();
+    }
+
+    function verifyUrbanSakhi(clusterId) {
+      changeUrbanStatus(clusterId, 'VERIFIED_READY');
+      filterUrbanClusters();
+      showToast('सत्यापन सफल! सखी WhatsApp हुक के लिए तैयार है।');
+    }
+
+    function lockUrbanArea(clusterId) {
+      changeUrbanStatus(clusterId, 'AREA_LOCKED');
+      filterUrbanClusters();
+      showToast('बधाई! क्षेत्र सफलता पूर्वक सेट हो गया — कॉलोनी सखी हब एक्टिव!');
+    }
+
 
     // ==============================================================
     // 1. HAR GHAR MICRO-CLUSTER 4-STEP FUNNEL ENGINE
@@ -1698,7 +1978,7 @@
 
     // Auto-launch Tab 1
     window.addEventListener('DOMContentLoaded', function() {
-      fetchMicroClusters();
+      fetchUrbanClusters();
     });
   </script>
 </body>
