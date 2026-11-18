@@ -10,13 +10,14 @@
     "is_urban": true,
     "worker_name": "श्रीमती सुनीता मालवीय",
     "role": "कार्यकर्ता",
-    "phone": "9826112233",
+    "phone": "9425321231",
     "sahayika_name": "कमला बाई यादव (सहायिका)",
     "beneficiary_women": 320,
     "door_to_door_coverage": "100% हर घर कवरेज (किशोरी + माताएँ)",
     "star_priority": true,
     "priority_rank": 1,
-    "status": "Active"
+    "status": "Active",
+    "karyakarta_name": "स्वाति बाई राजपूत"
   },
   {
     "id": "HDA-URB-AW-02",
@@ -29,13 +30,14 @@
     "is_urban": true,
     "worker_name": "श्रीमती रेखा पारे",
     "role": "कार्यकर्ता",
-    "phone": "9826223344",
+    "phone": "9893343962",
     "sahayika_name": "पुष्पा बाई गौर (सहायिका)",
     "beneficiary_women": 290,
     "door_to_door_coverage": "100% हर घर कवरेज (किशोरी + माताएँ)",
     "star_priority": true,
     "priority_rank": 1,
-    "status": "Active"
+    "status": "Active",
+    "karyakarta_name": "रेखा बाई मालवीय"
   },
   {
     "id": "HDA-URB-AW-03",
@@ -48,13 +50,14 @@
     "is_urban": true,
     "worker_name": "श्रीमती पूजा शर्मा",
     "role": "कार्यकर्ता",
-    "phone": "9826334455",
+    "phone": "9826214975",
     "sahayika_name": "अनिता बाई जाट (सहायिका)",
     "beneficiary_women": 350,
     "door_to_door_coverage": "100% हर घर कवरेज (किशोरी + माताएँ)",
     "star_priority": true,
     "priority_rank": 1,
-    "status": "Active"
+    "status": "Active",
+    "karyakarta_name": "दीपा बाई मालवीय"
   },
   {
     "id": "HDA-URB-AW-04",
@@ -67,13 +70,14 @@
     "is_urban": true,
     "worker_name": "श्रीमती ममता जाटव",
     "role": "कार्यकर्ता",
-    "phone": "9826445566",
+    "phone": "9425321231",
     "sahayika_name": "सुमन बाई अहिरवार (सहायिका)",
     "beneficiary_women": 380,
     "door_to_door_coverage": "100% हर घर कवरेज (किशोरी + माताएँ)",
     "star_priority": true,
     "priority_rank": 1,
-    "status": "Active"
+    "status": "Active",
+    "karyakarta_name": "स्वाति बाई राजपूत"
   },
   {
     "id": "HDA-URB-AW-05",
@@ -86,13 +90,14 @@
     "is_urban": true,
     "worker_name": "श्रीमती सरिता राजपूत",
     "role": "कार्यकर्ता",
-    "phone": "9826556677",
+    "phone": "9755733052",
     "sahayika_name": "उषा बाई विश्वकर्मा (सहायिका)",
     "beneficiary_women": 240,
     "door_to_door_coverage": "100% हर घर कवरेज (किशोरी + माताएँ)",
     "star_priority": true,
     "priority_rank": 1,
-    "status": "Active"
+    "status": "Active",
+    "karyakarta_name": "कमला बाई जोशी"
   },
   {
     "id": "HDA-URB-AW-06",
@@ -105,13 +110,14 @@
     "is_urban": true,
     "worker_name": "श्रीमती नीता गौर",
     "role": "कार्यकर्ता",
-    "phone": "9826667788",
+    "phone": "9755472528",
     "sahayika_name": "गीता बाई मालवीय (सहायिका)",
     "beneficiary_women": 310,
     "door_to_door_coverage": "100% हर घर कवरेज (किशोरी + माताएँ)",
     "star_priority": true,
     "priority_rank": 1,
-    "status": "Active"
+    "status": "Active",
+    "karyakarta_name": "प्रियंका बाई जाट"
   },
   {
     "id": "HDA-URB-AW-07",
@@ -124,13 +130,14 @@
     "is_urban": true,
     "worker_name": "श्रीमती आरती पटेल",
     "role": "कार्यकर्ता",
-    "phone": "9826778899",
+    "phone": "9406624902",
     "sahayika_name": "ललिता बाई कुशवाह (सहायिका)",
     "beneficiary_women": 360,
     "door_to_door_coverage": "100% हर घर कवरेज (किशोरी + माताएँ)",
     "star_priority": true,
     "priority_rank": 1,
-    "status": "Active"
+    "status": "Active",
+    "karyakarta_name": "कल्पना बाई पटेल"
   },
   {
     "id": "HDA-URB-AW-08",
@@ -143,13 +150,14 @@
     "is_urban": true,
     "worker_name": "श्रीमती किरण विश्नोई",
     "role": "कार्यकर्ता",
-    "phone": "9826889900",
+    "phone": "9893694916",
     "sahayika_name": "संतोष बाई यादव (सहायिका)",
     "beneficiary_women": 330,
     "door_to_door_coverage": "100% हर घर कवरेज (किशोरी + माताएँ)",
     "star_priority": true,
     "priority_rank": 1,
-    "status": "Active"
+    "status": "Active",
+    "karyakarta_name": "संतोष बाई गौर"
   },
   {
     "id": "HDA-URB-AW-09",
@@ -162,13 +170,14 @@
     "is_urban": true,
     "worker_name": "श्रीमती वंदना तिवारी",
     "role": "कार्यकर्ता",
-    "phone": "9826990011",
+    "phone": "9406624902",
     "sahayika_name": "माया बाई राजपूत (सहायिका)",
     "beneficiary_women": 270,
     "door_to_door_coverage": "100% हर घर कवरेज (किशोरी + माताएँ)",
     "star_priority": true,
     "priority_rank": 1,
-    "status": "Active"
+    "status": "Active",
+    "karyakarta_name": "कल्पना बाई पटेल"
   },
   {
     "id": "HDA-URB-AW-10",
@@ -181,13 +190,14 @@
     "is_urban": true,
     "worker_name": "श्रीमती साधना रघुवंशी",
     "role": "कार्यकर्ता",
-    "phone": "9826001122",
+    "phone": "9826214975",
     "sahayika_name": "रुक्मिणी बाई पारे (सहायिका)",
     "beneficiary_women": 340,
     "door_to_door_coverage": "100% हर घर कवरेज (किशोरी + माताएँ)",
     "star_priority": true,
     "priority_rank": 1,
-    "status": "Active"
+    "status": "Active",
+    "karyakarta_name": "दीपा बाई मालवीय"
   },
   {
     "id": "HDA-URB-0002-AW-01",
