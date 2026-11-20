@@ -207,9 +207,11 @@
     }
     .hero h2 .highlight { color: var(--rose); }
     .hero h2 .callout-box {
-      background: linear-gradient(135deg, #fee2e2, #fff1f2); color: #991b1b;
-      padding: 6px 16px; border-radius: 14px; display: inline-block; font-size: 23px; margin-top: 8px;
-      border: 1px dashed #f87171;
+      background: linear-gradient(135deg, #fdf2f8, #f5f3ff); color: #701a75;
+      padding: 8px 20px; border-radius: 16px; display: inline-block; font-size: 20px; margin-top: 10px;
+      border: 1.5px solid #f0abfc;
+      box-shadow: 0 4px 14px rgba(192, 38, 211, 0.08);
+      font-weight: 700;
     }
     .hero-desc {
       font-size: 15.5px; color: var(--slate-700); max-width: 740px; margin: 0 auto 22px; line-height: 1.65;
@@ -979,6 +981,73 @@
       line-height: 1.45;
     }
 
+    
+    /* HEARTFELT MESSAGE BOX (NON-AD AUTHENTIC HERO CARD) */
+    .heartfelt-message-box {
+      background: linear-gradient(135deg, #fff7ed 0%, #fdf2f8 50%, #f5f3ff 100%);
+      border: 2px solid #fbcfe8;
+      border-radius: 22px;
+      padding: 22px 26px;
+      margin: 0 auto 34px;
+      box-shadow: 0 8px 24px rgba(219, 39, 119, 0.07);
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+    @media (max-width: 640px) {
+      .heartfelt-message-box { flex-direction: column; padding: 18px; gap: 12px; }
+    }
+    .hm-icon {
+      font-size: 34px;
+      line-height: 1;
+      background: #ffffff;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(219, 39, 119, 0.12);
+      flex-shrink: 0;
+    }
+    .hm-content { flex: 1; }
+    .hm-tag {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #be185d;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 5px;
+    }
+    .hm-title {
+      font-size: 17px;
+      font-weight: 900;
+      color: #1e1b4b;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .hm-text {
+      font-size: 13.5px;
+      color: #475569;
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .hm-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hm-points span {
+      background: #ffffff;
+      border: 1px solid #fbcfe8;
+      color: #831843;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 14px;
+    }
+
     /* FOOTER */
     footer {
       border-top: 1px solid #ffe4e6; padding: 32px 20px; text-align: center; font-size: 12.5px;
@@ -991,10 +1060,10 @@
 
   <!-- TOP URGENCY & CALL ALERT RIBBON -->
   <div class="top-ribbon" id="ribbon-text">
-    <span class="badge-pill">⚠️ महिला स्वास्थ्य चेतावनी</span>
+    <span class="badge-pill" style="background:#be185d;">🌸 सच्ची सलाह</span>
     <span class="cod-pill">💵 Cash On Delivery (घर पर पैसे दें)</span>
-    <span>दुकान पर 50-60 रुपये में प्लास्टिक कचरा मत खरीदिए! Jehovahrohi India Private Limited 100% असली कॉटन पैड मंगवाएं!</span>
-    <a href="tel:9713773339" class="call-ribbon-link">📞 कॉल करें: 9713773339</a>
+    <span>बस एक बार इसे आज़मा कर देखिए — फिर आप बाज़ार के प्लास्टिक वाले पैड्स कभी नहीं लेंगी!</span>
+    <a href="tel:9713773339" class="call-ribbon-link">📞 बात करें: 9713773339</a>
   </div>
 
   <!-- LANGUAGE SELECTOR BAR -->
@@ -1037,16 +1106,34 @@
     <!-- HERO SECTION -->
     <div class="hero">
       <div class="trust-pill" id="trust-badge">
-        ✓ 100% शुद्ध ऑर्गेनिक कॉटन · 0% प्लास्टिक कचरा · 💵 Cash on Delivery · 🚚 फ़्री डिलीवरी!
+        🌸 कोई विज्ञापन नहीं · हर बहन व माँ की सेहत के लिए एक सच्ची सलाह · 100% शुद्ध कॉटन
       </div>
       <h2 id="hero-title">
-        दुकान पर 50-60 रुपये में आपको प्लास्टिक कचरा मिलता है! <br>
-        <span class="highlight">और अच्छी क्वालिटी के पैड्स ₹300-₹400 के आते हैं!</span> <br>
-        <span class="callout-box">Jehovahrohi India Private Limited: आम बाज़ार रेट पर 100% असली कॉटन पैड!</span>
+        "बस एक बार इसे आज़मा कर देखिए... <br>
+        <span class="highlight">फिर आप बाज़ार के प्लास्टिक वाले पैड्स को कभी हाथ नहीं लगाएँगी।"</span> <br>
+        <span class="callout-box">🌿 Women's Free Life™: 100% असली ऑर्गेनिक कॉटन और 8 नेचुरल लेयर्स का शुद्ध आराम</span>
       </h2>
       <p class="hero-desc" id="hero-desc">
-        बाज़ार के आम पैड्स में 70% रिसाइकल प्लास्टिक और ब्लीचिंग केमिकल होते हैं जो प्राइवेट पार्ट्स में लाल दाने, असहनीय खुजली और गंभीर इन्फेक्शन करते हैं। <strong>एक बार इसे इस्तेमाल करके खुद फर्क देखें — XL सिर्फ ₹45 व XXL सिर्फ ₹55 (डिलीवरी बिल्कुल फ़्री)!</strong>
+        हम कोई बनावटी विज्ञापन नहीं कर रहे, बस एक बहन और माँ की सेहत के नाते सच बता रहे हैं — बाज़ार के पैड्स में ऊपर दिखने वाली सफेद जाली असल में रिसाइकिल प्लास्टिक और केमिकल होती है, जो हर महीने असहनीय खुजली, रैशेस और इन्फेक्शन देती है। <strong>सिर्फ एक बार इसे इस्तेमाल करके खुद फर्क महसूस करें — आपको तुरंत समझ आ जाएगा कि आपकी त्वचा के लिए असली सुकून क्या है।</strong>
       </p>
+    </div>
+
+    <!-- HEARTFELT NON-AD AUTHENTIC HERO CARD -->
+    <div class="heartfelt-message-box">
+      <div class="hm-icon">💝</div>
+      <div class="hm-content">
+        <div class="hm-tag">हर महिला, माँ और बहन के नाम एक ईमानदार संदेश</div>
+        <h3 class="hm-title">"हमारा मकसद सिर्फ सामान बेचना नहीं, बल्कि हर महिला को प्लास्टिक के दर्द और खुजली से आज़ादी दिलाना है।"</h3>
+        <p class="hm-text">
+          आप बस एक बार <strong>Women's Free Life™</strong> का एक पैकेट इस्तेमाल करके देखें। अगर आपको लगे कि यह वाकई आपकी त्वचा को सांस लेने देता है और कोई चिपचिपाहट या जलन नहीं होती, तभी दूसरों को बताएं। बाज़ार के केमिकल प्लास्टिक से खुद को और अपनी बेटियों को बचाएं।
+        </p>
+        <div class="hm-points">
+          <span>🌿 100% शुद्ध कॉटन</span>
+          <span>🛡️ 0% प्लास्टिक जाली</span>
+          <span>✨ दाने व खुजली से 100% मुक्ति</span>
+          <span>💵 घर बैठे मंगाएं (Cash on Delivery)</span>
+        </div>
+      </div>
     </div>
 
     <!-- OFFICIAL PACKAGING SHOWCASE CARD -->
@@ -1109,7 +1196,7 @@
     <!-- 3D 8-LAYERS EXPLODED ANATOMY & ADVERTISEMENT ENGINE -->
     <div class="anatomy-section" id="3d-layers-showcase">
       <div class="anatomy-head">
-        <span class="anatomy-pill">🔬 वैज्ञानिक 8-लेयर टेक्नोलॉजी · 3D विज्ञापन टूर</span>
+        <span class="anatomy-pill">🔬 वैज्ञानिक 8-लेयर टेक्नोलॉजी · 3D इंटरैक्टिव डेमो</span>
         <h2>Women's Free Life™ — पैड की सभी 8 परतों का 3D विच्छेदन</h2>
         <p>
           पैड को 3D में खोलकर देखें — <strong>4 टिशू लेयर्स, 2 ऑक्सीजन लेयर्स, 1 एंटी-बैक्टीरिया एनायन चिप व 1 जापानी जिलेटिन पाउडर कोर!</strong>
@@ -1126,7 +1213,7 @@
           📦 पैड जोड़ें (असेंबल मोड)
         </button>
         <button id="btn-tour" class="btn-ctrl" onclick="toggleAutoTour()">
-          ▶️ 3D ऑटो ऐड टूर शुरू करें
+          ▶️ 3D लेयर गाइड देखें
         </button>
         <button class="btn-ctrl" onclick="openPamphletModal()">
           📑 पूरा पर्चा / लीफलेट देखें
@@ -1914,11 +2001,11 @@
         clearInterval(tourInterval);
         tourInterval = null;
         btn.classList.remove('active');
-        btn.innerText = '▶️ 3D ऑटो ऐड टूर शुरू करें';
+        btn.innerText = '▶️ 3D लेयर गाइड देखें';
       } else {
         toggleExplodeView(true);
         btn.classList.add('active');
-        btn.innerText = '⏸️ टूर रोकें';
+        btn.innerText = '⏸️ गाइड रोकें';
         tourInterval = setInterval(function() {
           currentLayerIdx = (currentLayerIdx + 1) % LAYERS_DATA.length;
           selectLayer(currentLayerIdx + 1);
@@ -1936,12 +2023,12 @@
 
     var STRINGS = {
       hi: {
-        ribbon: '<span class="badge-pill">⚠️ महिला स्वास्थ्य चेतावनी</span> <span class="cod-pill">💵 Cash On Delivery (घर पर पैसे दें)</span> <span>दुकान पर 50-60 रुपये में प्लास्टिक कचरा मत खरीदिए! Jehovahrohi India Private Limited 100% असली कॉटन पैड मंगवाएं!</span> <a href="tel:9713773339" class="call-ribbon-link">📞 कॉल करें: 9713773339</a>',
+        ribbon: '<span class="badge-pill" style="background:#be185d;">🌸 सच्ची सलाह</span> <span class="cod-pill">💵 Cash On Delivery (घर पर पैसे दें)</span> <span>बस एक बार इसे आज़मा कर देखिए — फिर आप बाज़ार के प्लास्टिक वाले पैड्स कभी नहीं लेंगी!</span> <a href="tel:9713773339" class="call-ribbon-link">📞 बात करें: 9713773339</a>',
         subHeader: "महिला स्वास्थ्य व हाइजीन जागरूकता मिशन · शासकीय पंजीकृत पहल",
         navClaim: "ऑर्डर / सैंपल लें →",
-        trustBadge: "✓ 100% शुद्ध ऑर्गेनिक कॉटन · 0% प्लास्टिक कचरा · 💵 Cash on Delivery · 🚚 फ़्री डिलीवरी!",
-        heroTitle: 'दुकान पर 50-60 रुपये में आपको प्लास्टिक कचरा मिलता है! <br><span class="highlight">और अच्छी क्वालिटी के पैड्स ₹300-₹400 के आते हैं!</span> <br><span class="callout-box">Jehovahrohi India Private Limited: आम बाज़ार रेट पर 100% असली कॉटन पैड!</span>',
-        heroDesc: "बाज़ार के आम पैड्स में 70% रिसाइकल प्लास्टिक और ब्लीचिंग केमिकल होते हैं जो प्राइवेट पार्ट्स में लाल दाने, असहनीय खुजली और गंभीर इन्फेक्शन करते हैं। <strong>एक बार इसे इस्तेमाल करके खुद फर्क देखें — XL सिर्फ ₹45 व XXL सिर्फ ₹55 (डिलीवरी बिल्कुल फ़्री)!</strong>",
+        trustBadge: "🌸 कोई विज्ञापन नहीं · हर बहन व माँ की सेहत के लिए एक सच्ची सलाह · 100% शुद्ध कॉटन",
+        heroTitle: '"बस एक बार इसे आज़मा कर देखिए... <br><span class=\"highlight\">फिर आप बाज़ार के प्लास्टिक वाले पैड्स को कभी हाथ नहीं लगाएँगी!\"</span> <br><span class=\"callout-box\">🌿 Women\'s Free Life™: 100% असली ऑर्गेनिक कॉटन और 8 नेचुरल लेयर्स का शुद्ध आराम</span>',
+        heroDesc: "हम कोई बनावटी विज्ञापन नहीं कर रहे, बस एक बहन और माँ की सेहत के नाते सच बता रहे हैं — बाज़ार के पैड्स में ऊपर दिखने वाली सफेद जाली असल में रिसाइकिल प्लास्टिक और केमिकल होती है, जो हर महीने असहनीय खुजली, रैशेस और इन्फेक्शन देती है। <strong>सिर्फ एक बार इसे इस्तेमाल करके खुद फर्क महसूस करें — आपको तुरंत समझ आ जाएगा कि आपकी त्वचा के लिए असली सुकून क्या है।</strong>",
         
         cfTitle: "📞 कोई भी झिझक न करें — अभी शारदा दीदी से फोन पर बात करें",
         cfSub: "सीनियर महिला हेल्थ कंसल्टेंट (100% गोपनीय व नि:शुल्क परामर्श) · 1 मिनट में कॉल कनेक्ट होगा",
@@ -1963,12 +2050,12 @@
         vbBtn: "💬 सभी महिलाओं व सहेलियों को WhatsApp पर बताएं →"
       },
       hinglish: {
-        ribbon: '<span class="badge-pill">⚠️ Health Alert</span> <span class="cod-pill">💵 Cash On Delivery Available</span> <span>Dukan par 50-60 rupees me plastic kachra mat lijiye! Jehovahrohi India Private Limited 100% Cotton Pad mangwayein!</span> <a href="tel:9713773339" class="call-ribbon-link">📞 Call: 9713773339</a>',
+        ribbon: '<span class="badge-pill" style="background:#be185d;">🌸 Sachi Salah</span> <span class="cod-pill">💵 Cash On Delivery Available</span> <span>Bas ek baar ise try karke dekhiye — phir aap bazaar ke plastic wale pads kabhi nahi lengi!</span> <a href="tel:9713773339" class="call-ribbon-link">📞 Call: 9713773339</a>',
         subHeader: "Women Healthcare & Hygiene Mission · Make in MP",
         navClaim: "Order / Sample Lein →",
-        trustBadge: "✓ 100% Pure Organic Cotton · 0% Plastic Waste · 💵 Cash on Delivery · 🚚 Free Delivery!",
-        heroTitle: 'Dukan Par 50-60 Rs Me Aapko Plastic Kachra Milta Hai! <br><span class="highlight">Aur Acchi Quality Ke Cotton Pads ₹300-₹400 Ke Aate Hain!</span> <br><span class="callout-box">Jehovahrohi India Private Limited: Normal Market Rate Par 100% Asli Cotton Pad!</span>',
-        heroDesc: "Bazaar ke commercial pads me 70% recycled plastic aur bleaching chemicals hote hain jo private parts me rashes, jalan aur infection karte hain. <strong>Ek baar ise use karke khud farak dekhein — XL sirf ₹45 aur XXL sirf ₹55 (Free Delivery)!</strong>",
+        trustBadge: "🌸 Koi Ad Nahi · Har Behan Aur Beti Ke Liye Dil Se Ek Sachi Salah · 100% Pure Cotton",
+        heroTitle: '"Bas ek baar ise aazma kar dekhein... <br><span class=\"highlight\">Phir aap bazaar ke plastic wale pads ko kabhi hath nahi lagayengi!\"</span> <br><span class=\"callout-box\">🌿 Women\'s Free Life™: 100% Pure Cotton Aur 8 Natural Layers Ka Asli Aaram</span>',
+        heroDesc: "Ye koi advertisement nahi hai, balki har aurat aur beti ki health ke liye ek honest baat hai — bazaar ke pads me upar jo jali dikhti hai wo chemical aur plastic waste hoti hai jo rashes aur infection karti hai. <strong>Sirf ek baar ise apne period me use karke dekhein — aapko khud pata chal jayega ki asli skin comfort kya hota hai!</strong>",
 
         cfTitle: "📞 Koi Bhi Sharam Ya Jhijhak Na Karein — Sharda Didi Se Call Par Baat Karein",
         cfSub: "Senior Women Health Specialist (100% Private & Free Advice) · 1 minute me direct call",
@@ -1990,11 +2077,11 @@
         vbBtn: "💬 Apni Sabhi Behano Ko WhatsApp Par Alert Bhejein →"
       },
       en: {
-        ribbon: '<span class="badge-pill">⚠️ Women Health Alert</span> <span class="cod-pill">💵 Cash On Delivery Available</span> <span>Stop buying ₹50-60 plastic waste in shops! Order Jehovahrohi India Private Limited 100% Cotton Pads!</span> <a href="tel:9713773339" class="call-ribbon-link">📞 Call: 9713773339</a>',
+        ribbon: '<span class="badge-pill" style="background:#be185d;">🌸 Honest Advice</span> <span class="cod-pill">💵 Cash On Delivery Available</span> <span>Just try it once — and you will never go back to synthetic plastic pads again!</span> <a href="tel:9713773339" class="call-ribbon-link">📞 Call: 9713773339</a>',
         subHeader: "Women Healthcare & Hygiene Mission · Make in MP",
         navClaim: "Order / Sample →",
-        trustBadge: "✓ 100% Pure Organic Cotton · 0% Plastic Waste · 💵 Cash on Delivery · 🚚 Free Delivery!",
-        heroTitle: 'Commercial ₹50-60 Pads Give You Synthetic Plastic Waste! <br><span class="highlight">While High-End Organic Pads Cost ₹300-₹400!</span> <br><span class="callout-box">Jehovahrohi India Private Limited: 100% Pure Cotton Pads At Normal Market Rates!</span>',
+        trustBadge: "🌸 Koi Ad Nahi · Har Behan Aur Beti Ke Liye Dil Se Ek Sachi Salah · 100% Pure Cotton",
+        heroTitle: '"Just Try It Once... <br><span class=\"highlight\">We Promise You Will Never Buy Those Synthetic Plastic Pads Again!\"</span> <br><span class=\"callout-box\">🌿 Women\'s Free Life™: 100% Organic Pure Cotton & 8-Layer Natural Comfort</span>',
         heroDesc: "Commercial pads contain 70% recycled synthetic plastic and chlorine bleach causing painful rashes and severe infections. <strong>Try it once to feel the difference yourself — XL at ₹45, XXL at ₹55 with FREE Delivery!</strong>",
 
         cfTitle: "📞 Do Not Hesitate — Speak Directly With Sharda Didi",
