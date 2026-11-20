@@ -1239,6 +1239,21 @@
             </select>
           </div>
         </div>
+        <div style="background: linear-gradient(135deg, rgba(236,72,153,0.08), rgba(139,92,246,0.08)); border-bottom: 1px solid rgba(236,72,153,0.2); padding: 14px 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <div style="font-weight: 800; color: #be185d; font-size: 13.5px; display: flex; align-items: center; gap: 6px;">
+              <span>🎯 2-चरण स्मार्ट अभियान (Strict No-Link Outreach Strategy)</span>
+              <span class="badge-tag tag-pink" style="font-size: 11px;">जेमिनी AI ऑटो-रिप्लाई सक्षम</span>
+            </div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-top: 3px; line-height: 1.5;">
+              • <strong>चरण 1 (प्रथम संपर्क):</strong> '💬 WA' बटन दबाने पर बिना किसी लिंक वाला आत्मीय संदेश जाता है ताकि स्पैम फ़िल्टर न लगे और विश्वास बने।<br>
+              • <strong>चरण 2 (AI उत्तर):</strong> जब संचालिका रुचि दिखाए या लिंक माँगे ("लिंक भेजो", "सैंपल कैसे मिलेगा"), तब हमारा जेमिनी AI पोर्टल लिंक (<code>https://shardagadeshwar-glitch.github.io/jr-india/</code>) भेजता है।
+            </div>
+          </div>
+          <button onclick="openAiChatModal('श्रीमती रशीदा बी', '9179845610', 'प्रिंसेस ब्यूटी पार्लर')" class="btn-action btn-rose" style="background:#8b5cf6; border-color:#7c3aed; display:flex; align-items:center; gap:6px; font-weight:700;">
+            🤖 AI चैट सिम्युलेटर टेस्ट करें
+          </button>
+        </div>
         <div class="table-responsive">
           <table class="data-table">
             <thead>
@@ -1470,6 +1485,91 @@
     </div>
   </div>
 
+  <!-- ============================================================== -->
+  <!-- MODAL: AI AUTO-RESPONDER & CHAT SIMULATOR (SHARDA DIDI)       -->
+  <!-- ============================================================== -->
+  <div class="modal-overlay" id="ai-chat-modal" onclick="closeAiChatModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()" style="max-width: 720px;">
+      <div class="modal-header" style="background: linear-gradient(135deg, #fdf2f8, #f5f3ff);">
+        <div>
+          <div class="modal-title" style="color: #be185d; display: flex; align-items: center; gap: 8px;">
+            🤖 जेआर इंडिया — AI ऑटो-रिस्पॉन्डर सिम्युलेटर
+          </div>
+          <div style="font-size: 12px; color: var(--text-muted); margin-top: 2px;">
+            शारदा दीदी (9713773339) | जेमिनी 3.5 फ़्लैश AI इंजन
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeAiChatModal()">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 20px;">
+        <!-- Recipient Info Strip -->
+        <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; font-size: 12px;">
+          <div><strong style="color:var(--text-muted);">पार्लर / प्रतिष्ठान:</strong> <span id="sim-parlour" style="font-weight:700; color:#0f172a;">प्रिंसेस ब्यूटी पार्लर</span></div>
+          <div><strong style="color:var(--text-muted);">संचालिका:</strong> <span id="sim-name" style="font-weight:700; color:#0f172a;">श्रीमती रशीदा बी</span></div>
+          <div><strong style="color:var(--text-muted);">मोबाइल:</strong> <span id="sim-phone" style="font-weight:700; color:#0284c7;">9179845610</span></div>
+        </div>
+
+        <!-- Tab 1: Step 1 Initial Outreach (No link) -->
+        <div style="background: #fff; border: 1px solid #fbcfe8; border-radius: 10px; padding: 14px; margin-bottom: 16px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <div style="font-weight: 800; color: #be185d; font-size: 13px;">
+              📩 चरण 1: प्रारंभिक WhatsApp आमंत्रण (Strictly NO LINK)
+            </div>
+            <span class="badge-tag tag-pink" style="font-size: 10px;">प्राकृतिक संवाद व विश्वास</span>
+          </div>
+          <div id="sim-outreach-text" style="background: #fff5f7; border: 1px solid #fecdd3; border-radius: 6px; padding: 10px; font-size: 12px; line-height: 1.6; color: #475569; white-space: pre-wrap;"></div>
+          <div style="display: flex; gap: 8px; margin-top: 10px;">
+            <button class="btn-action" onclick="copySimOutreach()" style="font-size: 11px;">📋 कॉपी करें</button>
+            <button class="btn-action btn-emerald" onclick="sendSimWhatsApp()" style="font-size: 11px;">💬 WhatsApp पर भेजें</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Customer Reply Simulation -->
+        <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; margin-bottom: 16px;">
+          <div style="font-weight: 800; color: #0f172a; font-size: 13px; margin-bottom: 8px;">
+            💬 चरण 2: पार्लर संचालिका का आने वाला संदेश (इनबाउंड सिमुलेशन)
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px;">
+            <button class="btn-action" style="font-size: 11px; background:#f1f5f9; color:#334155;" onclick="setPresetReply('हाँ दीदी, मुझे सैंपल देखना है, कृपया अपनी वेबसाइट का लिंक भेजिए ताकि मैं देख सकूँ।')">👉 लिंक व सैंपल माँगा</button>
+            <button class="btn-action" style="font-size: 11px; background:#f1f5f9; color:#334155;" onclick="setPresetReply('नमस्ते, आपके पैकेट का रेट क्या है और हमें कितना मार्जिन मिलेगा?')">👉 रेट व मार्जिन पूछा</button>
+            <button class="btn-action" style="font-size: 11px; background:#f1f5f9; color:#334155;" onclick="setPresetReply('क्या हम अपने पार्लर पर रखकर बेच सकते हैं? इसके क्या नियम हैं?')">👉 पार्लर फ्रेंचाइजी नियम</button>
+            <button class="btn-action" style="font-size: 11px; background:#f1f5f9; color:#334155;" onclick="setPresetReply('नमस्ते दीदी, अभी हमारे पास स्टॉक है, बाद में बताएंगे।')">👉 बाद में बात करेंगे</button>
+          </div>
+          <textarea id="sim-customer-input" class="search-input" rows="2" style="width:100%; border-radius:6px; font-size:12px; line-height:1.5; resize:vertical;" placeholder="संचालिका का संदेश यहाँ लिखें..."></textarea>
+          <div style="margin-top: 8px; display: flex; justify-content: flex-end;">
+            <button id="sim-ai-send-btn" class="btn-action btn-rose" style="background:#8b5cf6; border-color:#7c3aed; font-weight:700;" onclick="testAiInbound()">
+              🚀 जेमिनी AI उत्तर प्राप्त करें
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: AI Generated Reply -->
+        <div id="sim-ai-result-box" style="display: none; background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 10px; padding: 14px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
+            <div style="font-weight: 800; color: #6b21a8; font-size: 13px;">
+              ✨ शारदा दीदी (जेमिनी AI) का उत्तर:
+            </div>
+            <div style="display: flex; gap: 6px;">
+              <span id="sim-intent-badge" class="badge-tag tag-pink">INTENT</span>
+              <span id="sim-interest-badge" class="badge-tag tag-emerald">INTERESTED</span>
+            </div>
+          </div>
+          <div id="sim-ai-reply-text" style="background: #ffffff; border: 1px solid #d8b4fe; border-radius: 6px; padding: 12px; font-size: 12.5px; line-height: 1.6; color: #1e293b; white-space: pre-wrap;"></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; justify-content: space-between; align-items: center;">
+            <div style="font-size: 11px; color: var(--text-muted);">
+              ✅ आधिकारिक पोर्टल लिंक: <a href="https://shardagadeshwar-glitch.github.io/jr-india/" target="_blank" style="color:#0284c7; font-weight:700;">jr-india/</a>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-action" onclick="copyAiReplyText()" style="font-size: 11px;">📋 उत्तर कॉपी करें</button>
+              <button class="btn-action btn-emerald" onclick="sendAiReplyWhatsApp()" style="font-size: 11px;">💬 यह उत्तर WA पर भेजें</button>
+              <a href="https://shardagadeshwar-glitch.github.io/jr-india/" target="_blank" class="btn-action btn-rose" style="font-size: 11px; text-decoration:none;">🌐 पोर्टल खोलें</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast -->
   <div id="toast">संदेश कॉपी हो गया!</div>
 
@@ -1547,6 +1647,105 @@
       navigator.clipboard.writeText(text).then(function() {
         showToast('पड़ोसियों का WhatsApp आमंत्रण कॉपी हो गया!');
       });
+    }
+
+    // AI Chat Simulator Modal controls
+    var currentSimParlour = { name: 'श्रीमती रशीदा बी', phone: '9179845610', establishment: 'प्रिंसेस ब्यूटी पार्लर' };
+
+    function openAiChatModal(name, phone, establishment) {
+      if (name) currentSimParlour.name = name;
+      if (phone) currentSimParlour.phone = phone;
+      if (establishment) currentSimParlour.establishment = establishment;
+
+      document.getElementById('sim-name').innerText = currentSimParlour.name;
+      document.getElementById('sim-phone').innerText = currentSimParlour.phone;
+      document.getElementById('sim-parlour').innerText = currentSimParlour.establishment;
+
+      var initialMsg = "नमस्ते " + currentSimParlour.name + " जी! मैं शारदा दीदी बोल रही हूँ हरदा से (जेआर इंडिया महिला स्वास्थ्य जागरूकता मिशन)।\n\nआपके पार्लर '" + currentSimParlour.establishment + "' के बारे में जानकारी मिली। हरदा जिले में महिलाओं के स्वास्थ्य व इन्फेक्शन-मुक्त रहने के लिए हम 100% शुद्ध कॉटन सैनिटरी पैड्स का विशेष अभियान चला रहे हैं।\n\nपार्लर पर आने वाली महिलाओं को शुद्ध कॉटन पैड्स उपलब्ध कराकर आप अपने पार्लर से ही बिना किसी अग्रिम निवेश के ₹3,000 से ₹5,000 की अतिरिक्त मासिक आमदनी भी शुरू कर सकती हैं।\n\nक्या मैं 1 मिनट में आपको इसके बारे में संक्षिप्त जानकारी साझा कर सकती हूँ? - शारदा दीदी (9713773339)";
+      document.getElementById('sim-outreach-text').innerText = initialMsg;
+
+      document.getElementById('sim-customer-input').value = 'हाँ दीदी, मुझे पार्लर के लिए सैंपल देखना है, कृपया अपनी वेबसाइट का लिंक भेजिए ताकि मैं देख सकूँ।';
+      document.getElementById('sim-ai-result-box').style.display = 'none';
+
+      document.getElementById('ai-chat-modal').style.display = 'flex';
+    }
+
+    function closeAiChatModal(e) {
+      document.getElementById('ai-chat-modal').style.display = 'none';
+    }
+
+    function copySimOutreach() {
+      var text = document.getElementById('sim-outreach-text').innerText;
+      navigator.clipboard.writeText(text).then(function() {
+        showToast('प्रारंभिक आमंत्रण संदेश कॉपी हो गया!');
+      });
+    }
+
+    function sendSimWhatsApp() {
+      var text = document.getElementById('sim-outreach-text').innerText;
+      var cleanPhone = currentSimParlour.phone.replace(/\D/g, '');
+      var dest = cleanPhone.startsWith('91') ? cleanPhone : '91' + cleanPhone;
+      var url = 'https://wa.me/' + dest + '?text=' + encodeURIComponent(text);
+      window.open(url, '_blank');
+    }
+
+    function setPresetReply(txt) {
+      document.getElementById('sim-customer-input').value = txt;
+    }
+
+    function testAiInbound() {
+      var userText = document.getElementById('sim-customer-input').value.trim();
+      if (!userText) {
+        alert('कृपया संचालिका का संदेश लिखें');
+        return;
+      }
+
+      var btn = document.getElementById('sim-ai-send-btn');
+      btn.innerText = '⏳ जेमिनी AI सोच रहा है...';
+      btn.disabled = true;
+
+      fetch('/api/social/inbound', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          platform: 'whatsapp',
+          senderId: currentSimParlour.phone,
+          senderName: currentSimParlour.name + ' (' + currentSimParlour.establishment + ')',
+          text: userText,
+          timestamp: new Date().toISOString()
+        })
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        btn.innerText = '🚀 जेमिनी AI उत्तर प्राप्त करें';
+        btn.disabled = false;
+
+        document.getElementById('sim-ai-result-box').style.display = 'block';
+        document.getElementById('sim-intent-badge').innerText = data.intent || 'GENERAL_QUESTION';
+        document.getElementById('sim-interest-badge').innerText = data.isInterested ? '✅ रुचि दिखाई' : '⚪ सामान्य';
+        document.getElementById('sim-ai-reply-text').innerText = data.replyText || 'उत्तर नहीं मिला';
+        showToast('जेमिनी AI ने उत्तर तैयार कर दिया!');
+      })
+      .catch(function(err) {
+        btn.innerText = '🚀 जेमिनी AI उत्तर प्राप्त करें';
+        btn.disabled = false;
+        alert('AI सर्वर त्रुटि: ' + err.message);
+      });
+    }
+
+    function copyAiReplyText() {
+      var text = document.getElementById('sim-ai-reply-text').innerText;
+      navigator.clipboard.writeText(text).then(function() {
+        showToast('AI उत्तर कॉपी हो गया!');
+      });
+    }
+
+    function sendAiReplyWhatsApp() {
+      var text = document.getElementById('sim-ai-reply-text').innerText;
+      var cleanPhone = currentSimParlour.phone.replace(/\D/g, '');
+      var dest = cleanPhone.startsWith('91') ? cleanPhone : '91' + cleanPhone;
+      var url = 'https://wa.me/' + dest + '?text=' + encodeURIComponent(text);
+      window.open(url, '_blank');
     }
 
 
@@ -2089,6 +2288,9 @@
           '<a href="' + (p.fb_url || 'https://' + p.fb_id) + '" target="_blank" style="color:#1877f2; font-weight:700; text-decoration:none;">📘 ' + p.fb_id + '</a>' :
           '<span style="color:var(--text-muted); font-size:11px;">—</span>';
 
+        var initialMsg = "नमस्ते " + (p.name || "दीदी") + " जी! मैं शारदा दीदी बोल रही हूँ हरदा से (जेआर इंडिया महिला स्वास्थ्य जागरूकता मिशन)।\n\nआपके पार्लर '" + (p.establishment || "") + "' के बारे में जानकारी मिली। हरदा जिले में महिलाओं के स्वास्थ्य व इन्फेक्शन-मुक्त रहने के लिए हम 100% शुद्ध कॉटन सैनिटरी पैड्स का विशेष अभियान चला रहे हैं।\n\nपार्लर पर आने वाली महिलाओं को शुद्ध कॉटन पैड्स उपलब्ध कराकर आप अपने पार्लर से ही बिना किसी अग्रिम निवेश के ₹3,000 से ₹5,000 की अतिरिक्त मासिक आमदनी भी शुरू कर सकती हैं।\n\nक्या मैं 1 मिनट में आपको इसके बारे में संक्षिप्त जानकारी साझा कर सकती हूँ? - शारदा दीदी (9713773339)";
+        var waUrl = "https://wa.me/91" + p.phone + "?text=" + encodeURIComponent(initialMsg);
+
         var socialBtns = '';
         if (p.insta_id) {
           socialBtns += '<a href="' + p.insta_url + '" target="_blank" class="btn-wa-sm" style="background:#e1306c; margin-right:4px;">📸 Insta</a>';
@@ -2096,7 +2298,8 @@
         if (p.fb_id) {
           socialBtns += '<a href="' + p.fb_url + '" target="_blank" class="btn-wa-sm" style="background:#1877f2; margin-right:4px;">📘 FB</a>';
         }
-        socialBtns += '<a href="https://wa.me/91' + p.phone + '" target="_blank" class="btn-wa-sm">💬 WA</a>';
+        socialBtns += '<a href="' + waUrl + '" target="_blank" class="btn-wa-sm" title="प्रारंभिक आमंत्रण संदेश (Strict No-Link)">💬 WA</a>';
+        socialBtns += '<button onclick="openAiChatModal(\'' + (p.name||'').replace(/'/g, "\\'") + '\', \'' + p.phone + '\', \'' + (p.establishment||'').replace(/'/g, "\\'") + '\')" class="btn-wa-sm" style="background:#8b5cf6; border:none; cursor:pointer;" title="AI ऑटो-रिप्लाई टेस्ट करें">🤖</button>';
 
         return '<tr>' +
           '<td><span class="badge-sno">#' + (idx+1) + '</span></td>' +
