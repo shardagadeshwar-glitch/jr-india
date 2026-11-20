@@ -24,7 +24,8 @@
   <meta property="og:locale:alternate" content="en_IN">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23e11d48'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='42' font-weight='900' fill='white'>JR</text></svg>">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -32,7 +33,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "JR India",
-    "legalName": "JR India Private Limited",
+    "legalName": "Jehovahrohi India Private Limited",
+    "logo": "https://shardagadeshwar-glitch.github.io/jr-india/logo.png",
     "description": "JR India is a premier Indian feminine healthcare social enterprise manufacturing 100% rash-free organic cotton sanitary napkins with Green Anion antibacterial technology.",
     "address": {
       "@type": "PostalAddress",
@@ -163,13 +165,14 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.03);
     }
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .brand-logo {
-      width: 44px; height: 44px; border-radius: 14px; background: linear-gradient(135deg, #e11d48, #be123c);
-      color: white; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 20px;
-      box-shadow: 0 4px 12px var(--rose-glow);
+    .brand-logo-img {
+      width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
+      box-shadow: 0 4px 14px rgba(225, 29, 72, 0.25);
+      border: 2px solid #ffffff; background: #ffffff;
+      flex-shrink: 0;
     }
-    .brand-text h1 { font-size: 18px; font-weight: 900; line-height: 1.1; color: var(--slate-900); }
-    .brand-text h1 span { color: var(--rose); font-size: 12px; }
+    .brand-text h1 { font-size: 17px; font-weight: 900; line-height: 1.15; color: var(--slate-900); }
+    .brand-text h1 span { color: var(--rose); font-size: 11px; font-weight: 800; }
     .brand-text p { font-size: 11px; color: var(--slate-500); margin-top: 2px; }
     .header-actions { display: flex; gap: 8px; align-items: center; }
     .btn {
@@ -564,10 +567,10 @@
   <!-- HEADER -->
   <header>
     <a href="#" class="brand">
-      <div class="brand-logo">JR</div>
+      <img src="logo.png" alt="Jehovahrohi India Private Limited Logo" class="brand-logo-img">
       <div class="brand-text">
-        <h1>JR INDIA <span>PVT. LTD.</span></h1>
-        <p id="sub-header">महिला स्वास्थ्य व हाइजीन जागरूकता मिशन · मेक इन मध्य प्रदेश</p>
+        <h1>JR INDIA <span>(JEHOVAHROHI INDIA PVT. LTD.)</span></h1>
+        <p id="sub-header">महिला स्वास्थ्य व हाइजीन जागरूकता मिशन · शासकीय पंजीकृत पहल</p>
       </div>
     </a>
     <div class="header-actions">
@@ -1051,7 +1054,13 @@
         💬 WhatsApp: 9713773339
       </a>
     </div>
-    <strong>JR INDIA PRIVATE LIMITED</strong><br>
+    <div style="margin-bottom: 14px; display: inline-flex; align-items: center; gap: 12px; background: #fff1f2; padding: 10px 20px; border-radius: 40px; border: 1px solid #fecdd3;">
+      <img src="logo.png" alt="Jehovahrohi India Private Limited Logo" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid #be123c;">
+      <div style="text-align: left;">
+        <strong style="color: #be123c; font-size: 13.5px; display: block; line-height: 1.2;">JEHOVAHROHI INDIA PRIVATE LIMITED</strong>
+        <span style="font-size: 11px; color: #881337;">(JR INDIA • महिला स्वास्थ्य व हाइजीन जागरूकता मिशन)</span>
+      </div>
+    </div><br>
     <span id="footer-text">शासकीय पंजीकृत सैनिटरी केयर विनिर्माण व महिला स्वास्थ्य जागरूकता पहल · मेक इन मध्य प्रदेश</span><br>
     <div style="margin-top: 8px; font-size: 11.5px;">Women Helpline: +91 9713773339 (शारदा दीदी) · Harda, Timarni, Khirkiya & MP Project · 100% Cash on Delivery</div>
   </footer>
