@@ -215,6 +215,135 @@
       font-size: 15.5px; color: var(--slate-700); max-width: 740px; margin: 0 auto 22px; line-height: 1.65;
     }
 
+    /* PRODUCT SHOWCASE CARD */
+    .product-showcase-card {
+      background: linear-gradient(135deg, #ffffff, #faf5ff);
+      border: 2px solid #e9d5ff;
+      border-radius: 24px;
+      padding: 24px;
+      margin: 0 auto 34px;
+      box-shadow: 0 10px 30px rgba(147, 51, 234, 0.08);
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 26px;
+      align-items: center;
+      text-align: left;
+    }
+    @media (max-width: 768px) {
+      .product-showcase-card { grid-template-columns: 1fr; padding: 18px; gap: 18px; }
+    }
+    .psc-image-wrap {
+      position: relative;
+      text-align: center;
+      background: #fdf4ff;
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px solid #f0abfc;
+    }
+    .psc-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: linear-gradient(135deg, #9333ea, #7e22ce);
+      color: white;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(147, 51, 234, 0.3);
+      z-index: 2;
+    }
+    .psc-img {
+      width: 100%;
+      max-height: 280px;
+      object-fit: contain;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.12));
+    }
+    .psc-img:hover {
+      transform: scale(1.02);
+    }
+    .psc-img-caption {
+      font-size: 10.5px;
+      color: #6b21a8;
+      font-weight: 700;
+      margin-top: 10px;
+      letter-spacing: 0.3px;
+    }
+    .psc-brand-tag {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #9333ea;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .psc-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #1e1b4b;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+    .psc-sub-tag {
+      font-size: 12.5px;
+      background: #f3e8ff;
+      color: #7e22ce;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 800;
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 6px;
+    }
+    .psc-desc {
+      font-size: 13px;
+      color: var(--slate-600);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .psc-features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 480px) {
+      .psc-features-grid { grid-template-columns: 1fr; }
+    }
+    .psc-feat {
+      background: #ffffff;
+      border: 1px solid #f3e8ff;
+      border-radius: 10px;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #334155;
+    }
+    .psc-feat strong { display: block; font-size: 11.5px; color: #0f172a; line-height: 1.2; }
+    .psc-feat small { font-size: 10px; color: #64748b; }
+    .psc-feat-icon { font-size: 18px; flex-shrink: 0; }
+    .psc-pricing-strip {
+      background: #faf5ff;
+      border: 1px dashed #d8b4fe;
+      border-radius: 12px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .psc-price-label { font-size: 12px; color: #6b21a8; font-weight: 700; }
+    .psc-price-val { font-size: 18px; font-weight: 900; color: #be123c; margin-left: 6px; }
+    .psc-price-val small { font-size: 11px; color: #16a34a; font-weight: 700; margin-left: 4px; }
+    .psc-cod-pill { font-size: 11px; color: #065f46; font-weight: 700; background: #d1fae5; padding: 4px 10px; border-radius: 20px; }
+    .psc-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
     /* CASH ON DELIVERY GUARANTEE BANNER */
     .cod-guarantee-card {
       background: linear-gradient(135deg, #ecfdf5, #d1fae5);
@@ -608,6 +737,62 @@
       </p>
     </div>
 
+    <!-- OFFICIAL PACKAGING SHOWCASE CARD -->
+    <div class="product-showcase-card">
+      <div class="psc-image-wrap">
+        <span class="psc-badge">✨ 100% असली प्रोडक्ट पैकेजिंग</span>
+        <img src="product-pack.jpg" alt="Jehovahrohi Women's Free Life XXL Ultrathin Sanitary Pads (280mm)" class="psc-img">
+        <div class="psc-img-caption">
+          🏢 Reg. No. of Co. U24230CT2022PTC013108 · 6 XXL ULTRATHIN PADS
+        </div>
+      </div>
+      <div class="psc-details">
+        <div class="psc-brand-tag">JEHOVAHROHI INDIA PRIVATE LIMITED</div>
+        <h3 class="psc-title">Women's Free Life™ <span class="psc-sub-tag">XXL ULTRATHIN (280MM)</span></h3>
+        <p class="psc-desc">
+          शुद्ध मेडिकल-ग्रेड कॉटन सॉफ्टनेस और उन्नत <strong>Air Flow</strong> तकनीक के साथ। 0% प्लास्टिक जाली — जिससे दाने, खुजली और इन्फेक्शन हमेशा के लिए समाप्त हो जाते हैं।
+        </p>
+        
+        <div class="psc-features-grid">
+          <div class="psc-feat">
+            <span class="psc-feat-icon">🛡️</span>
+            <div><strong>Upto 100% Stain Protection</strong><small>पूरा दिन और रात लीकेज-फ्री सुरक्षा</small></div>
+          </div>
+          <div class="psc-feat">
+            <span class="psc-feat-icon">🌬️</span>
+            <div><strong>Air Flow Breathable Layer</strong><small>त्वचा सांस ले सके, चिपचिपाहट शून्य</small></div>
+          </div>
+          <div class="psc-feat">
+            <span class="psc-feat-icon">🪽</span>
+            <div><strong>280mm Wings Protection</strong><small>मजबूत विंग्स जो पैड को हिलने न दें</small></div>
+          </div>
+          <div class="psc-feat">
+            <span class="psc-feat-icon">🌿</span>
+            <div><strong>Soft & Slim Design</strong><small>कपड़ों के नीचे महसूस भी न हो</small></div>
+          </div>
+        </div>
+
+        <div class="psc-pricing-strip">
+          <div class="psc-price-box">
+            <span class="psc-price-label">सैंपल पैक (XXL 6 पैड्स):</span>
+            <span class="psc-price-val">₹55 <small>फ़्री होम डिलीवरी</small></span>
+          </div>
+          <div class="psc-cod-pill">
+            💵 Cash on Delivery (घर पर पैसे दें)
+          </div>
+        </div>
+
+        <div class="psc-actions">
+          <a href="#claim-form" class="btn btn-rose" style="font-size: 14px; padding: 12px 22px;">
+            🛒 अभी सैंपल ऑर्डर करें (COD) →
+          </a>
+          <a href="https://wa.me/919713773339?text=Namaste%20Sharda%20Didi,%20mujhe%20Jehovahrohi%20Women%27s%20Free%20Life%20sample%20chahiye" target="_blank" class="btn btn-wa" style="font-size: 14px; padding: 12px 20px;">
+            💬 WhatsApp पर मंगवाएं
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- CASH ON DELIVERY GUARANTEE BANNER -->
     <div class="cod-guarantee-card">
       <div class="cgc-left">
@@ -865,6 +1050,16 @@
       </div>
 
       <div id="form-content">
+        <!-- PRODUCT PACK PREVIEW STRIP -->
+        <div style="background: linear-gradient(135deg, #fdf4ff, #faf5ff); border: 1.5px solid #d8b4fe; border-radius: 14px; padding: 12px 16px; margin-bottom: 18px; display: flex; align-items: center; gap: 14px; box-shadow: 0 4px 12px rgba(147, 51, 234, 0.05);">
+          <img src="product-pack.jpg" alt="Jehovahrohi Women's Free Life Pack" style="width: 80px; height: 55px; object-fit: contain; border-radius: 8px; background: #fff; border: 1px solid #f0abfc; padding: 2px;">
+          <div>
+            <div style="font-size: 13.5px; font-weight: 900; color: #1e1b4b;">✨ असली प्रोडक्ट: JEHOVAHROHI Women's Free Life™</div>
+            <div style="font-size: 11.5px; color: #7e22ce; font-weight: 700; margin-top: 2px;">XXL ULTRATHIN (280MM WINGS) · 6 पैड्स · Upto 100% Stain Protection</div>
+            <div style="font-size: 10.5px; color: #64748b; margin-top: 1px;">Reg. No. of Co. U24230CT2022PTC013108 · 100% Cash on Delivery</div>
+          </div>
+        </div>
+
         <label class="form-label" id="lbl-select-pack">पैक विकल्प चुनें / Select Your Offer *</label>
         
         <!-- 3 OFFERS SELECTOR: XL ₹45, XXL ₹55, 10 PACKS BUNDLE ₹449 -->
