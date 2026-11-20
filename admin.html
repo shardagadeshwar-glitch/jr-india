@@ -673,6 +673,11 @@
         <span class="emerald-tab-badge">226 लाइव पिन</span>
       </button>
 
+      <button class="tab-btn" id="tab-villages-574-btn" onclick="switchTab('villages-574')" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(245, 158, 11, 0.12)); border: 1.5px solid #10b981; font-weight:800;">
+        <span>🏡 हरदा 574 समग्र गाँव</span>
+        <span class="gold-tab-badge" id="badge-villages-count">574 गाँव • 1.95L महिलाएँ</span>
+      </button>
+
       <button class="tab-btn" id="tab-village-reg-btn" onclick="switchTab('village-reg')">
         <span>🏘️ 220 ग्राम पंचायत रजिस्टर</span>
         <span class="gold-tab-badge" id="badge-village-reg-count">2,855 नाम</span>
@@ -966,6 +971,109 @@
     </div>
 
     <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- TAB: HARDA DISTRICT 574 VILLAGES CENSUS DIRECTORY (MASTER CENSUS) -->
+    <!-- ============================================================== -->
+    <div id="view-villages-574" style="display:none;">
+      <!-- STAT METRIC CARDS -->
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px; margin-bottom:20px;">
+        <div class="card" style="margin:0; border-left:4px solid #10b981;">
+          <div style="font-size:12px; color:var(--text-muted); font-weight:700;">🏡 कुल राजस्व गाँव (Census)</div>
+          <div style="font-size:26px; font-weight:900; color:#10b981; margin-top:4px;" id="stat-vil-total">574</div>
+          <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">461 आबाद • 109 बेचिराग़ • 4 नगरीय</div>
+        </div>
+
+        <div class="card" style="margin:0; border-left:4px solid var(--primary);">
+          <div style="font-size:12px; color:var(--text-muted); font-weight:700;">👩‍🦰 कुल महिला जनसंख्या</div>
+          <div style="font-size:26px; font-weight:900; color:var(--primary); margin-top:4px;" id="stat-vil-female">1,95,636</div>
+          <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">कुल ग्रामीण आबादी: 4,05,160</div>
+        </div>
+
+        <div class="card" style="margin:0; border-left:4px solid #f59e0b;">
+          <div style="font-size:12px; color:var(--text-muted); font-weight:700;">📦 मासिक पैड खपत क्षमता</div>
+          <div style="font-size:26px; font-weight:900; color:#f59e0b; margin-top:4px;" id="stat-vil-demand">4,10,836</div>
+          <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">प्रति माह आवश्यक कॉटन पैकेट क्षमता</div>
+        </div>
+
+        <div class="card" style="margin:0; border-left:4px solid #6366f1;">
+          <div style="font-size:12px; color:var(--text-muted); font-weight:700;">🏛️ 6 तहसीलें समग्र</div>
+          <div style="font-size:14px; font-weight:800; color:#4338ca; margin-top:6px; line-height:1.4;">
+            हंडिया (110) • हरदा (87) • खिरकिया (91)<br>
+            रहटगांव (118) • सिराली (107) • टिमरनी (61)
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN TABLE CARD -->
+      <div class="card">
+        <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+          <div>
+            <div class="card-title">🏡 हरदा ज़िला समग्र गाँव डायरेक्टरी (574 Villages Census Master)</div>
+            <div style="font-size:12px; color:var(--text-muted); margin-top:2px;" id="villages-table-subtitle">
+              कुल 574 में से 574 गाँव प्रदर्शित • सेंसस 2011 आधिकारिक महिला जनसंख्या व ग्राम पंचायत डेटा
+            </div>
+          </div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <a href="Harda_Villages_Female_Population.csv" download class="btn btn-outline" style="font-size:12px; padding:6px 12px; display:inline-flex; align-items:center; gap:6px;">
+              📥 डाउनलोड CSV (Excel)
+            </a>
+          </div>
+        </div>
+
+        <!-- FILTER BAR -->
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:16px;">
+          <input type="text" id="search-villages-input" class="filter-input" placeholder="🔍 गाँव, ग्राम पंचायत या तहसील खोजें..." style="flex:1; min-width:200px;" oninput="filterVillages574()">
+          
+          <select id="filter-vil-tehsil" class="filter-select" onchange="filterVillages574()">
+            <option value="all">🌐 सभी 6 तहसीलें (574 गाँव)</option>
+            <option value="Handiya">हंडिया तहसील (110 गाँव)</option>
+            <option value="Harda">हरदा तहसील (87 गाँव)</option>
+            <option value="Khirkiya">खिरकिया तहसील (91 गाँव)</option>
+            <option value="Rehatgaon">रहटगांव तहसील (118 गाँव)</option>
+            <option value="Sirali">सिराली तहसील (107 गाँव)</option>
+            <option value="Timarni">टिमरनी तहसील (61 गाँव)</option>
+          </select>
+
+          <select id="filter-vil-pop" class="filter-select" onchange="filterVillages574()">
+            <option value="all">👥 सभी आबादी श्रेणियां</option>
+            <option value="1000plus">🔥 बड़ी आबादी (1,000+ महिलाएँ)</option>
+            <option value="500to1000">⚡ मध्यम आबादी (500–1,000 महिलाएँ)</option>
+            <option value="100to500">🌱 सामान्य गाँव (100–500 महिलाएँ)</option>
+            <option value="under100">🌿 छोटे टोले (< 100 महिलाएँ)</option>
+            <option value="uninhabited">🏜️ बेचिराग़ / 0 आबादी (Uninhabited)</option>
+          </select>
+
+          <select id="filter-vil-status" class="filter-select" onchange="filterVillages574()">
+            <option value="all">📋 सभी स्थिति</option>
+            <option value="inhabited">🟢 आबाद गाँव (Inhabited)</option>
+            <option value="uninhabited">⚪ बेचिराग़ (Uninhabited)</option>
+            <option value="urban">🏙️ नगरीय / आउटग्रोथ</option>
+          </select>
+        </div>
+
+        <!-- DATA TABLE -->
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width:60px;">क्र.सं.</th>
+                <th>तहसील</th>
+                <th>गाँव का नाम</th>
+                <th>महिला जनसंख्या</th>
+                <th>कुल जनसंख्या</th>
+                <th>संबंधित ग्राम पंचायत</th>
+                <th>स्थिति / खपत</th>
+                <th>1-क्लिक एक्शन</th>
+              </tr>
+            </thead>
+            <tbody id="villages-tbody">
+              <tr><td colspan="8" style="text-align:center; padding:30px; color:var(--text-muted);">लोड हो रहा है...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
     <!-- TAB 3: 220 GRAM PANCHAYAT CITIZEN REGISTER                     -->
     <!-- ============================================================== -->
     <div id="view-village-reg" style="display:none;">
@@ -1389,7 +1497,7 @@
     var currentViewMode = 'gp226';
 
     function switchTab(tabId) {
-      var tabs = ['urban-saturation', 'cluster-funnel', 'maps-radar', 'village-reg', 'schools', 'anganwadi', 'doctors', 'parlours', 'shg', 'panchayat', 'social', 'orders'];
+      var tabs = ['urban-saturation', 'cluster-funnel', 'villages-574', 'maps-radar', 'village-reg', 'schools', 'anganwadi', 'doctors', 'parlours', 'shg', 'panchayat', 'social', 'orders'];
       tabs.forEach(function(t) {
         var btn = document.getElementById('tab-' + t + '-btn');
         var view = document.getElementById('view-' + t);
@@ -1404,6 +1512,7 @@
 
       if (tabId === 'urban-saturation' && allUrbanClusters.length === 0) fetchUrbanClusters();
       if (tabId === 'cluster-funnel' && allMicroClusters.length === 0) fetchMicroClusters();
+      if (tabId === 'villages-574' && allVillages574.length === 0) fetchVillages574();
       if (tabId === 'maps-radar') {
         if (!mapInstance) initMap();
         else setTimeout(function(){ mapInstance.invalidateSize(); }, 200);
