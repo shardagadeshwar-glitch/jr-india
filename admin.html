@@ -1583,7 +1583,9 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
   <script>
+    var allUrbanClusters = [];
     var allMicroClusters = [];
+    var allVillages574 = [];
     var allVillagesDetailed = [];
     var allVillageRegister = [];
     var allSchools = [];
@@ -1612,22 +1614,26 @@
       if (activeBtn) activeBtn.classList.add('active');
       if (activeView) activeView.style.display = 'block';
 
-      if (tabId === 'urban-saturation' && allUrbanClusters.length === 0) fetchUrbanClusters();
-      if (tabId === 'cluster-funnel' && allMicroClusters.length === 0) fetchMicroClusters();
-      if (tabId === 'villages-574' && allVillages574.length === 0) fetchVillages574();
-      if (tabId === 'maps-radar') {
-        if (!mapInstance) initMap();
-        else setTimeout(function(){ mapInstance.invalidateSize(); }, 200);
+      try {
+        if (tabId === 'urban-saturation' && (!allUrbanClusters || allUrbanClusters.length === 0)) fetchUrbanClusters();
+        if (tabId === 'cluster-funnel' && (!allMicroClusters || allMicroClusters.length === 0)) fetchMicroClusters();
+        if (tabId === 'villages-574' && (!allVillages574 || allVillages574.length === 0)) fetchVillages574();
+        if (tabId === 'maps-radar') {
+          if (!mapInstance) initMap();
+          else setTimeout(function(){ if (mapInstance) mapInstance.invalidateSize(); }, 200);
+        }
+        if (tabId === 'village-reg' && (!allVillageRegister || allVillageRegister.length === 0)) fetchVillageRegister();
+        if (tabId === 'schools' && (!allSchools || allSchools.length === 0)) fetchSchools();
+        if (tabId === 'anganwadi' && (!allAnganwadis || allAnganwadis.length === 0)) fetchAnganwadis();
+        if (tabId === 'doctors' && (!allDoctors || allDoctors.length === 0)) fetchDoctors();
+        if (tabId === 'parlours' && (!allParlours || allParlours.length === 0)) fetchParlours();
+        if (tabId === 'shg' && (!allSHG || allSHG.length === 0)) fetchSHG();
+        if (tabId === 'panchayat' && (!allPanchayat || allPanchayat.length === 0)) fetchPanchayat();
+        if (tabId === 'social') fetchSocialLeads();
+        if (tabId === 'orders') fetchOrdersAndStats();
+      } catch(err) {
+        console.error("Tab switch execution error for tab:", tabId, err);
       }
-      if (tabId === 'village-reg' && allVillageRegister.length === 0) fetchVillageRegister();
-      if (tabId === 'schools' && allSchools.length === 0) fetchSchools();
-      if (tabId === 'anganwadi' && allAnganwadis.length === 0) fetchAnganwadis();
-      if (tabId === 'doctors' && allDoctors.length === 0) fetchDoctors();
-      if (tabId === 'parlours' && allParlours.length === 0) fetchParlours();
-      if (tabId === 'shg' && allSHG.length === 0) fetchSHG();
-      if (tabId === 'panchayat' && allPanchayat.length === 0) fetchPanchayat();
-      if (tabId === 'social') fetchSocialLeads();
-      if (tabId === 'orders') fetchOrdersAndStats();
     }
 
     function showToast(msg) {
@@ -1654,6 +1660,33 @@
     // AI Chat Simulator Modal controls
     var currentSimParlour = { name: 'श्रीमती रशीदा बी', phone: '9179845610', establishment: 'प्रिंसेस ब्यूटी पार्लर' };
 
+
+    function getParlourOutreachMessage(name, establishment) {
+      return [
+        "नमस्ते " + (name || "दीदी") + " जी! 🙏",
+        "मैं शारदा दीदी बोल रही हूँ — Jehovahrohi India Private Limited (तवा कॉलोनी, हरदा)।",
+        "",
+        "आपके प्रतिष्ठित संस्थान '" + (establishment || "ब्यूटी पार्लर") + "' के बारे में जानकारी मिली। हरदा की सैकड़ों बहनें और युवतियां अपनी सुंदरता और त्वचा की देखभाल के लिए आप पर अटूट भरोसा करती हैं।",
+        "",
+        "दीदी, यह कोई विज्ञापन या सेल्स मैसेज नहीं है। यह हरदा की हर बहन और बेटी के स्वास्थ्य से जुड़ी एक बहुत गंभीर पहल है:",
+        "",
+        "🛑 बाज़ार का सच: दुकानों पर मिलने वाले 50-60 रुपये के आम पैड्स में ऊपर सफेद दिखने वाली जाली असल में रिसाइकिल प्लास्टिक और केमिकल ब्लीच होती है। यही वजह है कि आज हर दूसरी महिला असहनीय खुजली, जांघों में लाल दाने (Rashes), जलन, ल्यूकोरिया (सफेद पानी) और इन्फेक्शन का दर्द झेल रही है।",
+        "",
+        "🌿 हमारा मिशन — 'हर घर प्लास्टिक रिप्लेस':",
+        "हम हरदा के हर घर से इस जानलेवा प्लास्टिक को हटाकर बहनों को 100% शुद्ध कॉटन और 8-लेयर प्राकृतिक सुरक्षा दे रहे हैं:",
+        "1. 🌸 100% शुद्ध कॉटन सरफेस (0% प्लास्टिक — दाने और खुजली से 100% आज़ादी)",
+        "2. 🌿 ग्रीन एनायन चिप (99.9% बैक्टीरिया खात्मा, बदबू व इन्फेक्शन से बचाव, pH संतुलन)",
+        "3. 🌬️ एयर-फ्लो ऑक्सीजन लेयर (त्वचा सांस ले सके, चिपचिपाहट शून्य)",
+        "4. 💧 जापानी SAP जिलेटिन कोर (50 गुना अधिक सोखने की क्षमता — 100% सूखापन)",
+        "",
+        "एक महिला और ब्यूटी एक्सपर्ट होने के नाते आप जानती हैं कि बहनों के लिए असली स्किन कम्फर्ट क्या है। हम चाहते हैं कि पहले आप खुद इसकी क्वालिटी और परतों को जांचें।",
+        "",
+        "क्या हम आपके पार्लर पर क्वालिटी चेक करने के लिए एक फ्री सैंपल भिजवा सकते हैं?",
+        "— शारदा दीदी (हेल्पलाइन: 9713773339)",
+        "Jehovahrohi India Private Limited, हरदा (म.प्र.)"
+      ].join("\n");
+    }
+
     function openAiChatModal(name, phone, establishment) {
       if (name) currentSimParlour.name = name;
       if (phone) currentSimParlour.phone = phone;
@@ -1663,41 +1696,7 @@
       document.getElementById('sim-phone').innerText = currentSimParlour.phone;
       document.getElementById('sim-parlour').innerText = currentSimParlour.establishment;
 
-      var initialMsg = "नमस्ते " + currentSimParlour.name + " जी! 🙏
-" +
-        "मैं शारदा दीदी बोल रही हूँ — Jehovahrohi India Private Limited (तवा कॉलोनी, हरदा)।
-
-" +
-        "आपके प्रतिष्ठित संस्थान '" + currentSimParlour.establishment + "' के बारे में जानकारी मिली। हरदा की सैकड़ों बहनें और युवतियां अपनी सुंदरता और त्वचा की देखभाल के लिए आप पर अटूट भरोसा करती हैं।
-
-" +
-        "दीदी, यह कोई विज्ञापन या सेल्स मैसेज नहीं है। यह हरदा की हर बहन और बेटी के स्वास्थ्य से जुड़ी एक बहुत गंभीर पहल है:
-
-" +
-        "🛑 बाज़ार का सच: दुकानों पर मिलने वाले 50-60 रुपये के आम पैड्स में ऊपर सफेद दिखने वाली जाली असल में रिसाइकिल प्लास्टिक और केमिकल ब्लीच होती है। यही वजह है कि आज हर दूसरी महिला असहनीय खुजली, जांघों में लाल दाने (Rashes), जलन, ल्यूकोरिया (सफेद पानी) और इन्फेक्शन का दर्द झेल रही है।
-
-" +
-        "🌿 हमारा मिशन — 'हर घर प्लास्टिक रिप्लेस':
-" +
-        "हम हरदा के हर घर से इस जानलेवा प्लास्टिक को हटाकर बहनों को 100% शुद्ध कॉटन और 8-लेयर प्राकृतिक सुरक्षा दे रहे हैं:
-" +
-        "1. 🌸 100% शुद्ध कॉटन सरफेस (0% प्लास्टिक — दाने और खुजली से 100% आज़ादी)
-" +
-        "2. 🌿 ग्रीन एनायन चिप (99.9% बैक्टीरिया खात्मा, बदबू व इन्फेक्शन से बचाव, pH संतुलन)
-" +
-        "3. 🌬️ एयर-फ्लो ऑक्सीजन लेयर (त्वचा सांस ले सके, चिपचिपाहट शून्य)
-" +
-        "4. 💧 जापानी SAP जिलेटिन कोर (50 गुना अधिक सोखने की क्षमता — 100% सूखापन)
-
-" +
-        "एक महिला और ब्यूटी एक्सपर्ट होने के नाते आप जानती हैं कि बहनों के लिए असली स्किन कम्फर्ट क्या है। हम चाहते हैं कि पहले आप खुद इसकी क्वालिटी और परतों को जांचें।
-
-" +
-        "क्या हम आपके पार्लर पर क्वालिटी चेक करने के लिए एक फ्री सैंपल भिजवा सकते हैं?
-" +
-        "— शारदा दीदी (हेल्पलाइन: 9713773339)
-" +
-        "Jehovahrohi India Private Limited, हरदा (म.प्र.)";
+      var initialMsg = getParlourOutreachMessage(currentSimParlour.name, currentSimParlour.establishment);
       document.getElementById('sim-outreach-text').innerText = initialMsg;
 
       document.getElementById('sim-customer-input').value = 'हाँ दीदी, मुझे पार्लर के लिए सैंपल देखना है, कृपया अपनी वेबसाइट का लिंक भेजिए ताकि मैं देख सकूँ।';
@@ -1789,6 +1788,95 @@
     // HARDA URBAN 3-DAY SATURATION ENGINE (35 WARDS)
     // ==============================================================
     var allUrbanClusters = [];
+
+    
+    // ==============================================================
+    // 574 VILLAGES CENSUS MASTER DIRECTORY LOGIC
+    // ==============================================================
+    function fetchVillages574() {
+      var tbody = document.getElementById('villages-tbody');
+      if (tbody) tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:30px; color:var(--text-muted);">🏡 हरदा 574 समग्र गाँव सेंसस डेटा लोड हो रहा है...</td></tr>';
+
+      fetch('harda_574_villages_master_census.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          var list = (data && data.villages) ? data.villages : (Array.isArray(data) ? data : []);
+          allVillages574 = list;
+          filterVillages574();
+        })
+        .catch(function(err) {
+          console.error('Error loading villages census:', err);
+          if (tbody) tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:30px; color:#ef4444;">डेटा लोड करने में त्रुटि। <button onclick="fetchVillages574()" class="btn btn-outline" style="font-size:12px; margin-left:10px;">🔄 पुनः लोड करें</button></td></tr>';
+        });
+    }
+
+    function filterVillages574() {
+      var tehsil = document.getElementById('filter-vil-tehsil') ? document.getElementById('filter-vil-tehsil').value : 'all';
+      var pop = document.getElementById('filter-vil-pop') ? document.getElementById('filter-vil-pop').value : 'all';
+      var status = document.getElementById('filter-vil-status') ? document.getElementById('filter-vil-status').value : 'all';
+      var query = (document.getElementById('search-villages-input') ? document.getElementById('search-villages-input').value : '').toLowerCase().trim();
+
+      var filtered = allVillages574.filter(function(v) {
+        var matchTehsil = (tehsil === 'all') || (v.tehsil && v.tehsil.toLowerCase() === tehsil.toLowerCase());
+        
+        var matchPop = true;
+        var fpop = v.female_population || 0;
+        if (pop === '1000plus') matchPop = fpop >= 1000;
+        else if (pop === '500to1000') matchPop = fpop >= 500 && fpop < 1000;
+        else if (pop === '100to500') matchPop = fpop >= 100 && fpop < 500;
+        else if (pop === 'under100') matchPop = fpop > 0 && fpop < 100;
+        else if (pop === 'uninhabited') matchPop = fpop === 0;
+
+        var matchStatus = true;
+        if (status === 'inhabited') matchStatus = !v.is_uninhabited;
+        else if (status === 'uninhabited') matchStatus = v.is_uninhabited;
+
+        var matchQ = !query ||
+          (v.village_name && v.village_name.toLowerCase().includes(query)) ||
+          (v.gram_panchayat && v.gram_panchayat.toLowerCase().includes(query)) ||
+          (v.tehsil && v.tehsil.toLowerCase().includes(query));
+
+        return matchTehsil && matchPop && matchStatus && matchQ;
+      });
+
+      renderVillagesTable(filtered);
+    }
+
+    function renderVillagesTable(list) {
+      var tbody = document.getElementById('villages-tbody');
+      var sub = document.getElementById('villages-table-subtitle');
+      if (sub) sub.innerText = 'कुल 574 में से ' + list.length + ' गाँव प्रदर्शित • सेंसस 2011 आधिकारिक महिला जनसंख्या व ग्राम पंचायत डेटा';
+
+      if (!list || list.length === 0) {
+        if (tbody) tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding:30px; color:var(--text-muted);">कोई गाँव नहीं मिला। फ़िल्टर बदलें।</td></tr>';
+        return;
+      }
+
+      if (tbody) {
+        tbody.innerHTML = list.map(function(v, idx) {
+          var statusHtml = v.is_uninhabited ?
+            '<span class="badge" style="background:#fee2e2; color:#b91c1c; font-size:11px;">🏜️ बेचिराग़ (0)</span>' :
+            '<span class="badge" style="background:#dcfce7; color:#15803d; font-size:11px;">🟢 आबाद (' + (v.monthly_pads_demand || 0) + ' पैड/माह)</span>';
+
+          var waInitial = "नमस्ते! मैं शारदा दीदी बोल रही हूँ हरदा से (जेआर इंडिया महिला स्वास्थ्य जागरूकता मिशन)। आपके गाँव " + (v.village_name || "") + " (तहसील: " + (v.tehsil || "") + ") में 100% शुद्ध कॉटन पैड्स की फ़्री होम डिलीवरी व दीदी मॉडल शुरू हो चुका है। अधिक जानकारी: 9713773339";
+          var waUrl = "https://wa.me/919713773339?text=" + encodeURIComponent(waInitial);
+
+          return '<tr>' +
+            '<td><span class="badge-sno">#' + (v.sno || (idx + 1)) + '</span></td>' +
+            '<td><strong>' + (v.tehsil || '—') + '</strong></td>' +
+            '<td><strong style="color:var(--primary); font-size:14px;">' + (v.village_name || '—') + '</strong></td>' +
+            '<td><strong style="color:#e11d48;">' + (v.female_pop_formatted || v.female_population || 0) + '</strong></td>' +
+            '<td>' + (v.total_pop_formatted || v.total_population || 0) + '</td>' +
+            '<td>🏛️ ' + (v.gram_panchayat || '—') + '</td>' +
+            '<td>' + statusHtml + '</td>' +
+            '<td>' +
+              '<a href="' + waUrl + '" target="_blank" class="btn-wa-sm" title="गाँव के लिए WhatsApp संदेश भेजें">💬 WA</a> ' +
+              '<a href="' + (v.url || '#') + '" target="_blank" class="btn-wa-sm" style="background:#6366f1;" title="सेंसस रिपोर्ट देखें">ℹ️ सेंसस</a>' +
+            '</td>' +
+          '</tr>';
+        }).join('');
+      }
+    }
 
     function fetchUrbanClusters() {
       fetch('harda_urban_35_wards_clusters_db.json')
@@ -2324,41 +2412,7 @@
           '<a href="' + (p.fb_url || 'https://' + p.fb_id) + '" target="_blank" style="color:#1877f2; font-weight:700; text-decoration:none;">📘 ' + p.fb_id + '</a>' :
           '<span style="color:var(--text-muted); font-size:11px;">—</span>';
 
-        var initialMsg = "नमस्ते " + (p.name || "दीदी") + " जी! 🙏
-" +
-          "मैं शारदा दीदी बोल रही हूँ — Jehovahrohi India Private Limited (तवा कॉलोनी, हरदा)।
-
-" +
-          "आपके प्रतिष्ठित संस्थान '" + (p.establishment || "ब्यूटी पार्लर") + "' के बारे में जानकारी मिली। हरदा की सैकड़ों बहनें और युवतियां अपनी सुंदरता और त्वचा की देखभाल के लिए आप पर अटूट भरोसा करती हैं।
-
-" +
-          "दीदी, यह कोई विज्ञापन या सेल्स मैसेज नहीं है। यह हरदा की हर बहन और बेटी के स्वास्थ्य से जुड़ी एक बहुत गंभीर पहल है:
-
-" +
-          "🛑 बाज़ार का सच: दुकानों पर मिलने वाले 50-60 रुपये के आम पैड्स में ऊपर सफेद दिखने वाली जाली असल में रिसाइकिल प्लास्टिक और केमिकल ब्लीच होती है। यही वजह है कि आज हर दूसरी महिला असहनीय खुजली, जांघों में लाल दाने (Rashes), जलन, ल्यूकोरिया (सफेद पानी) और इन्फेक्शन का दर्द झेल रही है।
-
-" +
-          "🌿 हमारा मिशन — 'हर घर प्लास्टिक रिप्लेस':
-" +
-          "हम हरदा के हर घर से इस जानलेवा प्लास्टिक को हटाकर बहनों को 100% शुद्ध कॉटन और 8-लेयर प्राकृतिक सुरक्षा दे रहे हैं:
-" +
-          "1. 🌸 100% शुद्ध कॉटन सरफेस (0% प्लास्टिक — दाने और खुजली से 100% आज़ादी)
-" +
-          "2. 🌿 ग्रीन एनायन चिप (99.9% बैक्टीरिया खात्मा, बदबू व इन्फेक्शन से बचाव, pH संतुलन)
-" +
-          "3. 🌬️ एयर-फ्लो ऑक्सीजन लेयर (त्वचा सांस ले सके, चिपचिपाहट शून्य)
-" +
-          "4. 💧 जापानी SAP जिलेटिन कोर (50 गुना अधिक सोखने की क्षमता — 100% सूखापन)
-
-" +
-          "एक महिला और ब्यूटी एक्सपर्ट होने के नाते आप जानती हैं कि बहनों के लिए असली स्किन कम्फर्ट क्या है। हम चाहते हैं कि पहले आप खुद इसकी क्वालिटी और परतों को जांचें।
-
-" +
-          "क्या हम आपके पार्लर पर क्वालिटी चेक करने के लिए एक फ्री सैंपल भिजवा सकते हैं?
-" +
-          "— शारदा दीदी (हेल्पलाइन: 9713773339)
-" +
-          "Jehovahrohi India Private Limited, हरदा (म.प्र.)";
+        var initialMsg = getParlourOutreachMessage(p.name, p.establishment);
         var waUrl = "https://wa.me/91" + p.phone + "?text=" + encodeURIComponent(initialMsg);
 
         var socialBtns = '';
